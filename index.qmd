@@ -1,11 +1,10 @@
 ---
-title: "imran's data sc"
+title: "Imran's Data Science website"
 ---
 
-This is a Quarto website.
+Welcome to my website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Here, you will find some of my post-graduate research, assignments and projects.
 
-```{r}
-1 + 3
-```
+![“All models are wrong but some are useful.” - George Box](images/mydatascwebsitecoverpage.png)\
+\

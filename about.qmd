@@ -1,9 +1,11 @@
 ---
-title: "About"
+title: "About Imran"
 ---
 
-About this site
+Having spent many years lost in a traditional finance career, I've finally found the courage to start learning about Data Science.
 
-```{r}
-1 + 1
-```
+Now, I'm on my second wind, and hope to become someone more than just to "increase shareholder value".\
+\
+Never settle, and always strive to be a better version of yourself every day. It's never to late to start something or learn something new. Your ability is not determined by your age.\
+\
+"Never say never, because limits, like fears, are often just an illusion" - Michael Jordan.

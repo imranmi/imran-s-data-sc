@@ -2,18 +2,59 @@ project:
   type: website
 
 website:
-  title: "imran's data sc"
+  title: "Imran's Data Science website"
+  page-navigation: true
+  back-to-top-navigation: true
+  
   navbar:
+    tools:
+      - icon: house-heart
+        href: about.qmd      
+      - icon: github
+        href: "https://github.com/imranmi/imran-s-data-sc"
+      - icon: linkedin
+        href: "www.linkedin.com/in/imran-ibrahim-116a236b"
+    search: true
+    
+  
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
-
+      - text: Exercises in R
+        menu: 
+          - text: R Exercise 1 
+            href: R-ex/R-Ex1/R_Ex1.html
+          - text: R Exercise 2 
+            href: R-ex/R-Ex2/R_Ex2.html
+          - text: R Exercise 3 
+            href: R-ex/R-Ex3/R_Ex3.html
+      - text: Exercises in Python
+        menu: 
+          - text: Python Exercise 1 
+            href: Python-ex/Python-Ex1/Python_Ex1.html
+          - text: Python Exercise 2 
+            href: Python-ex/Python-Ex1/Python_Ex1.html
+          - text: Python Exercise 3 
+            href: Python-ex/Python-Ex1/Python_Ex1.html
+      - text: Write-ups
+        menu: 
+          - text: Write-up 1 
+            href: Write-ex/Write-Ex1/Write_Ex1.html
+          - text: Write-up 2 
+            href: Write-ex/Write-Ex2/Write_Ex2.html
+          - text: Write-up 3 
+            href: Write-ex/Write-Ex3/Write_Ex3.html     
+          
 format:
   html:
-    theme: cosmo
+    theme: 
+      - cerulean
+      - theme.scss
+    mermaid: 
+      theme: neutral
     css: styles.css
     toc: true
-
+    grid:
+      sidebar-width: 100px
+      body-width: 1200px
+      margin-width: 200px
+      gutter-width: 2.0rem
 editor: visual
-
