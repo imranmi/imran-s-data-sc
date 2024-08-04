@@ -22,7 +22,7 @@ website:
         menu: 
           - text: R Exercise 1 - Analysing PISA's education survey data
             href: R-ex/R-Ex1/R_Ex1.html
-          - text: R Exercise 2 
+          - text: R Exercise 2 - 5 Exploratory Data Analyses on Pisa Data
             href: R-ex/R-Ex2/R_Ex2.html
           - text: R Exercise 3 
             href: R-ex/R-Ex3/R_Ex3.html
