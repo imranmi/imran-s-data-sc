@@ -1,26 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Imran’s Data Science website",
-    "section": "",
-    "text": "Welcome to my website.\nHere, you will find some of my post-graduate research, assignments and projects.\n\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Imran",
-    "section": "",
-    "text": "Having spent many years lost in a traditional finance career, I’ve finally found the courage to start learning about Data Science.\nNow, I’m on my second wind, and hope to become someone more than just to “increase shareholder value”.\n\nNever settle, and always strive to be a better version of yourself every day. It’s never to late to start something or learn something new. Your ability is not determined by your age.\n\n“Never say never, because limits, like fears, are often just an illusion” - Michael Jordan.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "R-ex/R-Ex1/R_Ex1.html",
-    "href": "R-ex/R-Ex1/R_Ex1.html",
-    "title": "Take Home Exercise 1 - Pisa’s global education survey data",
-    "section": "",
-    "text": "Creating data visualisation beyond default\n\n\nSetting the Scene\nOECD education director Andreas Schleicher shared in a BBC article that “Singapore managed to achieve excellence without wide differences between children from wealthy and disadvantaged families.” (2016) Furthermore, several of Singapore’s ministers for Education also started an “every school a good school” slogan. The general public, however, believes that there are still disparities that exist, especially between “elite” and neighborhood schools, between students from families with higher socioeconomic status and those with relatively lower socioeconomic status and immigration and non-immigration families.\n\n\nThe Task\nThe 2022 Programme for International Student Assessment (PISA) data was released on December 5, 2022. PISA’s global education survey runs every three years to assess education systems worldwide through the testing 15 year old students in the subjects of mathematics, reading, and science.\nIn this take-home exercise, we will use appropriate Exploratory Data Analysis (EDA) methods and ggplot2 functions to reveal:\n\nthe distribution of Singapore students’ performance in mathematics, reading, and science, and\nthe relationship between these performances with schools, gender and socioeconomic status of the students.\n\n\n\nThe Data\nThe PISA 2022 database contains the full set of responses from individual students, school principals and parents. There are a total of five data files and their contents are as follows:\n\nStudent questionnaire data file\nSchool questionnaire data file\nTeacher questionnaire data file\nCognitive item data file\nQuestionnaire timing data file\n\nThese data files are in SAS and SPSS formats. For the purpose of this assignment, we will use the Student questionnaire data file only.\nTo learn more about PISA 2022 survey, please refer to the PISA 2022 Technical Report\n\n\n\n\n Back to top"
-  },
-  {
     "objectID": "R-ex/R-Ex1/R_Ex1.html#loading-r-packages",
     "href": "R-ex/R-Ex1/R_Ex1.html#loading-r-packages",
     "title": "Take Home Exercise 1 - Pisa’s global education survey data",
@@ -159,5 +138,19 @@
     "title": "Take Home Exercise 1 - Pisa’s global education survey data",
     "section": "Observation 8",
     "text": "Observation 8\nFrom the combined plot, it appears that the optimal number of times to study in a week is 5 times for all subjects. More times spent on homework and/or studying does not seem to translate to higher scores for this PISA test. However this factor alone is insufficient to conclude causality, and we should do additional analysis on other factors that may impact a student’s ability to prepare for this test."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Imran",
+    "section": "",
+    "text": "Having spent many years lost in a traditional finance career, I’ve finally found the courage to start learning about Data Science.\nNow, I’m on my second wind, and hope to become someone more than just to “increase shareholder value”.\n\nNever settle, and always strive to be a better version of yourself every day. It’s never to late to start something or learn something new. Your ability is not determined by your age.\n\n“Never say never, because limits, like fears, are often just an illusion” - Michael Jordan.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Imran’s Data Science website",
+    "section": "",
+    "text": "Welcome to my website.\nHere, you will find some of my post-graduate research, assignments and projects.\n\n\n\n\n\n\n Back to top"
   }
 ]
