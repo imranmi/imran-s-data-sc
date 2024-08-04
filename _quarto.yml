@@ -26,7 +26,7 @@ website:
             href: R-ex/R-Ex2/R_Ex2.html
           - text: R Exercise 3 - DataVis Makeover of another student's work
             href: R-ex/R-Ex3/R_Ex3.html
-          - text: R Exercise 4 
+          - text: R Exercise 4 - Be Weatherwise or Otherwise
             href: R-ex/R-Ex4/R_Ex4.html
       - text: Exercises in Python
         menu: 
