@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Imran Ibrahim">
+<meta name="dcterms.date" content="2024-08-11">
+
+<title>Imran’s Data Science website - Comparison of Predictive and Machine Learning models for Loan Default prediction</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Imran’s Data Science website</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-exercises-in-r" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Exercises in R</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises-in-r">    
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex1/R_Ex1.html">
+ <span class="dropdown-text">R Exercise 1 - Analysing PISA’s education survey data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex2/R_Ex2.html">
+ <span class="dropdown-text">R Exercise 2 - 5 Exploratory Data Analyses on Pisa Data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex3/R_Ex3.html">
+ <span class="dropdown-text">R Exercise 3 - DataVis Makeover of another student’s work</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex4/R_Ex4.html">
+ <span class="dropdown-text">R Exercise 4 - Be Weatherwise or Otherwise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex5/R_Ex5.html">
+ <span class="dropdown-text">R Exercise 5 - Visual Analytics exercise on Armed conflicts - Initial Draft</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex6/R_Ex6.html">
+ <span class="dropdown-text">R Exercise 6 - Geospatial Analysis1 - Local Measures of Spatial Autocorrelation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex7/R_Ex7.html">
+ <span class="dropdown-text">R Exercise 7 - Geospatial Analysis2 - Emerging Hot Spot Analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex8/R_Ex8.html">
+ <span class="dropdown-text">R Exercise 8 - Geospatial Analysis3 - Spatially Constrained Clustering-ClustGeo method</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-exercises-in-python" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Exercises in Python</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises-in-python">    
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex1/Python_Ex1.html">
+ <span class="dropdown-text">Python Exercise 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex1/Python_Ex1.html">
+ <span class="dropdown-text">Python Exercise 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex1/Python_Ex1.html">
+ <span class="dropdown-text">Python Exercise 3</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-sas-viya-exercises" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">SAS Viya Exercises</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-sas-viya-exercises">    
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex1/Write_Ex1.html">
+ <span class="dropdown-text">Assignment 1 - Show me the numbers</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex2/Write_Ex2.html">
+ <span class="dropdown-text">Assignment 2 - Be Customer wise or otherwise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex3/Write_Ex3.html">
+ <span class="dropdown-text">Project - Loan Default prediction</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools tools-wide">
+    <a href="../../about.html" title="About Imran" class="quarto-navigation-tool px-1" aria-label="About Imran"><i class="bi bi-house-heart"></i></a>
+    <a href="https://github.com/imranmi/imran-s-data-sc" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/imran-ibrahim-116a236b" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">1. Abstract</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">2. Introduction</a>
+  <ul class="collapse">
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">2.1 Background</a></li>
+  <li><a href="#problem-statement" id="toc-problem-statement" class="nav-link" data-scroll-target="#problem-statement">2.2 Problem Statement</a></li>
+  <li><a href="#project-objectives" id="toc-project-objectives" class="nav-link" data-scroll-target="#project-objectives">2.3 Project Objectives</a></li>
+  </ul></li>
+  <li><a href="#literature-review" id="toc-literature-review" class="nav-link" data-scroll-target="#literature-review">3. Literature Review</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">4. Methodology</a>
+  <ul class="collapse">
+  <li><a href="#predictive-modelling-process" id="toc-predictive-modelling-process" class="nav-link" data-scroll-target="#predictive-modelling-process">4.1 Predictive Modelling Process</a></li>
+  <li><a href="#data-set" id="toc-data-set" class="nav-link" data-scroll-target="#data-set">4.2 Data Set</a></li>
+  <li><a href="#data-cleaning-preparation" id="toc-data-cleaning-preparation" class="nav-link" data-scroll-target="#data-cleaning-preparation">4.3 Data Cleaning &amp; Preparation</a></li>
+  <li><a href="#variable-creation-and-selection" id="toc-variable-creation-and-selection" class="nav-link" data-scroll-target="#variable-creation-and-selection">4.4 Variable creation and selection</a></li>
+  <li><a href="#data-partitioning" id="toc-data-partitioning" class="nav-link" data-scroll-target="#data-partitioning">4.5 Data Partitioning</a></li>
+  <li><a href="#model-fitting-and-evaluation" id="toc-model-fitting-and-evaluation" class="nav-link" data-scroll-target="#model-fitting-and-evaluation">4.6 Model Fitting and Evaluation</a></li>
+  <li><a href="#analysis-and-results" id="toc-analysis-and-results" class="nav-link" data-scroll-target="#analysis-and-results">4.7 Analysis and Results</a></li>
+  </ul></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">5. Discussion</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">6. Conclusion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a>
+  <ul class="collapse">
+  <li><a href="#fit-statistics-for-the-champion-mode----ensemble" id="toc-fit-statistics-for-the-champion-mode----ensemble" class="nav-link" data-scroll-target="#fit-statistics-for-the-champion-mode----ensemble">Fit statistics for the Champion mode- - Ensemble</a></li>
+  </ul></li>
+  <li><a href="#important-note" id="toc-important-note" class="nav-link" data-scroll-target="#important-note">Important Note:</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Comparison of Predictive and Machine Learning models for Loan Default prediction</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Imran Ibrahim </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 11, 2024</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">August 11, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="abstract" class="level1">
+<h1>1. Abstract</h1>
+<p>Accurate predictions of loan defaults is crucial for financial institutions to mitigate risks and make informed lending decisions. This paper presents a comprehensive analysis of consumer loan data, utilizing predictive and machine learning models to forecast probabilities of loan defaults.</p>
+<p>This study was conducted using data from SuperLender, a digital lending company. With limited granular customer data, feature extraction and selection played a significant role in identifying the most predictive variables for model training.</p>
+<p>Various machine learning techniques, including logistic regression, decision trees, random forest, gradient boost, and neural networks, were employed to analyze these variables and their impact on loan repayments. Ensemble models were also explored to examine improvements over standalone models. We also explored different Data partition ratios to assess their impact on model evaluation, selection, and accuracy.</p>
+<p>Despite the data limitations, the ML models were able to achieve accuracies of over 80%, demonstrating their effectiveness in predicting consumer loan defaults. Key variables influencing loan defaults were identified, such as time taken to repay loans, delays in repaying loans and instances of past loan repayment failure.</p>
+<p>This research contributes to financial risk management by providing a practical framework for implementing machine learning in loan prediction. It offers banks and financial institutions a more sophisticated toolset to manage credit risk effectively and make informed lending decisions.</p>
+</section>
+<section id="introduction" class="level1">
+<h1>2. Introduction</h1>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">2.1 Background</h2>
+<p>Bank loans play a fundamental role in the financial system, enabling individuals and businesses to pursue their financial goals and driving economic growth (International Monetary Fund,2017). However, loans also pose a significant credit risk for financial institutions, making accurate loan default prediction crucial for mitigating risks, and making informed lending decisions.</p>
+<p>Traditional loan approval processes rely heavily on manual underwriting, which is derived from credit scorecards and analysis on past credit history. However, this process can be subjective, prone to human error and impervious to future trends. This has led to a growing demand for more automated and accurate methods of loan prediction (Aslam et al., 2019). Machine learning (ML) has emerged as a promising approach to address this challenge, offering the ability to analyze large datasets and identify complex patterns that may not be readily apparent to human analysts (X. Zhu et al., 2023).</p>
+<p>The emergence of digital lending platforms like SuperLender has exacerbated the need for more accurate modelling techniques, introducing new variables and credit history patterns into the risk assessment equation. This study is contextualized within this evolving landscape, proposing a shift towards more data-driven, machine learning-based approaches for predicting loan defaults.</p>
+</section>
+<section id="problem-statement" class="level2">
+<h2 class="anchored" data-anchor-id="problem-statement">2.2 Problem Statement</h2>
+<p>Despite the proliferation of data in the lending sector, there is a conspicuous absence of effective predictive models that can accurately forecast loan defaults. This gap not only impedes the risk management capabilities of financial institutions but also limits their ability to extend credit to viable borrowers.<br>
+<br>
+While ML has shown considerable promise in loan prediction, there remains a gap between the potential of ML and its practical application in the financial industry. One of the key challenges is the limited availability of rich and granular customer data, which often restricts the effectiveness of ML models. Additionally, there is a need for more research on the optimal combination of ML techniques and the development of robust models that can generalize well to new types of data.</p>
+</section>
+<section id="project-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="project-objectives">2.3 Project Objectives</h2>
+<p>This study aims to bridge the gap between traditional loan prediction methods and the potential of ML by developing and evaluating ML models for predicting consumer loan defaults.</p>
+<p>The specific objectives of this study are:</p>
+<ol type="1">
+<li><p>To identify the key factors that could influence consumer loan defaults.</p></li>
+<li><p>To develop and evaluate various ML models for predicting consumer loan defaults.</p></li>
+<li><p>To compare the performance of different ML models and identify the most effective model for predicting loan defaults.</p></li>
+</ol>
+</section>
+</section>
+<section id="literature-review" class="level1">
+<h1>3. Literature Review</h1>
+<p>Loan default prediction, a crucial task for financial institutions, involves forecasting the likelihood of borrowers defaulting on loans. This process is vital in mitigating credit risk and maintaining financial stability.</p>
+<p>A systematic review by Calli and Çoşkun (2021) encompassing 108 studies on credit risk assessment and credit default predictors, reveals a myriad of significant factors in predicting loan default. Socioeconomic elements such as home ownership, number of dependents, household size, employment status, income, and education were identified as critical predictors of default risk. Additionally, demographic factors like age, gender, and marital status, along with psychological and behavioral attributes such as risk-taking behavior, impulsiveness, and financial literacy, have been linked to default probability.</p>
+<p>The industry-standard Fair Isaac Corp score (FICO) further illustrates this complexity. It evaluates creditworthiness based on amounts owed, payment history, new credit, length of credit history, and credit mix (myFICO, 2022). This underscores the need for a multifaceted approach in credit risk evaluation and integrating a diverse set of variables into predictive models.</p>
+<p>Beyond identifying influential variables, the research landscape also points to the need for effective predictive models that can accurately interpret customer loan data nuances. Wu, W.J. (2022) applied Random Forest and XGBoost models to a dataset of 105,471 loan records, achieving commendable average accuracy scores of around 0.9. In a separate study, X. Zhu et al.&nbsp;(2023) conducted a comparative analysis with four models (Logistic Regression, Decision Tree, XGBoost, and LightGBM) on a dataset with 800,000 loan records and concluded that XGBoost and LightGBM models surpassed Logistic Regression and Decision Tree models, with accuracy scores exceeding 0.8 compared to the latter’s 0.6. Lastly, Odegua (2020), using the same customer loan dataset from SuperLender, reported substantial results from an XGBoost model, with an accuracy score of 0.79 and an F1 score of 0.87.<br>
+<br>
+In addition to individual predictive models, ensemble methods have also been shown to achieve promising results in loan default prediction. Ensemble methods combine the predictions of multiple individual models to produce a more robust and accurate prediction. This approach is based on the premise that a diverse set of models is more likely to capture the underlying complexities of the data and produce more accurate predictions than individual models.</p>
+<p>Ma and Wu (2023) proposed a two-layer model based on a Stacking ensemble learning algorithm for a personal loan dataset in Alibaba’s Tianchi platform, using LightGBM, Adaboost, XGBoost and Gradient boosting as primary classifiers and random forest as the secondary classifier. Results from their study concluded that their Stacking ensemble learning model outperformed the four individual models in five evaluation metrics: accuracy, precision, recall, F1 score, and AUC, with a prediction accuracy of 82.03% for the test set.<br>
+<br>
+In addition to selecting appropriate predictive models, the methodology of dividing data into training and testing sets is critical for developing a robust predictive system. The training set is used to build the model, encapsulating the intricate relationships between the variables, while the testing set serves to evaluate its predictive power on unseen data. A study by Gholamy &amp; Kreinovich (2018) suggested that an optimal balance is typically achieved with a 70/30 or 80/20 split between training and testing sets. This division not only allows the model to learn from a substantial portion of the data but also retains a significant subset for validation, thus enhancing the model’s ability to generalize beyond the data on which it was trained. This consideration of data partitioning is instrumental in avoiding overfitting, where a model performs well on training data but fails to predict accurately on new data, which is a common pitfall in machine learning applications.</p>
+</section>
+<section id="methodology" class="level1">
+<h1>4. Methodology</h1>
+<section id="predictive-modelling-process" class="level2">
+<h2 class="anchored" data-anchor-id="predictive-modelling-process">4.1 Predictive Modelling Process</h2>
+<p>The Predictive Modelling process in this study involved Data exploration and preparation, Variable creation and selection, Data Sampling, Model fitting and evaluation and Final model selection. All of these were performed using SAS Viya, alongside various SAS modules as depicted in Figure 1. Several iterations in terms of variable selection and data sampling and partitioning ratios were also explored, to observe any improvements in the performance of the models.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3668131683.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 1: Predictive Modelling Process</figcaption>
+</figure>
+</div>
+</section>
+<section id="data-set" class="level2">
+<h2 class="anchored" data-anchor-id="data-set">4.2 Data Set</h2>
+<p>The dataset used in this study was obtained from the Loan Default Prediction Challenge Early (Zindi, 2023).</p>
+<p>There are three sets of data:</p>
+<ol type="1">
+<li><p>Demographics: This contains description and details about loan applicants. Attributes such as birth dates, education level, employment type and account types can be found here.</p></li>
+<li><p>Performance: This contains details of the latest loan applied by each applicant and a rating (good-bad-flag) which describes if an applicant is a good or bad debtor.</p></li>
+<li><p>Previous Loans: This contains information on the previous loans disbursed, as well as the history of repayment.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-6688442.png" class="img-fluid figure-img"></p>
+<figcaption>Table 1: Overview of Datasets</figcaption>
+</figure>
+</div>
+<p>We observed that the variables provided in the Demographics dataset: ‘birthdate’, ‘bank account type’, ‘longitude’, ‘latitude’, ‘bank name’, ‘bank branch’, ‘employment status’ and ‘education’ were somewhat generic with sizeable missing values.</p>
+<p>On the other hand, the previous loans dataset was extensively populated with previous loan applications as well as the history of payments. This lack of granularity in demographic variables led us to examine in more detail the relationships between past loan applications and payment histories to loan default probabilities.</p>
+</section>
+<section id="data-cleaning-preparation" class="level2">
+<h2 class="anchored" data-anchor-id="data-cleaning-preparation">4.3 Data Cleaning &amp; Preparation</h2>
+<p>The Demographics and Performance datasets were grouped by Customer Identifiers while Previous loans were grouped by Loan Identifiers. Upon examining the datasets, we noted that there were 1099 customers which could not be found in the Demographics dataset.</p>
+<p>We first merged the Performance and Demographics datasets to ensure that we only include unique customers found in both datasets. This enabled us to draw from existing variables present in both the Demographics and Loan performance datasets for our prediction models. This merged dataset derived 3269 unique customers.</p>
+<p>We then merged this with the Previous Loans dataset, upon first completing a Group-by Customer Identifier operation. This operation enabled us to change the structure of the Previous loans dataset to be aligned with the other two datasets. After identifying and removing duplicates, our final merged dataset consisted of <strong>3264 unique customers</strong> with variables drawn from all three original datasets. As highlighted in Figure 1, the process of deriving the final dataset went through several iterations, as we identified and experimented on various predictive variables.</p>
+</section>
+<section id="variable-creation-and-selection" class="level2">
+<h2 class="anchored" data-anchor-id="variable-creation-and-selection">4.4 Variable creation and selection</h2>
+<p>Additionally, we also created new predictor variables, in line with the influential factors that we identified and mentioned in our literature review.</p>
+<p>The following summarizes the Variable creation and selection/filtering process:</p>
+<ul>
+<li><p>Bank Branch was dropped as there were more than 80% missing values.</p></li>
+<li><p>Latitude and Longitude variables were dropped as only 25 customers were found to be residing outside of Africa.&nbsp;</p></li>
+<li><p>Education level: 86.4% of this data is missing. However, since education was identified to be an influential factor in predicting loan defaults, we recoded this variable to ‘High Education’, ‘Low Education’ and ‘No Education’ classes.</p></li>
+<li><p>Employment: Since there were 648 records missing, we recoded this variable into ‘Permanent’ and ‘Not Permanent’ classes.</p></li>
+<li><p>Referred by: We recoded this to ‘Yes’ and ‘No’ classes.</p></li>
+<li><p>Created new ‘Recency’ variables to measure the relationship of time between loans, difference in time between the last loan in the previous loan’s dataset and the newest loan in the performance dataset.</p></li>
+<li><p>Created new ‘Frequency’ variables to measure the number of loans, the minimum, maximum, average of number of loans.</p></li>
+<li><p>Created new ‘Monetary’ variables to measure loan amounts, minimum, maximum, average and variations between previous loan amounts across the credit history period.</p></li>
+<li><p>Created new ‘Comparison’ variables to compare a customer’s previous loan behaviour against the newest loan in performance dataset. Comparisons were also made in terms of differences in amount, term days, interest costs, interests and time or gap in between loans.</p></li>
+</ul>
+<p>In total, 57 new predictive variables were created or recoded from data drawn from the original datasets.</p>
+</section>
+<section id="data-partitioning" class="level2">
+<h2 class="anchored" data-anchor-id="data-partitioning">4.5 Data Partitioning</h2>
+<p>Our consolidated final dataset was split into Training, Validation, and Test partitions in 4 combinations like below:</p>
+<ol type="1">
+<li><p>50:30:20</p></li>
+<li><p>60:20:20</p></li>
+<li><p>60:30:10</p></li>
+<li><p>40:30:30</p></li>
+</ol>
+<p>This is in line with the research mentioned in our literature review where Test partitions of 20% and 30% were observed to produce better results over other ratios. Furthermore, we wanted to observe if the choice of partition ratios could influence model selection.</p>
+</section>
+<section id="model-fitting-and-evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="model-fitting-and-evaluation">4.6 Model Fitting and Evaluation</h2>
+<p>The following predictive models were applied to our training dataset upon selecting the Auto-tuning template in SAS Model Studio (Figure 2):</p>
+<ul>
+<li><p>Neural network</p></li>
+<li><p>Stepwise Logistic regression</p></li>
+<li><p>Forward Logistic regression</p></li>
+<li><p>Gradient Boosting</p></li>
+<li><p>Forest</p></li>
+<li><p>Decision Tree</p></li>
+<li><p>Ensemble</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-679082376.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 2: Model Studio selects 7 models when an Auto-tune template was selected.</figcaption>
+</figure>
+</div>
+<p>As part of our model building process, for models that are sensitive to highly correlated variables (Log regression and Neural networks), SAS Model Studio first analyses our predictive variables and rejects similar variables of high variance through the Variable Selection process. This represents an improvement over manual checks of collinearity as SAS Model Studio can analyze paired and grouped variances at the same time.</p>
+</section>
+<section id="analysis-and-results" class="level2">
+<h2 class="anchored" data-anchor-id="analysis-and-results">4.7 Analysis and Results</h2>
+<p>The F-1 score metric is used to evaluate models’ accuracy in predicting loan defaults probability.</p>
+<p>In SAS Model Studio, we ran four separate model projects based on an auto-tuning template with default settings on 4 different Train-Validate-Test partition ratios.</p>
+<p>Our champion model was the Ensemble model with a partition ratio of 60:30:10 (Table 2) and an F-1 score of 0.8972 on test data.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3637334345.png" class="img-fluid figure-img"></p>
+<figcaption>Table 2: Summary of the F-1 scores for our 4 projects across 4 data sampling ratios on Test data</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-733787886.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 3: Our Champion model was partitioned in a 60:30:10 ratio.</figcaption>
+</figure>
+</div>
+<p>We further break down and compare the F1 and Accuracy scores of other models in the same project as our Champion model to examine the relative differences (Figure 4)</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2523087072.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 4: Comparison of models for our Champion model’s project segment</figcaption>
+</figure>
+</div>
+<p>The Ensemble model, which combines multiple algorithms, obtained the highest F1 score of 0.8972 and an Accuracy score of 82.21% (Figure 4). This superior performance underscores the ensemble’s robustness, likely due to its ability to integrate diverse predictive signals.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3382581902.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 5: Graphs depicting the F-1 and Accuracy scores for our Champion model, Ensemble model.</figcaption>
+</figure>
+</div>
+<p><u><strong>F1 score</strong></u> combines the measures of precision and recall (or sensitivity), which are measures of classification based on the confusion matrix that are calculated at various cutoff values. It is calculated as 2*Precision*Recall / (Precision + Recall), which is the harmonic mean of Precision and Recall. A larger F1 score indicates a more accurate model.</p>
+<p><u><strong>Accuracy</strong></u> is the proportion of observations that are correctly classified as either an event or non-event, calculated at various cutoff values. It is calculated as (true positives + true negatives) / (total observations).</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1726276720.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 6: ROC Curve for our Champion Ensemble Model</figcaption>
+</figure>
+</div>
+<p>The Receiver Operating Characteristic (ROC) curve is a plot of sensitivity (the true positive rate) against 1-specificity (the false positive rate), which are both measures of classification based on the confusion matrix. From Figure 6, we can observe that our Ensemble model is able to achieve a high Area under the Curve (AUC) for all our partitions Train (0.7501), Validate (0.6999) and Test (0.7423). (See Appendix for Fit statistics).</p>
+<p>The diagonal line indicates a random model, where sensitivity = 1-specificity. An ROC curve that plots above this diagonal indicates a better-than-random ability to distinguish between the positive and negative classes.</p>
+</section>
+</section>
+<section id="discussion" class="level1">
+<h1>5. Discussion</h1>
+</section>
+<section id="section" class="level1">
+<h1></h1>
+<p>Notably, our tree-based models, including Random Forest, Gradient Boosting, and Decision Trees, exhibit a somewhat subdued performance compared to Logistic regression models. This divergence in efficacy may be attributed to the logistic regression models’ ability for handling interval variables, which are predominant in our dataset.</p>
+<p>Moreover, the consistency across both the F1 score and accuracy for logistic regression models indicates a stable predictive capacity. In contrast, the tree-based models, while still a robust contender, fall behind, likely due to their inherent complexity and potential for overfitting, which is less of a concern with logistic regression.</p>
+<p>This assessment leads us to conclude that, for this specific dataset, Logistic regression models may provide a competitive edge. However, the ensemble model’s superior performance remains a testament to the power of combining algorithmic strengths to achieve a more accurate prediction model.</p>
+<p>The Event Classification report (Figure 7) enables us to examine the model’s ability to correctly predict events. It is a visual representation of the confusion matrix at various cutoff values for each partition. The classification cutoffs used in the plot are the default (0.5) and KS cutoff values for existing partitions: 0.79 (TRAIN), 0.77 (VALIDATE), 0.81 (TEST).</p>
+<p>It is noticeable that at the Default cut off 0.5, the model is unable to attain a high level to correctly predict True Negatives (correct predictions of ‘Bad’ events) across all partitions. However, it is able to maintain a high level to correctly predict True Positives (correct predictions of ‘Good’ events). This is likely due to an imbalance of the dataset where there are more ‘Good’ and non-defaulting clients present. This is further substantiated by the presence of 261 records of ‘Bad’ flags out of the total 3264 unique customers in our dataset.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-488075160.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 7: Event classification report for the Champion Model, Ensemble</figcaption>
+</figure>
+</div>
+<p>Nonetheless, relaxing the cut-off levels to higher cutoff levels enables our model to increase its ability to capture ‘Bad’ events. As can be seen in Figure 8, our model is able to increase True Negatives from 21.12% to 71.83% when the cut off is raised to 0.81.</p>
+<p>However, this comes with a tradeoff where True Positives were reduced from 99.21% to 69.01%. In a loan lending sense, this is akin to reducing one’s revenue, in order to reduce costs from loan defaults. This tradeoff would make sense for banks or financial institutions which consider the costs from loan defaults to be more damaging to their bottom line than the revenue loss from disbursing lesser loans.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2116569626.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 8: Classification rates change as cut-off rates are increased</figcaption>
+</figure>
+</div>
+<p>In terms of model interpretability, SAS Model studio is able to rank the variables that are important to our model through the variable importance function (figure 9).</p>
+<p>From Table 3, we observed that our top 10 important variables can be grouped in terms of time taken to repay loans, delays in repaying loans and instances of past loan repayment failure. This fits well with the factors we identified and mentioned in our literature review, where factors related to Debt servicing seem to provide more effective feedback on an applicant’s creditworthiness.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3650966470.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 9: Variables are ranked in terms of importance, in SAS Model Studio</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3822004476.png" class="img-fluid figure-img"></p>
+<figcaption>Table 3: The top 10 variables for our Champion model, Ensemble</figcaption>
+</figure>
+</div>
+</section>
+<section id="conclusion" class="level1">
+<h1>6. Conclusion</h1>
+<p>Through meticulous analysis, we established that ensemble models, which synthesize the insights of multiple algorithms, are likely able to deliver higher F-1 and Accuracy scores over standalone models.</p>
+<p>However, it is also important to understand the nature of the dataset. As mentioned, the lack of granular demographics data on loan applicants steered us to examine in more detail the relationships between past loan applications and payments behaviour to loan default probabilities. This may have likely led to the creation of more interval instead of categorical variables, which may have inadvertently favored logistic regression models over tree-based models.</p>
+<p>Our study also points to a delicate balance in credit risk management. As observed, the adoption of a higher threshold for classifying loan defaults can significantly mitigate the risk of default by enhancing the true negative rate. However, this comes at the cost of potential revenue loss by identifying fewer good loan opportunities. This finding is particularly important for financial institutions for whom the cost of defaults can potentially overshadow the revenue from new loans.</p>
+<p>Moreover, our findings underscore the importance of variable selection in developing predictive models. By refining the variables through iterative analysis, we identified key predictors of default that look beyond traditional financial metrics, suggesting that future models could benefit from incorporating a broader spectrum of behavioral and economic indicators. Significantly, important variables on demographics and situational factors could exert a stronger influence on loan default probabilities compared to historical repayment data.</p>
+<p>Future research could investigate the scalability of our proposed models across different financial products and diverse economic contexts. For example, would the same approach and models work across other credit products and for other geographies?</p>
+<p>The integration of machine learning models in risk management presents an opportunity for banks to not only fortify their defenses against loan defaults but also to enhance their overall operational efficiency. However, as with other predictive models, it is also important that this does not become a one-size-fits-all solution and approach. Machine learning models need to be tailored to the specific needs of each financial institution and market.</p>
+<p>There is also a continuous need to collect new data and phase out obsolete ones to train the models. The use of meaningful and quality variables that make sense from both a business and behavioral sense could also enhance predictive capabilities and improve model performance.</p>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<p>Banks: at the heart of the matter. (2017, June 15). IMF. <a href="https://www.imf.org/en/Publications/fandd/issues/Series/Back-to-Basics/Banks#:~:text=Making%20loans%20While%20at%20any,term%20assets%20%28loans" class="uri">https://www.imf.org/en/Publications/fandd/issues/Series/Back-to-Basics/Banks#:~:text=Making%20loans%20While%20at%20any,term%20assets%20%28loans</a></p>
+<p>Aslam, U., Aziz, H. I. T., Sohail, A., &amp; Batcha, N. K. (2019). An Empirical study on loan default prediction models. Journal of Computational and Theoretical Nanoscience, 16(8), 3483–3488. <a href="https://doi.org/10.1166/jctn.2019.8312" class="uri">https://doi.org/10.1166/jctn.2019.8312</a></p>
+<p>Çallı, B. A., &amp; Çoşkun, E. (2021). A longitudinal systematic review of credit risk assessment and credit default predictors. SAGE Open, 11(4), 215824402110613. <a href="https://doi.org/10.1177/21582440211061333" class="uri">https://doi.org/10.1177/21582440211061333</a></p>
+<p>Loan Default Risk Prediction using Knowledge Graph. (2022, January 26). IEEE Conference Publication | IEEE Xplore. <a href="https://ieeexplore.ieee.org/abstract/document/9729073" class="uri">https://ieeexplore.ieee.org/abstract/document/9729073</a></p>
+<p>Bhatore, S., Mohan, S., &amp; Reddy, Y. R. (2020). Machine learning techniques for credit risk evaluation: a systematic literature review. Journal of Banking and Financial Technology, 4(1), 111–138. <a href="https://doi.org/10.1007/s42786-020-00020-3" class="uri">https://doi.org/10.1007/s42786-020-00020-3</a></p>
+<p>Zhu, X., Chu, Q., Song, X., Hu, P., &amp; Peng, L. (2023). Explainable prediction of loan default based on machine learning models. Data Science and Management, 6(3), 123–133. <a href="https://doi.org/10.1016/j.dsm.2023.04.003" class="uri">https://doi.org/10.1016/j.dsm.2023.04.003</a></p>
+<p>Odegua, R. (2020). Predicting Bank Loan Default with Extreme Gradient Boosting. ResearchGate. <a href="https://www.researchgate.net/publication/339088951_Predicting_Bank_Loan_Default_with_Extreme_Gradient_Boosting" class="uri">https://www.researchgate.net/publication/339088951_Predicting_Bank_Loan_Default_with_Extreme_Gradient_Boosting</a></p>
+<p>Gholamy, A. (n.d.). Why 70/30 or 80/20 relation between training and testing sets: A pedagogical explanation. ScholarWorks@UTEP. <a href="https://scholarworks.utep.edu/cs_techrep/1209/" class="uri">https://scholarworks.utep.edu/cs_techrep/1209/</a></p>
+<p>myFICO. (2022, February 23). What’s in my FICO<sup>®</sup> Scores? myFICO. <a href="https://www.myfico.com/credit-education/whats-in-your-credit-score#:~:text=What's%20in%20my%20FICO%C2%AE,and%20credit%20mix%20(10%25)">https://www.myfico.com/credit-education/whats-in-your-credit-score#:~:text=What’s%20in%20my%20FICO%C2%AE,and%20credit%20mix%20(10%25</a>.</p>
+<p>Ma, Z., &amp; Wu, Q. (2023). Research on the prediction method for personal loan default based on Two-Layer Stacking Ensemble Learning model. In Atlantis Highlights in Computer Sciences (pp.&nbsp;1099–1110). <a href="https://doi.org/10.2991/978-94-6463-198-2_113" class="uri">https://doi.org/10.2991/978-94-6463-198-2_113</a></p>
+</section>
+<section id="appendix" class="level1">
+<h1>Appendix</h1>
+<section id="fit-statistics-for-the-champion-mode----ensemble" class="level2">
+<h2 class="anchored" data-anchor-id="fit-statistics-for-the-champion-mode----ensemble">Fit statistics for the Champion mode- - Ensemble</h2>
+<p><img src="images/clipboard-2043373673.png" class="img-fluid"></p>
+<p><img src="images/clipboard-866648709.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="important-note" class="level1">
+<h1>Important Note:</h1>
+<p>SAS and all other SAS Institute Inc.&nbsp;product or service names are registered trademarks or trademarks of SAS Institute Inc.&nbsp;in the USA and other countries. ® indicates USA registration.</p>
+<p>Other brand and product names are trademarks of their respective companies.</p>
+</section>
+<section id="section-1" class="level1">
+<h1></h1>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
