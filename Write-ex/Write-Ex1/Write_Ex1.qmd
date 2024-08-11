@@ -477,3 +477,9 @@ Due to the lack of subsequent measures of joviality, it is unclear if observed c
 2.  Collect additional data on the demographics profile of participants
 
 3.  Test findings from the initial survey against a separate sample.
+
+# Important Note
+
+SAS and all other SAS Institute Inc. product or service names are registered trademarks or trademarks of SAS Institute Inc. in the USA and other countries. ® indicates USA registration.
+
+Other brand and product names are trademarks of their respective companies.
