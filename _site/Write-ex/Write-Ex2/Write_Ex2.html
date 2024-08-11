@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Imran Ibrahim">
+<meta name="dcterms.date" content="2024-08-11">
+
+<title>Imran’s Data Science website - Assignment 2 - Be Customer wise or otherwise</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Imran’s Data Science website</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-exercises-in-r" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Exercises in R</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises-in-r">    
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex1/R_Ex1.html">
+ <span class="dropdown-text">R Exercise 1 - Analysing PISA’s education survey data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex2/R_Ex2.html">
+ <span class="dropdown-text">R Exercise 2 - 5 Exploratory Data Analyses on Pisa Data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex3/R_Ex3.html">
+ <span class="dropdown-text">R Exercise 3 - DataVis Makeover of another student’s work</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex4/R_Ex4.html">
+ <span class="dropdown-text">R Exercise 4 - Be Weatherwise or Otherwise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex5/R_Ex5.html">
+ <span class="dropdown-text">R Exercise 5 - Visual Analytics exercise on Armed conflicts - Initial Draft</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex6/R_Ex6.html">
+ <span class="dropdown-text">R Exercise 6 - Geospatial Analysis1 - Local Measures of Spatial Autocorrelation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex7/R_Ex7.html">
+ <span class="dropdown-text">R Exercise 7 - Geospatial Analysis2 - Emerging Hot Spot Analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex8/R_Ex8.html">
+ <span class="dropdown-text">R Exercise 8 - Geospatial Analysis3 - Spatially Constrained Clustering-ClustGeo method</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-exercises-in-python" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Exercises in Python</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises-in-python">    
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex1/Python_Ex1.html">
+ <span class="dropdown-text">Python Exercise 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex1/Python_Ex1.html">
+ <span class="dropdown-text">Python Exercise 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex1/Python_Ex1.html">
+ <span class="dropdown-text">Python Exercise 3</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-sas-viya-exercises" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">SAS Viya Exercises</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-sas-viya-exercises">    
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex1/Write_Ex1.html">
+ <span class="dropdown-text">Assignment 1 - Show me the numbers</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex2/Write_Ex2.html">
+ <span class="dropdown-text">Assignment 2 - Be Customer wise or otherwise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex3/Write_Ex3.html">
+ <span class="dropdown-text">Write-up 3</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools tools-wide">
+    <a href="../../about.html" title="About Imran" class="quarto-navigation-tool px-1" aria-label="About Imran"><i class="bi bi-house-heart"></i></a>
+    <a href="https://github.com/imranmi/imran-s-data-sc" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/imran-ibrahim-116a236b" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">2. Objectives</a></li>
+  <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link" data-scroll-target="#data-preparation">3. Data Preparation</a>
+  <ul class="collapse">
+  <li><a href="#removing-clients-with-no-deposits-made-to-their-wagering-accounts" id="toc-removing-clients-with-no-deposits-made-to-their-wagering-accounts" class="nav-link" data-scroll-target="#removing-clients-with-no-deposits-made-to-their-wagering-accounts">3.1 Removing clients with no deposits made to their wagering accounts</a></li>
+  <li><a href="#converting-timestamp-to-datetime-and-creating-dates-and-time-columns" id="toc-converting-timestamp-to-datetime-and-creating-dates-and-time-columns" class="nav-link" data-scroll-target="#converting-timestamp-to-datetime-and-creating-dates-and-time-columns">3.2 Converting timestamp to datetime and creating dates and time columns</a></li>
+  <li><a href="#filtering-out-transactions-beyond-the-sample-cut-off-date" id="toc-filtering-out-transactions-beyond-the-sample-cut-off-date" class="nav-link" data-scroll-target="#filtering-out-transactions-beyond-the-sample-cut-off-date">3.3 Filtering out transactions beyond the sample cut-off date</a></li>
+  <li><a href="#filtering-out-transactions-with-na-status" id="toc-filtering-out-transactions-with-na-status" class="nav-link" data-scroll-target="#filtering-out-transactions-with-na-status">3.4 Filtering out transactions with N/A status</a></li>
+  <li><a href="#removing-duplicates-in-data-set" id="toc-removing-duplicates-in-data-set" class="nav-link" data-scroll-target="#removing-duplicates-in-data-set">3.5 Removing Duplicates in data set</a></li>
+  <li><a href="#renaming-transaction-types" id="toc-renaming-transaction-types" class="nav-link" data-scroll-target="#renaming-transaction-types">3.6 Renaming Transaction types</a></li>
+  <li><a href="#creating-new-categorical-variables-for-date-and-time" id="toc-creating-new-categorical-variables-for-date-and-time" class="nav-link" data-scroll-target="#creating-new-categorical-variables-for-date-and-time">3.7 Creating new categorical variables for date and time</a></li>
+  <li><a href="#creating-new-time-variables-for-betting-activity" id="toc-creating-new-time-variables-for-betting-activity" class="nav-link" data-scroll-target="#creating-new-time-variables-for-betting-activity">3.8 Creating new time variables for betting activity</a></li>
+  <li><a href="#creating-new-variables-to-analyse-the-winning-data-of-clients" id="toc-creating-new-variables-to-analyse-the-winning-data-of-clients" class="nav-link" data-scroll-target="#creating-new-variables-to-analyse-the-winning-data-of-clients">3.9 Creating new variables to analyse the ‘Winning’ data of clients</a></li>
+  <li><a href="#capturing-information-on-declined-transactions" id="toc-capturing-information-on-declined-transactions" class="nav-link" data-scroll-target="#capturing-information-on-declined-transactions">3.10 Capturing information on Declined transactions</a></li>
+  <li><a href="#creating-new-recency-frequency-and-monetary-variables-and-merging-tables" id="toc-creating-new-recency-frequency-and-monetary-variables-and-merging-tables" class="nav-link" data-scroll-target="#creating-new-recency-frequency-and-monetary-variables-and-merging-tables">3.11 Creating new Recency, Frequency and Monetary variables and Merging tables</a></li>
+  </ul></li>
+  <li><a href="#cluster-analysis" id="toc-cluster-analysis" class="nav-link" data-scroll-target="#cluster-analysis">4. Cluster Analysis</a>
+  <ul class="collapse">
+  <li><a href="#univariate-analysis" id="toc-univariate-analysis" class="nav-link" data-scroll-target="#univariate-analysis">4.1 Univariate Analysis</a></li>
+  <li><a href="#bivariate-analysis" id="toc-bivariate-analysis" class="nav-link" data-scroll-target="#bivariate-analysis">4.2 Bivariate Analysis</a></li>
+  <li><a href="#log-transformation-of-clustering-variables" id="toc-log-transformation-of-clustering-variables" class="nav-link" data-scroll-target="#log-transformation-of-clustering-variables">4.3 Log Transformation of Clustering variables</a></li>
+  <li><a href="#k-means-clustering-interation-one-11-variables-4-clusters" id="toc-k-means-clustering-interation-one-11-variables-4-clusters" class="nav-link" data-scroll-target="#k-means-clustering-interation-one-11-variables-4-clusters">4.4 K-means clustering interation one (11 variables &amp; 4 clusters)</a></li>
+  <li><a href="#k-means-clustering-iteration-two-11-variables-6-clusters" id="toc-k-means-clustering-iteration-two-11-variables-6-clusters" class="nav-link" data-scroll-target="#k-means-clustering-iteration-two-11-variables-6-clusters">4.5 K-means clustering Iteration two (11 variables &amp; 6 clusters)</a></li>
+  <li><a href="#k-means-clustering-iteration-three-9-variables-5-clusters" id="toc-k-means-clustering-iteration-three-9-variables-5-clusters" class="nav-link" data-scroll-target="#k-means-clustering-iteration-three-9-variables-5-clusters">4.6 K-means clustering Iteration three (9 variables &amp; 5 clusters)</a></li>
+  </ul></li>
+  <li><a href="#interpretation-of-analyses" id="toc-interpretation-of-analyses" class="nav-link" data-scroll-target="#interpretation-of-analyses">5. Interpretation of Analyses</a></li>
+  <li><a href="#recommendations" id="toc-recommendations" class="nav-link" data-scroll-target="#recommendations">6. Recommendations</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a>
+  <ul class="collapse">
+  <li><a href="#data-preparation-change-log" id="toc-data-preparation-change-log" class="nav-link" data-scroll-target="#data-preparation-change-log">Data preparation Change log</a></li>
+  <li><a href="#cluster-profile-and-characteristics" id="toc-cluster-profile-and-characteristics" class="nav-link" data-scroll-target="#cluster-profile-and-characteristics">4-Cluster Profile and Characteristics</a></li>
+  <li><a href="#cluster-profile-and-characteristics-1" id="toc-cluster-profile-and-characteristics-1" class="nav-link" data-scroll-target="#cluster-profile-and-characteristics-1">6-cluster Profile and Characteristics</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Assignment 2 - Be Customer wise or otherwise</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Imran Ibrahim </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 11, 2024</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">August 11, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1">
+<h1>1. Introduction</h1>
+<p>In recent years, the prevalence of digital payments in the gambling industry has raised questions about how this technology may influence individuals’ gambling behaviours and its potential to contribute to harm. There is a research gap in terms of understanding how these digital payments might contribute to harm, and how they might provide opportunities for harm prevention.</p>
+</section>
+<section id="objectives" class="level1">
+<h1>2. Objectives</h1>
+<p>This analysis aims to explore whether subgroups of gamblers can be distinguished by analysing their payment activities in a gambling digital payments service provider. Specifically, it aims to discern whether cluster analysis of payments transaction data can reveal different types of gambling behaviours, profiles and highlight areas for harm prevention.<br>
+<br>
+This will be achieved by the following steps:</p>
+<ol type="1">
+<li><p>proposing new variables from transaction data for customer segmentation</p></li>
+<li><p>Applying clustering techniques to discover distinct customer profiles and behaviour</p></li>
+<li><p>Identifying potential markers of harm for further research exploration</p></li>
+</ol>
+</section>
+<section id="data-preparation" class="level1">
+<h1>3. Data Preparation</h1>
+<p>A single dataset is used for this analysis, ‘Online_sports_DIB.csv’, which consists of 447,853 transaction records from 1<sup>st</sup> March 2019 to 29<sup>th</sup> February 2020. To be included in the sample, customers had to have made at least one deposit to their wagering account during the 1-year period.</p>
+<p>An initial check of the dataset via SAS studio did not reveal any missing values.<br>
+<br>
+Steps: In SAS Studio, Task&gt; Prepare Data &gt; Examine Data &gt; Describe Missing Data</p>
+<p><img src="images/clipboard-122331340.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3895906548.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 1 : Missing Data report for Online_sports_DIB dataset</figcaption>
+</figure>
+</div>
+<p>From SAS Visual Analytics, we note that there are 5,685 distinct Account identifiers.</p>
+<p>Steps: In SAS Visual Analytics, Data&gt; Move cursor to ‘Account Identifier’.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1311647117.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 2: 5,685 distinct Account holders.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3907026920.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 3: Data dictionary of Online_sports_DIB</figcaption>
+</figure>
+</div>
+<p>From Fig 3, we note that there are 4 transaction types, namely, ‘LOYALTYCARDDEBIT’,’LOYALTYCARDCREDIT’, ’LOYALTYCARDCREDITCL’ and ‘LOYALTYCARDCREDITACH’. These are transactions in and out of a customer’s digital wallet and are further classified as ‘Approved’ or ‘Declined’.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2958271254.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 4: Explanation on the Transaction types</figcaption>
+</figure>
+</div>
+<p>The following sub-sections highlight the major data-related issues and the steps taken to address them. The data preparation change log is detailed in the Appendix.</p>
+<section id="removing-clients-with-no-deposits-made-to-their-wagering-accounts" class="level2">
+<h2 class="anchored" data-anchor-id="removing-clients-with-no-deposits-made-to-their-wagering-accounts">3.1 Removing clients with no deposits made to their wagering accounts</h2>
+<p>There are 77 accounts with no deposits made to their wagering accounts during the time period. These accounts will be removed. We use SQL code in SAS Studio to identify these accounts.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2131900706.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 5: Creating a table for account identifiers with no ‘LOYALTYCARDDEBIT’ transactions</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2254886967.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 6 : Generating a report to show the accounts with no deposits made</figcaption>
+</figure>
+</div>
+</section>
+<section id="converting-timestamp-to-datetime-and-creating-dates-and-time-columns" class="level2">
+<h2 class="anchored" data-anchor-id="converting-timestamp-to-datetime-and-creating-dates-and-time-columns">3.2 Converting timestamp to datetime and creating dates and time columns</h2>
+<p>The timestamp column in the transaction dataset was set with a varchar format.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2892560206.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 7: Data type of variables in Online_sports_DIB dataset</figcaption>
+</figure>
+</div>
+<p>We convert the timestamp variable to a datetime format and rename the column ‘Timestamp’.<br>
+<br>
+Steps:<br>
+In SAS Data Studio -Prepare Data &gt; Column Transforms &gt; Convert column &gt; Conversion<br>
+In SAS Data Studio -Prepare Data &gt; Column Tranforms &gt; Rename column &gt; Name of new column</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-4094932784.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 8: Converting to datetime format and renaming to ‘Timestamp’</figcaption>
+</figure>
+</div>
+<p>To further understand of the extent of transaction activities intraday, we decompose the timestamp to date and time.<br>
+</p>
+<p>Steps:<br>
+In SAS Data Studio -Prepare Data &gt; Column Transforms &gt; Convert column &gt; Conversion (select date &amp; time)</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3506358356.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 9: Deriving distinct dates and time from timestamp</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2030439007.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 10: New Time and Date columns are generated</figcaption>
+</figure>
+</div>
+</section>
+<section id="filtering-out-transactions-beyond-the-sample-cut-off-date" class="level2">
+<h2 class="anchored" data-anchor-id="filtering-out-transactions-beyond-the-sample-cut-off-date">3.3 Filtering out transactions beyond the sample cut-off date</h2>
+<p>There are 3,268 transactions which were recorded beyond the sample date cut off of 29/02/2020. These were filtered out in SAS data studio-Prepare Data.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1348479112.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 11: Dataset contains 3,268 transactions beyond the sample cut-off date of 29/02/2020</figcaption>
+</figure>
+</div>
+<p>Steps:<br>
+In SAS Data Studio -Prepare Data &gt; Row Transforms &gt; Filter &gt; column (TimeStamp), operator (less than), and value (1/3/2020)</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1294237504.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 12: Filtering out transactions beyond cut-off date of 29/02/2020</figcaption>
+</figure>
+</div>
+</section>
+<section id="filtering-out-transactions-with-na-status" class="level2">
+<h2 class="anchored" data-anchor-id="filtering-out-transactions-with-na-status">3.4 Filtering out transactions with N/A status</h2>
+<p>From SAS Visual Analytics, we noted that there are 6 transactions with ‘NA’ status. This will not bring any meaningful insight and will be filtered out.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-776588121.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 13: There are 6 transactions with ‘NA’ status</figcaption>
+</figure>
+</div>
+<p>Steps:<br>
+In SAS Data Studio -Prepare Data &gt; Row Transforms &gt; Filter &gt; column (Status), operator (Not Contains), and value (NA).</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1281311843.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 14: Filtering out transactions with ‘NA’ status</figcaption>
+</figure>
+</div>
+</section>
+<section id="removing-duplicates-in-data-set" class="level2">
+<h2 class="anchored" data-anchor-id="removing-duplicates-in-data-set">3.5 Removing Duplicates in data set</h2>
+<p>Using SQL code in SAS studio we noted that there are 4 duplicate entries in the dataset.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1696102728.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 15: SQL code to check for duplicates in dataset</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-4259429888.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 16: 4 Duplicates were found</figcaption>
+</figure>
+</div>
+<p>The duplicates were subsequently removed in SAS Data studio.<br>
+Steps: SAS Data Studio -Prepare Data &gt; Data Quality Transforms &gt; Remove Duplicates</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1265809901.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 17: Removing duplicates from the dataset</figcaption>
+</figure>
+</div>
+</section>
+<section id="renaming-transaction-types" class="level2">
+<h2 class="anchored" data-anchor-id="renaming-transaction-types">3.6 Renaming Transaction types</h2>
+<p>There are 4 transaction types, namely, ‘LOYALTYCARDDEBIT’,’LOYALTYCARDCREDIT’, ’LOYALTYCARDCREDITCL’ and ‘LOYALTYCARDCREDITACH’. We rename them to easily be able to infer the direction of funds. This is done through SQL code.<br>
+</p>
+<p>‘LOYALTYCARDDEBIT’ to ‘Deposit into Wager’<br>
+‘LOYALTYCARDCREDIT’ to ‘Withdrawal from Wager’<br>
+‘LOYALTYCARDCREDITCL’ to ‘Credit Line Deposit’<br>
+‘LOYALTYCARDCREDITACH’ to ‘Electronic Deposit’</p>
+<p><img src="images/clipboard-2728516349.png" class="img-fluid"></p>
+<p>Fig 18: Renaming Transaction types by SQL code</p>
+</section>
+<section id="creating-new-categorical-variables-for-date-and-time" class="level2">
+<h2 class="anchored" data-anchor-id="creating-new-categorical-variables-for-date-and-time">3.7 Creating new categorical variables for date and time</h2>
+<p>Since transactions are recorded on an intraday basis, we re-categorize it into day type (weekday or weekend) and segments of the day (day, evening, and dawn) to help us analyse transaction patterns. This is done through SQL code. &nbsp;</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2446058944.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 19: Categorizing transactions into day segments and days of the week</figcaption>
+</figure>
+</div>
+</section>
+<section id="creating-new-time-variables-for-betting-activity" class="level2">
+<h2 class="anchored" data-anchor-id="creating-new-time-variables-for-betting-activity">3.8 Creating new time variables for betting activity</h2>
+<p>To better understand when clients place their bets online, we create new variables using SQL code. From previously created categories of time, we sum the frequency counts of transactions. This is then grouped by bets placed during the day, night, dawn, weekday, and weekend. &nbsp;A new table ‘BetTimeCounts_Percentages’ will be created.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-946167040.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 20: SQL code to create new time variables</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3386701621.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 21: A new table ‘BetTimeCounts_Percentages’ is created</figcaption>
+</figure>
+</div>
+<p><u><strong>Assumption:</strong></u></p>
+<p>We assume that a successful deposit into the wagering account is a betting attempt i.e., an ‘Approved’ transaction type of ‘LOYALTYCARDDEBIT’.<br>
+</p>
+</section>
+<section id="creating-new-variables-to-analyse-the-winning-data-of-clients" class="level2">
+<h2 class="anchored" data-anchor-id="creating-new-variables-to-analyse-the-winning-data-of-clients">3.9 Creating new variables to analyse the ‘Winning’ data of clients</h2>
+<p>To analyse if clients are actually winning from their betting activities. A new table ‘WinMetrics’ will be created using SQL code. This will include the frequency count of withdrawals from wager account, total winnings, and net winnings.</p>
+<p><u><strong>Assumption:</strong></u></p>
+<p>We assume that a successful withdrawal from the wagering account is a win from betting.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-71551359.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 22: SQL code to create new variables that capture the ‘win’ information</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2665978111.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 23: A new table ‘WinMetrics’ is created to capture the ‘win’ data</figcaption>
+</figure>
+</div>
+</section>
+<section id="capturing-information-on-declined-transactions" class="level2">
+<h2 class="anchored" data-anchor-id="capturing-information-on-declined-transactions">3.10 Capturing information on Declined transactions</h2>
+<p>There were 10,876 declined transactions, mainly made up of declined deposits to the digital wallet and declined deposits to wager accounts. It would be worthwhile to analyse which types of customers are getting declined, as this could be an indication of financial stress or over-gambling. A new table ‘DeclineData’ is created to capture the frequency counts of declined transactions.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3472019499.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 24: Bar chart showing 4,627 declined deposits into wager accounts (SAS Visual Analytics)</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1292639955.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 25: SQL code to create new variables to capture declined transactions</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-990659008.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 26: A new table ‘Decline Data’ is created</figcaption>
+</figure>
+</div>
+</section>
+<section id="creating-new-recency-frequency-and-monetary-variables-and-merging-tables" class="level2">
+<h2 class="anchored" data-anchor-id="creating-new-recency-frequency-and-monetary-variables-and-merging-tables">3.11 Creating new Recency, Frequency and Monetary variables and Merging tables</h2>
+<p>New recency, frequency, and monetary (RFM) variables (Fig 27) are created, using SQL code.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1680389093.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 27: New ‘RFM’ Variables to measure Betting Activity</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1309517620.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 28: SQL code to create new RFM variables</figcaption>
+</figure>
+</div>
+<p>Lastly, we use the Join method in SQL code to merge all our tables to a combined dataset. This will be used for our subsequent clustering analysis. Our final dataset has 5575 distinct Account holders.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-4056468584.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 29: SQL code to join all our created tables to a merged dataset</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3707710942.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 30: The consolidated dataset to analyse gambling behaviour and patterns</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="cluster-analysis" class="level1">
+<h1>4. Cluster Analysis</h1>
+<p>In this section, we deep dive into the K-means clustering method. First, we perform univariate and bivariate analysis to examine the distribution and correlation of our variables.</p>
+<section id="univariate-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="univariate-analysis">4.1 Univariate Analysis</h2>
+<p>In SAS Visual Analytics, we populate the histograms of our variables. The following were observed:</p>
+<ol type="1">
+<li><p>Most variables are heavily skewed , meaning that transformation (e.g., log transform) would be required.</p></li>
+<li><p>Some variables have some ‘0’ values because of the way they are calculated.<br>
+These values will be applied with a constant when doing log transformation as log of zero is undefined in real numbers.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1152857831.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 31: Examining the distribution of our variables from the merged dataset</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-748153558.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 32: 4 Variables had more than 90% zero values</figcaption>
+</figure>
+</div>
+<p>4 Variables, ‘DeclinedAmt’, Withdrawal_Count’, ‘DeclinedCount’ and ‘ROI’&nbsp; will be dropped due to a high proportion of ‘0’ values</p>
+</section>
+<section id="bivariate-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="bivariate-analysis">4.2 Bivariate Analysis</h2>
+<p>Next, we analyse the correlations between the remaining variables to check for variable pairs with strong correlation &gt; 0.8.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2363863720.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 33: Correlation matrix of our variables from the merged dataset</figcaption>
+</figure>
+</div>
+<p>From the correlation matrix, the following 9 pairs of variables were observed to have a high correlation &gt; 0.8 (Fig 34).<br>
+</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-513636308.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 34: Variables pairs with high correlation &gt; 0.8</figcaption>
+</figure>
+</div>
+<p>7 variables: ‘Average_deposit’, ‘Deposit_Count’, ‘BetWeekdaypercentage’, ‘Max_Wager’, ‘Net_Cash_Flow’ , ‘Total_Deposit_Amount’ and ‘BetActiveDays’ were dropped.</p>
+<p>The remaining 12 variables were retained for our clustering analysis.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-904135582.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 35: Scatter plot of the remaining variables</figcaption>
+</figure>
+</div>
+<p>Fig 36 describes our 12 clustering variables.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-678213285.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 36: Finalized clustering variables and their description</figcaption>
+</figure>
+</div>
+</section>
+<section id="log-transformation-of-clustering-variables" class="level2">
+<h2 class="anchored" data-anchor-id="log-transformation-of-clustering-variables">4.3 Log Transformation of Clustering variables</h2>
+<p>Most of our clustering variables are heavily skewed. We will do a log transformation to reduce the skewness. This is because K-means is highly sensitive to highly skewed data.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-4210099079.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 37: Distribution of the 12 clustering variables.</figcaption>
+</figure>
+</div>
+<p>Next, we apply log transformation to transform highly skewed variables. As some variables have some ‘0’ values, we will need to apply a constant before doing a log transform.</p>
+<p>Steps:<br>
+SAS Visual Analytics &gt; Data &gt; New Data Item&gt; Calculated item &gt; select variable &gt; Operators &gt; Numeric (simple)&gt; x+y &gt; Numeric (advanced) &gt; Log &gt; insert constant and log</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-948296612.png" class="img-fluid figure-img"></p>
+<figcaption>Steps for log transformation</figcaption>
+</figure>
+</div>
+<p>The results of our log transformation can be seen in Fig 38.<br>
+<br>
+We conduct another correlation analysis to check if any of our correlations have changed. (Fig 39)</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3480938576.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 38: Visual analysis of our distributions after log transformation.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2670888954.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 39: Correlation matrix of variables after log transform.</figcaption>
+</figure>
+</div>
+<p>Upon checking, variable pair ‘Log 10 withdrawal’ &amp; ‘Log 10 average withdrawal’ were found to have a high correlation of &gt; 0.8. ‘Log 10 withdrawal’ was subsequently removed.</p>
+<p>We retain the remaining 11 variables and proceed with our K-means clustering.</p>
+</section>
+<section id="k-means-clustering-interation-one-11-variables-4-clusters" class="level2">
+<h2 class="anchored" data-anchor-id="k-means-clustering-interation-one-11-variables-4-clusters">4.4 K-means clustering interation one (11 variables &amp; 4 clusters)</h2>
+<p>Our first K-means iteration uses our finalized 11 clustering variables and 4 clusters.</p>
+<p>Steps: SAS Visual Analytics &gt; Objects &gt; Statistics &gt; Cluster</p>
+<p><img src="images/clipboard-137604936.png" class="img-fluid"></p>
+<p>Steps: Options &gt; Add clustering variables</p>
+<p><img src="images/clipboard-1064581228.png" class="img-fluid"></p>
+<p>The number of clusters is automatically assigned by selecting the Automatic Aligned Box Criterion (ABC) function. We specify a range of 2 and 8 as the min and max number of clusters. Seed number is inputted as 1234 for reproducibility.</p>
+<p>As we have log transformed variables, we apply ’None” under standardization.</p>
+<p>Steps: SAS Visual Analytics &gt; Options &gt; Cluster</p>
+<p><img src="images/clipboard-2563282093.png" class="img-fluid"></p>
+<p>We also enable ‘ABC Statistics’ to evaluate the automatic assignment of cluster number.</p>
+<p>Steps: SAS Visual Analytics, Options&gt; Model Display &gt; General &gt;Select ABC Statistics</p>
+<p><img src="images/clipboard-4168806009.png" class="img-fluid"></p>
+<p>From the ABC Statistics graph(Fig 40), we analyse the Gap statistics further. We observe that the Gap statistic for 4 clusters (0.1003) is higher than that for 5 clusters (-0.0250) i.e., after 4 clusters, the Gap statistic starts to decrease, indicating diminishing returns in cluster quality or compactness.</p>
+<p>This can typically be interpreted as the optimal number of clusters for the dataset.<br>
+<br>
+As K-means is an unsupervised learning method, we will just use this auto-assignment as a start for our first clustering analysis. Subsequently, we will change the number of clusters to observe the difference in the quality of the clustering operation.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-4067688190.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 40: Recommended number of clusters based on Automatic (Aligned box criterion)</figcaption>
+</figure>
+</div>
+<p><u><strong>Cluster visualization</strong></u><br>
+As can be seen from Fig 41, there is some overlapping among some clusters, which suggest that some data points might have similar attributes across clusters. Some clusters are larger in terms of their spread (width and height of the ellipses), indicating a higher variance within those clusters.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-725008638.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 41: Cluster Diagram using 11 variables and 4 clusters</figcaption>
+</figure>
+</div>
+<p><u>Cluster Summary Statistics<br>
+</u>From the cluster summary (Fig 42) we observe the following:-</p>
+<ol type="1">
+<li><p>Cluster 3 has the majority of data points (2833) and has overlaps with all the other 3 clusters.</p></li>
+<li><p>Cluster 2 is the most compact with the lowest RMS of STD.</p></li>
+<li><p>Cluster 4, while having the fewest observations, is the most spread-out. As can be seen from its high RMS of STD.</p></li>
+<li><p>Cluster 1 shows a moderate spread compared to other clusters<br>
+</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-4037373578.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 42: Cluster summary for 4 clusters</figcaption>
+</figure>
+</div>
+<p>The parallel coordinate graphs (Fig 43 &amp; 44) provide a way to visually inspect how each cluster differs across the different variables. Visually it is evident that the clusters differ across some variables but converge on others i.e., the similarities and dissimilarities between each cluster is quite even in proportion.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-136252027.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 43: Parallel plot of 4 clusters with 11 variables</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1287141396.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 44: By selecting individual clusters, we can dim other clusters to visually see the influence of each cluster for each variable</figcaption>
+</figure>
+</div>
+<p>Next, we use the ‘derive cluster ID’ function in Visual Analytics to create a new categorical data role. This will enable us to analyse each cluster on an individual variable basis using bar charts on a separate page.</p>
+<p>Steps: Cluster graph Options &gt; Derive cluster ID items &gt; define cluster id name</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-555714838.png" class="img-fluid figure-img"></p>
+<figcaption><img src="images/clipboard-1945275992.png" class="img-fluid figure-img"></figcaption>
+</figure>
+</div>
+<p>Fig 45: using the ‘Derive Cluster ID items’ function to create a new categorical data role</p>
+<p>This new cluster ID will populate in Data roles. We can select this role to populate individual bar charts for each clustering variable (Fig 46).</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1107672158.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 46: Bar charts of the clustering variables by Cluster ID</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-811780315.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 47: Cluster mean for 4 clusters</figcaption>
+</figure>
+</div>
+<p>Using the parallel plots of the 4 clusters (Fig 44), and bar charts of the clustering variables (fig 46), we summarize the ‘ranking’ of the 4 clusters in the table below(Fig 48).</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-4009273538.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 48: Ranking table of the 4 cluster operation</figcaption>
+</figure>
+</div>
+<p>Ranking for 1<sup>st</sup> to 4<sup>th</sup> is by order of magnitude. For wager recency, a ranking of 1<sup>st</sup> is equivalent to the most recent betting activity.<br>
+<br>
+An explanation of the 4-cluster profiles and characteristics can be found in Appendix B.</p>
+</section>
+<section id="k-means-clustering-iteration-two-11-variables-6-clusters" class="level2">
+<h2 class="anchored" data-anchor-id="k-means-clustering-iteration-two-11-variables-6-clusters">4.5 K-means clustering Iteration two (11 variables &amp; 6 clusters)</h2>
+<p>Next, we change the number of clusters to 6, to see if there is any difference in the quality of the clustering operation.</p>
+<p>Steps: Options &gt; General &gt; Number of Clusters (input 6)</p>
+<p><img src="images/clipboard-3860910632.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2046300730.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 49: Cluster diagram using 6 clusters</figcaption>
+</figure>
+</div>
+<p><u>Cluster visualization</u><br>
+As can be seen from Fig 49, with the addition of 2 more clusters, there is more overlapping among the clusters, which suggest that adding more clusters may not have improved the distinctiveness between clusters.<br>
+However, this can only be confirmed after examining the characteristics of the clusters on an individual variable basis.</p>
+<p><u>Cluster Summary Statistics<br>
+</u>From the cluster summary (Fig 50) we observe the following:-</p>
+<ol type="1">
+<li><p>Cluster 1: Balanced size with 1,154 observations; nearest to Cluster 4.</p></li>
+<li><p>Cluster 2: Smallest cluster at 263 observations; closest relationship with Cluster 3.</p></li>
+<li><p>Cluster 3: Mid-sized (485 observations) with a moderate spread; leans towards Cluster 4.</p></li>
+<li><p>Cluster 4: Largest cluster (2,716 observations) and most compact; central reference for Clusters 1 and 3.</p></li>
+<li><p>Cluster 5: Most diverse with highest RMS STD (44.69); closest to Cluster 1.</p></li>
+<li><p>Cluster 6: Mid-size with 440 observations; also has a tendency towards Cluster 1.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3844787688.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 50: Cluster summary of the 6 clusters</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-844537266.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 51: Parallel plot graph of the 6 clusters</figcaption>
+</figure>
+</div>
+<p>Similarly, we use the ‘derive cluster ID’ function to create a new categorical data role. This will enable us to analyse the characteristics of each cluster on an individual variable basis using bar charts on a separate page (Fig 52).</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-768632532.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 52: Bar charts of the clustering variables grouped by Cluster ID</figcaption>
+</figure>
+</div>
+<p>Using the parallel plots (Fig 51) and the bar charts (Fig 52), we summarize the ‘ranking’ of the 6 clusters in the table below (Fig 53).</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-4070885958.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 53: Ranking table of 6 Cluster operation</figcaption>
+</figure>
+</div>
+<p>Ranking for 1<sup>st</sup> to 6<sup>th</sup> is by order of magnitude. For wager recency, a ranking of 1<sup>st</sup> is equivalent to the most recent betting activity.</p>
+<p>An explanation of the 6-cluster profiles and characteristics can be found in Appendix C.</p>
+</section>
+<section id="k-means-clustering-iteration-three-9-variables-5-clusters" class="level2">
+<h2 class="anchored" data-anchor-id="k-means-clustering-iteration-three-9-variables-5-clusters">4.6 K-means clustering Iteration three (9 variables &amp; 5 clusters)</h2>
+<p>In the previous 2 iterations, we had used 11 clustering variables. From the previous collinearity matrix, there were 2 variable pairs of correlation close to 0.8 which were retained. Specifically, ‘BetDayPercentage’ &amp; ‘BetDawnPercentage’, and ‘Log 10 Wager Frequency’ &amp; ‘Log 10 Total Wager had correlations of above 0.75’. &nbsp;</p>
+<p>In iteration 3, we drop 2 variables i.e., ‘BetDayPercentage’ and ‘Log 10 Total Wager’ to see if this improves our clustering operation. Similarly, the number of clusters (5) is derived from the Automatic Aligned Box Criterion (ABC) function in SAS visual Analytics (Fig 55).<br>
+<br>
+<img src="images/clipboard-1337112008.png" class="img-fluid"></p>
+<p>Fig 54: The remaining 9 variables do not exceed 0.7 in terms of correlation</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3295949672.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 55: We enable the automatic ABC criteria to derive 5 clusters</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1258195091.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 56: Cluster diagram of 9 variables and 5 clusters</figcaption>
+</figure>
+</div>
+<p><u>Cluster visualization</u><br>
+As can be seen from Fig 56, with the removal of 2 variables, there is more overlapping among the clusters compared to the previous 2 iterations. This suggest that this had reduced the distinctiveness between clusters. Cluster 3 is the ‘central’ cluster which captures most of the characteristics of other clusters.</p>
+<p>Cluster 3 dominates with more than 50% of the observations and is the common cluster linking other clusters.</p>
+<p><img src="images/clipboard-2606042535.png" class="img-fluid"></p>
+<p>Fig 57: Cluster summary of the 5 clusters</p>
+<p>The dominance of cluster 3 becomes more apparent as we examine the Parallel coordinates graph of the clusters (Fig 58). By selecting cluster 3 and dimming the others, we observe that cluster 3 occupies a large range of the percentile segments for each variable.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3727251732.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 58: Parallel coordinates graph of the 5 clusters, and Cluster 3’s influence on variables</figcaption>
+</figure>
+</div>
+<p>As a result, we will proceed to delve further into Iterations 1 &amp; 2 instead for our next section.</p>
+</section>
+</section>
+<section id="interpretation-of-analyses" class="level1">
+<h1>5. Interpretation of Analyses</h1>
+<p><u><strong>11 variable, 4-Cluster Model:</strong></u></p>
+<p>With only four clusters, each cluster captures a broader range of behaviours. For example, the “Dawn Predominant” group (Appendix B) captures those who bet primarily during the early hours. However, it doesn’t differentiate between those who also bet during the weekends versus those who don’t.</p>
+<p>The markers of harm identified are relatively general, like disrupted sleep patterns for dawn bettors or habitual gambling for consistent high rollers. These can apply to a wider range of individuals within each cluster.</p>
+<p><u><strong>11 variable, 6-Cluster Model:</strong></u></p>
+<p>The 6 clusters allow for a more granular segmentation. We’ve separated those who bet during dawn from those who primarily bet over the weekends (Cluster 2 - “Dawn &amp; Weekend Enthusiasts”) (Appendix C). This provides a more detailed view of the betting patterns.</p>
+<p>With the increased granularity, the markers of harm can also be more tailored to the specific behaviours of each group. For instance, the “Night Owls” cluster in the 6-cluster model specifically highlights potential insomnia issues, something not explicitly mentioned in the 4-cluster model.</p>
+<p>Discovery of New Behaviours: With the 6 clusters, the “Daytime Weekenders” cluster shows a group that prioritizes gambling during work breaks and weekends.</p>
+<p><u><strong>Conclusion:</strong></u></p>
+<p>The 6-cluster model seems to provide more granularity on distinct gambling behaviours in our dataset. It potentially offers a better chance of identifying nuanced patterns. If the aim is to have a more detailed and actionable segmentation, then the 6-cluster model appears more beneficial.<br>
+<br>
+However, it’s also essential to ensure that the data supports these granular segments and that there’s enough differentiation between the clusters to justify the increased complexity. This will be explained in the next section.</p>
+</section>
+<section id="recommendations" class="level1">
+<h1>6. Recommendations</h1>
+<p>During the process of data preparation, we encountered some ambiguity that could benefit from clarification or additional data.</p>
+<p>a) Missing data for L1W, i.e.&nbsp;&nbsp;withdrawals from the digital wallet back to customer funding or credit line accounts (Fig 59).</p>
+<p>It is not clear whether the digital wallet can be used as a payments tool for other transactions beyond betting. However, it is rational to think that winnings gained would usually be transferred back to funding and credit line accounts at some point.<br>
+<br>
+Having this data would enable us to separate rational gamblers (win and take profits) and addicted gamblers(win but continue to bet more) more clearly.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2958271254.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 59: Type of transaction flows</figcaption>
+</figure>
+</div>
+<p>b) Reason for ‘Declined’ transaction status</p>
+<p>It is not clear whether transactions were declined due to system issues, lack of funds, lack of credit limit, or limits on betting volume.<br>
+<br>
+Understanding the reason for declined transactions could further help identify clients undergoing financial stress or exhibiting excessive gambling exuberance.</p>
+<p>c) Types and nature of Betting games</p>
+<p>There is a clear distinction between very regular bettors and semi-frequent bettors. Besides attributing this to conservative gambling habits, the difference could also be explained by the type and nature of games played.</p>
+<p>For example, regular bettors could be betting on frequently scheduled football matches, while non regular bettors could be betting on less frequently schedule boxing matches. Understanding the type and nature of the games played could help prevent misclassification of gambling profiles caused by the assumption that they are all playing the same game.</p>
+<p>d) Demographics of clients</p>
+<p>There is a clear distinction of gamblers (late night/dawn and daytime bettors). Besides attributing this to obsessive gambling habits, the difference could also be explained by the jobs held by these clients. For example, some clients could have different working hours (e.g., night shifts).<br>
+<br>
+Understanding the age profiles of client could also benefit the analysis and help identify points of concern. For example, if there are many economically active young persons, it would be concerning that they are spending most of their leisure hours gambling.</p>
+</section>
+<section id="appendix" class="level1">
+<h1>Appendix</h1>
+<section id="data-preparation-change-log" class="level2">
+<h2 class="anchored" data-anchor-id="data-preparation-change-log">Data preparation Change log</h2>
+<p><img src="images/clipboard-1376609350.png" class="img-fluid"></p>
+</section>
+<section id="cluster-profile-and-characteristics" class="level2">
+<h2 class="anchored" data-anchor-id="cluster-profile-and-characteristics">4-Cluster Profile and Characteristics</h2>
+<p><img src="images/clipboard-4009273538.png" class="img-fluid"></p>
+<ol type="1">
+<li>Cluster 1 (Dawn Predominant)</li>
+</ol>
+<p>Profile:</p>
+<ul>
+<li><p>High activity during dawn, with average wagering amounts and frequency.</p></li>
+<li><p>Moderate wager recency indicates they bet not too distantly in the past.</p></li>
+<li><p>Have the lowest minimum wager amount, suggesting some caution.</p></li>
+</ul>
+<p>Possible Markers of Harm:</p>
+<ul>
+<li>The propensity to bet during dawn might indicate disrupted sleep patterns or prioritizing gambling over other morning activities.</li>
+</ul>
+<ol start="2" type="1">
+<li>Cluster 2 (Consistent High Rollers)</li>
+</ol>
+<p>Profile:</p>
+<ul>
+<li><p>Highest average wager amounts and highest total wagered in the period.</p></li>
+<li><p>Moderately recent betting activity and consistent frequency.</p></li>
+<li><p>Bets are spread fairly evenly across the day, night, and weekends.</p></li>
+</ul>
+<p>Possible Markers of Harm:</p>
+<ul>
+<li><p>The consistently high amounts wagered could be indicative of potential gambling problems.</p></li>
+<li><p>Regularity across different times might indicate dependency or habitual gambling.</p>
+<ol start="3" type="1">
+<li>Cluster 3 (Frequent Bettors)</li>
+</ol></li>
+</ul>
+<p>Profile:</p>
+<ul>
+<li><p>Largest cluster indicating a significant segment of the gambler population.</p></li>
+<li><p>High withdrawal amounts, most recent betting activity, and most frequent wagers.</p></li>
+<li><p>Moderate betting amounts but leaning towards higher total wagers due to the frequency.</p></li>
+</ul>
+<p>Possible Markers of Harm:</p>
+<ul>
+<li><p>Frequent betting might indicate compulsive gambling behaviours.</p></li>
+<li><p>The high withdrawal amount may signify dependency on winnings for daily expenses or immediate rewards.</p></li>
+</ul>
+<ol start="4" type="1">
+<li>Cluster 4 (Night Enthusiasts)</li>
+</ol>
+<p>Profile:</p>
+<ul>
+<li><p>Smallest cluster in terms of population.</p></li>
+<li><p>Predominantly active during nighttime with moderate average wagers.</p></li>
+<li><p>Less recent betting activity, suggesting they don’t bet as frequently as others.</p></li>
+</ul>
+<p>Possible Markers of Harm:</p>
+<ul>
+<li>Predominant night-time activity could suggest using gambling as an escape from daily stresses or other issues. A less frequent betting pattern might indicate periodic but intense gambling sessions.</li>
+</ul>
+</section>
+<section id="cluster-profile-and-characteristics-1" class="level2">
+<h2 class="anchored" data-anchor-id="cluster-profile-and-characteristics-1">6-cluster Profile and Characteristics</h2>
+<p><img src="images/clipboard-4070885958.png" class="img-fluid"></p>
+<ol type="1">
+<li>Cluster 1 (High Rollers)</li>
+</ol>
+<p>Profile:</p>
+<ul>
+<li><p>These customers have the highest average wagers and also have high withdrawal amounts.</p></li>
+<li><p>Their betting is consistent across different times of the day.</p></li>
+</ul>
+<p>Possible Markers of Harm:</p>
+<ul>
+<li><p>The consistently high amounts wagered might indicate potential gambling problems or financial distress.</p></li>
+<li><p>Their constant betting behaviour, irrespective of the time, may indicate a lack of self-control or compulsive gambling tendencies.</p></li>
+</ul>
+<ol start="2" type="1">
+<li>Cluster 2 (Dawn &amp; Weekend Enthusiasts)</li>
+</ol>
+<p>Profile:</p>
+<ul>
+<li>Predominantly active during early mornings and weekends with smaller wager amounts.</li>
+</ul>
+<p>Possible Markers of Harm:</p>
+<ul>
+<li>Betting during unusual hours (early morning) may signify disrupted sleep patterns or prioritizing gambling over other essential activities.</li>
+</ul>
+<ol start="3" type="1">
+<li>Cluster 3 (Steady Gamblers)</li>
+</ol>
+<p>Profile:</p>
+<ul>
+<li><p>A balanced approach to betting, with high average wagers and withdrawals.</p></li>
+<li><p>Active both during the day and at night.</p></li>
+</ul>
+<p>Possible Markers of Harm:</p>
+<ul>
+<li><p>High withdrawal amounts might indicate dependency on winnings for daily expenses.</p></li>
+<li><p>Constant activity during both day and night may indicate extended gambling sessions, leading to potential burnout or overspending.</p></li>
+</ul>
+<ol start="4" type="1">
+<li>Cluster 4 (Frequent Bettors)</li>
+</ol>
+<p>Profile:</p>
+<ul>
+<li><p>Regular bettors with the highest number of wagers.</p></li>
+<li><p>Their activity is prominent during the day.</p></li>
+</ul>
+<p>Possible Markers of Harm:</p>
+<ul>
+<li><p>The frequency of their bets might indicate compulsive betting behaviour.</p></li>
+<li><p>Reliance on consistent withdrawals may point to financial dependency on gambling.</p></li>
+</ul>
+<ol start="5" type="1">
+<li>Cluster 5 (Night Owls)</li>
+</ol>
+<p>Profile:</p>
+<ul>
+<li>Predominantly active during nighttime with moderate wager amounts.</li>
+</ul>
+<p>Possible Markers of Harm:</p>
+<ul>
+<li>Betting predominantly at night may point towards using gambling as an escape mechanism from daily stresses or potential insomnia issues.</li>
+</ul>
+<ol start="6" type="1">
+<li>Cluster 6 (Daytime Weekenders)</li>
+</ol>
+<p>Profile:</p>
+<ul>
+<li>Active during the day and weekends with good average wager and withdrawal amounts.</li>
+</ul>
+<p>Possible Markers of Harm:</p>
+<ul>
+<li><p>Regular betting during work breaks might indicate prioritizing gambling over work or other commitments.</p></li>
+<li><p>Consistent weekend activity may show a lack of balance between leisure and betting.</p></li>
+</ul>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
