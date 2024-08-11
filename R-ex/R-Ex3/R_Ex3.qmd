@@ -1,5 +1,5 @@
 ---
-title: "Take-Home Exercise 1c : DataVis Makeover of another student's work"
+title: "DataVis Makeover of another student's work"
 author: "Imran Ibrahim"
 date: August 4, 2024
 date-modified: "last-modified"

@@ -1,5 +1,5 @@
 ---
-title: "Take-Home Exercise 2 - Be Weatherwise or Otherwise"
+title: "Be Weatherwise or Otherwise"
 author: "Imran Ibrahim"
 date: August 4, 2024
 date-modified: "last-modified"

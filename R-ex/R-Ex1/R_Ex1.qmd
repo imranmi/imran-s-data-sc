@@ -1,5 +1,5 @@
 ---
-title: "Take Home Exercise 1 - Pisa's global education survey data"
+title: "Analysing Pisa's global education survey data"
 author: "Imran Ibrahim"
 date: August 4, 2024
 date-modified: "last-modified"
