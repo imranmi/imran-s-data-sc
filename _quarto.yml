@@ -44,11 +44,11 @@ website:
             href: Python-ex/Python-Ex1/Python_Ex1.html
           - text: Python Exercise 3 
             href: Python-ex/Python-Ex1/Python_Ex1.html
-      - text: Write-ups
+      - text: SAS Viya Exercises
         menu: 
-          - text: Write-up 1 
+          - text: Assignment 1 - Show me the numbers 
             href: Write-ex/Write-Ex1/Write_Ex1.html
-          - text: Write-up 2 
+          - text: Assignment 2 - Be Customer wise or otherwise 
             href: Write-ex/Write-Ex2/Write_Ex2.html
           - text: Write-up 3 
             href: Write-ex/Write-Ex3/Write_Ex3.html     

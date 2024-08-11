@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Imran Ibrahim">
+<meta name="dcterms.date" content="2024-08-11">
+
+<title>Imran’s Data Science website - Assignment 1 - Show me the numbers</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Imran’s Data Science website</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-exercises-in-r" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Exercises in R</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises-in-r">    
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex1/R_Ex1.html">
+ <span class="dropdown-text">R Exercise 1 - Analysing PISA’s education survey data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex2/R_Ex2.html">
+ <span class="dropdown-text">R Exercise 2 - 5 Exploratory Data Analyses on Pisa Data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex3/R_Ex3.html">
+ <span class="dropdown-text">R Exercise 3 - DataVis Makeover of another student’s work</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex4/R_Ex4.html">
+ <span class="dropdown-text">R Exercise 4 - Be Weatherwise or Otherwise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex5/R_Ex5.html">
+ <span class="dropdown-text">R Exercise 5 - Visual Analytics exercise on Armed conflicts - Initial Draft</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex6/R_Ex6.html">
+ <span class="dropdown-text">R Exercise 6 - Geospatial Analysis1 - Local Measures of Spatial Autocorrelation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex7/R_Ex7.html">
+ <span class="dropdown-text">R Exercise 7 - Geospatial Analysis2 - Emerging Hot Spot Analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex8/R_Ex8.html">
+ <span class="dropdown-text">R Exercise 8 - Geospatial Analysis3 - Spatially Constrained Clustering-ClustGeo method</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-exercises-in-python" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Exercises in Python</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises-in-python">    
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex1/Python_Ex1.html">
+ <span class="dropdown-text">Python Exercise 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex1/Python_Ex1.html">
+ <span class="dropdown-text">Python Exercise 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex1/Python_Ex1.html">
+ <span class="dropdown-text">Python Exercise 3</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-sas-viya-exercises" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">SAS Viya Exercises</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-sas-viya-exercises">    
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex1/Write_Ex1.html">
+ <span class="dropdown-text">Assignment 1 - Show me the numbers</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex2/Write_Ex2.html">
+ <span class="dropdown-text">Assignment 2 - Be Customer wise or otherwise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex3/Write_Ex3.html">
+ <span class="dropdown-text">Write-up 3</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools tools-wide">
+    <a href="../../about.html" title="About Imran" class="quarto-navigation-tool px-1" aria-label="About Imran"><i class="bi bi-house-heart"></i></a>
+    <a href="https://github.com/imranmi/imran-s-data-sc" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/imran-ibrahim-116a236b" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">2. Objectives</a></li>
+  <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link" data-scroll-target="#data-preparation">3. Data Preparation</a>
+  <ul class="collapse">
+  <li><a href="#converting-timestamp-to-datetime" id="toc-converting-timestamp-to-datetime" class="nav-link" data-scroll-target="#converting-timestamp-to-datetime">3.1 Converting timestamp to datetime</a></li>
+  <li><a href="#converting-categorical-variables-to-correct-data-type" id="toc-converting-categorical-variables-to-correct-data-type" class="nav-link" data-scroll-target="#converting-categorical-variables-to-correct-data-type">3.2 Converting categorical variables to correct data type</a></li>
+  <li><a href="#remove-duplicates-from-the-financial-journal-dataset" id="toc-remove-duplicates-from-the-financial-journal-dataset" class="nav-link" data-scroll-target="#remove-duplicates-from-the-financial-journal-dataset">3.3 Remove Duplicates from the Financial Journal dataset</a></li>
+  <li><a href="#data-quality-issue-standardising-and-consolidating-financial-journal-entries" id="toc-data-quality-issue-standardising-and-consolidating-financial-journal-entries" class="nav-link" data-scroll-target="#data-quality-issue-standardising-and-consolidating-financial-journal-entries">3.4 Data quality issue: Standardising and consolidating financial journal entries</a></li>
+  <li><a href="#grouping-participants-by-age-groups-binning" id="toc-grouping-participants-by-age-groups-binning" class="nav-link" data-scroll-target="#grouping-participants-by-age-groups-binning">3.5 Grouping Participants by Age Groups (Binning)</a></li>
+  <li><a href="#integrating-data-by-merging-participants-and-financial-journal-data-sets" id="toc-integrating-data-by-merging-participants-and-financial-journal-data-sets" class="nav-link" data-scroll-target="#integrating-data-by-merging-participants-and-financial-journal-data-sets">3.6 Integrating data by merging Participants and Financial Journal data sets</a></li>
+  </ul></li>
+  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis">4. Data Analysis</a>
+  <ul class="collapse">
+  <li><a href="#observation-1-the-distribution-for-joviality-and-age-amongst-participants-is-not-normal" id="toc-observation-1-the-distribution-for-joviality-and-age-amongst-participants-is-not-normal" class="nav-link" data-scroll-target="#observation-1-the-distribution-for-joviality-and-age-amongst-participants-is-not-normal">4.1 Observation 1 – The distribution for Joviality and Age amongst participants is not normal</a></li>
+  <li><a href="#observation-2-the-joviality-for-participants-with-children-is-the-same-as-participants-without." id="toc-observation-2-the-joviality-for-participants-with-children-is-the-same-as-participants-without." class="nav-link" data-scroll-target="#observation-2-the-joviality-for-participants-with-children-is-the-same-as-participants-without.">4.2 Observation 2 – The Joviality for participants with children is the same as participants without.</a></li>
+  <li><a href="#observation-3-there-is-a-relationship-between-education-level-and-having-children" id="toc-observation-3-there-is-a-relationship-between-education-level-and-having-children" class="nav-link" data-scroll-target="#observation-3-there-is-a-relationship-between-education-level-and-having-children">4.3 Observation 3 – There is a relationship between education level and having children</a></li>
+  <li><a href="#observation-4-the-mean-joviality-for-participants-is-the-same-across-all-education-levels" id="toc-observation-4-the-mean-joviality-for-participants-is-the-same-across-all-education-levels" class="nav-link" data-scroll-target="#observation-4-the-mean-joviality-for-participants-is-the-same-across-all-education-levels">4.4 Observation 4 – The mean Joviality for participants is the same across all education levels</a></li>
+  <li><a href="#observation-5-there-is-a-relationship-between-education-level-and-mean-wages" id="toc-observation-5-there-is-a-relationship-between-education-level-and-mean-wages" class="nav-link" data-scroll-target="#observation-5-there-is-a-relationship-between-education-level-and-mean-wages">4.5 Observation 5 – There is a relationship between Education Level and Mean Wages</a></li>
+  <li><a href="#observation-6---joviality-is-moderately-correlated-with-wages-and-recreation-spend." id="toc-observation-6---joviality-is-moderately-correlated-with-wages-and-recreation-spend." class="nav-link" data-scroll-target="#observation-6---joviality-is-moderately-correlated-with-wages-and-recreation-spend.">4.6 Observation 6 - Joviality is moderately correlated with Wages and Recreation spend.</a></li>
+  <li><a href="#observation-7-there-is-no-difference-in-joviality-for-participants-in-different-age-groups" id="toc-observation-7-there-is-no-difference-in-joviality-for-participants-in-different-age-groups" class="nav-link" data-scroll-target="#observation-7-there-is-no-difference-in-joviality-for-participants-in-different-age-groups">4.7 Observation 7 – There is no difference in Joviality for participants in different Age groups</a></li>
+  <li><a href="#observation-8-there-is-no-difference-in-joviality-for-different-household-sizes." id="toc-observation-8-there-is-no-difference-in-joviality-for-different-household-sizes." class="nav-link" data-scroll-target="#observation-8-there-is-no-difference-in-joviality-for-different-household-sizes.">4.8 Observation 8 – There is no difference in Joviality for different household sizes.</a></li>
+  <li><a href="#observation-9-participants-financial-health-does-not-improve-over-time" id="toc-observation-9-participants-financial-health-does-not-improve-over-time" class="nav-link" data-scroll-target="#observation-9-participants-financial-health-does-not-improve-over-time">4.9 Observation 9 – Participants financial health does not improve over time</a></li>
+  <li><a href="#observation-10---wages-is-moderately-correlated-with-food-and-shelter-spend." id="toc-observation-10---wages-is-moderately-correlated-with-food-and-shelter-spend." class="nav-link" data-scroll-target="#observation-10---wages-is-moderately-correlated-with-food-and-shelter-spend.">4.10 Observation 10 - Wages is moderately correlated with Food and Shelter spend.</a></li>
+  </ul></li>
+  <li><a href="#interpretation-of-analyses" id="toc-interpretation-of-analyses" class="nav-link" data-scroll-target="#interpretation-of-analyses">5. Interpretation of Analyses</a></li>
+  <li><a href="#recommendations" id="toc-recommendations" class="nav-link" data-scroll-target="#recommendations">6. Recommendations</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">7. Appendix</a></li>
+  <li><a href="#data-limitations" id="toc-data-limitations" class="nav-link" data-scroll-target="#data-limitations">8. Data Limitations</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Assignment 1 - Show me the numbers</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Imran Ibrahim </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 11, 2024</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">August 11, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1">
+<h1>1. Introduction</h1>
+<p>City of Engagement is a small city located at Country of Nowhere. The local council of the city is in the process of preparing the Local Plan 2024. A sample survey of representative residents had been conducted to collect data related to their household demographic and spending patterns. The city aims to use this data to assist with their major community revitalization efforts, including how to allocate a large city renewal grant to improve the happiness of their local residents.</p>
+</section>
+<section id="objectives" class="level1">
+<h1>2. Objectives</h1>
+<p>This report will employ Interactive Data Exploration and Analysis (IDEA) to discover insights from the survey data related to residents’ household demographics and financial health.</p>
+<p>This analysis aims to characterise the demographics of the town and describe how these affect the happiness of residents. Further, this analysis also aims to examine how household finances affect the quality of life of&nbsp; residents.</p>
+<p>This technical report provides a detailed description of the data preparation and analysis conducted. It also highlights the key insights from the analysis and provides recommendations from the observations.</p>
+</section>
+<section id="data-preparation" class="level1">
+<h1>3. Data Preparation</h1>
+<p>2 different datasets were used for this analysis, ‘Participants.csv’ and ‘FinancialJournal.csv’.</p>
+<p>The Participants dataset comprises of data related to the demographics of each survey participant, including&nbsp; information such as age, household size, children, education level, Interest group and Joviality.</p>
+<p>The Financial Journal dataset is a much larger dataset and consists of participant’s financial records from a time period of March 2022 to May 2023. This consists of 6 different types of transactions, namely, Education, Food, Shelter, Recreation, Rent Adjustment and Wages.</p>
+<p>An initial check of the two datasets via SAS studio did not reveal any missing data from the two datasets.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1020040810.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 1: Participants dataset</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-4237803965.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 2: Financial Journal Dataset</figcaption>
+</figure>
+</div>
+<p>The following sub-sections highlight the major data-related issues and the steps taken to address them. The data preparation change log is detailed in the Appendix.</p>
+<section id="converting-timestamp-to-datetime" class="level2">
+<h2 class="anchored" data-anchor-id="converting-timestamp-to-datetime">3.1 Converting timestamp to datetime</h2>
+<p>The timestamp column in the financial journal dataset was set with a varchar format.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2742173757.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 3: Timestamp format of transactions</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-130929284.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 4: Data type of variables in Participants dataset</figcaption>
+</figure>
+</div>
+<p>We convert the timestamp variable from varchar format to an appropriate datetime format.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2375563915.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 5: Conversion of datatype from varchar to datetime format</figcaption>
+</figure>
+</div>
+</section>
+<section id="converting-categorical-variables-to-correct-data-type" class="level2">
+<h2 class="anchored" data-anchor-id="converting-categorical-variables-to-correct-data-type">3.2 Converting categorical variables to correct data type</h2>
+<p>The ‘participantId’ and ‘householdSize’ variable was set with a numeric double format. We convert ‘participantId’ to a varchar format to ensure that this variable could be used as a distinct identifier when merging both datasets.</p>
+<p>Similarly, we convert ‘householdSize’ to varchar to enable categorical analysis in the data analysis stage, since there are only 3 distinct values in household size.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2131444204.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 6: ‘participantId’ and ‘householdSize’ are set as numeric double format</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1757595629.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 7: Converting datatypes using the transform column function in SAS Data Studio</figcaption>
+</figure>
+</div>
+<p>Upon conversion, we remove the old columns and rename the converted columns.</p>
+<p><img src="images/clipboard-1372158351.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1425951642.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 8: Removing columns with incorrect datatype and renaming the corrected columns</figcaption>
+</figure>
+</div>
+</section>
+<section id="remove-duplicates-from-the-financial-journal-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="remove-duplicates-from-the-financial-journal-dataset">3.3 Remove Duplicates from the Financial Journal dataset</h2>
+<p>There are 1,113 duplicate entries for 2 categories, namely education and shelter. These are monthly entries and seem to occur only in March 2022.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1343059944.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 9: Duplicates in the Education transaction entries</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1886416454.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 10: Duplicates in the Shelter transaction entries</figcaption>
+</figure>
+</div>
+<p>We remove these duplicates in SAS studio, by using the remove duplicate function.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1253546182.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 11: Utilizing the remove duplicates function in SAS Data Studio-Prepare Data</figcaption>
+</figure>
+</div>
+<p>Upon removal, our number of rows has decreased to 1,855,217 from the original 1,856,330.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-206362008.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 12: 1,113 duplicated records were successfully removed</figcaption>
+</figure>
+</div>
+</section>
+<section id="data-quality-issue-standardising-and-consolidating-financial-journal-entries" class="level2">
+<h2 class="anchored" data-anchor-id="data-quality-issue-standardising-and-consolidating-financial-journal-entries">3.4 Data quality issue: Standardising and consolidating financial journal entries</h2>
+<p>Financial journal entries are not standardised. Some transaction categories are recorded as single monthly entries while others are recorded as multiple daily entries.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3731046618.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 13: Single monthly entries for Education category</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-210373379.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 14: Multiple daily entries for Food category</figcaption>
+</figure>
+</div>
+<p>We standardize these timestamps and consolidate the daily entries to single monthly entries. First, we extract and separate the date, time, month, and year from our timestamp variable.</p>
+<p>We use SAS studio to extract the month and year via SQL code.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2670503917.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 15: Using SAS studio and sql code to extract the month and year from timestamp</figcaption>
+</figure>
+</div>
+<p>Next, we do a group by selection by ‘participantID’, ‘category’, ‘year’ and ‘month’; and sum up the total monthly amounts for each category.</p>
+<p>These series of actions will consolidate all timestamp entries into single monthly amounts, and sort it by participantID, category, year, and month.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-164269805.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 16: using SQL code to group to the transaction entries by year and month, and summing up to derive consolidated monthly amounts</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2236019757.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 17: Output of the group by action</figcaption>
+</figure>
+</div>
+<p>As a result, we have reduced the number of rows from 1,855,217 rows to 55,498 rows by consolidating the daily transactions to monthly transaction entries.</p>
+</section>
+<section id="grouping-participants-by-age-groups-binning" class="level2">
+<h2 class="anchored" data-anchor-id="grouping-participants-by-age-groups-binning">3.5 Grouping Participants by Age Groups (Binning)</h2>
+<p>The 1011 participants in the survey range from an age of 18 to 60. In order to increase our flexibility in the data analysis stage, we can group participants into distinct age groups. Through binning, we convert a numerical variable into a categorical one, which enable us to do additional analyses like association testing. This is done by using the recode ranges task in SAS studio.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1211050511.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 18: Utilizing the recode ranges task in SAS studio to bin ’Age”.</figcaption>
+</figure>
+</div>
+<p>New age ranges are defined as per Fig 19. These represent 20<sup>th</sup> percentiles in sequence.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-4108089077.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 19: Define each Age group by percentiles. Each increasing range is a sequential 20 percentile.</figcaption>
+</figure>
+</div>
+<p>Subsequently, we create a new column ‘Age_Groups’ for our participants dataset.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2925799421.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 20: Adding the new age bins to our Participants dataset</figcaption>
+</figure>
+</div>
+</section>
+<section id="integrating-data-by-merging-participants-and-financial-journal-data-sets" class="level2">
+<h2 class="anchored" data-anchor-id="integrating-data-by-merging-participants-and-financial-journal-data-sets">3.6 Integrating data by merging Participants and Financial Journal data sets</h2>
+<p>Previously, we had consolidated the Financial Journal dataset and reduced it to 55,498 rows. This lists all monthly transactions per category for each participant on a row by row basis.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1671521073.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 21: The consolidated financial journal with 55,498 rows of monthly transaction amounts</figcaption>
+</figure>
+</div>
+<p>However, the participant dataset is set in the format of listing variables on a column by column basis.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2406022981.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 22: Participants dataset lists variables on a column by column basis</figcaption>
+</figure>
+</div>
+<p>We proceed to sort and transpose our Financial Journal dataset to a similar column by column format. This is done by SAS studio, using SQL code.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1058871666.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 23: Creating new columns to be used for our grouping process</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1022170221.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 24: New columns, ‘month_str’ and ‘cat_month’ are created</figcaption>
+</figure>
+</div>
+<p>Creating the new column ‘cat_month’, allows us to use it as a criterion to group all amounts of the same type, month, and year together. We next sort by participant ID.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1264897913.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 25: SQL code to sum up transaction amounts upon grouping them together</figcaption>
+</figure>
+</div>
+<p>This enables us to get an ordered list of monthly category amounts by participant ID as can be seen in Fig 26</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3386518790.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 26: Consolidating all monthly transactions by category and sorting it by Participant ID</figcaption>
+</figure>
+</div>
+<p>Next, we use the below SQL code to transpose the rows into columns and standardize for any missing fields</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-64208109.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 27: SQL code to transpose the rows into columns and standardize for empty fields</figcaption>
+</figure>
+</div>
+<p>We generate a new table with 1011 rows, which matches our participants dataset.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3689743573.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 28: Transposed financial journal table which lists variables on a column by column basis per participant</figcaption>
+</figure>
+</div>
+<p>Next, we use a Join method in SAS studio to combine both datasets using the common identifier, ‘participantID’.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2441615071.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 29: Using the Join function in SAS Data studio</figcaption>
+</figure>
+</div>
+<p>We now have a combined dataset which we can use in our data analysis stage.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-183174212.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 30: Combined Participants and Financial Journal dataset</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="data-analysis" class="level1">
+<h1>4. Data Analysis</h1>
+<p>This section aims to achieve the following objectives:</p>
+<ul>
+<li><p>Understand the patterns between attributes</p></li>
+<li><p>Evaluate attributes that can be used to answer the objectives of this study, namely, demographics and happiness, and the relationship between finances and the quality of life.</p></li>
+</ul>
+<p>All hypothesis tests are conducted using a 5% significant level. Normality tests are conducted on continuous distributions to decide if a parametric or non-parametric test is to be conducted.</p>
+<section id="observation-1-the-distribution-for-joviality-and-age-amongst-participants-is-not-normal" class="level2">
+<h2 class="anchored" data-anchor-id="observation-1-the-distribution-for-joviality-and-age-amongst-participants-is-not-normal">4.1 Observation 1 – The distribution for Joviality and Age amongst participants is not normal</h2>
+<p>From our IDEA analysis, we noted that Joviality scores and Ages for participants are not evenly distributed. We examine this by conducting a Distribution Analysis test.</p>
+<p><img src="images/clipboard-95939127.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-4022069679.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 31: Histograms showing the distribution of joviality and age across participants</figcaption>
+</figure>
+</div>
+<p><u>Normality Distribution test Hypotheses:<br>
+</u>H0: The distribution of Joviality scores and Ages resembles normal distribution.<br>
+H1: The distribution of Joviality scores and Ages failed to resemble normal distribution.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3830692130.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 32: QQ plots and summary of Goodness of Fit tests for Joviality and Age</figcaption>
+</figure>
+</div>
+<p>From our QQ plot and Goodness of fit tests, p-values for both Joviality and Ages are &lt; 0.05.</p>
+<p>Hence, we reject the null hypothesis and infer that the distribution of Joviality and Age does not resemble normal distribution.</p>
+</section>
+<section id="observation-2-the-joviality-for-participants-with-children-is-the-same-as-participants-without." class="level2">
+<h2 class="anchored" data-anchor-id="observation-2-the-joviality-for-participants-with-children-is-the-same-as-participants-without.">4.2 Observation 2 – The Joviality for participants with children is the same as participants without.</h2>
+<p>From our IDEA analysis, we noted that mean joviality for participants with children is somewhat higher than participants without. We examine this by conducting a two-sample test.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2385422964.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 33: Boxplot comparing Joviality Vs “haveKids”</figcaption>
+</figure>
+</div>
+<p><u>Two-sample mean test hypotheses:</u></p>
+<p>H0: The mean joviality is the same for participants with and without children<br>
+H1: The mean joviality is not the same for participants with and without children</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3913909323.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 34: Summary of the normal distribution test</figcaption>
+</figure>
+</div>
+<p>Both the Shapiro-Wilk and Anderson-Darling tests derived p-values of &lt; 0.05; ie distribution is not normal. Therefore, two-sample non-parametric test was used to compare the mean joviality across participants with and without children.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2506532589.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 35: Results from the Wilcoxon test</figcaption>
+</figure>
+</div>
+<p>The two-sample Wilcoxon test yielded a p-value &gt; 0.05. Hence, we have failed to reject the null hypothesis. We can conclude that the mean joviality is the same.</p>
+<p><u><strong>Conclusion</strong></u><strong>:</strong></p>
+<p>There is no strong evidence to conclude that participants with children happier on average.</p>
+</section>
+<section id="observation-3-there-is-a-relationship-between-education-level-and-having-children" class="level2">
+<h2 class="anchored" data-anchor-id="observation-3-there-is-a-relationship-between-education-level-and-having-children">4.3 Observation 3 – There is a relationship between education level and having children</h2>
+<p>From our IDEA analysis, we noted a relationship between education level and having children. Particularly, we noted that the percentage of not having children is comparatively higher for participants with Bachelors and Graduate. We examine this further by conducting a Chi-square test of independence.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-4140649298.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 36: A normalized stacked bar-chart to observe the frequency of participants with children across education levels.</figcaption>
+</figure>
+</div>
+<p><u>Chi-square test hypotheses</u>:</p>
+<p>H0: Education level is independent of whether one has children (There is no association between education level and having children)<br>
+H1: Education level is not independent of whether one has children (There is an association between education level and having children)</p>
+<p><img src="images/clipboard-561782671.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-566599916.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 37: A mosaic plot and chi-square results for our association analysis (education level Vs having children)</figcaption>
+</figure>
+</div>
+<p>From the test results, the p-value is &lt; 0.05. Hence, we reject the null hypothesis and conclude that there is a statistically significant association between education level and having children.</p>
+<p><u><strong>Conclusion</strong></u><strong>:</strong></p>
+<p>A participant’s education level may have some bearing on the decision to have children.</p>
+</section>
+<section id="observation-4-the-mean-joviality-for-participants-is-the-same-across-all-education-levels" class="level2">
+<h2 class="anchored" data-anchor-id="observation-4-the-mean-joviality-for-participants-is-the-same-across-all-education-levels">4.4 Observation 4 – The mean Joviality for participants is the same across all education levels</h2>
+<p>From our IDEA analysis, we noted that the mean joviality for participants with an education level of ‘bachelors’ and ‘graduate’ is slightly higher than other participants.</p>
+<p>We examine this by conducting a One-way ANOVA test to test for differences in the means of the 4 groups of education level.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2836702162.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 38: Box plot showing the difference in mean joviality across education levels</figcaption>
+</figure>
+</div>
+<p>First, we run normality tests to check the distribution.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3226910240.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 39: Summary of normality distribution test</figcaption>
+</figure>
+</div>
+<p>Both the Shapiro-Wilk and Anderson-Darling tests derived p-values &lt; 0.05; ie the distribution for all 4 classes is not normal. Hence, we will proceed with the non-parametric one-way ANOVA test.</p>
+<p><u>Non-parametric One-way ANOVA test hypotheses:</u></p>
+<p>H0: There is no difference in the mean joviality across different education levels.<br>
+H1: There is a difference in the mean joviality across different education levels.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3056839064.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 40: Summary of results from the Kruskal-Wallis test</figcaption>
+</figure>
+</div>
+<p>The p-value from the Kruskal-Wallis test is 0.7018, which is &gt; 0.05. This means that we do not have sufficient evidence to reject the null hypothesis.</p>
+<p><u><strong>Conclusion:</strong></u></p>
+<p>Education level does not significantly impact one’s happiness level.</p>
+</section>
+<section id="observation-5-there-is-a-relationship-between-education-level-and-mean-wages" class="level2">
+<h2 class="anchored" data-anchor-id="observation-5-there-is-a-relationship-between-education-level-and-mean-wages">4.5 Observation 5 – There is a relationship between Education Level and Mean Wages</h2>
+<p>From our IDEA analysis, we noted a relationship in the mean wages for participants in different education levels, where participants with higher education levels have higher mean wages. We examine this by conducting a One-way ANOVA test to test for differences in the mean wages of the 4 different education levels.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3968768911.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 41: Average wages seem higher the higher the education level</figcaption>
+</figure>
+</div>
+<p>First, we run normality tests to check the distribution.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-535896652.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 42: Summary of normal distribution test for wage vs education level</figcaption>
+</figure>
+</div>
+<p>Both the Shapiro-Wilk and Anderson-Darling tests derived p-values &lt; 0.05; ie the distribution for all 4 classes in education level is not normal. Therefore, we use the non-parametric one-way ANOVA test to compare the means.</p>
+<p><u>Non-parametric One-way ANOVA test hypotheses:</u></p>
+<p>H0: There is no difference in the mean wages across different education levels.<br>
+H1: There is a difference in the mean wages for at least one pair of education levels.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2630015562.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 43: Summary of the Kruskal-Wallis test for wages Vs Education level</figcaption>
+</figure>
+</div>
+<p>Given that the p-value (&lt;.0001) is much smaller than the common significance threshold of 0.05, we have evidence to reject the null hypothesis.</p>
+<p><u><strong>Conclusion</strong></u><strong>:</strong></p>
+<p>A higher Education level is related to a higher mean wage.</p>
+</section>
+<section id="observation-6---joviality-is-moderately-correlated-with-wages-and-recreation-spend." class="level2">
+<h2 class="anchored" data-anchor-id="observation-6---joviality-is-moderately-correlated-with-wages-and-recreation-spend.">4.6 Observation 6 - Joviality is moderately correlated with Wages and Recreation spend.</h2>
+<p>From our IDEA analysis, we noted that Joviality is moderately correlated with Wages and Recreation spend. For this analysis, only financial data from March 2022 was considered, as Joviality scores were obtained at the start of the survey period. We examined the correlation between Joviality and March 2022 transaction categories (Food, Recreation, Education, Shelter, Rent Adjustment and Wages).</p>
+<p><img src="images/clipboard-3937081255.png" class="img-fluid"><br>
+Fig 44: Scatter plots of Joviality Vs Education, Food, Recreation, Rent Adjustment, Shelter and Wages<br>
+<u>Correlation test hypotheses:</u></p>
+<p>H0: There is no correlation between the variables<br>
+H1: There is a correlation between the variables.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-40438289.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 45: Pearson Coefficient scores for Joviality Vs transaction categories</figcaption>
+</figure>
+</div>
+<p>P-values for Food, Recreation, Wages and Rent Adjustment are &lt; 0.05. Hence, we can reject the null hypothesis and conclude that there is some correlation between Joviality and these transaction categories.</p>
+<p>Specifically, there is a moderate positive linear relationship with Recreation spend (Pearson coefficient 0.345) and a moderate negative linear relationship with Wages (Pearson coefficient 0.318).<br>
+<br>
+<u><strong>Conclusion</strong></u>:</p>
+<p>The negative linear relationship with wages suggests that earning higher wages does not make one happier.</p>
+<p>This observation links back to our observations in 4 &amp; 5 , where earning higher wages by being more educated does not seem to have much impact on one’s happiness.</p>
+</section>
+<section id="observation-7-there-is-no-difference-in-joviality-for-participants-in-different-age-groups" class="level2">
+<h2 class="anchored" data-anchor-id="observation-7-there-is-no-difference-in-joviality-for-participants-in-different-age-groups">4.7 Observation 7 – There is no difference in Joviality for participants in different Age groups</h2>
+<p>From our IDEA analysis, we noted a difference in the mean Joviality for different Age groups. We examined this by conducting a One-way ANOVA test to test for differences in the mean joviality for the 5 different age groups.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3964600075.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 46: Box plot showing the mean joviality across Age groups</figcaption>
+</figure>
+</div>
+<p>First, we run normality tests to check the distribution.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3040571853.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 47: Summary of normal distribution tests for joviality Vs Age groups</figcaption>
+</figure>
+</div>
+<p>Both the Shapiro-Wilk and Anderson-Darling tests derived p-values &lt; 0.05; ie the distribution for all 4 classes in age groups is not normal. Therefore, we proceed with a non-parametric one-way ANOVA test to compare the means.</p>
+<p><u>Non-parametric One-way ANOVA test hypotheses:</u></p>
+<p>H0: There is no difference in the mean joviality across age groups<br>
+H1: There is a difference in the mean joviality across age groups.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1009307602.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 48: Summary of the Kruskal-Wallis test for Joviality Vs Age groups</figcaption>
+</figure>
+</div>
+<p>The p-value from the Kruskal-Wallis test is 0.1852, which is &gt; 0.05. This means that we do not have sufficient evidence to reject the null hypothesis</p>
+<p><u><strong>Conclusion</strong></u><strong>:</strong></p>
+<p>There is no strong evidence that different age groups are happier than others.</p>
+</section>
+<section id="observation-8-there-is-no-difference-in-joviality-for-different-household-sizes." class="level2">
+<h2 class="anchored" data-anchor-id="observation-8-there-is-no-difference-in-joviality-for-different-household-sizes.">4.8 Observation 8 – There is no difference in Joviality for different household sizes.</h2>
+<p>From our IDEA analysis, we noted that the mean Joviality for participants with a household size of 3 is somewhat higher than other participants. We examine this with a One-way ANOVA test to test for differences in the means of the 3 classes of household sizes.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2092126368.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 49: Box plot showing the difference in mean joviality across household sizes</figcaption>
+</figure>
+</div>
+<p>First, we run normality tests to check the distribution.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3520231721.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 50: Summary of Normal distribution test for joviality Vs Household sizes</figcaption>
+</figure>
+</div>
+<p>Both the Shapiro-Wilk and Anderson-Darling tests derived p-values &lt; 0.05; ie the distribution for all 3 classes in Household size is not normal. Therefore, we use non-parametric one-way ANOVA test to compare the means.&nbsp;&nbsp;&nbsp;</p>
+<p><u>Non-parametric One-way ANOVA test hypotheses:</u></p>
+<p>H0: There is no difference in the mean joviality across different household sizes<br>
+H1: There is a difference in the mean joviality across different household sizes.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3502527678.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 51: Summary of the Kruskal-Wallis test for Joviality Vs Household sizes</figcaption>
+</figure>
+</div>
+<p>The p-value from the Kruskal-Wallis test is 0.6854, which is &gt; 0.05. This means that we do not have sufficient evidence to reject the null hypothesis</p>
+<p><u><strong>Conclusion</strong></u><strong>:</strong></p>
+<p>There is no strong evidence that different household sizes are happier than others</p>
+</section>
+<section id="observation-9-participants-financial-health-does-not-improve-over-time" class="level2">
+<h2 class="anchored" data-anchor-id="observation-9-participants-financial-health-does-not-improve-over-time">4.9 Observation 9 – Participants financial health does not improve over time</h2>
+<p>From our IDEA analysis, we noted that monthly wages do not increase over time, and instead shows a decreasing trend.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2090264842.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 52: Line chart showing the total monthly wages from March 2022 to May 2022</figcaption>
+</figure>
+</div>
+<p>As can be seen from Fig 53, all participants in all household types, spend the most from their wages on shelter.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2242268645.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 53: Breakdown of expenditure for participants across all household sizes</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2165377868.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 54: Comparison of total expenditure over different expense categories, over time period.</figcaption>
+</figure>
+</div>
+<p>From Fig 54, we can observe that Shelter occupies the top expenditure bracket and is constant throughout the time period.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1046296570.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 55: Expenditure on recreation and food show a decreasing trend over time</figcaption>
+</figure>
+</div>
+<p>Therefore, from the constant expenditure on shelter and decreasing wages over time, we can infer that participants are compensating for this by spending lesser on recreation and food. Educational spend does not impact our conclusion due to its low relative cost and constant or fixed pricing. Furthermore, educational spend is exclusive to participants with children, who make up 1/3 of the sample size.</p>
+<p><u><strong>Conclusion</strong></u><strong>:</strong></p>
+<p>Participants do not get wealthier over time and have to compensate by cutting back on recreation and food as they prioritize Shelter over other items.</p>
+</section>
+<section id="observation-10---wages-is-moderately-correlated-with-food-and-shelter-spend." class="level2">
+<h2 class="anchored" data-anchor-id="observation-10---wages-is-moderately-correlated-with-food-and-shelter-spend.">4.10 Observation 10 - Wages is moderately correlated with Food and Shelter spend.</h2>
+<p>From our IDEA analysis, we noted that wage is moderately correlated with Food and Shelter spend. We proceed to examine the correlation between Wages and Expense categories (Food, Recreation, Education, Shelter).</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3103231406.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 56: Scatter plots of Wage Vs Food, Education, Recreation and Shelter</figcaption>
+</figure>
+</div>
+<p><u>Correlation test hypotheses:</u></p>
+<p>H0: There is no correlation between the variables<br>
+H1: There is a correlation between the variables.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-826493999.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 57: Pearson Coefficient scores for Wage Vs Expense categories. Correlations are indicated as negative as expense amounts in the dataset is recorded as negative amounts.</figcaption>
+</figure>
+</div>
+<p>The p values for Education, Food, Recreation and Shelter are below &lt;0.05. Hence, we can reject the null hypothesis and conclude that there is some correlation between wages and these expense categories.</p>
+<p>Specifically, we noted a moderate positive linear relationship with Food spend (Pearson coefficient 0.3609) and a moderate positive linear relationship with Shelter (Pearson coefficient 0.4176).</p>
+<p><u><strong>Conclusion</strong></u><strong>:</strong></p>
+<p>The positive linear relationship with Food and Shelter suggests that participants prioritize these items ahead of other categories like recreation.</p>
+<p>This observation links back to our observations in financial analysis , where recreation spend exhibits a decreasing trend in the time period.</p>
+</section>
+</section>
+<section id="interpretation-of-analyses" class="level1">
+<h1>5. Interpretation of Analyses</h1>
+<p>The following points summarises the key findings from the analyses conducted:</p>
+<ol type="1">
+<li><p><u>Uniform Joviality among Parents &amp; Non-Parents</u>: Despite common perceptions, having children doesn’t necessarily correlate with increased joviality. Life satisfaction could be influenced by other factors beyond family structure.</p></li>
+<li><p><u>Education &amp; Parenthood</u>: Higher educational attainment may influence life decisions, including the choice to have children, potentially due to career priorities or financial considerations.</p></li>
+<li><p><u>Education, Wages &amp; Joviality</u>: Higher education seems to correlate with better wages, but not necessarily with increased joviality. This suggests that factors beyond income play a significant role in determining one’s happiness. For example, longer working hours or a lack of work life balance associated with better paying jobs may affect happiness levels.</p></li>
+<li><p><u>Joviality &amp; Expenditure</u>: The association between joviality and recreational spend highlights the importance of leisure and personal time. Conversely, higher wages not correlating directly with higher joviality may hint at societal pressures or job-related stress.</p></li>
+<li><p><u>Age &amp; Joviality</u>: The consistent joviality across age groups implies that age-specific factors or challenges don’t significantly affect overall happiness.</p></li>
+<li><p><u>Financial Health Over Time:</u> The observed trend where participants don’t become wealthier over time and prioritize shelter over other expenses, implies a possible housing affordability crisis, especially if residents are compromising on other basic needs.</p></li>
+<li><p><u>Wages &amp; Essential Expenses</u>: Wages being correlated with food and shelter expenditures signifies the necessity-driven nature of earnings, which can influence overall life satisfaction.</p></li>
+</ol>
+</section>
+<section id="recommendations" class="level1">
+<h1>6. Recommendations</h1>
+<p>The following initiatives are recommended for the community revitalization efforts:</p>
+<ol type="1">
+<li><p><u>Community Building</u>: Encourage community programs that emphasize shared experiences to increase joviality beyond materialistic pursuits.</p></li>
+<li><p><u>Education &amp; Career Counselling</u>: Given the relationship between education, wages, and life decisions, comprehensive education and career counselling can assist residents in making informed life choices.</p></li>
+<li><p><u>Financial Literacy Programs</u>: Equip residents with tools to manage and optimize their finances, especially as they navigate wage and expenditure challenges.</p></li>
+<li><p><u>Housing Policies</u>: Given the prominence of shelter as an expenditure, housing affordability initiatives or rent-control measures may help alleviate financial pressures.</p></li>
+<li><p><u>Work-Life Balance</u>: Promote employer policies that emphasize a healthy work-life balance, as higher wages alone don’t correlate with increased joviality.</p></li>
+<li><p><u>Leisure &amp; Recreation Initiatives</u>: Subsidize and promote recreational activities to ensure residents have avenues for relaxation, given its correlation with joviality.</p></li>
+<li><p><u>Support for Families</u>: To encourage family growth, the city council can consider child benefits, parental support programs, and affordable childcare services.</p></li>
+</ol>
+</section>
+<section id="appendix" class="level1">
+<h1>7. Appendix</h1>
+<p>Data Preparation Change log</p>
+<p><img src="images/clipboard-3033982119.png" class="img-fluid"></p>
+</section>
+<section id="data-limitations" class="level1">
+<h1>8. Data Limitations</h1>
+<p><u><strong>Sample Representativeness:</strong></u></p>
+<p>It is unclear if the sample collected is truly representative of the city residents due to a lack of additional data on participants like geography, type of home, marital status, occupation, rent cost etc.</p>
+<p>There could have potentially been some sample bias towards specific locations or demographic groups, which may explain the relatively high proportion of participants without children and with lower educational qualifications surveyed. This could have hindered the ability to find associations between joviality and the given categorical variables.<br>
+<br>
+<u><strong>Response Bias:</strong></u></p>
+<p>Joviality scores were recorded only at the start, but financial data was taken throughout the year. The large one-time wage inflows in March 2022 could have disproportionally influenced these joviality scores.</p>
+<p>A declining trend in expenditure on Food and Recreation was observed, but no subsequent joviality changes were recorded. Furthermore, changes in personal circumstances could have also affected joviality but is hard to infer due to the limited available data on participants.</p>
+<p><u><strong>Causation vs Correlation</strong></u></p>
+<p>Due to the lack of subsequent measures of joviality, it is unclear if observed correlations with wages and expense categories continually to directly result in changes in joviality.</p>
+<p><u><strong>Recommendation for Improved Data Collection:</strong></u></p>
+<ol type="1">
+<li><p>Conduct multiple survey rounds for comprehensive data.</p></li>
+<li><p>Collect additional data on the demographics profile of participants</p></li>
+<li><p>Test findings from the initial survey against a separate sample.</p></li>
+</ol>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,479 @@
+---
+title: "Assignment 1 - Show me the numbers"
+author: "Imran Ibrahim"
+date: August 11, 2024
+date-modified: "last-modified"
+toc: true
+execute: 
+  eval: true
+  echo: true
+  freeze: true
+  warning: false
+  message: false
+---
+
+# 1. Introduction
+
+City of Engagement is a small city located at Country of Nowhere. The local council of the city is in the process of preparing the Local Plan 2024. A sample survey of representative residents had been conducted to collect data related to their household demographic and spending patterns. The city aims to use this data to assist with their major community revitalization efforts, including how to allocate a large city renewal grant to improve the happiness of their local residents.
+
+# 2. Objectives
+
+This report will employ Interactive Data Exploration and Analysis (IDEA) to discover insights from the survey data related to residents’ household demographics and financial health.
+
+This analysis aims to characterise the demographics of the town and describe how these affect the happiness of residents. Further, this analysis also aims to examine how household finances affect the quality of life of  residents.
+
+This technical report provides a detailed description of the data preparation and analysis conducted. It also highlights the key insights from the analysis and provides recommendations from the observations.
+
+# 3. Data Preparation
+
+2 different datasets were used for this analysis, ‘Participants.csv’ and ‘FinancialJournal.csv’.
+
+The Participants dataset comprises of data related to the demographics of each survey participant, including  information such as age, household size, children, education level, Interest group and Joviality.
+
+The Financial Journal dataset is a much larger dataset and consists of participant’s financial records from a time period of March 2022 to May 2023. This consists of 6 different types of transactions, namely, Education, Food, Shelter, Recreation, Rent Adjustment and Wages.
+
+An initial check of the two datasets via SAS studio did not reveal any missing data from the two datasets.
+
+![Fig 1: Participants dataset](images/clipboard-1020040810.png){fig-align="left"}
+
+![Fig 2: Financial Journal Dataset](images/clipboard-4237803965.png){fig-align="left"}
+
+The following sub-sections highlight the major data-related issues and the steps taken to address them. The data preparation change log is detailed in the Appendix.
+
+## 3.1 Converting timestamp to datetime
+
+The timestamp column in the financial journal dataset was set with a varchar format.
+
+![Fig 3: Timestamp format of transactions](images/clipboard-2742173757.png){fig-align="left"}
+
+![Fig 4: Data type of variables in Participants dataset](images/clipboard-130929284.png){fig-align="left"}
+
+We convert the timestamp variable from varchar format to an appropriate datetime format.
+
+![Fig 5: Conversion of datatype from varchar to datetime format](images/clipboard-2375563915.png){fig-align="left"}
+
+## 3.2 Converting categorical variables to correct data type
+
+The ‘participantId’ and ‘householdSize’ variable was set with a numeric double format. We convert ‘participantId’ to a varchar format to ensure that this variable could be used as a distinct identifier when merging both datasets.
+
+Similarly, we convert ‘householdSize’ to varchar to enable categorical analysis in the data analysis stage, since there are only 3 distinct values in household size.
+
+![Fig 6: ‘participantId’ and ‘householdSize’ are set as numeric double format](images/clipboard-2131444204.png){fig-align="left"}
+
+![Fig 7: Converting datatypes using the transform column function in SAS Data Studio](images/clipboard-1757595629.png){fig-align="left"}
+
+Upon conversion, we remove the old columns and rename the converted columns.
+
+![](images/clipboard-1372158351.png)
+
+![Fig 8: Removing columns with incorrect datatype and renaming the corrected columns](images/clipboard-1425951642.png){fig-align="left"}
+
+## 3.3 Remove Duplicates from the Financial Journal dataset
+
+There are 1,113 duplicate entries for 2 categories, namely education and shelter. These are monthly entries and seem to occur only in March 2022.
+
+![Fig 9: Duplicates in the Education transaction entries](images/clipboard-1343059944.png){fig-align="left"}
+
+![Fig 10: Duplicates in the Shelter transaction entries](images/clipboard-1886416454.png){fig-align="left"}
+
+We remove these duplicates in SAS studio, by using the remove duplicate function.
+
+![Fig 11: Utilizing the remove duplicates function in SAS Data Studio-Prepare Data](images/clipboard-1253546182.png){fig-align="left"}
+
+Upon removal, our number of rows has decreased to 1,855,217 from the original 1,856,330.
+
+![Fig 12: 1,113 duplicated records were successfully removed](images/clipboard-206362008.png){fig-align="left"}
+
+## 3.4 Data quality issue: Standardising and consolidating financial journal entries
+
+Financial journal entries are not standardised. Some transaction categories are recorded as single monthly entries while others are recorded as multiple daily entries.
+
+![Fig 13: Single monthly entries for Education category](images/clipboard-3731046618.png){fig-align="left"}
+
+![Fig 14: Multiple daily entries for Food category](images/clipboard-210373379.png){fig-align="left"}
+
+We standardize these timestamps and consolidate the daily entries to single monthly entries. First, we extract and separate the date, time, month, and year from our timestamp variable.
+
+We use SAS studio to extract the month and year via SQL code.
+
+![Fig 15: Using SAS studio and sql code to extract the month and year from timestamp](images/clipboard-2670503917.png){fig-align="left"}
+
+Next, we do a group by selection by ‘participantID’, ‘category’, ‘year’ and ‘month’; and sum up the total monthly amounts for each category.
+
+These series of actions will consolidate all timestamp entries into single monthly amounts, and sort it by participantID, category, year, and month.
+
+![Fig 16: using SQL code to group to the transaction entries by year and month, and summing up to derive consolidated monthly amounts](images/clipboard-164269805.png){fig-align="left"}
+
+![Fig 17: Output of the group by action](images/clipboard-2236019757.png){fig-align="left"}
+
+As a result, we have reduced the number of rows from 1,855,217 rows to 55,498 rows by consolidating the daily transactions to monthly transaction entries.
+
+## 3.5 Grouping Participants by Age Groups (Binning)
+
+The 1011 participants in the survey range from an age of 18 to 60. In order to increase our flexibility in the data analysis stage, we can group participants into distinct age groups. Through binning, we convert a numerical variable into a categorical one, which enable us to do additional analyses like association testing. This is done by using the recode ranges task in SAS studio.
+
+![Fig 18: Utilizing the recode ranges task in SAS studio to bin ‘Age”.](images/clipboard-1211050511.png){fig-align="left"}
+
+New age ranges are defined as per Fig 19. These represent 20^th^ percentiles in sequence.
+
+![Fig 19: Define each Age group by percentiles. Each increasing range is a sequential 20 percentile.](images/clipboard-4108089077.png){fig-align="left"}
+
+Subsequently, we create a new column ‘Age_Groups’ for our participants dataset.
+
+![Fig 20: Adding the new age bins to our Participants dataset](images/clipboard-2925799421.png){fig-align="left"}
+
+## 3.6 Integrating data by merging Participants and Financial Journal data sets
+
+Previously, we had consolidated the Financial Journal dataset and reduced it to 55,498 rows. This lists all monthly transactions per category for each participant on a row by row basis.
+
+![Fig 21: The consolidated financial journal with 55,498 rows of monthly transaction amounts](images/clipboard-1671521073.png){fig-align="left"}
+
+However, the participant dataset is set in the format of listing variables on a column by column basis.
+
+![Fig 22: Participants dataset lists variables on a column by column basis](images/clipboard-2406022981.png){fig-align="left"}
+
+We proceed to sort and transpose our Financial Journal dataset to a similar column by column format. This is done by SAS studio, using SQL code.
+
+![Fig 23: Creating new columns to be used for our grouping process](images/clipboard-1058871666.png){fig-align="left"}
+
+![Fig 24: New columns, ‘month_str’ and ‘cat_month’ are created](images/clipboard-1022170221.png){fig-align="left"}
+
+Creating the new column ‘cat_month’, allows us to use it as a criterion to group all amounts of the same type, month, and year together. We next sort by participant ID.
+
+![Fig 25: SQL code to sum up transaction amounts upon grouping them together](images/clipboard-1264897913.png){fig-align="left"}
+
+This enables us to get an ordered list of monthly category amounts by participant ID as can be seen in Fig 26
+
+![Fig 26: Consolidating all monthly transactions by category and sorting it by Participant ID](images/clipboard-3386518790.png){fig-align="left"}
+
+Next, we use the below SQL code to transpose the rows into columns and standardize for any missing fields
+
+![Fig 27: SQL code to transpose the rows into columns and standardize for empty fields](images/clipboard-64208109.png){fig-align="left"}
+
+We generate a new table with 1011 rows, which matches our participants dataset.
+
+![Fig 28: Transposed financial journal table which lists variables on a column by column basis per participant](images/clipboard-3689743573.png){fig-align="left"}
+
+Next, we use a Join method in SAS studio to combine both datasets using the common identifier, ‘participantID’.
+
+![Fig 29: Using the Join function in SAS Data studio](images/clipboard-2441615071.png){fig-align="left"}
+
+We now have a combined dataset which we can use in our data analysis stage.
+
+![Fig 30: Combined Participants and Financial Journal dataset](images/clipboard-183174212.png){fig-align="left"}
+
+# 4. Data Analysis
+
+This section aims to achieve the following objectives:
+
+-   Understand the patterns between attributes
+
+-   Evaluate attributes that can be used to answer the objectives of this study, namely, demographics and happiness, and the relationship between finances and the quality of life.
+
+All hypothesis tests are conducted using a 5% significant level. Normality tests are conducted on continuous distributions to decide if a parametric or non-parametric test is to be conducted.
+
+## 4.1 Observation 1 – The distribution for Joviality and Age amongst participants is not normal
+
+From our IDEA analysis, we noted that Joviality scores and Ages for participants are not evenly distributed. We examine this by conducting a Distribution Analysis test.
+
+![](images/clipboard-95939127.png)
+
+![Fig 31: Histograms showing the distribution of joviality and age across participants](images/clipboard-4022069679.png){fig-align="left"}
+
+[Normality Distribution test Hypotheses:\
+]{.underline}H0: The distribution of Joviality scores and Ages resembles normal distribution.\
+H1: The distribution of Joviality scores and Ages failed to resemble normal distribution.
+
+![Fig 32: QQ plots and summary of Goodness of Fit tests for Joviality and Age](images/clipboard-3830692130.png){fig-align="left"}
+
+From our QQ plot and Goodness of fit tests, p-values for both Joviality and Ages are \< 0.05.
+
+Hence, we reject the null hypothesis and infer that the distribution of Joviality and Age does not resemble normal distribution.
+
+## 4.2 Observation 2 – The Joviality for participants with children is the same as participants without.
+
+From our IDEA analysis, we noted that mean joviality for participants with children is somewhat higher than participants without. We examine this by conducting a two-sample test.
+
+![Fig 33: Boxplot comparing Joviality Vs “haveKids”](images/clipboard-2385422964.png){fig-align="left"}
+
+[Two-sample mean test hypotheses:]{.underline}
+
+H0: The mean joviality is the same for participants with and without children\
+H1: The mean joviality is not the same for participants with and without children
+
+![Fig 34: Summary of the normal distribution test](images/clipboard-3913909323.png){fig-align="left"}
+
+Both the Shapiro-Wilk and Anderson-Darling tests derived p-values of \< 0.05; ie distribution is not normal. Therefore, two-sample non-parametric test was used to compare the mean joviality across participants with and without children.
+
+![Fig 35: Results from the Wilcoxon test](images/clipboard-2506532589.png){fig-align="left"}
+
+The two-sample Wilcoxon test yielded a p-value \> 0.05. Hence, we have failed to reject the null hypothesis. We can conclude that the mean joviality is the same.
+
+[**Conclusion**]{.underline}**:**
+
+There is no strong evidence to conclude that participants with children happier on average.
+
+## 4.3 Observation 3 – There is a relationship between education level and having children
+
+From our IDEA analysis, we noted a relationship between education level and having children. Particularly, we noted that the percentage of not having children is comparatively higher for participants with Bachelors and Graduate. We examine this further by conducting a Chi-square test of independence.
+
+![Fig 36: A normalized stacked bar-chart to observe the frequency of participants with children across education levels.](images/clipboard-4140649298.png){fig-align="left"}
+
+[Chi-square test hypotheses]{.underline}:
+
+H0: Education level is independent of whether one has children (There is no association between education level and having children)\
+H1: Education level is not independent of whether one has children (There is an association between education level and having children)
+
+![](images/clipboard-561782671.png)
+
+![Fig 37: A mosaic plot and chi-square results for our association analysis (education level Vs having children)](images/clipboard-566599916.png){fig-align="left"}
+
+From the test results, the p-value is \< 0.05. Hence, we reject the null hypothesis and conclude that there is a statistically significant association between education level and having children.
+
+[**Conclusion**]{.underline}**:**
+
+A participant’s education level may have some bearing on the decision to have children.
+
+## 4.4 Observation 4 – The mean Joviality for participants is the same across all education levels
+
+From our IDEA analysis, we noted that the mean joviality for participants with an education level of ‘bachelors’ and ‘graduate’ is slightly higher than other participants.
+
+We examine this by conducting a One-way ANOVA test to test for differences in the means of the 4 groups of education level.
+
+![Fig 38: Box plot showing the difference in mean joviality across education levels](images/clipboard-2836702162.png){fig-align="left"}
+
+First, we run normality tests to check the distribution.
+
+![Fig 39: Summary of normality distribution test](images/clipboard-3226910240.png){fig-align="left"}
+
+Both the Shapiro-Wilk and Anderson-Darling tests derived p-values \< 0.05; ie the distribution for all 4 classes is not normal. Hence, we will proceed with the non-parametric one-way ANOVA test.
+
+[Non-parametric One-way ANOVA test hypotheses:]{.underline}
+
+H0: There is no difference in the mean joviality across different education levels.\
+H1: There is a difference in the mean joviality across different education levels.
+
+![Fig 40: Summary of results from the Kruskal-Wallis test](images/clipboard-3056839064.png){fig-align="left"}
+
+The p-value from the Kruskal-Wallis test is 0.7018, which is \> 0.05. This means that we do not have sufficient evidence to reject the null hypothesis.
+
+[**Conclusion:**]{.underline}
+
+Education level does not significantly impact one’s happiness level.
+
+## 4.5 Observation 5 – There is a relationship between Education Level and Mean Wages
+
+From our IDEA analysis, we noted a relationship in the mean wages for participants in different education levels, where participants with higher education levels have higher mean wages. We examine this by conducting a One-way ANOVA test to test for differences in the mean wages of the 4 different education levels.
+
+![Fig 41: Average wages seem higher the higher the education level](images/clipboard-3968768911.png){fig-align="left"}
+
+First, we run normality tests to check the distribution.
+
+![Fig 42: Summary of normal distribution test for wage vs education level](images/clipboard-535896652.png){fig-align="left"}
+
+Both the Shapiro-Wilk and Anderson-Darling tests derived p-values \< 0.05; ie the distribution for all 4 classes in education level is not normal. Therefore, we use the non-parametric one-way ANOVA test to compare the means.
+
+[Non-parametric One-way ANOVA test hypotheses:]{.underline}
+
+H0: There is no difference in the mean wages across different education levels.\
+H1: There is a difference in the mean wages for at least one pair of education levels.
+
+![Fig 43: Summary of the Kruskal-Wallis test for wages Vs Education level](images/clipboard-2630015562.png){fig-align="left"}
+
+Given that the p-value (\<.0001) is much smaller than the common significance threshold of 0.05, we have evidence to reject the null hypothesis.
+
+[**Conclusion**]{.underline}**:**
+
+A higher Education level is related to a higher mean wage.
+
+## 4.6 Observation 6 - Joviality is moderately correlated with Wages and Recreation spend.
+
+From our IDEA analysis, we noted that Joviality is moderately correlated with Wages
+and Recreation spend. For this analysis, only financial data from March 2022
+was considered, as Joviality scores were obtained at the start of the survey
+period. We examined the correlation between Joviality and March 2022
+transaction categories (Food, Recreation, Education, Shelter, Rent Adjustment
+and Wages).
+
+![](images/clipboard-3937081255.png)\
+Fig 44: Scatter plots of Joviality Vs Education, Food, Recreation, Rent Adjustment, Shelter and Wages
+\
+[Correlation test hypotheses:]{.underline}
+
+H0: There is no correlation between the variables\
+H1: There is a correlation between the variables.
+
+![Fig 45: Pearson Coefficient scores for Joviality Vs transaction categories](images/clipboard-40438289.png){fig-align="left"}
+
+P-values for Food, Recreation, Wages and Rent Adjustment are \< 0.05. Hence, we can reject the null hypothesis and conclude that there is some correlation between Joviality and these transaction categories.
+
+Specifically, there is a moderate positive linear relationship with Recreation spend (Pearson coefficient 0.345) and a moderate negative linear relationship with Wages (Pearson coefficient 0.318).\
+\
+[**Conclusion**]{.underline}:
+
+The negative linear relationship with wages suggests that earning higher wages does not make one happier.
+
+This observation links back to our observations in 4 & 5 , where earning higher wages by being more educated does not seem to have much impact on one’s happiness.
+
+## 4.7 Observation 7 – There is no difference in Joviality for participants in different Age groups
+
+From our IDEA analysis, we noted a difference in the mean Joviality for different Age groups. We examined this by conducting a One-way ANOVA test to test for differences in the mean joviality for the 5 different age groups.
+
+![Fig 46: Box plot showing the mean joviality across Age groups](images/clipboard-3964600075.png){fig-align="left"}
+
+First, we run normality tests to check the distribution.
+
+![Fig 47: Summary of normal distribution tests for joviality Vs Age groups](images/clipboard-3040571853.png){fig-align="left"}
+
+Both the Shapiro-Wilk and Anderson-Darling tests derived p-values \< 0.05; ie the distribution for all 4 classes in age groups is not normal. Therefore, we proceed with a non-parametric one-way ANOVA test to compare the means.
+
+[Non-parametric One-way ANOVA test hypotheses:]{.underline}
+
+H0: There is no difference in the mean joviality across age groups\
+H1: There is a difference in the mean joviality across age groups.
+
+![Fig 48: Summary of the Kruskal-Wallis test for Joviality Vs Age groups](images/clipboard-1009307602.png){fig-align="left"}
+
+The p-value from the Kruskal-Wallis test is 0.1852, which is \> 0.05. This means that we do not have sufficient evidence to reject the null hypothesis
+
+[**Conclusion**]{.underline}**:**
+
+There is no strong evidence that different age groups are happier than others.
+
+## 4.8 Observation 8 – There is no difference in Joviality for different household sizes.
+
+From our IDEA analysis, we noted that the mean Joviality for participants with a household size of 3 is somewhat higher than other participants. We examine this with a One-way ANOVA test to test for differences in the means of the 3 classes of household sizes.
+
+![Fig 49: Box plot showing the difference in mean joviality across household sizes](images/clipboard-2092126368.png){fig-align="left"}
+
+First, we run normality tests to check the distribution.
+
+![Fig 50: Summary of Normal distribution test for joviality Vs Household sizes](images/clipboard-3520231721.png){fig-align="left"}
+
+Both the Shapiro-Wilk and Anderson-Darling tests derived p-values \< 0.05; ie the distribution for all 3 classes in Household size is not normal. Therefore, we use non-parametric one-way ANOVA test to compare the means.   
+
+[Non-parametric One-way ANOVA test hypotheses:]{.underline}
+
+H0: There is no difference in the mean joviality across different household sizes\
+H1: There is a difference in the mean joviality across different household sizes.
+
+![Fig 51: Summary of the Kruskal-Wallis test for Joviality Vs Household sizes](images/clipboard-3502527678.png){fig-align="left"}
+
+The p-value from the Kruskal-Wallis test is 0.6854, which is \> 0.05. This means that we do not have sufficient evidence to reject the null hypothesis
+
+[**Conclusion**]{.underline}**:**
+
+There is no strong evidence that different household sizes are happier than others
+
+## 4.9 Observation 9 – Participants financial health does not improve over time
+
+From our IDEA analysis, we noted that monthly wages do not increase over time, and instead shows a decreasing trend.
+
+![Fig 52: Line chart showing the total monthly wages from March 2022 to May 2022](images/clipboard-2090264842.png){fig-align="left"}
+
+As can be seen from Fig 53, all participants in all household types, spend the most from their wages on shelter.
+
+![Fig 53: Breakdown of expenditure for participants across all household sizes](images/clipboard-2242268645.png){fig-align="left"}
+
+![Fig 54: Comparison of total expenditure over different expense categories, over time period.](images/clipboard-2165377868.png){fig-align="left"}
+
+From Fig 54, we can observe that Shelter occupies the top expenditure bracket and is constant throughout the time period.
+
+![Fig 55: Expenditure on recreation and food show a decreasing trend over time](images/clipboard-1046296570.png){fig-align="left"}
+
+Therefore, from the constant expenditure on shelter and decreasing wages over time, we can infer that participants are compensating for this by spending lesser on recreation and food. Educational spend does not impact our conclusion due to its low relative cost and constant or fixed pricing. Furthermore, educational spend is exclusive to participants with children, who make up 1/3 of the sample size.
+
+[**Conclusion**]{.underline}**:**
+
+Participants do not get wealthier over time and have to compensate by cutting back on recreation and food as they prioritize Shelter over other items.
+
+## 4.10 Observation 10 - Wages is moderately correlated with Food and Shelter spend.
+
+From our IDEA analysis, we noted that wage is moderately correlated with Food and Shelter spend. We proceed to examine the correlation between Wages and Expense categories (Food, Recreation, Education, Shelter).
+
+![Fig 56: Scatter plots of Wage Vs Food, Education, Recreation and Shelter](images/clipboard-3103231406.png){fig-align="left"}
+
+[Correlation test hypotheses:]{.underline}
+
+H0: There is no correlation between the variables\
+H1: There is a correlation between the variables.
+
+![Fig 57: Pearson Coefficient scores for Wage Vs Expense categories. Correlations are indicated as negative as expense amounts in the dataset is recorded as negative amounts.](images/clipboard-826493999.png){fig-align="left"}
+
+The p values for Education, Food, Recreation and Shelter are below \<0.05. Hence, we can reject the null hypothesis and conclude that there is some correlation between wages and these expense categories.
+
+Specifically, we noted a moderate positive linear relationship with Food spend (Pearson coefficient 0.3609) and a moderate positive linear relationship with Shelter (Pearson coefficient 0.4176).
+
+[**Conclusion**]{.underline}**:**
+
+The positive linear relationship with Food and Shelter suggests that participants prioritize these items ahead of other categories like recreation.
+
+This observation links back to our observations in financial analysis , where recreation spend exhibits a decreasing trend in the time period.
+
+# 5. Interpretation of Analyses
+
+The following points summarises the key findings from the analyses conducted:
+
+1.  [Uniform Joviality among Parents & Non-Parents]{.underline}: Despite common perceptions, having children doesn't necessarily correlate with increased joviality. Life satisfaction could be influenced by other factors beyond family structure.
+
+2.  [Education & Parenthood]{.underline}: Higher educational attainment may influence life decisions, including the choice to have children, potentially due to career priorities or financial considerations.
+
+3.  [Education, Wages & Joviality]{.underline}: Higher education seems to correlate with better wages, but not necessarily with increased joviality. This suggests that factors beyond income play a significant role in determining one's happiness. For example, longer working hours or a lack of work life balance associated with better paying jobs may affect happiness levels.
+
+4.  [Joviality & Expenditure]{.underline}: The association between joviality and recreational spend highlights the importance of leisure and personal time. Conversely, higher wages not correlating directly with higher joviality may hint at societal pressures or job-related stress.
+
+5.  [Age & Joviality]{.underline}: The consistent joviality across age groups implies that age-specific factors or challenges don't significantly affect overall happiness.
+
+6.  [Financial Health Over Time:]{.underline} The observed trend where participants don't become wealthier over time and prioritize shelter over other expenses, implies a possible housing affordability crisis, especially if residents are compromising on other basic needs.
+
+7.  [Wages & Essential Expenses]{.underline}: Wages being correlated with food and shelter expenditures signifies the necessity-driven nature of earnings, which can influence overall life satisfaction.
+
+# 6. Recommendations
+
+The following initiatives are recommended for the community revitalization efforts:
+
+1.  [Community Building]{.underline}: Encourage community programs that emphasize shared experiences to increase joviality beyond materialistic pursuits.
+
+2.  [Education & Career Counselling]{.underline}: Given the relationship between education, wages, and life decisions, comprehensive education and career counselling can assist residents in making informed life choices.
+
+3.  [Financial Literacy Programs]{.underline}: Equip residents with tools to manage and optimize their finances, especially as they navigate wage and expenditure challenges.
+
+4.  [Housing Policies]{.underline}: Given the prominence of shelter as an expenditure, housing affordability initiatives or rent-control measures may help alleviate financial pressures.
+
+5.  [Work-Life Balance]{.underline}: Promote employer policies that emphasize a healthy work-life balance, as higher wages alone don't correlate with increased joviality.
+
+6.  [Leisure & Recreation Initiatives]{.underline}: Subsidize and promote recreational activities to ensure residents have avenues for relaxation, given its correlation with joviality.
+
+7.  [Support for Families]{.underline}: To encourage family growth, the city council can consider child benefits, parental support programs, and affordable childcare services.
+
+# 7. Appendix
+
+Data Preparation Change log
+
+![](images/clipboard-3033982119.png)
+
+# 8. Data Limitations
+
+[**Sample Representativeness:**]{.underline}
+
+It is unclear if the sample collected is truly representative of the city residents due to a lack of additional data on participants like geography, type of home, marital status, occupation, rent cost etc.
+
+There could have potentially been some sample bias towards specific locations or demographic groups, which may explain the relatively high proportion of participants without children and with lower educational qualifications surveyed. This could have hindered the ability to find associations between joviality and the given categorical variables.\
+\
+[**Response Bias:**]{.underline}
+
+Joviality scores were recorded only at the start, but financial data was taken throughout the year. The large one-time wage inflows in March 2022 could have disproportionally influenced these joviality scores.
+
+A declining trend in expenditure on Food and Recreation was observed, but no subsequent joviality changes were recorded. Furthermore, changes in personal circumstances could have also affected joviality but is hard to infer due to the limited available data on participants.
+
+[**Causation vs Correlation**]{.underline}
+
+Due to the lack of subsequent measures of joviality, it is unclear if observed correlations with wages and expense categories continually to directly result in changes in joviality.
+
+[**Recommendation for Improved Data Collection:**]{.underline}
+
+1.  Conduct multiple survey rounds for comprehensive data.
+
+2.  Collect additional data on the demographics profile of participants
+
+3.  Test findings from the initial survey against a separate sample.
