@@ -28,6 +28,8 @@ website:
             href: R-ex/R-Ex3/R_Ex3.html
           - text: R Exercise 4 - Be Weatherwise or Otherwise
             href: R-ex/R-Ex4/R_Ex4.html
+          - text: R Exercise 5 - Visual Analytics exercise on Armed conflicts - Detailed
+            href: R-ex/R-Ex4/R_Ex5.html  
       - text: Exercises in Python
         menu: 
           - text: Python Exercise 1 
