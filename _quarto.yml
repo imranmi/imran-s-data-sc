@@ -44,7 +44,7 @@ website:
             href: Python-ex/Python-Ex1/Python_Ex1.html
           - text: Python Exercise 2 - Designing a 3-stock portfolio for a robo-advisor 
             href: Python-ex/Python-Ex2/Python_Ex2.html
-          - text: Python Exercise 3 
+          - text: Python Exercise 3 - Project - Predicting Stock Prices through Time series Analysis 
             href: Python-ex/Python-Ex3/Python_Ex3.html
       - text: SAS Viya Exercises
         menu: 
