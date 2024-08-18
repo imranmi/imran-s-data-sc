@@ -60,7 +60,7 @@ A systematic review by Calli and Çoşkun (2021) encompassing 108 studies on cre
 
 The industry-standard Fair Isaac Corp score (FICO) further illustrates this complexity. It evaluates creditworthiness based on amounts owed, payment history, new credit, length of credit history, and credit mix (myFICO, 2022). This underscores the need for a multifaceted approach in credit risk evaluation and integrating a diverse set of variables into predictive models.
 
-Beyond identifying influential variables, the research landscape also points to the need for effective predictive models that can accurately interpret customer loan data nuances. Wu, W.J. (2022) applied Random Forest and XGBoost models to a dataset of 105,471 loan records, achieving commendable average accuracy scores of around 0.9. In a separate study, X. Zhu et al. (2023) conducted a comparative analysis with four models (Logistic Regression, Decision Tree, XGBoost, and LightGBM) on a dataset with 800,000 loan records and concluded that XGBoost and LightGBM models surpassed Logistic Regression and Decision Tree models, with accuracy scores exceeding 0.8 compared to the latter's 0.6. Lastly, Odegua (2020), using the same customer loan dataset from SuperLender, reported substantial results from an XGBoost model, with an accuracy score of 0.79 and an F1 score of 0.87. \
+Beyond identifying influential variables, the research landscape also points to the need for effective predictive models that can accurately interpret customer loan data nuances. Wu, W.J. (2022) applied Random Forest and XGBoost models to a dataset of 105,471 loan records, achieving commendable average accuracy scores of around 0.9. In a separate study, X. Zhu et al. (2023) conducted a comparative analysis with four models (Logistic Regression, Decision Tree, XGBoost, and LightGBM) on a dataset with 800,000 loan records and concluded that XGBoost and LightGBM models surpassed Logistic Regression and Decision Tree models, with accuracy scores exceeding 0.8 compared to the latter's 0.6. Lastly, Odegua (2020), using the same customer loan dataset from SuperLender, reported substantial results from an XGBoost model, with an accuracy score of 0.79 and an F1 score of 0.87.\
 \
 In addition to individual predictive models, ensemble methods have also been shown to achieve promising results in loan default prediction. Ensemble methods combine the predictions of multiple individual models to produce a more robust and accurate prediction. This approach is based on the premise that a diverse set of models is more likely to capture the underlying complexities of the data and produce more accurate predictions than individual models.
 
@@ -194,9 +194,9 @@ The Receiver Operating Characteristic (ROC) curve is a plot of sensitivity (the 
 
 The diagonal line indicates a random model, where sensitivity = 1-specificity. An ROC curve that plots above this diagonal indicates a better-than-random ability to distinguish between the positive and negative classes.
 
-# 5. Discussion  
+# 5. Discussion
 
-#  
+# 
 
 Notably, our tree-based models, including Random Forest, Gradient Boosting, and Decision Trees, exhibit a somewhat subdued performance compared to Logistic regression models. This divergence in efficacy may be attributed to the logistic regression models’ ability for handling interval variables, which are predominant in our dataset.
 
@@ -276,4 +276,4 @@ SAS and all other SAS Institute Inc. product or service names are registered tra
 
 Other brand and product names are trademarks of their respective companies.
 
-#    
+# 

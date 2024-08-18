@@ -288,16 +288,10 @@ A higher Education level is related to a higher mean wage.
 
 ## 4.6 Observation 6 - Joviality is moderately correlated with Wages and Recreation spend.
 
-From our IDEA analysis, we noted that Joviality is moderately correlated with Wages
-and Recreation spend. For this analysis, only financial data from March 2022
-was considered, as Joviality scores were obtained at the start of the survey
-period. We examined the correlation between Joviality and March 2022
-transaction categories (Food, Recreation, Education, Shelter, Rent Adjustment
-and Wages).
+From our IDEA analysis, we noted that Joviality is moderately correlated with Wages and Recreation spend. For this analysis, only financial data from March 2022 was considered, as Joviality scores were obtained at the start of the survey period. We examined the correlation between Joviality and March 2022 transaction categories (Food, Recreation, Education, Shelter, Rent Adjustment and Wages).
 
 ![](images/clipboard-3937081255.png)\
-Fig 44: Scatter plots of Joviality Vs Education, Food, Recreation, Rent Adjustment, Shelter and Wages
-\
+Fig 44: Scatter plots of Joviality Vs Education, Food, Recreation, Rent Adjustment, Shelter and Wages\
 [Correlation test hypotheses:]{.underline}
 
 H0: There is no correlation between the variables\

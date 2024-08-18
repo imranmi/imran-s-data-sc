@@ -35,7 +35,9 @@ website:
           - text: R Exercise 7 - Geospatial Analysis2 - Emerging Hot Spot Analysis
             href: R-ex/R-Ex7/R_Ex7.html
           - text: R Exercise 8 - Geospatial Analysis3 - Spatially Constrained Clustering-ClustGeo method
-            href: R-ex/R-Ex8/R_Ex8.html   
+            href: R-ex/R-Ex8/R_Ex8.html
+          - text: Group Project Poster - Decoding Chaos - Analysing Armed conflicts in Myammar
+            href: R-ex/R-Ex9/R_Ex9.html  
       - text: Exercises in Python
         menu: 
           - text: Python Exercise 1 
@@ -51,7 +53,9 @@ website:
           - text: Assignment 2 - Be Customer wise or otherwise 
             href: Write-ex/Write-Ex2/Write_Ex2.html
           - text: Project - Loan Default prediction    
-            href: Write-ex/Write-Ex3/Write_Ex3.html     
+            href: Write-ex/Write-Ex3/Write_Ex3.html
+          - text: Project Poster - Loan Default prediction    
+            href: Write-ex/Write-Ex4/Write_Ex4.html  
           
 format:
   html:

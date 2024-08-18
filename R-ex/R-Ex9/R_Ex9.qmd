@@ -1,0 +1,25 @@
+---
+title: "Decoding Chaos - Analysing Armed conflicts in Myammar"
+author: "Imran Ibrahim, Teo Suan Ern & Zachary Wong"
+date: August 18, 2024
+date-modified: "last-modified"
+toc: true
+execute: 
+  eval: true
+  echo: true
+  freeze: true
+  warning: false
+  message: false
+---
+
+# Overview of Project
+
+![](images/ISSS608_AY2023-24-G1-Group05-PosterDraft-300324-1138PM.jpg)
+
+# Website
+
+<https://decoding-chaos.netlify.app/>
+
+# Shiny app user guide
+
+<https://decoding-chaos.netlify.app/RShiny/UserGuide.pdf>

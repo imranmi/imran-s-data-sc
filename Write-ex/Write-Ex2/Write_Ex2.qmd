@@ -68,20 +68,18 @@ The timestamp column in the transaction dataset was set with a varchar format.
 
 ![Fig 7: Data type of variables in Online_sports_DIB dataset](images/clipboard-2892560206.png){fig-align="left"}
 
-We convert the timestamp variable to a datetime format and rename the column ‘Timestamp’. \
+We convert the timestamp variable to a datetime format and rename the column ‘Timestamp’.\
 \
-Steps: \
+Steps:\
 In SAS Data Studio -Prepare Data \> Column Transforms \> Convert column \> Conversion\
 In SAS Data Studio -Prepare Data \> Column Tranforms \> Rename column \> Name of new column
 
 ![Fig 8: Converting to datetime format and renaming to ‘Timestamp’](images/clipboard-4094932784.png){fig-align="left"}
 
-To further understand of the extent of transaction activities intraday, we
-decompose the timestamp to date and time.\
+To further understand of the extent of transaction activities intraday, we decompose the timestamp to date and time.\
 
-Steps: \
-In SAS Data Studio -Prepare Data \> Column Transforms \> Convert column
-\> Conversion (select date & time)
+Steps:\
+In SAS Data Studio -Prepare Data \> Column Transforms \> Convert column \> Conversion (select date & time)
 
 ![Fig 9: Deriving distinct dates and time from timestamp](images/clipboard-3506358356.png){fig-align="left"}
 
@@ -93,7 +91,7 @@ There are 3,268 transactions which were recorded beyond the sample date cut off 
 
 ![Fig 11: Dataset contains 3,268 transactions beyond the sample cut-off date of 29/02/2020](images/clipboard-1348479112.png){fig-align="left"}
 
-Steps: \
+Steps:\
 In SAS Data Studio -Prepare Data \> Row Transforms \> Filter \> column (TimeStamp), operator (less than), and value (1/3/2020)
 
 ![Fig 12: Filtering out transactions beyond cut-off date of 29/02/2020](images/clipboard-1294237504.png){fig-align="left"}
@@ -104,7 +102,7 @@ From SAS Visual Analytics, we noted that there are 6 transactions with ‘NA’ 
 
 ![Fig 13: There are 6 transactions with ‘NA’ status](images/clipboard-776588121.png){fig-align="left"}
 
-Steps: \
+Steps:\
 In SAS Data Studio -Prepare Data \> Row Transforms \> Filter \> column (Status), operator (Not Contains), and value (NA).
 
 ![Fig 14: Filtering out transactions with ‘NA’ status](images/clipboard-1281311843.png){fig-align="left"}
@@ -124,9 +122,7 @@ Steps: SAS Data Studio -Prepare Data \> Data Quality Transforms \> Remove Duplic
 
 ## 3.6 Renaming Transaction types
 
-There are 4 transaction types, namely, ‘LOYALTYCARDDEBIT’,’LOYALTYCARDCREDIT’,
-’LOYALTYCARDCREDITCL’ and ‘LOYALTYCARDCREDITACH’. We rename them to easily be
-able to infer the direction of funds. This is done through SQL code.\
+There are 4 transaction types, namely, ‘LOYALTYCARDDEBIT’,’LOYALTYCARDCREDIT’, ’LOYALTYCARDCREDITCL’ and ‘LOYALTYCARDCREDITACH’. We rename them to easily be able to infer the direction of funds. This is done through SQL code.\
 
 ‘LOYALTYCARDDEBIT’ to ‘Deposit into Wager’\
 ‘LOYALTYCARDCREDIT’ to ‘Withdrawal from Wager’\
@@ -137,7 +133,7 @@ able to infer the direction of funds. This is done through SQL code.\
 
 Fig 18: Renaming Transaction types by SQL code
 
-##  3.7 Creating new categorical variables for date and time
+## 3.7 Creating new categorical variables for date and time
 
 Since transactions are recorded on an intraday basis, we re-categorize it into day type (weekday or weekend) and segments of the day (day, evening, and dawn) to help us analyse transaction patterns. This is done through SQL code.  
 
@@ -145,11 +141,7 @@ Since transactions are recorded on an intraday basis, we re-categorize it into d
 
 ## 3.8 Creating new time variables for betting activity
 
-To better understand when clients place their bets online, we create new variables using
-SQL code. From previously created categories of time, we sum the frequency
-counts of transactions. This is then grouped by bets placed during the day,
-night, dawn, weekday, and weekend.  A new
-table ‘BetTimeCounts_Percentages’ will be created.
+To better understand when clients place their bets online, we create new variables using SQL code. From previously created categories of time, we sum the frequency counts of transactions. This is then grouped by bets placed during the day, night, dawn, weekday, and weekend.  A new table ‘BetTimeCounts_Percentages’ will be created.
 
 ![Fig 20: SQL code to create new time variables](images/clipboard-946167040.png){fig-align="left"}
 
@@ -157,15 +149,11 @@ table ‘BetTimeCounts_Percentages’ will be created.
 
 [**Assumption:**]{.underline}
 
-We assume that a successful deposit into the wagering account is a betting attempt
-i.e., an ‘Approved’ transaction type of ‘LOYALTYCARDDEBIT’.\
+We assume that a successful deposit into the wagering account is a betting attempt i.e., an ‘Approved’ transaction type of ‘LOYALTYCARDDEBIT’.\
 
-## 3.9 Creating new variables to analyse the ‘Winning’ data of clients 
+## 3.9 Creating new variables to analyse the ‘Winning’ data of clients
 
-To analyse if clients are actually winning from their betting activities. A new
-table ‘WinMetrics’ will be created using SQL code. This will include the
-frequency count of withdrawals from wager account, total winnings, and net
-winnings.
+To analyse if clients are actually winning from their betting activities. A new table ‘WinMetrics’ will be created using SQL code. This will include the frequency count of withdrawals from wager account, total winnings, and net winnings.
 
 [**Assumption:**]{.underline}
 
@@ -246,7 +234,7 @@ Most of our clustering variables are heavily skewed. We will do a log transforma
 
 Next, we apply log transformation to transform highly skewed variables. As some variables have some ‘0’ values, we will need to apply a constant before doing a log transform.
 
-Steps: \
+Steps:\
 SAS Visual Analytics \> Data \> New Data Item\> Calculated item \> select variable \> Operators \> Numeric (simple)\> x+y \> Numeric (advanced) \> Log \> insert constant and log
 
 ![Steps for log transformation](images/clipboard-948296612.png){fig-align="left"}
@@ -291,7 +279,7 @@ Steps: SAS Visual Analytics, Options\> Model Display \> General \>Select ABC Sta
 
 From the ABC Statistics graph(Fig 40), we analyse the Gap statistics further. We observe that the Gap statistic for 4 clusters (0.1003) is higher than that for 5 clusters (-0.0250) i.e., after 4 clusters, the Gap statistic starts to decrease, indicating diminishing returns in cluster quality or compactness.
 
-This can typically be interpreted as the optimal number of clusters for the dataset. \
+This can typically be interpreted as the optimal number of clusters for the dataset.\
 \
 As K-means is an unsupervised learning method, we will just use this auto-assignment as a start for our first clustering analysis. Subsequently, we will change the number of clusters to observe the difference in the quality of the clustering operation.
 
@@ -354,7 +342,7 @@ Steps: Options \> General \> Number of Clusters (input 6)
 ![Fig 49: Cluster diagram using 6 clusters](images/clipboard-2046300730.png){fig-align="left"}
 
 [Cluster visualization]{.underline}\
-As can be seen from Fig 49, with the addition of 2 more clusters, there is more overlapping among the clusters, which suggest that adding more clusters may not have improved the distinctiveness between clusters. \
+As can be seen from Fig 49, with the addition of 2 more clusters, there is more overlapping among the clusters, which suggest that adding more clusters may not have improved the distinctiveness between clusters.\
 However, this can only be confirmed after examining the characteristics of the clusters on an individual variable basis.
 
 [Cluster Summary Statistics\
@@ -435,7 +423,7 @@ Discovery of New Behaviours: With the 6 clusters, the "Daytime Weekenders" clust
 
 [**Conclusion:**]{.underline}
 
-The 6-cluster model seems to provide more granularity on distinct gambling behaviours in our dataset. It potentially offers a better chance of identifying nuanced patterns. If the aim is to have a more detailed and actionable segmentation, then the 6-cluster model appears more beneficial. \
+The 6-cluster model seems to provide more granularity on distinct gambling behaviours in our dataset. It potentially offers a better chance of identifying nuanced patterns. If the aim is to have a more detailed and actionable segmentation, then the 6-cluster model appears more beneficial.\
 \
 However, it's also essential to ensure that the data supports these granular segments and that there's enough differentiation between the clusters to justify the increased complexity. This will be explained in the next section.
 
@@ -465,7 +453,7 @@ For example, regular bettors could be betting on frequently scheduled football m
 
 d\) Demographics of clients
 
-There is a clear distinction of gamblers (late night/dawn and daytime bettors). Besides attributing this to obsessive gambling habits, the difference could also be explained by the jobs held by these clients. For example, some clients could have different working hours (e.g., night shifts). \
+There is a clear distinction of gamblers (late night/dawn and daytime bettors). Besides attributing this to obsessive gambling habits, the difference could also be explained by the jobs held by these clients. For example, some clients could have different working hours (e.g., night shifts).\
 \
 Understanding the age profiles of client could also benefit the analysis and help identify points of concern. For example, if there are many economically active young persons, it would be concerning that they are spending most of their leisure hours gambling.
 
