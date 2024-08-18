@@ -40,7 +40,7 @@ website:
             href: R-ex/R-Ex9/R_Ex9.html  
       - text: Exercises in Python
         menu: 
-          - text: Python Exercise 1 
+          - text: Python Exercise 1 - Automate the design of a 3-stocks portfolio for a given target return 
             href: Python-ex/Python-Ex1/Python_Ex1.html
           - text: Python Exercise 2 
             href: Python-ex/Python-Ex1/Python_Ex1.html

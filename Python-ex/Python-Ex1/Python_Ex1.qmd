@@ -1,0 +1,75 @@
+---
+title: "Automate the design of a 3-stocks portfolio for a given target return"
+author: "Imran Ibrahim"
+date: August 18, 2024
+date-modified: "last-modified"
+toc: true
+execute: 
+  eval: true
+  echo: true
+  freeze: true
+  warning: false
+  message: false
+---
+
+# Overview
+
+![](images/clipboard-2348194083.png){fig-align="left"}
+
+![](images/clipboard-4712954.png)
+
+# Importing modules
+
+![](images/clipboard-3433780652.png)
+
+# Read and Format the data
+
+![](images/clipboard-3618622536.png)
+
+# Getting month-end dates and prices of data file
+
+![](images/clipboard-3043959214.png)
+
+# Getting month-end dates and prices of analysis period
+
+![](images/clipboard-2684221949.png)
+
+# Getting the stock universe
+
+![](images/clipboard-87370097.png)
+
+![](images/clipboard-791679182.png)
+
+# Identifying the 3 stocks for portfolio construction
+
+![](images/clipboard-3373737196.png)
+
+# Allocation of optimised portfolio
+
+Design consideration for only 3 stocks chosen to form the portfolio. Based on 3 stock design and the min_weight variable that is assigned to each of the 3 stocks, the procedure to find the optimised portfolio will be as follows:
+
+1.  Maximum weight to be distributed will be determined as 100% - (min weight \* no. of stocks)
+
+2.  The weight will be randomly distributed over the 3 stocks, and the random distribution will be iterated over 10% of the total possible combinations possible based on max weight to be distributed and 3 stocks in portfolio
+
+3.  Assumption that the random sample will be enough to get the optimal distribution and decision for the random sample is to alleviate the computational power required to calculate all possible combinations
+
+4.  Each random distribution of weight will then be test by calculating the Sharpe ratio of the portfolio with that weight distribution
+
+5.  The results of the random test will be plotted on a graph to find the distribution with the highest Sharpe Ratio
+
+![![](images/clipboard-3934151235.png)](images/clipboard-331002429.png)
+
+# Reporting the required results
+
+![](images/clipboard-996575642.png)
+
+![](images/clipboard-1619392214.png)
+
+# Appendix
+
+![](images/clipboard-103785325.png)
+
+![](images/clipboard-1405731177.png)
+
+![](images/clipboard-69540955.png)
