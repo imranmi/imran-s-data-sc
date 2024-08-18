@@ -42,10 +42,10 @@ website:
         menu: 
           - text: Python Exercise 1 - Automate the design of a 3-stocks portfolio for a given target return 
             href: Python-ex/Python-Ex1/Python_Ex1.html
-          - text: Python Exercise 2 
-            href: Python-ex/Python-Ex1/Python_Ex1.html
+          - text: Python Exercise 2 - Designing a 3-stock portfolio for a robo-advisor 
+            href: Python-ex/Python-Ex2/Python_Ex2.html
           - text: Python Exercise 3 
-            href: Python-ex/Python-Ex1/Python_Ex1.html
+            href: Python-ex/Python-Ex3/Python_Ex3.html
       - text: SAS Viya Exercises
         menu: 
           - text: Assignment 1 - Show me the numbers 

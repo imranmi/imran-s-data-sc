@@ -581,6 +581,13 @@
     "text": "Observation 8\nFrom the combined plot, it appears that the optimal number of times to study in a week is 5 times for all subjects. More times spent on homework and/or studying does not seem to translate to higher scores for this PISA test. However this factor alone is insufficient to conclude causality, and we should do additional analysis on other factors that may impact a student’s ability to prepare for this test."
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Imran’s Data Science website",
+    "section": "",
+    "text": "Welcome to my website.\nHere, you will find some of my post-graduate research, assignments and projects.\n\n\n\n\n\n\n Back to top"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About Imran",
@@ -588,11 +595,11 @@
     "text": "Having spent many years lost in a traditional finance career, I’ve finally found the courage to start learning about Data Science.\nNow, I’m on my second wind, and hope to become someone more than just to “increase shareholder value”.\n\nNever settle, and always strive to be a better version of yourself every day. It’s never to late to start something or learn something new. Your ability is not determined by your age.\n\n“Never say never, because limits, like fears, are often just an illusion” - Michael Jordan.\n\n\n\n Back to top"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Imran’s Data Science website",
+    "objectID": "Python-ex/Python-Ex1/Python_Ex1.html",
+    "href": "Python-ex/Python-Ex1/Python_Ex1.html",
+    "title": "Automate the design of a 3-stocks portfolio for a given target return",
     "section": "",
-    "text": "Welcome to my website.\nHere, you will find some of my post-graduate research, assignments and projects.\n\n\n\n\n\n\n Back to top"
+    "text": "Overview\n\n\n\n\n\n\n\n\nImporting modules\n\n\n\nRead and Format the data\n\n\n\nGetting month-end dates and prices of data file\n\n\n\nGetting month-end dates and prices of analysis period\n\n\n\nGetting the stock universe\n\n\n\n\nIdentifying the 3 stocks for portfolio construction\n\n\n\nAllocation of optimised portfolio\nDesign consideration for only 3 stocks chosen to form the portfolio. Based on 3 stock design and the min_weight variable that is assigned to each of the 3 stocks, the procedure to find the optimised portfolio will be as follows:\n\nMaximum weight to be distributed will be determined as 100% - (min weight * no. of stocks)\nThe weight will be randomly distributed over the 3 stocks, and the random distribution will be iterated over 10% of the total possible combinations possible based on max weight to be distributed and 3 stocks in portfolio\nAssumption that the random sample will be enough to get the optimal distribution and decision for the random sample is to alleviate the computational power required to calculate all possible combinations\nEach random distribution of weight will then be test by calculating the Sharpe ratio of the portfolio with that weight distribution\nThe results of the random test will be plotted on a graph to find the distribution with the highest Sharpe Ratio\n\n\n\n\n\n\n\n\n\nReporting the required results\n\n\n\n\nAppendix\n\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "R-ex/R-Ex2/R_Ex2.html",
@@ -973,10 +980,10 @@
     "text": "Fit statistics for the Champion mode- - Ensemble"
   },
   {
-    "objectID": "Python-ex/Python-Ex1/Python_Ex1.html",
-    "href": "Python-ex/Python-Ex1/Python_Ex1.html",
-    "title": "Automate the design of a 3-stocks portfolio for a given target return",
+    "objectID": "Python-ex/Python-Ex2/Python_Ex2.html",
+    "href": "Python-ex/Python-Ex2/Python_Ex2.html",
+    "title": "Designing a 3 -stock portfolio for a robo-advisor",
     "section": "",
-    "text": "Overview\n\n\n\n\n\n\n\n\nImporting modules\n\n\n\nRead and Format the data\n\n\n\nGetting month-end dates and prices of data file\n\n\n\nGetting month-end dates and prices of analysis period\n\n\n\nGetting the stock universe\n\n\n\n\nIdentifying the 3 stocks for portfolio construction\n\n\n\nAllocation of optimised portfolio\nDesign consideration for only 3 stocks chosen to form the portfolio. Based on 3 stock design and the min_weight variable that is assigned to each of the 3 stocks, the procedure to find the optimised portfolio will be as follows:\n\nMaximum weight to be distributed will be determined as 100% - (min weight * no. of stocks)\nThe weight will be randomly distributed over the 3 stocks, and the random distribution will be iterated over 10% of the total possible combinations possible based on max weight to be distributed and 3 stocks in portfolio\nAssumption that the random sample will be enough to get the optimal distribution and decision for the random sample is to alleviate the computational power required to calculate all possible combinations\nEach random distribution of weight will then be test by calculating the Sharpe ratio of the portfolio with that weight distribution\nThe results of the random test will be plotted on a graph to find the distribution with the highest Sharpe Ratio\n\n\n\n\n\n\n\n\n\nReporting the required results\n\n\n\n\nAppendix\n\n\n\n\n\n\n\n Back to top"
+    "text": "Overview\n\n\n\n\nImporting Modules\n\n\n\nWorking out the required monthly return rate to achieve target wealth\n\n\n\nRead and format the data\n\n\n\nGetting month-end dates and prices from data file\n\n\n\nGetting month-end dates and prices of analysis period\n\n\n\nGetting stock universe\n\n\n\nIdentify 3 stocks for portfolio construction\n\n\n\n\nAllocation of optimised portfolio\nDesign consideration for only 3 stocks chosen to form the portfolio. Based on 3 stock design and the min_weight variable that is assigned to each of the 3 stocks, the procedure to find the optimised portfolio will be as follows:\n\nMaximum weight to be distributed will be determined as 100% - (min weight * no. of stocks)\nThe weight will be randomly distributed over the 3 stocks, and the random distribution will be iterated over 10% of the total possible combinations possible based on max weight to be distributed and 3 stocks in portfolio\nAssumption that the random sample will be enough to get the optimal distribution and decision for the random sample is to alleviate the computational power required to calculate all possible combinations\nEach random distribution of weight will then be test by calculating the Sharpe ratio of the portfolio with that weight distribution\nThe results of the random test will be plotted on a graph to find the distribution with the highest Sharpe Ratio\n\n\n\n\n\n\n\n\n\n\nReporting the required results\n\n\n\nQuery on the portfolio value\n\n\n\n\nAppendix\n\n\n\n\n\n\n\n\n\n\n\n Back to top"
   }
 ]
