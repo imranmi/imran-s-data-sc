@@ -590,16 +590,16 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Imran’s Data Science website",
+    "title": "Imran’s Postgrad repository",
     "section": "",
-    "text": "Welcome to my website.\nHere, you will find some of my post-graduate research, assignments and projects.\n\n\n\n\n\n\n Back to top"
+    "text": "Welcome to my website.\nHere, you will find some of my post-graduate research, assignments and projects on Financial Technology and Data Analytics.\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About Imran",
     "section": "",
-    "text": "Having spent many years lost in a traditional finance career, I’ve finally found the courage to start learning about Data Science.\nNow, I’m on my second wind, and hope to become someone more than just to “increase shareholder value”.\n\nNever settle, and always strive to be a better version of yourself every day. It’s never to late to start something or learn something new. Your ability is not determined by your age.\n\n“Never say never, because limits, like fears, are often just an illusion” - Michael Jordan.\n\n\n\n Back to top"
+    "text": "Having spent many years lost in a traditional finance career, I took the leap of faith to embark on a learning journey to deepen my understanding on Financial technology and Data Analytics.\nNever settle, and always strive to be a better version of yourself every day. It’s never to late to start something or learn something new. Your ability is not determined by your age.\n\n“Never say never, because limits, like fears, are often just an illusion” - Michael Jordan.\n\n\n\n Back to top"
   },
   {
     "objectID": "Python-ex/Python-Ex1/Python_Ex1.html",
@@ -614,6 +614,139 @@
     "title": "Project - Predicting Stock Prices through Time series Analysis",
     "section": "",
     "text": "This study focuses on applying and evaluating various time series analysis models for the prediction of stock prices, with an emphasis on understanding the nuances, behaviour, and potential accuracy of each model. While our study conducts a comparative analysis, its primary purpose is to delve deep into the insights and observations we obtained during the application of these models on the same dataset. Our work revolves around using ARIMA, LSTM, and FB Prophet models to forecast future stock prices of Microsoft (MSFT). This stock was selected based on its high trading volumes and considerable market influence. For our dataset, we chose a period of five years, from June 2018 to June 2023, which covers the period before, during and after the pandemic. While longer time periods were considered, we felt that the market environment and price action during this 5-year period would suffice to represent a varied set of data more meaningful than any recent period in the past.  FB Prophet serves as the benchmark tool against which the other models were evaluated, utilizing the Root Mean Squared Error (RMSE) as the primary performance metric. An interesting facet of this investigation was the exploration of a hybrid model approach, combining the strengths of ARIMA and LSTM. This allowed for the examination of both short-term and long-term predictive capabilities of these models, and their effectiveness when combined. Ultimately, this study underscores that there is no one-size-fits-all model for stock price prediction. Each model’s effectiveness depends significantly on various factors such as the length of the forecast period, the nature of the data, and the specific application context."
+  },
+  {
+    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#data-collection",
+    "href": "Python-ex/Python-Ex3/Python_Ex3.html#data-collection",
+    "title": "Project - Predicting Stock Prices through Time series Analysis",
+    "section": "2.1 Data collection",
+    "text": "2.1 Data collection\nWe gathered historical stock price data for Microsoft (MSFT) from Yahoo Finance. Our data spans a period of five years, from June 2018 to June 2023, which includes both pre- and post-pandemic periods."
+  },
+  {
+    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#data-pre-processing",
+    "href": "Python-ex/Python-Ex3/Python_Ex3.html#data-pre-processing",
+    "title": "Project - Predicting Stock Prices through Time series Analysis",
+    "section": "2.2 Data Pre-processing",
+    "text": "2.2 Data Pre-processing\nTo prepare the data for our models, we carried out several pre-processing steps. These steps may vary between models, but they generally include handling missing data, normalizing or standardizing the data, and potentially detrending or de-seasonalizing the data where necessary."
+  },
+  {
+    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#model-selection-and-implementation",
+    "href": "Python-ex/Python-Ex3/Python_Ex3.html#model-selection-and-implementation",
+    "title": "Project - Predicting Stock Prices through Time series Analysis",
+    "section": "2.3 Model Selection and Implementation",
+    "text": "2.3 Model Selection and Implementation\nWe selected several time-series forecasting models for our study, including ARIMA, LSTM, and a novel hybrid approach. These models were implemented using the Python programming language with the help of libraries such as statsmodels for ARIMA, Keras for LSTM, and FB Prophet for our benchmark model. We are also exploring some other models to see if they have any novel results."
+  },
+  {
+    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#parameter-adjustments",
+    "href": "Python-ex/Python-Ex3/Python_Ex3.html#parameter-adjustments",
+    "title": "Project - Predicting Stock Prices through Time series Analysis",
+    "section": "2.4 Parameter Adjustments",
+    "text": "2.4 Parameter Adjustments\nEach model was fine-tuned to optimize performance. This involved adjusting various parameters specific to each model to minimize forecasting error. For example, for ARIMA, we determined the optimal order parameters (p, d, q) using techniques like the AIC criterion or PACF and ACF plots."
+  },
+  {
+    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#model-evaluation",
+    "href": "Python-ex/Python-Ex3/Python_Ex3.html#model-evaluation",
+    "title": "Project - Predicting Stock Prices through Time series Analysis",
+    "section": "2.5 Model Evaluation",
+    "text": "2.5 Model Evaluation\nTo evaluate the performance of our models, we split our data set into a training set (2018-06-15 to 2023-1-15) and a test set (2023-1-15 to 2023-6-15). The models were trained on the training data and their predictions were compared to the actual prices in the test set. We used several metrics to measure the accuracy of the models’ predictions, including Mean Absolute Error (MAE), Root Mean Square Error (RMSE)."
+  },
+  {
+    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#analysis-and-conclusion",
+    "href": "Python-ex/Python-Ex3/Python_Ex3.html#analysis-and-conclusion",
+    "title": "Project - Predicting Stock Prices through Time series Analysis",
+    "section": "2.6 Analysis and Conclusion",
+    "text": "2.6 Analysis and Conclusion\nFinally, we conducted a comparative analysis of the performance of each model. We discussed the strengths and weaknesses of each model, insights gained, and the implications for real-world investment decision-making."
+  },
+  {
+    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#common-metrics-for-time-series-analyses",
+    "href": "Python-ex/Python-Ex3/Python_Ex3.html#common-metrics-for-time-series-analyses",
+    "title": "Project - Predicting Stock Prices through Time series Analysis",
+    "section": "2.7 Common metrics for Time series analyses",
+    "text": "2.7 Common metrics for Time series analyses\nThe below metrics will be used to evaluate our model results."
+  },
+  {
+    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#auto-regressive-intergration-moving-ave-arima",
+    "href": "Python-ex/Python-Ex3/Python_Ex3.html#auto-regressive-intergration-moving-ave-arima",
+    "title": "Project - Predicting Stock Prices through Time series Analysis",
+    "section": "3.1 Auto-Regressive Intergration Moving Ave (ARIMA)",
+    "text": "3.1 Auto-Regressive Intergration Moving Ave (ARIMA)\nThe traditional statistical model we adopted in the time series analysis is the ARIMA model. It is a combination of autoregressive (AR) and moving average (MA). “I” in the middle means that the model employs differencing of raw observations to make the time-series stationary. ARIMA can be used for modeling stationary time series or non-stationary time series that can become stationary through differentiation. Stationary series are those whose expected value and variance do not change over time.\nAn ARIMA model is defined by its three order parameters, p, d, q. The parameter p represents the number of autoregressive terms or the number of “lag observations”. It determines the outcome of the model by providing lagged data points. The parameter d, known as the degree of differencing, indicates how many times the lagged indicators have been subtracted to achieve data stationarity. The parameter q signifies the number of forecast errors in the model and is often referred to as the size of the moving average window.\nThe process of building the ARIMA model can be divided into three phases. In the first phase is to check if the time series is stationary by examining ACF, PACF, and Dickey-Fuller tests. The second phase is to choose parameters and the performance of the model would be tested in the third phase."
+  },
+  {
+    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#long-short-term-memory-lstm",
+    "href": "Python-ex/Python-Ex3/Python_Ex3.html#long-short-term-memory-lstm",
+    "title": "Project - Predicting Stock Prices through Time series Analysis",
+    "section": "3.2 Long Short-Term Memory (LSTM)",
+    "text": "3.2 Long Short-Term Memory (LSTM)\nLSTM is a recurrent neural network (RNN) model and is widely adopted in the time series analysis. The main idea behind LSTM cells is to learn the important parts of the sequence seen so far and forget the less important ones. LSTM cells are designed to deal with the problem of “long-term dependence” and the memory capacity of standard recurrent cell is improved by introducing a gate into the cell. In particular, three types of gates are involved in each cell, namely forget gate, memory gate, and output gate. In cells, data can be disposed, filtered, or added for the next cells by using gates. The amount of data entering a cell at a time is referred to as “batch size”. The number of complete runs through the data is known as an “epoch”.\nIn the stock price prediction, we can put the historical close prices into the model and tune the hyperparameters to optimize the model performance. Some important hyperparameters include units, epochs, optimizer, input shape, batch size etc."
+  },
+  {
+    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#facebook-prophet",
+    "href": "Python-ex/Python-Ex3/Python_Ex3.html#facebook-prophet",
+    "title": "Project - Predicting Stock Prices through Time series Analysis",
+    "section": "3.3 Facebook Prophet",
+    "text": "3.3 Facebook Prophet\nProphet was developed by Facebook as an algorithm for the prediction of time series values for different business applications. Prophet is a useful tool for time series forecasting. It incorporates non-linear trends, as well as yearly, weekly, and daily seasonality patterns, and prides itself on being able to predict holiday effects. It excels in forecasting time series that exhibit significant seasonal variations and possess a substantial historical data spanning multiple seasons.    \nIt is an additive model consisting of four components: g(t) is a trend to capture the general trend of the series. s(t) is a seasonality component and h(t) is a Holidays component. The error term εt stands for random fluctuations that cannot be explained by the model."
+  },
+  {
+    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#arima-lstm-hybrid",
+    "href": "Python-ex/Python-Ex3/Python_Ex3.html#arima-lstm-hybrid",
+    "title": "Project - Predicting Stock Prices through Time series Analysis",
+    "section": "3.4 ARIMA & LSTM Hybrid",
+    "text": "3.4 ARIMA & LSTM Hybrid\nBoth ARIMA and LSTM models have their own strengths and weaknesses. ARIMA has difficulties with non-linear time series data whereas neural networks can work with linear and non-linear time series data. However, LSTM requires long training time and parameter selection can be challenging. To leverage the strengths of both models, a hybrid approach is implemented to capitalize on their respective expertise. The aim is to achieve more accurate predictions compared to using either model individually. In this hybrid model, the ARIMA component is applied to capture the trend component, while the LSTM component is utilized to model both the seasonal and residual components of the time series. By combining the two models, it is expected to enhance the overall forecasting performance and capture a broader range of patterns in the data.\nHere is a summary of all the adopted models in our project:\n\nTable 1: Model Comparison\n\n\n\n\n\n\n\n\n\n\nType\nName\nConcept\nApplications\nPros\nCons\n\n\n\n\nStatistical model\nARIMA\nA model that characterizes time series by the aspects of autoregressive, integrated, and moving average terms.\nAnalyse and forecast time series data\nSimple and interpretable.\nAccurate in short term prediction\nLimitation in non-linear patterns\nSensitivity in parameter selection\n\n\nRecurrent neural network (RNN) model\nLSTM\nLong-Short Term Memory model capable of learning order dependence for sequence prediction issues.\nDeep learning, speech recognition, machine translation\nCapture long-term and non-linear patterns\nDo not rely on specific data assumptions\nComputation extensive\nRequire more data\nLess interpretable\n\n\nStatistical & machine learning\nFB PROPHET\nAn additive model developed by Facebook, for forecasting time series data. Used best for time series with strong seasonal effects and a long history.\nForecast business results for planning and goal setting.\nSimple interface\nCapture seasonality and patterns\nLess data prepossessing\nLimited to univariant forecasting\nLess customized\n\n\nHybrid Model\nARIMA + LSTM (hybrid)\nHybrid LSTM and ARIMA model combines LSTM’s non-linear capabilities with ARIMA’s ability to capture linear trends.\nTime series prediction and integrate non-linear trend\nComprehensive\nImprove model performance\nAdaptability\nComplexity\nFurther studies required in model architecture"
+  },
+  {
+    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#arima",
+    "href": "Python-ex/Python-Ex3/Python_Ex3.html#arima",
+    "title": "Project - Predicting Stock Prices through Time series Analysis",
+    "section": "4.1 ARIMA",
+    "text": "4.1 ARIMA\nWhen using ARIMA, we initially wanted to see how accurate the model could be for predicting longer time frames. For this purpose, we used a Train-test split configuration where our test range would span a 5- month period (2023-1-15 to 2023-6-15). We then checked the data for stationarity using the Dickey-Fuller test. We obtained a p-value of 0.857 which confirmed that the data was not stationary. We performed a pairwise differencing to make this data stationary. The resultant stationarity can be observed visually below, with the differenced data now centred around the mean. We can also confirm this via another Dickey-Fuller test, where we now obtain a revised p-value closer to zero.\nWhen determining the parameters for the AR and MA parts of the model, we plotted the ACF and PACF plots for the differenced data to determine the values of p and q. Here, an ARIMA model of order (1,1,1) seemed reasonable to be used for our Manual-Arima workflow.  At the same time, we also used the Auto-Arima function to obtain the optimal (p,d,q) values which had the lowest values of AIC and BIC (Auto-Arima workflow). This recommended an ARIMA model of (4,1,1).  We compared both workflows and proceeded on with the Auto-Arima which had scored better in the MAE, MAPE and RSME metrics.\n\n\n\nFig 2: Pairwise Differencing\n\n\n\n\n\nFig 3: ACF and PACF\n\n\nWe then applied this model to our test data range (5 months) and obtained predictions as show in the chart below, which seems to predict a “flat” stock price for the next 5 months. This runs contrary to price dynamics for actively traded stocks, where prices are not likely to remain the same daily. Here, we concluded that the ARIMA model could not derive meaningful results when predicting for longer time frames and that longer term forecasting using ARIMA were prone to converging at the mean.  The ARIMA model only uses the previous X observations to make a prediction. Furthermore, prediction errors accumulate, and this results in the ARIMA model simply predicting a straight line for longer time frames. We therefore changed our test range to a shorter time frame of 1 month and re-visited the above steps to see the difference. We noted that our RSME score improved to 16.399 from the previous 46.55, and that our model no longer makes a ‘flat’ prediction of prices.\n\n\n\nFig 4: ARIMA results\n\n\n\n\n\nFig 5: Auto Arima Results\n\n\nThis leads us to conclude that the ARIMA model, on its own, would only be suited to make short term price predictions (a few days out). Next, we explore other models which may be better suited for making longer term predictions."
+  },
+  {
+    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#lstm",
+    "href": "Python-ex/Python-Ex3/Python_Ex3.html#lstm",
+    "title": "Project - Predicting Stock Prices through Time series Analysis",
+    "section": "4.2 LSTM",
+    "text": "4.2 LSTM\nFor our testing we used LSTM in 2 ways – the first was with “default” settings and the second was with parameter hyper-tuning. The results varied wildly and yielded many interesting insights. Both used the Adaptive Moment Estimation (Adam) optimizer. Although there are many other alternative optimizers, adam was selected not only because it is widely used (and as a result, widely watched), but also because it is specifically designed for training deep learning neural networks. We would have used others such as adagrad, adadelta, RMSprop and the plethora of optimizers out there but time is a factor, and it seems it might stray from our topic at hand.\nThe “default” LSTM was run with a batch size of 1 and an epoch of 3. The RMSE hovers around 7-9 across runs and although the model was unable to predict precise price points, it accurately predicted trends on when the stock went up and down. (figure below)\n\n\n\nFig 6: LSTM Model 1 results\n\n\nThe second model, with hyper-tuning, showed much more promise but tended to overfit. It trades robustness for more accuracy. The reverse of the above happened, where stock prices were predicted with a much higher degree of precision, some days a few cents off but overfit. RMSE drops to as low as 1 or even 0.05 (figure of extreme example below). What happens is that the model ends up using the previous day’s close price to predict the next day’s price. If you shift the predictions one day backwards it makes an almost perfect overlay. I propose that the best would be to use hyper-tuning with a bigger range of stocks so that the model can learn more meaningful patterns. Finer tuning of parameters also affects the results as well, and as such further experimentation could be done.\n\n\n\nFig 7: LSTM Model 2 results"
+  },
+  {
+    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#fb-prophet",
+    "href": "Python-ex/Python-Ex3/Python_Ex3.html#fb-prophet",
+    "title": "Project - Predicting Stock Prices through Time series Analysis",
+    "section": "4.3 FB Prophet",
+    "text": "4.3 FB Prophet\nThere is not much to mention on our process for using FB Prophet since most of it was straightforward. There was no parameter tuning and such. The Prophet package provides intuitive parameters which are easy to use and specify for trend, seasonality and holiday.\nHowever, to note is that the RMSE of this model is quite high as compared to the LSTM since it tries to give more of a ballpark estimate rather than a precise number. By that standard, if we consider whether the actual number lands within the predicted upper and lower bounds it is more accurate than simply taking it at face value. The RMSE typically floats around 18.8 with a minor deviation past 2 decimal places.\nThe 3 figures below in order of presentation shows the overall prediction period (“zoomed out”), day-to-day view for predictions (“zoomed in”), and finally the table of numbers for a more numerical view of the predictions. One thing to note is that each red dot is a single day.\n\n\n\nFig 8: FB Prophet Predictions\n\n\n\n\n\nFig 9: FB Prophet Prediction Range"
+  },
+  {
+    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#moving-averages-linear-regression-k-nearest-neighbours",
+    "href": "Python-ex/Python-Ex3/Python_Ex3.html#moving-averages-linear-regression-k-nearest-neighbours",
+    "title": "Project - Predicting Stock Prices through Time series Analysis",
+    "section": "4.4 Moving Averages, Linear Regression & K-Nearest Neighbours",
+    "text": "4.4 Moving Averages, Linear Regression & K-Nearest Neighbours\nAs part of our study, we also explored the use of other models commonly used in trading. Moving averages and Linear regression form the basis for commonly used Technical Analysis indicators like Exponential Moving Averages, Bollinger bands and Linear Regression Channels. We applied the same dataset and specified a 75-25% train-test split.\nMoving averages are widely used to smooth out fluctuations and identify trends in stock prices. They calculate the average value of a stock’s price over a specified period and are commonly used to generate buy or sell signals. Our moving average model drew a RMSE score of 38.46 but was not able to adjust to sudden shifts in trends, opting for an average between the two price boundaries.\nLinear regression is a statistical technique used to model the relationship between a dependent variable (stock price) and one or more independent variables (time). In stock price prediction, linear regression could be used to fit a straight line to historical data, capturing the overall trend. However, our Linear Regression model seemed to fare worse than our Moving Average model, with an RMSE score of 89.25. The model was only able to project future values based on a fitted linear trendline. While Linear Regression can be simple to use and intuitive, it fails to account for more complex, non-linear trends. Furthermore, it assumes that the relationship between the dependent and independent variables remain constant.\n\n\n\nFig 10: MA predictions\n\n\n\n\n\nFig 11: Linear Regression Predictions\n\n\n\nK-Nearest Neighbours (KNN)\nK-nearest neighbour is a commonly used Machine Learning algorithm used for classification and regression tasks in various fields including finance. In the context of stock price prediction, we wanted to explore if the KNN model could be used to predict future prices based on the historical prices of K nearest neighbours. While KNN is more commonly used for classification tasks, it could also be applied to regression problems.  Our KNN model fared better with an RMSE score of 28.65 but was not able to pick up on any trends in future prices.\n\n\n\nFig 12: KNN Model Results\n\n\n\n\n\nFig 13: LSTM Baseline Model results\n\n\nWe concluded that the 3 models performed worse that our LSTM base model, leading us to conclude that they are unable to capture temporal dynamics and patterns inherent in stock price data as effectively as other time series forecasting models."
+  },
+  {
+    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#arima-lstm-hybrid-1",
+    "href": "Python-ex/Python-Ex3/Python_Ex3.html#arima-lstm-hybrid-1",
+    "title": "Project - Predicting Stock Prices through Time series Analysis",
+    "section": "4.5 ARIMA & LSTM HYBRID",
+    "text": "4.5 ARIMA & LSTM HYBRID\nThe dominant model is in the hybrid is LSTM, as the ARIMA model does not have enough lags to predict the long-term modelling conditions. To improve our model, we have considered additional features from technical analysis such as Bollinger Bands, but ARIMA cannot incorporate those features as it lacks feature selection.\n\n\n\nFig 14: Combined Predictions"
+  },
+  {
+    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#network-models",
+    "href": "Python-ex/Python-Ex3/Python_Ex3.html#network-models",
+    "title": "Project - Predicting Stock Prices through Time series Analysis",
+    "section": "4.6 Network Models",
+    "text": "4.6 Network Models\n\n\n\nFig 15: Simple Network Model\n\n\n\n\n\nFig 16: Ideal Network model (Future scope)\n\n\nNetwork Models aid in modelling relationships between varioud stocks. The key advantage of network modelling is capturing complex relationships between various stocks through network dynamics (opinion, adoption, decision), and this would aid in predicting trends through various similarities such as Eigen Vector Similarity, Jaccard Similarity etc. These models would boost the accuracy of predictions as features generated here can be used for our LSTM models. While the network we generated was simple and able to model stocks closest to and most different from MSFT for hedging, a more complex model can build more features and explore relationships such as Key Opinion Leader Stocks for systemic importance, Diversity Centrality to enable diversified portfolios etc."
+  },
+  {
+    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#model-limitations",
+    "href": "Python-ex/Python-Ex3/Python_Ex3.html#model-limitations",
+    "title": "Project - Predicting Stock Prices through Time series Analysis",
+    "section": "5.1 Model Limitations",
+    "text": "5.1 Model Limitations\nThe ARIMA Model is limited by the number of lags available in the equation. This makes feature selection inherently impossible. Additionally, many of our other models such as the KNN were found to not capture information on the time series. LSTM while being the best performing model, is extremely computationally intense."
+  },
+  {
+    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#data-set-and-hyper-parameter-tuning",
+    "href": "Python-ex/Python-Ex3/Python_Ex3.html#data-set-and-hyper-parameter-tuning",
+    "title": "Project - Predicting Stock Prices through Time series Analysis",
+    "section": "5.2 Data set and Hyper parameter tuning",
+    "text": "5.2 Data set and Hyper parameter tuning\nWhile prediction on just the time series trend may give us some information, considering more features such as the technical analysis or fundamental analysis would improve our results considerably. To model complex relationships, we could consider network analysis as well as building more technical analysis indicators as features in our model (as we have in our hybrid model)"
   },
   {
     "objectID": "R-ex/R-Ex2/R_Ex2.html",
@@ -992,138 +1125,5 @@
     "title": "Comparison of Predictive and Machine Learning models for Loan Default prediction",
     "section": "Fit statistics for the Champion mode- - Ensemble",
     "text": "Fit statistics for the Champion mode- - Ensemble"
-  },
-  {
-    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#data-collection",
-    "href": "Python-ex/Python-Ex3/Python_Ex3.html#data-collection",
-    "title": "Project - Predicting Stock Prices through Time series Analysis",
-    "section": "2.1 Data collection",
-    "text": "2.1 Data collection\nWe gathered historical stock price data for Microsoft (MSFT) from Yahoo Finance. Our data spans a period of five years, from June 2018 to June 2023, which includes both pre- and post-pandemic periods."
-  },
-  {
-    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#data-pre-processing",
-    "href": "Python-ex/Python-Ex3/Python_Ex3.html#data-pre-processing",
-    "title": "Project - Predicting Stock Prices through Time series Analysis",
-    "section": "2.2 Data Pre-processing",
-    "text": "2.2 Data Pre-processing\nTo prepare the data for our models, we carried out several pre-processing steps. These steps may vary between models, but they generally include handling missing data, normalizing or standardizing the data, and potentially detrending or de-seasonalizing the data where necessary."
-  },
-  {
-    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#model-selection-and-implementation",
-    "href": "Python-ex/Python-Ex3/Python_Ex3.html#model-selection-and-implementation",
-    "title": "Project - Predicting Stock Prices through Time series Analysis",
-    "section": "2.3 Model Selection and Implementation",
-    "text": "2.3 Model Selection and Implementation\nWe selected several time-series forecasting models for our study, including ARIMA, LSTM, and a novel hybrid approach. These models were implemented using the Python programming language with the help of libraries such as statsmodels for ARIMA, Keras for LSTM, and FB Prophet for our benchmark model. We are also exploring some other models to see if they have any novel results."
-  },
-  {
-    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#parameter-adjustments",
-    "href": "Python-ex/Python-Ex3/Python_Ex3.html#parameter-adjustments",
-    "title": "Project - Predicting Stock Prices through Time series Analysis",
-    "section": "2.4 Parameter Adjustments",
-    "text": "2.4 Parameter Adjustments\nEach model was fine-tuned to optimize performance. This involved adjusting various parameters specific to each model to minimize forecasting error. For example, for ARIMA, we determined the optimal order parameters (p, d, q) using techniques like the AIC criterion or PACF and ACF plots."
-  },
-  {
-    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#model-evaluation",
-    "href": "Python-ex/Python-Ex3/Python_Ex3.html#model-evaluation",
-    "title": "Project - Predicting Stock Prices through Time series Analysis",
-    "section": "2.5 Model Evaluation",
-    "text": "2.5 Model Evaluation\nTo evaluate the performance of our models, we split our data set into a training set (2018-06-15 to 2023-1-15) and a test set (2023-1-15 to 2023-6-15). The models were trained on the training data and their predictions were compared to the actual prices in the test set. We used several metrics to measure the accuracy of the models’ predictions, including Mean Absolute Error (MAE), Root Mean Square Error (RMSE)."
-  },
-  {
-    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#analysis-and-conclusion",
-    "href": "Python-ex/Python-Ex3/Python_Ex3.html#analysis-and-conclusion",
-    "title": "Project - Predicting Stock Prices through Time series Analysis",
-    "section": "2.6 Analysis and Conclusion",
-    "text": "2.6 Analysis and Conclusion\nFinally, we conducted a comparative analysis of the performance of each model. We discussed the strengths and weaknesses of each model, insights gained, and the implications for real-world investment decision-making."
-  },
-  {
-    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#common-metrics-for-time-series-analyses",
-    "href": "Python-ex/Python-Ex3/Python_Ex3.html#common-metrics-for-time-series-analyses",
-    "title": "Project - Predicting Stock Prices through Time series Analysis",
-    "section": "2.7 Common metrics for Time series analyses",
-    "text": "2.7 Common metrics for Time series analyses\nThe below metrics will be used to evaluate our model results."
-  },
-  {
-    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#auto-regressive-intergration-moving-ave-arima",
-    "href": "Python-ex/Python-Ex3/Python_Ex3.html#auto-regressive-intergration-moving-ave-arima",
-    "title": "Project - Predicting Stock Prices through Time series Analysis",
-    "section": "3.1 Auto-Regressive Intergration Moving Ave (ARIMA)",
-    "text": "3.1 Auto-Regressive Intergration Moving Ave (ARIMA)\nThe traditional statistical model we adopted in the time series analysis is the ARIMA model. It is a combination of autoregressive (AR) and moving average (MA). “I” in the middle means that the model employs differencing of raw observations to make the time-series stationary. ARIMA can be used for modeling stationary time series or non-stationary time series that can become stationary through differentiation. Stationary series are those whose expected value and variance do not change over time.\nAn ARIMA model is defined by its three order parameters, p, d, q. The parameter p represents the number of autoregressive terms or the number of “lag observations”. It determines the outcome of the model by providing lagged data points. The parameter d, known as the degree of differencing, indicates how many times the lagged indicators have been subtracted to achieve data stationarity. The parameter q signifies the number of forecast errors in the model and is often referred to as the size of the moving average window.\nThe process of building the ARIMA model can be divided into three phases. In the first phase is to check if the time series is stationary by examining ACF, PACF, and Dickey-Fuller tests. The second phase is to choose parameters and the performance of the model would be tested in the third phase."
-  },
-  {
-    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#long-short-term-memory-lstm",
-    "href": "Python-ex/Python-Ex3/Python_Ex3.html#long-short-term-memory-lstm",
-    "title": "Project - Predicting Stock Prices through Time series Analysis",
-    "section": "3.2 Long Short-Term Memory (LSTM)",
-    "text": "3.2 Long Short-Term Memory (LSTM)\nLSTM is a recurrent neural network (RNN) model and is widely adopted in the time series analysis. The main idea behind LSTM cells is to learn the important parts of the sequence seen so far and forget the less important ones. LSTM cells are designed to deal with the problem of “long-term dependence” and the memory capacity of standard recurrent cell is improved by introducing a gate into the cell. In particular, three types of gates are involved in each cell, namely forget gate, memory gate, and output gate. In cells, data can be disposed, filtered, or added for the next cells by using gates. The amount of data entering a cell at a time is referred to as “batch size”. The number of complete runs through the data is known as an “epoch”.\nIn the stock price prediction, we can put the historical close prices into the model and tune the hyperparameters to optimize the model performance. Some important hyperparameters include units, epochs, optimizer, input shape, batch size etc."
-  },
-  {
-    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#facebook-prophet",
-    "href": "Python-ex/Python-Ex3/Python_Ex3.html#facebook-prophet",
-    "title": "Project - Predicting Stock Prices through Time series Analysis",
-    "section": "3.3 Facebook Prophet",
-    "text": "3.3 Facebook Prophet\nProphet was developed by Facebook as an algorithm for the prediction of time series values for different business applications. Prophet is a useful tool for time series forecasting. It incorporates non-linear trends, as well as yearly, weekly, and daily seasonality patterns, and prides itself on being able to predict holiday effects. It excels in forecasting time series that exhibit significant seasonal variations and possess a substantial historical data spanning multiple seasons.    \nIt is an additive model consisting of four components: g(t) is a trend to capture the general trend of the series. s(t) is a seasonality component and h(t) is a Holidays component. The error term εt stands for random fluctuations that cannot be explained by the model."
-  },
-  {
-    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#arima-lstm-hybrid",
-    "href": "Python-ex/Python-Ex3/Python_Ex3.html#arima-lstm-hybrid",
-    "title": "Project - Predicting Stock Prices through Time series Analysis",
-    "section": "3.4 ARIMA & LSTM Hybrid",
-    "text": "3.4 ARIMA & LSTM Hybrid\nBoth ARIMA and LSTM models have their own strengths and weaknesses. ARIMA has difficulties with non-linear time series data whereas neural networks can work with linear and non-linear time series data. However, LSTM requires long training time and parameter selection can be challenging. To leverage the strengths of both models, a hybrid approach is implemented to capitalize on their respective expertise. The aim is to achieve more accurate predictions compared to using either model individually. In this hybrid model, the ARIMA component is applied to capture the trend component, while the LSTM component is utilized to model both the seasonal and residual components of the time series. By combining the two models, it is expected to enhance the overall forecasting performance and capture a broader range of patterns in the data.\nHere is a summary of all the adopted models in our project:\n\nTable 1: Model Comparison\n\n\n\n\n\n\n\n\n\n\nType\nName\nConcept\nApplications\nPros\nCons\n\n\n\n\nStatistical model\nARIMA\nA model that characterizes time series by the aspects of autoregressive, integrated, and moving average terms.\nAnalyse and forecast time series data\nSimple and interpretable.\nAccurate in short term prediction\nLimitation in non-linear patterns\nSensitivity in parameter selection\n\n\nRecurrent neural network (RNN) model\nLSTM\nLong-Short Term Memory model capable of learning order dependence for sequence prediction issues.\nDeep learning, speech recognition, machine translation\nCapture long-term and non-linear patterns\nDo not rely on specific data assumptions\nComputation extensive\nRequire more data\nLess interpretable\n\n\nStatistical & machine learning\nFB PROPHET\nAn additive model developed by Facebook, for forecasting time series data. Used best for time series with strong seasonal effects and a long history.\nForecast business results for planning and goal setting.\nSimple interface\nCapture seasonality and patterns\nLess data prepossessing\nLimited to univariant forecasting\nLess customized\n\n\nHybrid Model\nARIMA + LSTM (hybrid)\nHybrid LSTM and ARIMA model combines LSTM’s non-linear capabilities with ARIMA’s ability to capture linear trends.\nTime series prediction and integrate non-linear trend\nComprehensive\nImprove model performance\nAdaptability\nComplexity\nFurther studies required in model architecture"
-  },
-  {
-    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#arima",
-    "href": "Python-ex/Python-Ex3/Python_Ex3.html#arima",
-    "title": "Project - Predicting Stock Prices through Time series Analysis",
-    "section": "4.1 ARIMA",
-    "text": "4.1 ARIMA\nWhen using ARIMA, we initially wanted to see how accurate the model could be for predicting longer time frames. For this purpose, we used a Train-test split configuration where our test range would span a 5- month period (2023-1-15 to 2023-6-15). We then checked the data for stationarity using the Dickey-Fuller test. We obtained a p-value of 0.857 which confirmed that the data was not stationary. We performed a pairwise differencing to make this data stationary. The resultant stationarity can be observed visually below, with the differenced data now centred around the mean. We can also confirm this via another Dickey-Fuller test, where we now obtain a revised p-value closer to zero.\nWhen determining the parameters for the AR and MA parts of the model, we plotted the ACF and PACF plots for the differenced data to determine the values of p and q. Here, an ARIMA model of order (1,1,1) seemed reasonable to be used for our Manual-Arima workflow.  At the same time, we also used the Auto-Arima function to obtain the optimal (p,d,q) values which had the lowest values of AIC and BIC (Auto-Arima workflow). This recommended an ARIMA model of (4,1,1).  We compared both workflows and proceeded on with the Auto-Arima which had scored better in the MAE, MAPE and RSME metrics.\n\n\n\nFig 2: Pairwise Differencing\n\n\n\n\n\nFig 3: ACF and PACF\n\n\nWe then applied this model to our test data range (5 months) and obtained predictions as show in the chart below, which seems to predict a “flat” stock price for the next 5 months. This runs contrary to price dynamics for actively traded stocks, where prices are not likely to remain the same daily. Here, we concluded that the ARIMA model could not derive meaningful results when predicting for longer time frames and that longer term forecasting using ARIMA were prone to converging at the mean.  The ARIMA model only uses the previous X observations to make a prediction. Furthermore, prediction errors accumulate, and this results in the ARIMA model simply predicting a straight line for longer time frames. We therefore changed our test range to a shorter time frame of 1 month and re-visited the above steps to see the difference. We noted that our RSME score improved to 16.399 from the previous 46.55, and that our model no longer makes a ‘flat’ prediction of prices.\n\n\n\nFig 4: ARIMA results\n\n\n\n\n\nFig 5: Auto Arima Results\n\n\nThis leads us to conclude that the ARIMA model, on its own, would only be suited to make short term price predictions (a few days out). Next, we explore other models which may be better suited for making longer term predictions."
-  },
-  {
-    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#lstm",
-    "href": "Python-ex/Python-Ex3/Python_Ex3.html#lstm",
-    "title": "Project - Predicting Stock Prices through Time series Analysis",
-    "section": "4.2 LSTM",
-    "text": "4.2 LSTM\nFor our testing we used LSTM in 2 ways – the first was with “default” settings and the second was with parameter hyper-tuning. The results varied wildly and yielded many interesting insights. Both used the Adaptive Moment Estimation (Adam) optimizer. Although there are many other alternative optimizers, adam was selected not only because it is widely used (and as a result, widely watched), but also because it is specifically designed for training deep learning neural networks. We would have used others such as adagrad, adadelta, RMSprop and the plethora of optimizers out there but time is a factor, and it seems it might stray from our topic at hand.\nThe “default” LSTM was run with a batch size of 1 and an epoch of 3. The RMSE hovers around 7-9 across runs and although the model was unable to predict precise price points, it accurately predicted trends on when the stock went up and down. (figure below)\n\n\n\nFig 6: LSTM Model 1 results\n\n\nThe second model, with hyper-tuning, showed much more promise but tended to overfit. It trades robustness for more accuracy. The reverse of the above happened, where stock prices were predicted with a much higher degree of precision, some days a few cents off but overfit. RMSE drops to as low as 1 or even 0.05 (figure of extreme example below). What happens is that the model ends up using the previous day’s close price to predict the next day’s price. If you shift the predictions one day backwards it makes an almost perfect overlay. I propose that the best would be to use hyper-tuning with a bigger range of stocks so that the model can learn more meaningful patterns. Finer tuning of parameters also affects the results as well, and as such further experimentation could be done.\n\n\n\nFig 7: LSTM Model 2 results"
-  },
-  {
-    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#fb-prophet",
-    "href": "Python-ex/Python-Ex3/Python_Ex3.html#fb-prophet",
-    "title": "Project - Predicting Stock Prices through Time series Analysis",
-    "section": "4.3 FB Prophet",
-    "text": "4.3 FB Prophet\nThere is not much to mention on our process for using FB Prophet since most of it was straightforward. There was no parameter tuning and such. The Prophet package provides intuitive parameters which are easy to use and specify for trend, seasonality and holiday.\nHowever, to note is that the RMSE of this model is quite high as compared to the LSTM since it tries to give more of a ballpark estimate rather than a precise number. By that standard, if we consider whether the actual number lands within the predicted upper and lower bounds it is more accurate than simply taking it at face value. The RMSE typically floats around 18.8 with a minor deviation past 2 decimal places.\nThe 3 figures below in order of presentation shows the overall prediction period (“zoomed out”), day-to-day view for predictions (“zoomed in”), and finally the table of numbers for a more numerical view of the predictions. One thing to note is that each red dot is a single day.\n\n\n\nFig 8: FB Prophet Predictions\n\n\n\n\n\nFig 9: FB Prophet Prediction Range"
-  },
-  {
-    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#moving-averages-linear-regression-k-nearest-neighbours",
-    "href": "Python-ex/Python-Ex3/Python_Ex3.html#moving-averages-linear-regression-k-nearest-neighbours",
-    "title": "Project - Predicting Stock Prices through Time series Analysis",
-    "section": "4.4 Moving Averages, Linear Regression & K-Nearest Neighbours",
-    "text": "4.4 Moving Averages, Linear Regression & K-Nearest Neighbours\nAs part of our study, we also explored the use of other models commonly used in trading. Moving averages and Linear regression form the basis for commonly used Technical Analysis indicators like Exponential Moving Averages, Bollinger bands and Linear Regression Channels. We applied the same dataset and specified a 75-25% train-test split.\nMoving averages are widely used to smooth out fluctuations and identify trends in stock prices. They calculate the average value of a stock’s price over a specified period and are commonly used to generate buy or sell signals. Our moving average model drew a RMSE score of 38.46 but was not able to adjust to sudden shifts in trends, opting for an average between the two price boundaries.\nLinear regression is a statistical technique used to model the relationship between a dependent variable (stock price) and one or more independent variables (time). In stock price prediction, linear regression could be used to fit a straight line to historical data, capturing the overall trend. However, our Linear Regression model seemed to fare worse than our Moving Average model, with an RMSE score of 89.25. The model was only able to project future values based on a fitted linear trendline. While Linear Regression can be simple to use and intuitive, it fails to account for more complex, non-linear trends. Furthermore, it assumes that the relationship between the dependent and independent variables remain constant.\n\n\n\nFig 10: MA predictions\n\n\n\n\n\nFig 11: Linear Regression Predictions\n\n\n\nK-Nearest Neighbours (KNN)\nK-nearest neighbour is a commonly used Machine Learning algorithm used for classification and regression tasks in various fields including finance. In the context of stock price prediction, we wanted to explore if the KNN model could be used to predict future prices based on the historical prices of K nearest neighbours. While KNN is more commonly used for classification tasks, it could also be applied to regression problems.  Our KNN model fared better with an RMSE score of 28.65 but was not able to pick up on any trends in future prices.\n\n\n\nFig 12: KNN Model Results\n\n\n\n\n\nFig 13: LSTM Baseline Model results\n\n\nWe concluded that the 3 models performed worse that our LSTM base model, leading us to conclude that they are unable to capture temporal dynamics and patterns inherent in stock price data as effectively as other time series forecasting models."
-  },
-  {
-    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#arima-lstm-hybrid-1",
-    "href": "Python-ex/Python-Ex3/Python_Ex3.html#arima-lstm-hybrid-1",
-    "title": "Project - Predicting Stock Prices through Time series Analysis",
-    "section": "4.5 ARIMA & LSTM HYBRID",
-    "text": "4.5 ARIMA & LSTM HYBRID\nThe dominant model is in the hybrid is LSTM, as the ARIMA model does not have enough lags to predict the long-term modelling conditions. To improve our model, we have considered additional features from technical analysis such as Bollinger Bands, but ARIMA cannot incorporate those features as it lacks feature selection.\n\n\n\nFig 14: Combined Predictions"
-  },
-  {
-    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#network-models",
-    "href": "Python-ex/Python-Ex3/Python_Ex3.html#network-models",
-    "title": "Project - Predicting Stock Prices through Time series Analysis",
-    "section": "4.6 Network Models",
-    "text": "4.6 Network Models\n\n\n\nFig 15: Simple Network Model\n\n\n\n\n\nFig 16: Ideal Network model (Future scope)\n\n\nNetwork Models aid in modelling relationships between varioud stocks. The key advantage of network modelling is capturing complex relationships between various stocks through network dynamics (opinion, adoption, decision), and this would aid in predicting trends through various similarities such as Eigen Vector Similarity, Jaccard Similarity etc. These models would boost the accuracy of predictions as features generated here can be used for our LSTM models. While the network we generated was simple and able to model stocks closest to and most different from MSFT for hedging, a more complex model can build more features and explore relationships such as Key Opinion Leader Stocks for systemic importance, Diversity Centrality to enable diversified portfolios etc."
-  },
-  {
-    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#model-limitations",
-    "href": "Python-ex/Python-Ex3/Python_Ex3.html#model-limitations",
-    "title": "Project - Predicting Stock Prices through Time series Analysis",
-    "section": "5.1 Model Limitations",
-    "text": "5.1 Model Limitations\nThe ARIMA Model is limited by the number of lags available in the equation. This makes feature selection inherently impossible. Additionally, many of our other models such as the KNN were found to not capture information on the time series. LSTM while being the best performing model, is extremely computationally intense."
-  },
-  {
-    "objectID": "Python-ex/Python-Ex3/Python_Ex3.html#data-set-and-hyper-parameter-tuning",
-    "href": "Python-ex/Python-Ex3/Python_Ex3.html#data-set-and-hyper-parameter-tuning",
-    "title": "Project - Predicting Stock Prices through Time series Analysis",
-    "section": "5.2 Data set and Hyper parameter tuning",
-    "text": "5.2 Data set and Hyper parameter tuning\nWhile prediction on just the time series trend may give us some information, considering more features such as the technical analysis or fundamental analysis would improve our results considerably. To model complex relationships, we could consider network analysis as well as building more technical analysis indicators as features in our model (as we have in our hybrid model)"
   }
 ]

@@ -2,10 +2,8 @@
 title: "About Imran"
 ---
 
-Having spent many years lost in a traditional finance career, I've finally found the courage to start learning about Data Science.
+Having spent many years lost in a traditional finance career, I took the leap of faith to embark on a learning journey to deepen my understanding on Financial technology and Data Analytics.
 
-Now, I'm on my second wind, and hope to become someone more than just to "increase shareholder value".\
-\
 Never settle, and always strive to be a better version of yourself every day. It's never to late to start something or learn something new. Your ability is not determined by your age.\
 \
 "Never say never, because limits, like fears, are often just an illusion" - Michael Jordan.

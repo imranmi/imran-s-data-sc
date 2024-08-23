@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Imran's Data Science website"
+  title: "Imran's Postgrad repo"
   page-navigation: true
   back-to-top-navigation: true
   
@@ -55,8 +55,25 @@ website:
           - text: Project - Loan Default prediction    
             href: Write-ex/Write-Ex3/Write_Ex3.html
           - text: Project Poster - Loan Default prediction    
-            href: Write-ex/Write-Ex4/Write_Ex4.html  
-          
+            href: Write-ex/Write-Ex4/Write_Ex4.html
+      - text: Written Assignments (Fintech) 
+        menu: 
+          - text: Assignment 1 
+            href: Article-ex/Article-Ex1/Article_Ex1.html
+          - text: Assignment 2 
+            href: Article-ex/Article-Ex2/Article_Ex2.html
+          - text: Assignment 3  
+            href: Article-ex/Article-Ex3/Article_Ex3.html
+          - text: Assignment 4   
+            href: Article-ex/Article-Ex4/Article_Ex4.html        
+          - text: Assignment 5 
+            href: Article-ex/Article-Ex5/Article_Ex5.html
+          - text: Assignment 6 
+            href: Article-ex/Article-Ex6/Article_Ex6.html
+          - text: Assignment 7  
+            href: Article-ex/Article-Ex7/Article_Ex7.html
+          - text: Assignment 8   
+            href: Article-ex/Article-Ex8/Article_Ex8.html  
 format:
   html:
     theme: 

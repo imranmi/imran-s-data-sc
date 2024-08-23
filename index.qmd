@@ -1,10 +1,10 @@
 ---
-title: "Imran's Data Science website"
+title: "Imran's Postgrad repository"
 ---
 
 Welcome to my website.
 
-Here, you will find some of my post-graduate research, assignments and projects.
+Here, you will find some of my post-graduate research, assignments and projects on Financial Technology and Data Analytics.
 
 ![“All models are wrong but some are useful.” - George Box](images/mydatascwebsitecoverpage.png)\
 \
