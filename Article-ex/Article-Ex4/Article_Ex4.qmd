@@ -1,0 +1,145 @@
+---
+title: "Key characteristics that create or inject value for a non-fungible token"
+author: "Imran Ibrahim"
+date: August 24, 2024
+date-modified: "last-modified"
+toc: true
+execute: 
+  eval: true
+  echo: true
+  freeze: true
+  warning: false
+  message: false
+---
+
+# Assignment Topic
+
+Select and discuss four (4) key characteristics that create or inject value for a non-fungible token (NFT).
+
+## Introduction
+
+In its early versions, NFTs derived their value from being collectible and scarce. In recent times, the demand for NFTs have evolved beyond the rarity aspect and new value propositions have grown in importance. The four characteristics that create value for NFTs are verifiable ownership, utility and benefits, community and inclusion, and social impact.
+
+## Verifiable ownership: enabling new markets and transactions
+
+Before NFTs, there was no straightforward way to distinguish owners of digital art from someone who just copied an image of the artwork. Making a copy of a piece of art does not diminish the value of the original, provided we can prove which is the original and who owns it. Similarly, having multiple digital copies of the same artwork does not make someone the exclusive owner of that piece of art.
+
+NFTs facilitate transactions between buyers and sellers by providing a verifiable proof and history of ownership. In doing so, they make it possible to build new markets around new types of transactions. For example, buying and selling artwork online that could never be sold before because of a lack of trust and inability to verify authenticity.
+
+Artists without connections or platforms to showcase their art can struggle to make a living and to maintain a sustainable career in the arts.  Through new public marketplaces like Open Sea, Foundation and Nifty gateway, digital creators and artists are now able to launch content without the need for intermediaries, having complete control over their artistic vision, while also being able to monetize their work and engage supporters on a global scale.
+
+Where in the past artists and creators could only profit from a meagre percentage of the initial sale, today they are earning higher incomes from their digital work. For example, in 2021, Central and Southeast Asia accounted for 35% of the global US\$ 22 billion global NFT industry(Ng, 2022).
+
+The proliferation of NFTs has enabled a new generation of artists who had previously been hindered by barriers of geography, societal norms, censorship, economic means, and unfair compensation to come online and affordably mint NFTs on open platforms; enabling them to reach an audience previously unattainable whilst securing fair and sustainable compensation for their work.
+
+For creators and artists from poorer geographies especially, NFTs have given them access to the digital economy via cryptocurrencies; improving financial inclusion among those who were previously unbanked and underserved. Earning income in cryptocurrencies have also given them access to currencies that function better as a store of wealth and medium of exchange without risks of forgery, inflation, and theft.
+
+Digital creators can set royalty clauses for all future sales of their work, generating recurring income as their works exchange hands and appreciate. NFTs make this possible through smart contracts that automatically enforce terms and clauses which are then permanently enshrined in the blockchain; immutable and transparent for anyone to check and verify against. This contrasts with the current system where artists are only paid for the initial sale of their works and where no redress can be automatically programmed to prevent exploitation from intermediaries and resellers.
+
+With NFTs, the need for trust between buyers and sellers is minimized as there is a verifiable decentralized system to record ownership and track ownership changes; without which there would be no incentive for buyers to purchase these digital artworks or for sellers to sell them. Buyers need to be able to verify that Sellers can sell the assets and Sellers need to be able to transfer ownership rights to Buyers in a secure and transparent manner. Without clear property rights and an efficient process for exchange, transactions cannot be facilitated, and markets cannot function.
+
+Because NFT ownership is easy to verify and transfer, new markets in a variety of goods can also be made possible. Real world assets like property, event passes, and services could also come with their own corresponding NFTs, solving age old barriers of trust and authenticity. For example, NFTs can speed up the process of buying property by replacing intermediaries with smart contracts to enable efficient and secure transfer of ownership. Converting a real estate property into an NFT enables for a quick and simple settlement process. As proof and history of ownership is directly recorded on the blockchain, transactions can be verified quickly and easily.
+
+Tickets for sporting events, concerts and conferences could also be sold in an NFT form. Buyers would not have to worry about counterparty risk, fraudulent exchanges, and counterfeit tickets. Holders of these NFT ticket/passes can also securely sell to anyone in an efficient and transparent manner, where changes in ownership rights are instantaneously updated and verifiable.
+
+NFTs can also enable digital ownership for physical rare artifacts, without the need to relinquish physical ownership rights. For example, museums can sell paintings and art objects in the form of digital assets, which then enable them to create new revenue streams. In 2021, the Russian Hermitage Museum sold several digital representations of its exclusive art collection via NFTs in a move it described as making luxury artwork more accessible (Dafoe, 2022).
+
+## Utility and Benefits
+
+Utility is the value that an asset provides to its holder. The more useful an asset is, the more people are willing to pay for that asset because of its associated benefits and practical uses after the initial purchase. The value of an NFT can increase by increasing the number of ways it can be used in the real world.
+
+NFT projects can offer utilities such as voting rights, real world items, memberships and access to events, private communities, fractional ownership and even the ability to earn passive income.
+
+As NFT holders have a personal stake in the success of the project, several projects enable their holders to be able to vote and decide on the future direction of the project. NFT projects could have a treasury or pool of funds raised from initial sales, from which the NFT community can vote and decide on how to spend those funds; for example, creating new projects, planning new collaborations, or even advancing important social issues.
+
+The decision-making process in the NFT project is shared with all members of the project by means of a Decentralized Autonomous Organization (DAO) where decision-making and influence is shared with all its members. In a traditional company, the CEO or management team would have made all decisions, having the final say in the company’s strategy and future direction. In NFT projects with voting rights, there is no centralization in the decision-making process and instead every NFT holder can have a voice and a say in what happens to the project. The decentralization of the decision-making process incentivises NFT holders to observe good behaviour to ensure success of the project.
+
+Some NFTs enable holders to obtain physical items in the real world. Fashion brands like Gucci and Nike use NFTs as a ticket to real world items. Holders of these NFTs can use their items both in the Metaverse or virtual worlds as well as in the real world. Nike, with its acquisition of RFTKT in December 2021 enables its NFT holders to obtain physical versions of its NFT sneakers (Ernest, 2022).
+
+Increasingly, NFTs are also being used to as proof of memberships to exclusive benefits or access to unique events. For example, the music festival Coachella sells NFTs that grant lifetime access to virtual and physical events as well as physical and digital items (Bierman, 2022). Holders of these NFTs can also enjoy benefits like first access to product launches and exclusive entry passes for virtual and in-person events.
+
+NFT projects like Gary Vaynerchuk’s VeeFriends include access to events like conferences, educational talks, and direct access to thought leaders and leading entrepreneurs (Thomas, 2022). NFT holders can buy and sell these NFTs in secondary markets, where the real-world benefits further enhance the value of these NFTs.
+
+NFT projects also provide their holders access to private communities and Discord channels, allowing holders the opportunity to participate and connect to exclusive communities or to create their own exclusive communities. Discord especially, has been the go-to online platform, enabling a diverse set of people to come together to collaborate and share information. In NFT projects like the World of Women project, these channels function as valuable platform for members to share ideas, knowledge, opportunities, and to connect with future business partners (Beyer, 2022).
+
+Some NFT projects enable fractional ownership, where one could own part of an NFT that would be otherwise be too expensive to own outright. Sellers can sell part of their asset without giving up complete ownership and buyers can own part of the NFT, reducing their risk of committing substantial amounts of capital for whole ownership. Fractional ownership also injects liquidity to the NFT project by allowing smaller investors to own assets collectively.
+
+In June 2021, the Doge meme NFT, was bought for \$4 million by PleasrDAO which then sold fractional ownerships to fans (Locke, 2021). Axie Infinity, an NFT-based online video game, also sells fractionalized ownerships of rare ‘Axies’, one of its most popular in-game NFT assets (Takyar, 2022).
+
+As NFTs become more popular, owning a complete NFT become more expensive. While fractional ownership can lower the cost of ownership, it does not necessarily dilute the overall value of that NFT. When a fractional owner re-sells his fraction at a lower price, it does not lower the value of the remaining token for other fractional holders. Similarly, even if the token’s value skyrockets, buyers can still come in to buy at lower prices to own a smaller fraction of that NFT.
+
+Another utility common for gaming NFTs is merging or breeding. For example, in the Crypto Kitties project, NFT holders can ‘breed’ their existing Crypto Cats to create new NFTs which they can choose to add to their collection or sell in the secondary market. For some, the new NFTs can fetch a higher value than existing tokens (Cryptokittes, 2018).
+
+Some NFT projects allow their holders to stake their NFTs to earn additional tokens or yield. NFT holders send their NFTs to a pool or a wallet to lock up their tokens, reducing the supply of tokens and maintaining the scarcity value of remaining tokens. Holders are then rewarded with native tokens during the period of staking.
+
+To reward NFT holders for their support and efforts in building awareness and interest for the project, many projects also frequently ‘airdrop’ new benefits and free NFTs into holder’s wallets. NFT ownership facilitates a direct relationship between creators/founders and their NFT holders who function as the unofficial marketing team of the project. This close bond between community and project shifts the company-customer relationship to be more of a partnership with shared and aligned interests.
+
+Designing utilities that provides recurring benefits to NFT holders encourage continued support for these NFT projects and instils greater satisfaction in ownership. In comparison, owning physical pieces of art or collectibles provides no real benefit other than price appreciation, which can only be realised upon selling those assets.
+
+## Community and Inclusion
+
+A network effect is a phenomenon where the intrinsic value of a product or good increases as more people use it. For example, a social media platform is only valuable if many people use it. The more active users an NFT project has, the more valuable it becomes for everyone involved. Like cryptocurrencies, where a token’s worth comes from users’ shared agreement, the bigger and more engaged the NFT community is, the higher the project’s value.
+
+It is not surprising why the two most valuable NFT projects Cryptopunks and Bored Ape Yacht Club have been able to rise in prominence, with their legions of fans and recognition from social and mainstream media and influential people.
+
+For these projects, buyers are not necessarily buying the NFTs for the art itself but for the community and exclusivity it accords to the holder. For example, Bored Ape Yacht Club (BAYC) NFT holders are immediately welcomed into an exclusive community with private Discord channels, member-only events, and networking sessions with other BAYC holders including celebrities and high-profile individuals.
+
+Beyond hype and profitability, communities that rally behind the same beliefs and connect to a greater cause have also grown in numbers and prominence within the NFT ecosystem. Projects with clearly defined roadmaps and social missions can effectively rally people together and add value to their lives. NFT communities provide a space and platform for people to share ideas, collaborate and support each other across borders, social circumstances, and languages. They can disrupt traditional industries, provide a platform to encourage entrepreneurship and come together to advance various social causes.
+
+The World of Women (WOW) NFT project is an artwork collection depicting women-centric characters and profile pictures (Beyer, 2022). The project builds and drives a community that rallies behind a movement to promote greater diversity, representation, and inclusion of women in the web3 space. The WOW project provides free mentoring and education, as well as channels for members to network and develop business opportunities across their userbase and network of corporate partners.
+
+This project also supports emerging artists and non-profits globally, with a percentage of all sales going to women-centric causes. Through the funding of projects important to women interests, the project inspires and nurtures a new generation of women to explore new opportunities in Web3 and technology.
+
+For any NFT project to be successful and have long-term growth and value, a constantly engaged community is crucial. Belonging to a community is intrinsic to human nature. Whether it be niche interests, identity, or beliefs, we all wish to form groups where we can interact with like-minded individuals. The more a community becomes part of people’s personal identities, the more the value of that community is reinforced.
+
+Without an active and engaged community of users, NFT projects can fail to take off, or would rapidly collapse as users lose interest. This lack of engagement and vigour in the community can eventually lead to the devaluation of the project and the NFTs directly.
+
+## Social Impact
+
+NFTs and its communities has enabled new ways of thinking about social responsibility. There is an increasing trend of new NFT projects with clearly defined road maps that explain how they intend to use their proceeds to fund projects to advance social causes and how to use their technology to improve the world around them. Projects have also purposefully allocated part of their proceeds to charitable and social causes, which in turn increase the interest in these NFT projects from people who identify with these causes.
+
+Some of the charitable and social causes adopted by NFT projects include climate change, mental health, saving endangered animals, among many others.
+
+For example, Apocalyptic Apes is a side project of the Bored Ape Yacht Club NFT project, focusing on climate issues through ocean clean up and reduction of plastic waste (Vick, 2022).
+
+The CleanOcean NFT project provides a reward system for volunteering activities like cleaning polluted beaches, parks, or lands (block.co, 2022). The project receives funds from donors and brings together volunteers and enthusiasts who are rewarded with tokens for their contributions to cleaning up contaminated oceans and lakes.
+
+The Blazed Cats NFT project features an artwork collection of cat jpegs with a variety of customizations (Blazed Cats, n.d.). 25% of new mint profits and 100% of secondary royalties goes to Mental Health America, which was chosen as the sole beneficiary by its discord community. This project raised over \$215,000 in its first two weeks and enables Mental Health America to generate perpetual revenue from secondary sales of their NFTs.
+
+NFTs provide a new and innovative way to raise funds for Non-profit organizations and charities where proceeds from NFT auctions are used to support the non-profit's mission. Selling NFTs enable non-profits to access new sources of funding outside of established channels and help them diversify their fund-raising streams. NFTs have also enabled non-profits and charities to continually receive income from secondary sales of these tokens. Each NFT that is purchased and subsequently resold provides perpetual revenue streams.
+
+For example, a Singaporean non-profit organization called The Good Blockchain minted unique National Day Parade-themed NFTs featuring artworks by artists with disabilities to raise funds for SG enable, a local agency that empowers persons with disabilities to integrate with society (Automata Network, 2022). Similarly, in April 2022, The Food Bank Singapore also auctioned several NFTs of its mascot to raise funds for its meals and pantry programme(Auto, 2022).
+
+## Conclusion
+
+NFTs have become the new social identity, enabling people to display the causes to which they are aligned to; functioning as social signalling tools to show what communities they belong to and what they believe in. By fostering a large and vibrant community centred around more than art or profits, the NFT space has become a place where people can collectively come together to effect real change and do positive things to improve the world around them. This is a good example on how NFTs have grown beyond the initial speculative hype by offering a utility that promotes positive change. Through its own way, NFTs help tackle important problems like climate, inequalities, and socio-economic issues by increasing awareness, building and driving community engagement and enabling participation.
+
+## References
+
+Auto, H. (2022, April 21). S'pore food charity auctions art NFTs to raise funds for meals and pantry programme. The Straits Times. <https://www.straitstimes.com/singapore/community/spore-food-charity-is-auctioning-art-nfts-to-raise-funds-for-meals-and-pantry-programme>  \[Accessed 26 October 2022\]
+
+Automata Network. (2022, August 9). NFTFair supports NDP2022 NFT fundraising campaign - Automata Network. Medium. <https://medium.com/atanetwork/nftfair-supports-ndp2022-nft-fundraising-campaign-32398b03bcd8> \[Accessed 26 October 2022\]
+
+Beyer, E. J. (2022, July 5). The Ultimate Guide to World of Women: A Pillar of Inclusivity in NFTs. Nft Now. <https://nftnow.com/guides/the-ultimate-guide-to-world-of-women-a-pillar-of-inclusivity-in-nfts/> \[Accessed 26 October 2022\]
+
+Bierman, B. (2022, February 18). Inside the Sale of Coachella’s Lifetime Passes and \$1.4 Million NFT Collection. EDM.com - the Latest Electronic Dance Music News, Reviews & Artists. <https://edm.com/gear-tech/coachella-sells-1-4-million-nft-lifetime-passes> \[Accessed 26 October 2022\]
+
+Blazed Cats. (n.d.). Retrieved October 25, 2022, from <https://blazedcats.com/> \[Accessed 26 October 2022\]
+
+Block.co. (2022, September 12). *NFTs for Social Good - block.co*. Medium. <https://blockdotco.medium.com/nfts-for-social-good-2b3e43b31e> \[Accessed 26 October 2022\]
+
+CryptoKitties. (2018, July 26). *Getting started with CryptoKitties Part Two: Buying and Breeding*. Medium. <https://medium.com/cryptokitties/getting-started-with-cryptokitties-part-two-buying-and-breeding-792502e54a4d> \[Accessed 26 October 2022\]
+
+Dafoe, T. (2022, January 27). Russia’s Hermitage Museum Will Auction Off NFTs of Prized Works by Leonardo, Van Gogh, and Other Artists in Its Collection. Artnet News. <https://news.artnet.com/art-world/hermitage-museum-auctioning-nfts-1992830> \[Accessed 26 October 2022\]
+
+Ernest, M. (2022, June 29). Nike’s RTFKT Studios is offering Air Force 1 NFTs with real sneakers to match. Input. <https://www.inputmag.com/style/nike-rtfkt-studios-air-force-1-nft-real-sneakers-redeem> \[Accessed 26 October 2022\]
+
+Kaczynski, S., & Kominers, S. D. (2021, November 19). *How NFTs Create Value*. Harvard Business Review. <https://hbr.org/2021/11/how-nfts-create-value> \[Accessed 26 October 2022\]
+
+Kostic, E. (2022, March 10). What Could NFTs Mean for Nonprofits? Ad Council Org. <https://www.adcouncil.org/all-articles/what-could-nfts-mean-for-nonprofits> \[Accessed 26 October 2022\]
+
+Ng, K. (2022, April 12). How Southeast Asia’s NFT ecosystem lifts up local artists. Forkast. <https://forkast.news/how-southeast-asias-nft-ecosystem-lifts-up-local-artists/> \[Accessed 26 October 2022\]
+
+Thomas, L. (2022, October 4). Gary Vee’s NFTs: A Guide to VeeFriends and the Man Taking Over Web3. Nft Now. <https://nftnow.com/guides/ultimate-guide-to-veefriends/> \[Accessed 26 October 2022\]
+
+Vick, A. (2022, February 24). How NFTs Are Creating Social Value. Forbes. <https://www.forbes.com/sites/forbestechcouncil/2022/02/24/how-nfts-are-creating-social-value/?sh=62a217ecb98c> \[Accessed 26 October 2022\]
