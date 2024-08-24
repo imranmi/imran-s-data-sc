@@ -1,0 +1,110 @@
+---
+title: "Quantum Computing - Mean-Variance Portfolio Optimization"
+author: "Imran Ibrahim"
+date: August 24, 2024
+date-modified: "last-modified"
+toc: true
+execute: 
+  eval: true
+  echo: true
+  freeze: true
+  warning: false
+  message: false
+---
+
+# Introduction
+
+Mean-variance portfolio optimization, a key component of Modern Portfolio Theory (MPT), helps investors determine the optimal mix of assets in their portfolios to achieve maximum returns for a given level of risk (Markowitz, 1952).
+
+This portfolio optimization calculates expected returns, portfolio variance (risk), and the covariance between assets to derive the optimal portfolio. However, computational complexity, especially as the number of assets increase, hinders this optimization. Quantum computing, with its unique computational capabilities, offers potential solutions to overcome these limitations and can potentially transform the way Asset Managers and Financial Institutions optimize their portfolios for their customers.
+
+## Why is it difficult for Classical computers?
+
+A key component of this optimization is the Portfolio Variance, where the formula for a simple two-asset portfolio is as follows:
+
+**Portfolio variance** = w~1~^2^σ~1~^2^ + w~2~^2^σ~2~^2^ + 2w~1~w~2~Cov~1,2~
+
+Where:
+
+-   w~1~ = the portfolio weight of the first asset
+
+-   w~2~ = the portfolio weight of the second asset
+
+-   σ~1~ = the standard deviation of the first asset
+
+-   σ~2~ = the standard deviation of the second asset
+
+-   Cov~1,2~ = the co-variance of the two assets, which can thus be expressed as *p*~(1,2)~σ~1~σ~2~, where *p*~(1,2)~ is the correlation co-efficient between the two assets
+
+As the number of assets in the portfolio grows, the terms in the formula for portfolio variance increase exponentially. For example, a three-asset portfolio has 6 parameters in the variance calculation, while a five-asset portfolio increases to 15. Furthermore, the number of potential portfolio combinations that need to be evaluated also increases exponentially with the number of assets. This growth in computational requirements means that the more assets there are, the longer it takes a classical computer to evaluate these parameters and find the optimal portfolio. Additionally, the relationships between financial assets may change over time, meaning any calculation may require frequent fine-tuning to reflect dynamic market conditions.
+
+# Why Quantum computing?
+
+Unlike classical computers, instead of relying on bits to process information, quantum computers use quantum bits, or qubits. The unique properties of qubits allow them to exist in multiple states simultaneously, enabling exponentially faster parallel processing of data. This property, along with the ability of qubits to maintain superposition and entanglement, could empower quantum algorithms to solve problems faster and more accurately than classical algorithms.
+
+[Speed and Scalability]{.underline}: Quantum algorithms can process vast amounts of data at unprecedented speeds, potentially reducing the time it takes to perform complex calculations (refer to Appendix- Fig 1). This is important in portfolio optimization, where the number of potential combinations increases exponentially with the number of assets.
+
+[Improved Accuracy]{.underline}: Variational Quantum Algorithms, like the Quantum Approximate Optimization Algorithm (QAOA) and Variational Quantum Eigensolver (VQE), are designed to potentially solve optimization problems with higher precision and efficiency than classical methods and algorithms.
+
+The potential for improved accuracy arises from the unique properties of superposition and entanglement. Superposition, allows a qubit to exist in multiple states at once, theoretically enabling quantum algorithms to process a multitude of possibilities simultaneously. This could potentially allow for a more extensive exploration of the solution space in a shorter time.
+
+Entanglement creates a high degree of correlation between qubits. While it may not necessarily provide an advantage for optimization problems where variables are interconnected, algorithms like QAOA and VQE are designed to exploit this correlation for potential computational advantages. For example, the entanglement of qubits in these algorithms could potentially facilitate the finding of global optima in a landscape of local optima.
+
+Additionally, the iterative nature of algorithms like QAOA and VQE allows them to refine solutions over time. The process of gradually adjusting the parameters of a quantum circuit (known as the ansatz) to minimize a specific cost function could potentially lead to more accurate solutions to optimization problems.
+
+# Risk and Challenges
+
+Despite its promising potential, there are several business and technical risks and challenges with implementing this solution:
+
+a\) Technology maturity: Quantum computing is still in its infancy, and the development of large-scale, fault-tolerant quantum computers remains an ongoing effort. The technology is nascent, and the quantum hardware and algorithms are still being developed and optimized.
+
+b\) Quantum error correction: Quantum information is highly susceptible to errors due to environmental noise and the unstable nature of quantum states. Effective error correction algorithms are necessary to make quantum computations reliable, but developing such algorithms is a complex task. For example, current quantum computers are classified as Noisy Intermediate-Scale Quantum (NISQ) devices because they lack efficient error correction.
+
+c\) Skills shortage: There is a lack of skilled professionals with expertise in quantum computing, posing a challenge for financial institutions to develop, implement, and maintain quantum-based portfolio optimization solutions.
+
+d\) Cost: Developing, maintaining, and operating quantum computing infrastructure is expensive. The requirement of extremely low temperatures for quantum computers to function adds to the cost and complexity. However, the advent of quantum computing-as-a-service (QCaaS) offerings from companies like IBM and Rigetti might lower these barriers and enable broader access to quantum resources.
+
+e\) Interoperability: Integrating quantum computing solutions with existing financial systems and processes may prove to be challenging, requiring extensive development, and testing. The different computational models may also pose compatibility issues.
+
+# Conclusion
+
+Several Financial Institutions have already recognized the potential benefits of quantum computing and are actively researching and investing in its development. For example, in collaboration with IBM, J.P. Morgan has been researching quantum computing applications in trading strategies, portfolio optimization, and risk analysis. Similarly, HSBC and IBM announced a three-year collaboration in 2022, to explore how quantum computers could be used for pricing and portfolio optimisation and identifying and addressing fraudulent activity.
+
+# References
+
+Orus, R., Mugel, S., & Lizaso, E. (2018). Quantum computing for finance: Overview and prospects. *Reviews in Physics*, *4*, 100028. <https://doi.org/10.1016/j.revip.2019.100028>
+
+Egger, D. J., Gambella, C., Marecek, J., McFaddin, S., Mevissen, M., Raymond, R., Simonetto, A., Woerner, S., & Yndurain, E. (2020). Quantum Computing for Finance: State-of-the-Art and Future Prospects. *IEEE Transactions on Quantum Engineering*, *1*, 1–24. <https://doi.org/10.1109/tqe.2020.3030314>
+
+Owhadi-Kareshk, M. (2021, December 16). *Portfolio Optimization on Classical and Quantum Computers Using PortFawn*. arXiv.org. <https://arxiv.org/abs/2112.08998>
+
+*Markowitz, H. (1952) Portfolio Selection. The Journal of Finance, 7, 77-91.\
+<https://doi.org/10.1111/j.1540-6261.1952.tb01525.x>*
+
+*Quantum computing is coming to your business*. (n.d.). IBM. <https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/quantumstrategy>
+
+Bova, F. (2021, July 23). *Quantum Computing Is Coming. What Can It Do?* Harvard Business Review. <https://hbr.org/2021/07/quantum-computing-is-coming-what-can-it-do>
+
+*How quantum computing could change financial services*. (2020, December 18). McKinsey & Company. <https://www.mckinsey.com/industries/financial-services/our-insights/how-quantum-computing-could-change-financial-services>
+
+*HSBC Working with IBM to Accelerate Quantum Computing Readiness*. (2022, March 29). IBM Newsroom. <https://newsroom.ibm.com/2022-03-29-HSBC-Working-with-IBM-to-Accelerate-Quantum-Computing-Readiness>
+
+Mugel, S., Kuchkovsky, C., Sanchez, E., Fernández-Lorenzo, S., Luis-Hita, J., Lizaso, E., & Orus, R. (2022). Dynamic portfolio optimization with real datasets using quantum processors and quantum-inspired tensor networks. *Physical Review Research*, *4*(1). <https://doi.org/10.1103/physrevresearch.4.013006>
+
+Leymann, F., & Barzen, J. (2020). The bitter truth about gate-based quantum algorithms in the NISQ era. *Quantum Science and Technology*, *5*(4), 044007. <https://doi.org/10.1088/2058-9565/abae7d>
+
+# Appendix
+
+![Fig 1 : comparison between classical algorithms and quantum algorithms. Source: IBM](images/clipboard-92372143.png){fig-align="left"}
+
+## Quantum Method for Portfolio Optimization
+
+To utilize QAOA and VQE in the context of portfolio optimization, the portfolio optimization problem first needs to be reformulated as a Quadratic Unconstrained Binary Optimization (QUBO) problem. The QUBO formulation is well suited for quantum computers as it involves binary variables, matching the binary nature of qubits.
+
+In a QUBO problem, the aim is to find the optimal values of binary variables that minimize or maximize an objective function. For portfolio optimization, this aligns with the goal of finding the asset weights that maximize returns for a given level of risk or minimize risk for a given level of returns. By transforming the portfolio optimization problem into a QUBO problem, quantum algorithms like QAOA and VQE can efficiently explore the solution space and potentially find improved portfolio allocations compared to classical methods.
+
+Specifically, the QAOA algorithm finds the optimal solution of the QUBO problem by adjusting the parameters of a quantum circuit (known as an ansatz) to minimize a specific cost function. VQE uses a similar approach but with a variational technique to find the minimum eigenvalue of a Hamiltonian, which represents the cost function in energy terms.
+
+QAOA is designed to address combinatorial optimization problems. These problems involve finding an optimal solution from a large set of possibilities. VQE, on the other hand, finds the minimum energy state of a quantum system. This can be leveraged to solve optimization problems by associating them with a system's energy states.
+
+Despite their different approaches, both QAOA and VQE offer the potential to enhance the construction of the “efficient frontier” and improve the accuracy of portfolio optimization, demonstrating their benefits over classical methods.
