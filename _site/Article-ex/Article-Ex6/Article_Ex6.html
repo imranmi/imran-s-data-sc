@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Imran Ibrahim">
+<meta name="dcterms.date" content="2024-08-24">
+
+<title>Imran’s Postgrad repo - Decentralised Finance - Examine the working principles and Appraise the future of DeFi</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Imran’s Postgrad repo</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-exercises-in-r" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Exercises in R</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises-in-r">    
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex1/R_Ex1.html">
+ <span class="dropdown-text">R Exercise 1 - Analysing PISA’s education survey data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex2/R_Ex2.html">
+ <span class="dropdown-text">R Exercise 2 - 5 Exploratory Data Analyses on Pisa Data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex3/R_Ex3.html">
+ <span class="dropdown-text">R Exercise 3 - DataVis Makeover of another student’s work</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex4/R_Ex4.html">
+ <span class="dropdown-text">R Exercise 4 - Be Weatherwise or Otherwise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex5/R_Ex5.html">
+ <span class="dropdown-text">R Exercise 5 - Visual Analytics exercise on Armed conflicts - Initial Draft</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex6/R_Ex6.html">
+ <span class="dropdown-text">R Exercise 6 - Geospatial Analysis1 - Local Measures of Spatial Autocorrelation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex7/R_Ex7.html">
+ <span class="dropdown-text">R Exercise 7 - Geospatial Analysis2 - Emerging Hot Spot Analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex8/R_Ex8.html">
+ <span class="dropdown-text">R Exercise 8 - Geospatial Analysis3 - Spatially Constrained Clustering-ClustGeo method</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex9/R_Ex9.html">
+ <span class="dropdown-text">Group Project Poster - Decoding Chaos - Analysing Armed conflicts in Myammar</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-exercises-in-python" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Exercises in Python</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises-in-python">    
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex1/Python_Ex1.html">
+ <span class="dropdown-text">Python Exercise 1 - Automate the design of a 3-stocks portfolio for a given target return</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex2/Python_Ex2.html">
+ <span class="dropdown-text">Python Exercise 2 - Designing a 3-stock portfolio for a robo-advisor</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex3/Python_Ex3.html">
+ <span class="dropdown-text">Python Exercise 3 - Project - Predicting Stock Prices through Time series Analysis</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-sas-viya-exercises" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">SAS Viya Exercises</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-sas-viya-exercises">    
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex1/Write_Ex1.html">
+ <span class="dropdown-text">Assignment 1 - Show me the numbers</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex2/Write_Ex2.html">
+ <span class="dropdown-text">Assignment 2 - Be Customer wise or otherwise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex3/Write_Ex3.html">
+ <span class="dropdown-text">Project - Loan Default prediction</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex4/Write_Ex4.html">
+ <span class="dropdown-text">Project Poster - Loan Default prediction</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-written-assignments-(fintech" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Written Assignments (Fintech)</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-written-assignments-(fintech">    
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex1/Article_Ex1.html">
+ <span class="dropdown-text">Assignment 1 - Factors that contributed to the rise of Fintech companies</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex2/Article_Ex2.html">
+ <span class="dropdown-text">Assignment 2 - Banks have changed the way they deploy technology</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex3/Article_Ex3.html">
+ <span class="dropdown-text">Assignment 3 - Assess and discuss how the role of financial regulators has evolved</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex4/Article_Ex4.html">
+ <span class="dropdown-text">Assignment 4 - Key characteristics that create or inject value for a non-fungible token</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex5/Article_Ex5.html">
+ <span class="dropdown-text">Assignment 5 - Bitcoin - Examining a Layer 1 &amp; 2 solution and adoption for a payment use case</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex6/Article_Ex6.html">
+ <span class="dropdown-text">Assignment 6 - Decentralised Finance - Examine the working principles and Appraise the future of DEFI</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex7/Article_Ex7.html">
+ <span class="dropdown-text">Assignment 7</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex8/Article_Ex8.html">
+ <span class="dropdown-text">Assignment 8</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools tools-wide">
+    <a href="../../about.html" title="About Imran" class="quarto-navigation-tool px-1" aria-label="About Imran"><i class="bi bi-house-heart"></i></a>
+    <a href="https://github.com/imranmi/imran-s-data-sc" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/imran-ibrahim-116a236b" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#assignment-topic" id="toc-assignment-topic" class="nav-link active" data-scroll-target="#assignment-topic">Assignment Topic</a>
+  <ul class="collapse">
+  <li><a href="#part-1" id="toc-part-1" class="nav-link" data-scroll-target="#part-1">Part 1</a></li>
+  <li><a href="#part-2" id="toc-part-2" class="nav-link" data-scroll-target="#part-2">Part 2</a></li>
+  <li><a href="#part-1---examine-the-working-principles-of-decentralised-finance-defi" id="toc-part-1---examine-the-working-principles-of-decentralised-finance-defi" class="nav-link" data-scroll-target="#part-1---examine-the-working-principles-of-decentralised-finance-defi">Part 1 - Examine the working principles of Decentralised Finance (DeFi)</a>
+  <ul class="collapse">
+  <li><a href="#asset-tokenization" id="toc-asset-tokenization" class="nav-link" data-scroll-target="#asset-tokenization">Asset Tokenization</a></li>
+  <li><a href="#decentralized-exchanges" id="toc-decentralized-exchanges" class="nav-link" data-scroll-target="#decentralized-exchanges">Decentralized Exchanges</a></li>
+  <li><a href="#lending-markets" id="toc-lending-markets" class="nav-link" data-scroll-target="#lending-markets">Lending Markets</a></li>
+  <li><a href="#decentralized-derivatives" id="toc-decentralized-derivatives" class="nav-link" data-scroll-target="#decentralized-derivatives">Decentralized Derivatives</a></li>
+  <li><a href="#asset-management" id="toc-asset-management" class="nav-link" data-scroll-target="#asset-management">Asset Management</a></li>
+  </ul></li>
+  <li><a href="#part-2---appraising-the-future-of-defi" id="toc-part-2---appraising-the-future-of-defi" class="nav-link" data-scroll-target="#part-2---appraising-the-future-of-defi">Part 2 - Appraising the future of DeFi</a>
+  <ul class="collapse">
+  <li><a href="#composability---lego-blocks" id="toc-composability---lego-blocks" class="nav-link" data-scroll-target="#composability---lego-blocks">Composability - Lego Blocks</a></li>
+  </ul></li>
+  <li><a href="#risks-in-decentralized-finance" id="toc-risks-in-decentralized-finance" class="nav-link" data-scroll-target="#risks-in-decentralized-finance">Risks in Decentralized Finance</a>
+  <ul class="collapse">
+  <li><a href="#smart-contracts---incorrect-codes-and-bugs" id="toc-smart-contracts---incorrect-codes-and-bugs" class="nav-link" data-scroll-target="#smart-contracts---incorrect-codes-and-bugs">Smart contracts - Incorrect codes and bugs</a></li>
+  <li><a href="#leverage" id="toc-leverage" class="nav-link" data-scroll-target="#leverage">Leverage</a></li>
+  <li><a href="#centralized-price-oracles-and-dependencies" id="toc-centralized-price-oracles-and-dependencies" class="nav-link" data-scroll-target="#centralized-price-oracles-and-dependencies">Centralized Price Oracles and Dependencies</a></li>
+  <li><a href="#scams-and-rug-pulls" id="toc-scams-and-rug-pulls" class="nav-link" data-scroll-target="#scams-and-rug-pulls">Scams and “Rug Pulls”</a></li>
+  <li><a href="#governance-risks" id="toc-governance-risks" class="nav-link" data-scroll-target="#governance-risks">Governance Risks</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Decentralised Finance - Examine the working principles and Appraise the future of DeFi</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Imran Ibrahim </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 24, 2024</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">August 24, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="assignment-topic" class="level1">
+<h1>Assignment Topic</h1>
+<p>Perform a comprehensive overview on Decentralised Finance. Your answer should include (but not limited to) the following:</p>
+<section id="part-1" class="level3">
+<h3 class="anchored" data-anchor-id="part-1">Part 1</h3>
+<p>Examine the working principles of Decentralised Finance (DeFi).</p>
+</section>
+<section id="part-2" class="level3">
+<h3 class="anchored" data-anchor-id="part-2">Part 2</h3>
+<p>Appraise the future of DeFi based on your understanding on its potential, risks, and challenges.</p>
+</section>
+<section id="part-1---examine-the-working-principles-of-decentralised-finance-defi" class="level2">
+<h2 class="anchored" data-anchor-id="part-1---examine-the-working-principles-of-decentralised-finance-defi">Part 1 - Examine the working principles of Decentralised Finance (DeFi)</h2>
+<p>Decentralized finance (DeFi) refers to a blockchain based financial infrastructure built on top of public smart contract platforms such as Ethereum. It is based on open protocols where agreements are enforced by smart contract codes.</p>
+<p>Smart contracts are the cornerstone of Decentralized Finance (DeFi), enabling DeFi applications to deliver financial services without the need for intermediaries, custodians, or central clearing houses.</p>
+<p>Smart contracts are stored on a blockchain and are executed by a large set of validators, allowing any participant to verify the execution of the code and the resulting state changes independently.</p>
+<p>Smart contracts exhibit the following behaviour:</p>
+<ul>
+<li><p>Deterministic, Secure, and verifiable – Contracts execute as specified and can be verified by any participant</p></li>
+<li><p>Transparent – Smart contract codes are viewable publicly</p></li>
+<li><p>Immutable- completed operations cannot be reversed</p></li>
+<li><p>Atomic- contract execution is atomic and results in either a successful state change or reverts to the original state</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-940183335.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 1: DeFi is made up of a multi-layer architecture. Source: (Decentralized Finance: On Blockchain- and Smart Contract-Based Financial Markets | St.&nbsp;Louis Fed, 2021)</figcaption>
+</figure>
+</div>
+<p>1) The <u>settlement layer</u> is made up of the blockchain and its native asset or coin. This layer functions as the settlement and dispute resolution layer.</p>
+<p>2) The <u>asset layer</u> consists of assets or tokens that are issued on top of the settlement layer.</p>
+<p>3) The <u>protocol layer</u> provides standards for specific use cases such as lending, decentralized exchanges, asset-management, and derivatives.</p>
+<p>4) The <u>application layer</u> enables the creation of end user applications that can connect to individual protocols.</p>
+<p>5) The <u>aggregation layer</u> is an extension of the application layer. Aggregators create user-centred interfaces that can connect to different &nbsp;protocols from a single touchpoint.</p>
+<p>There are five main components in DeFi: Asset Tokenization, Decentralized Exchanges, Lending markets, Decentralized Derivatives and Asset Management.</p>
+<section id="asset-tokenization" class="level3">
+<h3 class="anchored" data-anchor-id="asset-tokenization">Asset Tokenization</h3>
+<p><u>Asset Tokenization</u> refers to the process of adding new assets to a blockchain. (Decentralized Finance: On Blockchain- and Smart Contract-Based Financial Markets | St.&nbsp;Louis Fed, 2021b)</p>
+<p>Tokenization allows for easier asset transfers easy between users, making assets more accessible and transactions more efficient. Tokenized assets can be used in various decentralized applications (DApps) and are stored within smart contracts. When issued using common standards like ERC-20, tokens are interoperable and can be used in multiple DeFI protocols.</p>
+<p>Tokens that tie their value to a reference asset with stable pricing, are called <u>stablecoins</u>. For example, Dai is a token that is pegged to the US dollar and maintains the same value as the Fiat currency. Stablecoins bridge the gap between Fiat currencies and cryptocurrencies, allowing people to have an asset with less price fluctuation.</p>
+<p>Stable Coins can be backed by on-chain or off-chain collateral. For example, ether is used as on-chain collateral to create new Dai tokens pegged to the US dollar. To mint new Dai tokens, one would first need to lock ether as collateral in a smart contract. As the USD/ETH exchange rate is variable, users usually need to lock more ether (over-collateralize).</p>
+<p>USDT and USDC, are examples of stable coins backed by physical US dollars off-chain. WBTC is a tokenized version of Bitcoin, and DGX is a stable coin backed by gold. Collateralizing tokens off-chain can mitigate exchange rate risk but introduces familiar counterparty risks and external dependencies.</p>
+<p>Tokens can serve a variety of purposes and have different utilities. For example, <u>governance tokens</u> allow holders to perform specific actions like voting. There are also tokens that resemble real world assets shares or bonds. One distinct category of tokens that have grown importance in recent times are <u>non-fungible tokens (NFTs)</u>. These tokens consist of unique assets which include game items, artwork, and collectibles.</p>
+<p>NFTs are minted using the ERC-721 standard, making them non-fungible and unique, enabling each token to be individually tracked and identified.</p>
+</section>
+<section id="decentralized-exchanges" class="level3">
+<h3 class="anchored" data-anchor-id="decentralized-exchanges">Decentralized Exchanges</h3>
+<p>Centralized cryptocurrency exchanges require users to deposit their assets and leave the assets’ custody to the exchanges, including the safekeeping and use of public and private keys. Users forgo access to their digital assets and have to explicitly trust the exchange. This exposes users to multiple risks as dishonest exchange operators could steal their customer keys and assets. Centralized crypto exchanges also represent a point of failure, facing constant threats of hacking and asset theft. For example, it was reported that around $292,665,886 worth of cryptocurrency and 510,000 user logins were stolen from crypto exchanges in 2019 (Thompson, 2020).</p>
+<p>Decentralized exchanges (DEXs) attempt to mitigate these risks by introducing a trust-less trading marketplace. For example, in decentralized exchanges like Uniswap, users can trade, exchange and swap cryptocurrencies without depositing funds or assets, maintaining complete control of their assets and keys. Trades are executed atomically through a smart contract, where both buy and sell transactions are performed in one synchronously, eliminating counterparty risk. Smart contracts effectively perform many existing functions done by intermediaries like escrow services, custodians and counterparty clearing houses (CCPs).</p>
+</section>
+<section id="lending-markets" class="level3">
+<h3 class="anchored" data-anchor-id="lending-markets">Lending Markets</h3>
+<p>Through lending protocols, users can borrow crypto assets or lend their cryptocurrency assets in exchange for interest, allowing them to earn income without giving up ownership rights on their assets. Borrowers and lenders do not need to identify themselves as DeFi loans are not reliant on trusted relationships.</p>
+<p>Instead, to mitigate counterparty risk, there are two distinct approaches.</p>
+<p><u>Transactions are done atomically</u>. The borrower receives and uses the loan, and repays, in the same transaction. If he fails to return the loan at the end of the transaction’s execution cycle, his loan will be invalidated along with any benefits derived from the transaction. These types of loans are usually referred as ‘flash’ loans.</p>
+<p>Loans are also secured with <u>collateral locked in smart contracts</u>. &nbsp;</p>
+<p>In <u>collateralized debt positions (CDP)</u> borrowers first create a vault (smart contract) and ‘lock’ their cryptocurrencies as collateral. They then mint new tokens up to a specified collateralization ratio allowed. The newly minted tokens are fully collateralized and allow the users to get new liquid asset which they can trade for other cryptocurrencies or hold to earn interest.</p>
+<p>To close a CDP, the borrower simply returns the minted tokens including any accrued interest to the smart contract. Borrowers can withdraw their collateral upon successful repayment of their debt. When borrowers fail to repay, or when the value of the collateral falls below the collateralization ratio threshold, the smart contract automatically liquidates the locked-up collateral to recover the debt amount.</p>
+<p>Lending markets also make it possible to borrow existing cryptocurrencies from other users. Lenders and borrowers can be matched via Peer to Peer(P2P) or liquidity pools. In P2P matching, lenders are matched to specific borrowers which allows for both parties to agree on customized maturities and interest rates.</p>
+<p>On the other hand, liquidity pools aggregate the funds of all borrowers in a single, lending pool. Users can earn interest which is derived as a function of the pool’s utilization rate. Some examples of DeFi projects using a liquidity pool to provide credit include Aave, Compound and dYdX.</p>
+<p>In DeFi lending markets, there are no credit scores, or credit history requirements before utilization. This enables more users from diverse locations and economic backgrounds to tap on new sources of funding where they would have otherwise had no access to in centralized finance.</p>
+</section>
+<section id="decentralized-derivatives" class="level3">
+<h3 class="anchored" data-anchor-id="decentralized-derivatives">Decentralized Derivatives</h3>
+<p>Decentralized derivatives are tokens that reference the price of tokens or other real-world assets.</p>
+<p>These derivatives can derive their value from an underlying asset’s performance or the outcome of an event.</p>
+<p>In <u>Asset-based derivative tokens</u> investors mint new tokens that track the price movements of a variety of real-world assets like stocks, precious metals, or other crypto currencies.</p>
+<p>Inverse tokens are recent instruments which allow investors to get short exposure to cryptocurrencies.</p>
+<p><u>Event-based derivative</u> tokens are tokens that track events with different potential outcomes. These are used in prediction markets where users trade in predicted outcomes for events like sporting, economic or world events. The tokens also enable fractionalization into sub-tokens where users can participate in pooled contracts for a fraction of the cost. These can be further traded through secondary sales. When the event ends, the smart contract will divide the pooled assets to the token owners of the winning outcome.</p>
+</section>
+<section id="asset-management" class="level3">
+<h3 class="anchored" data-anchor-id="asset-management">Asset Management</h3>
+<p>DeFi asset management funds are used in portfolio diversification and allow users to get exposure to a basket of crypto assets. These funds use a variety of trading strategies which are programmed into smart contracts. Smart contracts are used to hold crypto assets in custody and accord investors with complete control over their assets.</p>
+<p>Passive funds use smart contracts to automatically execute trading strategies, including portfolio rebalancing and trend trading. Actively managed funds allow human fund managers to manage fund strategies within predefined strategies and rulesets which are pre-programmed into smart contracts. For example, Enzyme Finance employs smart contracts to ensure that fund managers adhere to the fund strategies. Restrictions like token concentration, price limits, and the number of maximum trades can be automatically enforced by smart contract codes.</p>
+<p>When a user invests, the smart contract mints, and issues tokens to investors. These represent ownership of the fund and allows holders to redeem their share as and when required.</p>
+</section>
+</section>
+<section id="part-2---appraising-the-future-of-defi" class="level2">
+<h2 class="anchored" data-anchor-id="part-2---appraising-the-future-of-defi">Part 2 - Appraising the future of DeFi</h2>
+<p>DeFi has the potential to make the financial system and financial services more efficient, transparent, and accessible.</p>
+<p>The existing financial system is based on trust and depends on central third parties and intermediaries managing your money and ideally acting in your best interests. DeFi can replace the roles and functions of these intermediaries through the use of smart contracts. For example, decentralized exchanges (DEXs) allow users to swap cryptocurrencies for other types of cryptocurrencies directly peer to peer. Transactions can be settled atomically, where both parties are assured of successful execution or none at all. This reduces counterparty risk significantly while making token transfers faster than any similar asset transfer or transaction with traditional centralised exchanges, for a fraction of the cost.</p>
+<p>With traditional centralized exchanges, there are many intermediaries involved in facilitating the trade lifecycle. This imposes large trading fees on users and dependencies on multiple potential points of failure. For example, exchanges or brokers could run the risk of having liquidity issues in times of market volatility. Settlement of transactions are also not instant and can take days, as in the case of stock trades. Decentralized exchanges like Uniswap allow users to exchange or swap cryptocurrencies instantly, with minimal custodial risk for significantly smaller transaction fees.</p>
+<p>In DeFi applications, all transactions are transparent and publicly observable, with smart contract codes viewable and accessible on-chain. This allows for a higher level of transparency compared to traditional finance, where most of the data is scattered over multiple proprietary databases. Transparency can allow for the early detection of potential risks, allowing regulators to analyse potential consequences to the financial system and mitigate any systemic risk event</p>
+<p>Potentially, anyone can use DeFi applications. As there is no identity required, there would be less discrimination on who can use financial services. In traditional finance, users first need to have bank or trading accounts before they can access financial services. Their identities are screened against central watch-lists to prevent access to ‘bad-actors’ as defined by governments or regulators. Further, users can also be turned away because of associations to certain organizations, poor credit histories, income levels or nationalities. DeFi architecture can facilitate a more open and accessible financial system where ‘bad’ actions during transactions are mitigated by smart contract codes instead of restricting access to potential ‘bad actors’ before they can commit ‘bad’ actions.</p>
+<p>DeFi protocols and applications share the same settlement layer, and this enables for a high level of interoperability and interconnection. Similar to pieces of Lego blocks, different services and protocols can be integrated to create new bundles of financial services; potentially creating new services and products to address the needs of users. Any existing protocol or application can be used by other smart contracts for different use cases. This flexibility allows for a large number of permutations and possibilities for new models and services.</p>
+<section id="composability---lego-blocks" class="level3">
+<h3 class="anchored" data-anchor-id="composability---lego-blocks">Composability - Lego Blocks</h3>
+<p>Imagine DeFi with different blocks representing different protocols and applications. Developers could assemble a combination of protocols for a new product or service. With the stackable architecture, developers can build on existing protocols and applications; mixing and matching different functions to create completely new financial services and products. With interoperability, new projects would not exist as single-use isolated projects but functions as new building blocks, for future new projects.</p>
+<p>For example, the lending project Compound uses the Maker Dao CDP tool, the stablecoin DAI and their own smart contract to build a lending protocol that uses Maker Dao’s pre-built borrowing infrastructure. Instead of building the credit infrastructure from scratch, Compound connected with existing DeFi projects to create a new, useful financial services.</p>
+<p>The Zerion project uses the Maker Dao CDP tool, Compound, Uniswap, Metamask, imToken, Trust wallet, Coinbase wallet and Tokenary protocols to provide users with multi-service platform to cryptocurrency and NFTs portfolios. DeFi’s stackable and interoperable architecture allows for creativity and multiple use cases.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-270140161.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 2: The protocols and applications used by Zerion</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="risks-in-decentralized-finance" class="level2">
+<h2 class="anchored" data-anchor-id="risks-in-decentralized-finance">Risks in Decentralized Finance</h2>
+<section id="smart-contracts---incorrect-codes-and-bugs" class="level3">
+<h3 class="anchored" data-anchor-id="smart-contracts---incorrect-codes-and-bugs">Smart contracts - Incorrect codes and bugs</h3>
+<p>Smart contracts can potentially have coding errors or bugs which create vulnerabilities to attacks and exploits. For example, attackers could steal funds from the smart contracts, or render protocols unusable. Given that smart contracts are stored in public blockchains where anyone can view and interact with the code, attackers can easily identify potential vulnerabilities.</p>
+<p>For example, The DAO was an early decentralized autonomous organization (DAO) set up to act as an investor-directed venture capital fund. 3 months after its launch in 2016, hackers exploited vulnerabilities (‘Reentrancy Bug’) in its wallet’s smart contract codes. Specifically, the code allowed for repeated withdrawals before checking whether the attacker was entitled to withdraw those balances. This allowed the attackers to siphon almost $60 million worth of Ether which eventually led to a Hard fork to the version of Ethereum we know now (The DAO: What Was the DAO Hack?, n.d.).</p>
+</section>
+<section id="leverage" class="level3">
+<h3 class="anchored" data-anchor-id="leverage">Leverage</h3>
+<p>In lending markets and decentralized exchanges, users can typically borrow assets and re-use them as collateral for other transactions, allowing one to incrementally build large exposures. Crypto-based derivatives in DEXs involve a large amount of leverage which typically exceeds the levels allowed in regulated centralized exchanges. As these DeFi platforms are unregulated, there is technically no limit in terms of how much exposure a user can accumulate. While DeFi trading platforms allows for anyone to participate, this does not mean that everyone understands the financial risk of such transactions. Leverage enables users to trade large notional values with smaller amount of capital and can lead to oversized losses for investors in time of market volatility. The problem is further exacerbated when more assets are being reduced or liquidated collectively by smart contracts, which can trigger further downward pressure on prices. Interconnectedness among assets in different DeFi applications can adversely impact the system’s stability.</p>
+<p>DeFi relies exclusively on posted collateral to mitigate risk. In contrast, in centralized finance, banks can expand their balance sheets through bank deposits and rely on central banks in times of extreme stress.</p>
+<p>The destabilising role of leverage can be observed during the crypto crash in September 2021 (see fig 3) when forced liquidations on loans and derivatives on DeFi platforms accompanied sharp spikes in volatility.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2257806570.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 3: Leverage in the DeFi and its associated risks (Source: BIS Quarterly review Dec 2021)</figcaption>
+</figure>
+</div>
+</section>
+<section id="centralized-price-oracles-and-dependencies" class="level3">
+<h3 class="anchored" data-anchor-id="centralized-price-oracles-and-dependencies">Centralized Price Oracles and Dependencies</h3>
+<p>Many smart contracts in DeFi protocols are reliant on external data sources. External data sources or oracles and may introduce dependencies which can be exploited. For example, in 2020, bad actors used a flash loan to drive up the price of DAI on Coinbase which was used as an oracle by the DeFi lending platform Compound. This subsequently caused numerous liquidations as the value of the loans exceeded collateralization-ratio thresholds leading to almost $90 million worth of loans being liquidated (Gogo, 2020). In this case, Compound had relied on a single Oracle source from Coinbase as reference for its loan values instead of multiple oracle networks with a larger variety of data sources.</p>
+<p>With most DeFI protocols relying on Oracle services for their everyday functions, outages from oracle services can have damaging downstream effects on the services using them. Without Oracles, DeFi protocols stop working and are completely isolated and have no knowledge of the outside world other than the transactions added to their own native blockchain. This represents an important and yet unaddressed point of failure for a technology that aims to provide services to anyone round the clock.</p>
+</section>
+<section id="scams-and-rug-pulls" class="level3">
+<h3 class="anchored" data-anchor-id="scams-and-rug-pulls">Scams and “Rug Pulls”</h3>
+<p>A rug pull happens when a development team abandons a project and sells all their tokens.</p>
+<p>Typically, a DeFi project creates tokens and launches their tokens on a DEX. They offer high rewards to new investors, who in turn contribute their crypto assets to the liquidity pool. Once the pool gets large enough, the developers sell all their holdings on the DEX causing the price of their token to crash. Rug pulls are common in the DeFi space as projects can be easily listed on DEXs with little to no KYC or AML. Many projects are anonymous, making it easy for bad actors to defraud investors without revealing their identities (Malwa, 2021).</p>
+</section>
+<section id="governance-risks" class="level3">
+<h3 class="anchored" data-anchor-id="governance-risks">Governance Risks</h3>
+<p>Governance tokens allow token holders to vote on the direction of the project and participate in the decision making for how the project is run. However, governance tokens can also lead to centralization by participants with the financial means to accumulate a majority. This can lead to bad actors manipulating the project for his/her own economic benefit. For example, in March 2021, the True Seigniorage Dollar (TSD) stablecoin was attacked by a single hacker who amassed a majority of the governance tokens. The hacker subsequently voted to mint and issue a large amount of stablecoins to himself/herself, enabling him/her to sell the tokens and crashing the entire project</p>
+<p><strong>In conclusion</strong>, DeFI is still at its early stages and will face many more challenges and risks. One key challenge will be the role of regulators and governments. As many DeFI protocols enable investments with expected returns, this would surely attract the attention of regulators globally. Some regulators like the UAE, may welcome such innovation; while others like China, may just ban such projects to protect customer interests.</p>
+</section>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>Decentralized Finance: On Blockchain- and Smart Contract-Based Financial Markets | St.&nbsp;Louis Fed. (2021, February 5). <a href="https://research.stlouisfed.org/publications/review/2021/02/05/decentralized-finance-on-blockchain-and-smart-contract-based-financial-markets" class="uri">https://research.stlouisfed.org/publications/review/2021/02/05/decentralized-finance-on-blockchain-and-smart-contract-based-financial-markets</a></p>
+<p>Thompson, P. (2020, January 5). Most Significant Hacks of 2019 — New Record of Twelve in One Year. Cointelegraph. <a href="https://cointelegraph.com/news/most-significant-hacks-of-2019-new-record-of-twelve-in-one-year" class="uri">https://cointelegraph.com/news/most-significant-hacks-of-2019-new-record-of-twelve-in-one-year</a></p>
+<p>The DAO: What Was the DAO Hack? (n.d.). Gemini. <a href="https://www.gemini.com/cryptopedia/the-dao-hack-makerdao" class="uri">https://www.gemini.com/cryptopedia/the-dao-hack-makerdao</a></p>
+<p>Eichholz, L. (2021, April 13). DeFi Attacks: Flash Loans and Centralized Price Oracles. Glassnode Insights - On-Chain Market Intelligence. <a href="https://insights.glassnode.com/defi-attacks-flash-loans-centralized-price-oracles/" class="uri">https://insights.glassnode.com/defi-attacks-flash-loans-centralized-price-oracles/</a></p>
+<p>Gogo, J. (2020, November 27). $100 Million Liquidated on Defi Protocol Compound Following Oracle Exploit. Bitcoin News. <a href="https://news.bitcoin.com/100-million-liquidated-on-defi-protocol-compound-following-oracle-exploit/" class="uri">https://news.bitcoin.com/100-million-liquidated-on-defi-protocol-compound-following-oracle-exploit/</a></p>
+<p>Malwa, S. (2021, December 17). DeFi ‘Rug Pull’ Scams Pulled In $2.8B This Year: Chainalysis. <a href="https://www.coindesk.com/markets/2021/12/17/defi-rug-pull-scams-pulled-in-28b-this-year-chainalysis/" class="uri">https://www.coindesk.com/markets/2021/12/17/defi-rug-pull-scams-pulled-in-28b-this-year-chainalysis/</a></p>
+<p>Exploiting a Smart Contract without Security Vulnerabilities: Analysis of True Seigniorage Dollar Attack Event. (2022, January 7). Medium. <a href="https://certik.medium.com/exploiting-a-smart-contract-without-security-vulnerabilities-analysis-of-true-seigniorage-dollar-c319dce45783" class="uri">https://certik.medium.com/exploiting-a-smart-contract-without-security-vulnerabilities-analysis-of-true-seigniorage-dollar-c319dce45783</a></p>
+<p>Abdulhakeem, S. A. (2021, January 14). Powered by Blockchain Technology, DeFi (Decentralized Finance) Strives to Increase Financial Inclusion of the Unbanked by Reshaping the World Financial System. <a href="https://scirp.org/journal/paperinformation.aspx?paperid=106546" class="uri">https://scirp.org/journal/paperinformation.aspx?paperid=106546</a></p>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
