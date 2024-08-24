@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Imran Ibrahim, Aung Myat Ko, Ahn Byeongsu, Bryan Chee, Wang Zitian">
+<meta name="dcterms.date" content="2024-08-24">
+
+<title>Imran’s Postgrad repo - Data Quality as the Key enabler of Innovation and Digitisation</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Imran’s Postgrad repo</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-exercises-in-r" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Exercises in R</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises-in-r">    
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex1/R_Ex1.html">
+ <span class="dropdown-text">R Exercise 1 - Analysing PISA’s education survey data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex2/R_Ex2.html">
+ <span class="dropdown-text">R Exercise 2 - 5 Exploratory Data Analyses on Pisa Data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex3/R_Ex3.html">
+ <span class="dropdown-text">R Exercise 3 - DataVis Makeover of another student’s work</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex4/R_Ex4.html">
+ <span class="dropdown-text">R Exercise 4 - Be Weatherwise or Otherwise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex5/R_Ex5.html">
+ <span class="dropdown-text">R Exercise 5 - Visual Analytics exercise on Armed conflicts - Initial Draft</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex6/R_Ex6.html">
+ <span class="dropdown-text">R Exercise 6 - Geospatial Analysis1 - Local Measures of Spatial Autocorrelation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex7/R_Ex7.html">
+ <span class="dropdown-text">R Exercise 7 - Geospatial Analysis2 - Emerging Hot Spot Analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex8/R_Ex8.html">
+ <span class="dropdown-text">R Exercise 8 - Geospatial Analysis3 - Spatially Constrained Clustering-ClustGeo method</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex9/R_Ex9.html">
+ <span class="dropdown-text">Group Project Poster - Decoding Chaos - Analysing Armed conflicts in Myammar</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-exercises-in-python" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Exercises in Python</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises-in-python">    
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex1/Python_Ex1.html">
+ <span class="dropdown-text">Python Exercise 1 - Automate the design of a 3-stocks portfolio for a given target return</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex2/Python_Ex2.html">
+ <span class="dropdown-text">Python Exercise 2 - Designing a 3-stock portfolio for a robo-advisor</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex3/Python_Ex3.html">
+ <span class="dropdown-text">Python Exercise 3 - Project - Predicting Stock Prices through Time series Analysis</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-sas-viya-exercises" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">SAS Viya Exercises</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-sas-viya-exercises">    
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex1/Write_Ex1.html">
+ <span class="dropdown-text">Assignment 1 - Show me the numbers</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex2/Write_Ex2.html">
+ <span class="dropdown-text">Assignment 2 - Be Customer wise or otherwise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex3/Write_Ex3.html">
+ <span class="dropdown-text">Project - Loan Default prediction</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex4/Write_Ex4.html">
+ <span class="dropdown-text">Project Poster - Loan Default prediction</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-written-assignments-(fintech" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Written Assignments (Fintech)</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-written-assignments-(fintech">    
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex1/Article_Ex1.html">
+ <span class="dropdown-text">Assignment 1 - Factors that contributed to the rise of Fintech companies</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex2/Article_Ex2.html">
+ <span class="dropdown-text">Assignment 2 - Banks have changed the way they deploy technology</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex3/Article_Ex3.html">
+ <span class="dropdown-text">Assignment 3 - Assess and discuss how the role of financial regulators has evolved</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex4/Article_Ex4.html">
+ <span class="dropdown-text">Assignment 4 - Key characteristics that create or inject value for a non-fungible token</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex5/Article_Ex5.html">
+ <span class="dropdown-text">Assignment 5 - Bitcoin - Examining a Layer 1 &amp; 2 solution and adoption for a payment use case</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex6/Article_Ex6.html">
+ <span class="dropdown-text">Assignment 6 - Decentralised Finance - Examine the working principles and Appraise the future of DEFI</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex7/Article_Ex7.html">
+ <span class="dropdown-text">Assignment 7 - Design considerations when deploying a CBDC project</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex8/Article_Ex8.html">
+ <span class="dropdown-text">Assignment 8 - Consortium blockchain to track and trace assets for finance lease</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex9/Article_Ex9.html">
+ <span class="dropdown-text">Assignment 9 - Quantum Computing - Mean-Variance Portfolio Optimization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex10/Article_Ex10.html">
+ <span class="dropdown-text">Project 1 - Quantum Computing - Portfolio Optimisation using Hybrid Algorithm</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex11/Article_Ex11.html">
+ <span class="dropdown-text">Project 2 - Integrated IOT Data for Sustainability Use case</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex12/Article_Ex12.html">
+ <span class="dropdown-text">Project 3 - Data Quality as the Key enabler of Innovation and Digitisation</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools tools-wide">
+    <a href="../../about.html" title="About Imran" class="quarto-navigation-tool px-1" aria-label="About Imran"><i class="bi bi-house-heart"></i></a>
+    <a href="https://github.com/imranmi/imran-s-data-sc" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/imran-ibrahim-116a236b" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#project-topic" id="toc-project-topic" class="nav-link active" data-scroll-target="#project-topic">Project Topic</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">1. Introduction</a></li>
+  <li><a href="#existing-challenges" id="toc-existing-challenges" class="nav-link" data-scroll-target="#existing-challenges">2. Existing Challenges</a>
+  <ul class="collapse">
+  <li><a href="#importance-of-good-quality-data" id="toc-importance-of-good-quality-data" class="nav-link" data-scroll-target="#importance-of-good-quality-data">Importance of Good Quality Data</a></li>
+  </ul></li>
+  <li><a href="#use-cases-for-innovation-and-digitisation" id="toc-use-cases-for-innovation-and-digitisation" class="nav-link" data-scroll-target="#use-cases-for-innovation-and-digitisation">3. Use Cases for Innovation and Digitisation</a>
+  <ul class="collapse">
+  <li><a href="#credit-scoring" id="toc-credit-scoring" class="nav-link" data-scroll-target="#credit-scoring">3.1 Credit Scoring</a>
+  <ul class="collapse">
+  <li><a href="#the-impact-of-data-quality-on-machine-learning-algorithms" id="toc-the-impact-of-data-quality-on-machine-learning-algorithms" class="nav-link" data-scroll-target="#the-impact-of-data-quality-on-machine-learning-algorithms">The impact of Data Quality on Machine Learning Algorithms</a></li>
+  </ul></li>
+  <li><a href="#credit-card-fraud-detection" id="toc-credit-card-fraud-detection" class="nav-link" data-scroll-target="#credit-card-fraud-detection">3.2 Credit Card Fraud Detection</a></li>
+  <li><a href="#hyper-personalization" id="toc-hyper-personalization" class="nav-link" data-scroll-target="#hyper-personalization">3.3 Hyper-personalization</a></li>
+  </ul></li>
+  <li><a href="#roles-and-responsibilities-of-stakeholders" id="toc-roles-and-responsibilities-of-stakeholders" class="nav-link" data-scroll-target="#roles-and-responsibilities-of-stakeholders">4. Roles and Responsibilities of Stakeholders</a>
+  <ul class="collapse">
+  <li><a href="#internal-stakeholders" id="toc-internal-stakeholders" class="nav-link" data-scroll-target="#internal-stakeholders">4.1 Internal Stakeholders</a>
+  <ul class="collapse">
+  <li><a href="#data-management-office-led-by-the-chief-data-officer" id="toc-data-management-office-led-by-the-chief-data-officer" class="nav-link" data-scroll-target="#data-management-office-led-by-the-chief-data-officer">Data Management Office (Led by the Chief Data Officer)</a></li>
+  <li><a href="#system-owner-technology-department" id="toc-system-owner-technology-department" class="nav-link" data-scroll-target="#system-owner-technology-department">System Owner: Technology Department</a></li>
+  <li><a href="#data-owner-sales-marketing-credit-collections-and-operations-departments" id="toc-data-owner-sales-marketing-credit-collections-and-operations-departments" class="nav-link" data-scroll-target="#data-owner-sales-marketing-credit-collections-and-operations-departments">Data Owner: Sales &amp; Marketing, Credit &amp; Collections and Operations departments</a></li>
+  <li><a href="#data-consumer-sales-marketing-credit-collections-and-operations-departments" id="toc-data-consumer-sales-marketing-credit-collections-and-operations-departments" class="nav-link" data-scroll-target="#data-consumer-sales-marketing-credit-collections-and-operations-departments">Data Consumer: Sales &amp; Marketing, Credit &amp; Collections and Operations departments</a></li>
+  <li><a href="#legal-compliance-and-internal-audit" id="toc-legal-compliance-and-internal-audit" class="nav-link" data-scroll-target="#legal-compliance-and-internal-audit">Legal, Compliance and Internal Audit</a></li>
+  <li><a href="#finance" id="toc-finance" class="nav-link" data-scroll-target="#finance">Finance</a></li>
+  </ul></li>
+  <li><a href="#external-stakeholders" id="toc-external-stakeholders" class="nav-link" data-scroll-target="#external-stakeholders">4.2 External Stakeholders</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">5. Conclusion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data Quality as the Key enabler of Innovation and Digitisation</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Imran Ibrahim, Aung Myat Ko, Ahn Byeongsu, Bryan Chee, Wang Zitian </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 24, 2024</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">August 24, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="project-topic" class="level1">
+<h1>Project Topic</h1>
+<p>It is said that data is the key enabler of innovation and digitalisation, for example Generative AI.</p>
+<p>Critically examine how good quality data can support these initiatives by providing clear examples and the financial values they bring.</p>
+<p>Additionally, determine the roles and responsibilities of various parties involved in ensuring good quality data in your selected use case for innovation.</p>
+</section>
+<section id="introduction" class="level1">
+<h1>1. Introduction</h1>
+<p>The Credit Card industry has undergone significant transformations, transitioning from traditional rules-based decision-making to more agile, data-enabled methodologies. This transition is evident in the rapid adoption of data analytics, machine learning and artificial intelligence, which are not just revolutionizing credit card services but have also become critical tools to survive in the current competitive environment. For card issuers, the innovative use of data unlocks new opportunities to improve customer acquisition, boost product usage, and reduce losses from default and fraud.</p>
+<p>However, the transformative potential of these technologies is highly dependent on the quality of the underlying data. Only when the data used is of good quality would the insights generated from data analysis be accurate and subsequently useful to businesses. The potential financial values are comprehensive, offering enhanced revenue opportunities, cost efficiencies, and strengthening risk management.</p>
+<p>This report examines the role of good quality data as a key enabler of innovation and digitisation within this sector. Important data stakeholders will also be identified along with a discussion of their roles and responsibilities in ensuring good data quality.</p>
+</section>
+<section id="existing-challenges" class="level1">
+<h1>2. Existing Challenges</h1>
+<p>According to a 2022 report by the Federal Reserve on credit card profitability, the main components of revenue were identified as transaction-related income, primarily derived from interchange fees and interest income on card balances. Conversely, the main drivers of expenses were loan loss provisions and fraud expenses. This underscores the importance of having both robust risk management and innovative revenue generating strategies in order to sustain a profitable business (Adams, 2022).</p>
+<p>Credit card issuers are confronted with several business challenges, which include:-</p>
+<ul>
+<li><p>The emergence of non-traditional customers with unconventional credit histories, which necessitate new methods and models to assess creditworthiness.</p></li>
+<li><p>The increasing complexity and sophistication of financial fraud and cybercrime, requiring new detection models and tools to combat emerging threats.</p></li>
+<li><p>An informed customer base that demands innovative products and personalized experiences.</p></li>
+<li><p>New fintech alternatives that employ new business models and offer customer-centric products to compete for the same customer segments.</p></li>
+</ul>
+<p>Alongside these business challenges, credit card issuers must also tackle fundamental business goals and objectives, such as:-</p>
+<ul>
+<li><p>Attracting and retaining the right customers in a highly competitive market.</p></li>
+<li><p>Increasing the usage of credit cards and associated ‘wrapped’ services.</p></li>
+<li><p>Reducing losses from defaults and fraud.</p></li>
+<li><p>Increasing customer value and loyalty.</p></li>
+</ul>
+<p><strong>In response to these business challenges and goals</strong>, card issuers should adopt digitalization and innovation initiatives, such as:</p>
+<ol type="1">
+<li><p><strong>Enhanced Credit Scoring systems</strong></p></li>
+<li><p><strong>Advanced Fraud Detection analysis</strong></p></li>
+<li><p><strong>Hyper personalization of products and engagement</strong></p></li>
+</ol>
+<section id="importance-of-good-quality-data" class="level3">
+<h3 class="anchored" data-anchor-id="importance-of-good-quality-data">Importance of Good Quality Data</h3>
+<p>In the context of real-time credit scoring and fraud detection systems, the existing complexity of data, coupled with the need for timely processing, already present significant challenges. The use of poor-quality data in these critical functions further strains resources and could lead to inaccurate fraud detection and credit assessments outcomes.</p>
+<p>Similarly, for Hyper-personalization strategies to be effective, marketing efforts and customer engagement initiatives should be designed upon analysing accurate and timely data. Poor quality data could result in marketing campaigns that miss the mark, diminished value propositions and potentially disengaged customers.<br>
+<br>
+In the next section, we delve into each innovation initiative in more detail, analyzing the critical role of good quality data and the financial benefits these initiatives can potentially deliver to the business.</p>
+</section>
+</section>
+<section id="use-cases-for-innovation-and-digitisation" class="level1">
+<h1>3. Use Cases for Innovation and Digitisation</h1>
+<section id="credit-scoring" class="level2">
+<h2 class="anchored" data-anchor-id="credit-scoring">3.1 Credit Scoring</h2>
+<p>Credit scoring for credit cards is a process performed by card issuers to determine the creditworthiness of retail customers. It is based on various factors to determine the likelihood of the individual repaying their debts. The outcome is typically a numerical credit score, with a higher score indicating a lower default risk and vice versa.</p>
+<p>The methods used for credit scoring have increasingly evolved from traditional statistical methods to machine learning algorithms. These algorithms have improved accuracy and efficiency by being able to analyse large amounts of data and instantly provide credit scores and decisions. Traditional credit bureau data such age and income could be combined with data from online transactions, utility payments and even social media to train the machine learning models (Gambacorta et al., 2019).</p>
+<p>The use of non-traditional data sources can potentially result in more accurate credit assessments, especially for individuals with limited credit histories or for those who are unable to be assessed using traditional credit scoring models (Poghosya, 2023).</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-928926613.png" class="img-fluid figure-img"></p>
+<figcaption>Example of a Credit Scoring Modelling process using Machine Learning (Source: World Bank)</figcaption>
+</figure>
+</div>
+<p>Machine learning in credit scoring typically involves supervised learning, a type of machine learning where the model learns from labelled data. In this context, the label examples are default events and non-default events of borrowers. The first step of the modelling process is data collection and preparation. This is the process where traditional and non-traditional data are gathered from various sources and then pre-processed into formats suitable for machine learning algorithms. Next, relevant features and variables are selected for the model, such as credit history, debt ratio, income, and employment status. Feature selection is important as it directly impacts the model’s performance (Leder, 2023).</p>
+<p>Lastly, the prepared dataset is then split into training and validation sets. The machine learning algorithm uses the training set to learn the relationships between the features and the labelled outcome, while the validation set is used to test the model’s performance and fine tune its parameters. Once the model has been trained and validated, it can then be deployed to the credit scoring system (Leder, 2023).</p>
+<section id="the-impact-of-data-quality-on-machine-learning-algorithms" class="level3">
+<h3 class="anchored" data-anchor-id="the-impact-of-data-quality-on-machine-learning-algorithms">The impact of Data Quality on Machine Learning Algorithms</h3>
+<p>Data quality is a crucial factor in the performance of machine learning algorithms used in credit scoring. The table below provides a comparison between the impact of good and bad quality data on the model performance (Mashanovich, 2023).</p>
+<p><img src="images/clipboard-2747470573.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="credit-card-fraud-detection" class="level2">
+<h2 class="anchored" data-anchor-id="credit-card-fraud-detection">3.2 Credit Card Fraud Detection</h2>
+<p>The COVID-19 pandemic has accelerated the decline of cash payments, making way for digital commerce. In today’s global economy, credit card payments have taken the lead in modern digital transactions. Unfortunately, this shift has also led to a rise in credit card fraud due to advanced technologies like contactless payment. According to a 2023 report from Nilson, Credit Card fraud losses globally amounted to $32.34 billion in 2021, an increase of 14% over 2020, when losses globally totalled $28.43 billion, (Robertson, D., 2023). Criminals are using more advanced methods to carry out illegal transactions, causing substantial losses for both cardholders and banks. With tactics such as stealing information, phishing for credit card details, and creating fake cards to imitate legitimate users, fraudsters are now more able to commit fraudulent activities than ever before. (Cherif et al., 2023).</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2090784688.png" class="img-fluid figure-img"></p>
+<figcaption>Example of a Two-phased real time fraud detection system (Source: HPE, 2020)</figcaption>
+</figure>
+</div>
+<p>Credit Card fraud prevention presents another compelling use case for innovation initiatives in financial services industry. In comparison to traditional rules-based fraud detection techniques, modern fraud prevention systems based on AI and machine learning algorithms, rely on vast amounts of historical transaction data to identify patterns and anomalies that may indicate fraudulent activities. This data is typically stored in a data warehouse and serves as the foundation for training, testing, and selection of machine learning models. During production, real-time transactions are streamed into the deployed model which assesses transaction risk score and determines potential fraud (HP Enterprise, 2020).</p>
+<p>High-quality data, that is accurate, complete, consistent, and timely, enables fraud prevention systems to achieve the following outcomes and capabilities:</p>
+<ul>
+<li><p>Accurate Identification of Fraudulent Transactions: By analysing transaction data, including cardholder information, transaction details, and merchant information, together with the potential use of knowledge graph databases and graph AI (Mauliddiah &amp; Suharjito, 2023), fraud prevention systems can identify transactions that deviate from normal patterns, such as unusually large purchases or transactions conducted in unfamiliar locations.</p></li>
+<li><p>Real-time Detection and Prevention: With timely and accurate data, fraud prevention systems can use real-time transaction scoring algorithms to detect and block fraudulent transactions in real-time, minimizing losses and protecting cardholders (Thennakoon et al., 2019).</p></li>
+<li><p>Continuous Learning and Improvement: Machine learning algorithms used in fraud prevention systems rely on high-quality data to continuously improve their ability to identify and prevent fraudulent activities. With good quality data, machine learning algorithms can become more accurate, efficient, and adaptable to changing environments and unforeseen circumstances.</p></li>
+</ul>
+<p>Conversely, poor-quality data can severely hamper credit card fraud prevention efforts. Inaccurate or outdated information might lead to false positives or negatives, resulting in either unnecessary blocks on legitimate transactions or missed detection of fraudulent activity. If transaction data is not up to date, the system may not accurately recognize a cardholder’s recent spending behaviour, making it more challenging to identify anomalies and more likely to reject an otherwise valid transaction.</p>
+<p>Poor quality data can also introduce bias into machine learning algorithms, resulting in discriminatory outcomes and unfair treatment to legitimate customers. For example, transactions performed by individuals from certain geographic locations or with less established credit histories may be marked as fraudulent by the model, even though they may be legitimate. (European Union Agency for Fundamental Rights, 2022).</p>
+</section>
+<section id="hyper-personalization" class="level2">
+<h2 class="anchored" data-anchor-id="hyper-personalization">3.3 Hyper-personalization</h2>
+<p>Hyper-personalization presents credit card issuers with an ability to differentiate their products from their competition. Through the use of sophisticated algorithms that can analyse large datasets to discern spending patterns and predict future customer behaviour, card issuers are able to design marketing strategies that are tailored to individual customer needs and preferences.</p>
+<p>The process begins with the aggregation and analysis of detailed customer data such as demographic information, purchasing habits, past transaction history, and digital interactions. By applying classification algorithms and predictive analytics, credit card issuers can segment customers, anticipate their needs, and provide timely and relevant offers and promotions.</p>
+<p>In terms of system resources, hyper-personalization requires robust data management systems and advanced analytics platforms that can handle real-time processing and integration of various data streams. Data matching and aggregation, and Customer relationship management systems are also critical to synthesize this data into actionable insights (Fig 1).</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3357688495.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 1: A sample technology infrastructure for how customer data can be collected, stored, and analysed (Source: Reconfiguration from ”Data Science to Transform Business Operations”, KPMG)</figcaption>
+</figure>
+</div>
+<p>However, all these technologies and systems are only useful when the quality of data they process is of good quality. Ultimately, it is the accuracy, completeness, and timeliness of customer data that empowers the algorithms to be able to recommend useful, impactful, and relevant actions, which consequently influences the effectiveness and relevance of marketing promotions and engagement.</p>
+<p>Examples of how good quality data can directly impact marketing outcomes:-</p>
+<p><u><strong>Accurate data for Targeted Benefits</strong><br>
+</u>When transactional data accurately reflects a customer’s actual spending, AI-driven personalization can generate highly targeted customer rewards, such as travel points for frequent flyers. Conversely, inaccurate data could erroneously trigger irrelevant offers and benefits, undermining the relevance of promotions.</p>
+<p><u><strong>Complete data for Holistic Engagement</strong><br>
+</u>A complete dataset enables for a 360-degree view of the customer. Card issuers who also provide primary banking services are more able to design promotions that complement real-time customer needs and milestones, based on the consolidated financial data of that customer. For example, a new mortgage approval could trigger associated card benefits or discounts for the purchase of new household items.</p>
+<p>On the other hand, incomplete data could result in generalized promotions that overlook key customer milestones. Therefore, having complete data not only enriches customer profiles but also ensure that promotions are relevant to a customer’s real time needs.</p>
+<p><u><strong>Timely data for Real-Time Relevance</strong><br>
+</u>The timeliness of data is essential in capturing real-time spending behaviour and providing immediate rewards or offers. For example, card issuers who quickly identify large-ticket purchases can proactively offer benefits like cashbacks or installment plans, leading to positive customer experiences and loyalty. Conversely, delayed recognition due to poor data quality may result in belated promotions, rendering them irrelevant for customers.</p>
+<p><u><strong>Unique data for Individual Recognition</strong></u><br>
+Uniqueness of data ensures that each personalized interaction is distinct and relevant, such as recognizing and rewarding a customer’s milestone transaction with relevant promotions. Duplicate or non-unique data records could result in duplicated promotions or notifications, reducing the effectiveness and impact of marketing promotions.</p>
+<p>According to a Woori financial institute report, the anticipated benefits of adopting hyper-personalization in banking services include a potential increase of revenue by approximately 5-15%, and cost savings in marketing costs by approximately 10-30%.</p>
+<p>Other tangible benefits that can also be realized through hyper-personalization include:</p>
+<ul>
+<li><p><strong>Increased Customer Loyalty</strong>: Personalized experiences make customers feel valued and encourages repeat card usage.</p></li>
+<li><p><strong>Improved Customer Satisfaction</strong>: Accurate predictions of customer needs enhance satisfaction, leading to positive reviews and stronger brand reputation.</p></li>
+<li><p><strong>Increased Conversion Rates</strong>: Timely and relevant offers can significantly boost conversion rates.</p></li>
+<li><p><strong>Enhanced Customer Engagement</strong>: Personalized experiences lead to longer engagement sessions, and a more involved customer.</p></li>
+<li><p><strong>Higher Customer Lifetime Value (CLV)</strong>: Increased card usage and spending leads to a higher return from each customer over their lifespan.</p></li>
+<li><p><strong>Greater ROI on Marketing Spend</strong>: Targeting the right customers with the right messages, at the right time, optimizes marketing spend and improves campaign effectiveness.</p></li>
+<li><p><strong>Reduce Attrition</strong>: Hyper-personalization can reduce customer attrition by making customers feel valued, and thus more willing to stay with the brand.</p></li>
+</ul>
+<p>The Financial Institutions below (Table 1) have demonstrated innovative uses of customer data to create personalized and engaging customer experiences. These initiatives exemplify the trend of card issuers shifting from broad based marketing strategies to individualized customer interactions, through hyper-personalization.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-486016483.png" class="img-fluid figure-img"></p>
+<figcaption>Table 1: Examples of Financial institutions and their hyper-personalisation initiatives</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="roles-and-responsibilities-of-stakeholders" class="level1">
+<h1>4. Roles and Responsibilities of Stakeholders</h1>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2764390066.png" class="img-fluid figure-img"></p>
+<figcaption>Fig 2: Example of an organizational structure of a Card Issuer with Data stakeholders</figcaption>
+</figure>
+</div>
+<section id="internal-stakeholders" class="level2">
+<h2 class="anchored" data-anchor-id="internal-stakeholders">4.1 Internal Stakeholders</h2>
+<section id="data-management-office-led-by-the-chief-data-officer" class="level3">
+<h3 class="anchored" data-anchor-id="data-management-office-led-by-the-chief-data-officer">Data Management Office (Led by the Chief Data Officer)</h3>
+<p>In the whole data management framework, the Data Management Office (DMO) serves as the propeller to provide data governance strategies, data quality rules and data architecture. It is the middle layer between downstream data owners and consumers, and upstream senior management. In an organization, the DMO oversights the whole process from data production to Extract, Transform, Load (ETL) processes and downstream applications. Its specific responsibilities to ensure data quality are as follows:</p>
+<ol type="1">
+<li><u>Data quality rules</u></li>
+</ol>
+<p>While it is up to the data owners and consumers to decide what data fields should be identified as Critical Data Elements (CDEs), it is the DMO’s responsibility to work with data consumers and set data quality rules, depending on applicable scenarios for different data quality dimensions, and minimum coverage for individual rules on CDEs.</p>
+<ol start="2" type="1">
+<li><u>Data quality metrics</u></li>
+</ol>
+<p>The DMO is responsible for the assessment of data quality for the individual departments as well as for the wider organization; and should thus provide the appropriate evaluation metrics and standards. While Data owners monitor Data quality at the granular level, the DMO evaluates the data quality performances for each department or function and set alerts when any quality risks emerge.</p>
+<ol start="3" type="1">
+<li><u>Data remediation guidelines</u></li>
+</ol>
+<p>While data remediation is not the responsibility of the Data Management Office, it should still provide the necessary guidelines and standard operating procedures (SOPs) for addressing different types of data quality issues. Remediation approaches can be different depending on the nature of the quality issue. For example, while an inconsistency issue for a date format can be easily corrected, an inconsistency issue for customer names could potentially turn out to be an accuracy problem and therefore fixing the name format itself could have undesirable impact on other data stakeholders.</p>
+<p>If data management tools are utilized, guidelines and documentations on the proper usage of these tools should be provided by the DMO.</p>
+<ol start="4" type="1">
+<li><u>Data documentations</u></li>
+</ol>
+<p>The DMO should create and maintain business data documentations, in collaboration with data owners and consumers.</p>
+</section>
+<section id="system-owner-technology-department" class="level3">
+<h3 class="anchored" data-anchor-id="system-owner-technology-department">System Owner: Technology Department</h3>
+<p>The Technology department supports the technical implementation of all strategies provided by the DMO. To ensure data quality, in addition to having reliable tools and systems, the technology department is also responsible for two additional aspects: Controls and Remediations.</p>
+<p>At the frontend, whether customer facing or third-party facing, preventive controls should be implemented to ensure accuracy, completeness, and conformity. At the backend and during any transformation processes, scheduled jobs and APIs could be utilized to help ensure uniqueness, consistency, and timeliness of data. Alerts could also be set up at each processing point to help detect job failures, abnormalities, etc. As per guidelines provided by the DMO, besides manual corrections, systems should also be able to automatically impute or self-fix low quality data through either the use of default values or through AI/ML derived solutions.</p>
+<p>In addition, when there is an implementation of data management tools, the technology department is responsible for redevelopment, maintenance and providing applicational directions. They should also strive to automate as many processes as possible to eliminate human errors in End User Computing (EUC) tools.</p>
+</section>
+<section id="data-owner-sales-marketing-credit-collections-and-operations-departments" class="level3">
+<h3 class="anchored" data-anchor-id="data-owner-sales-marketing-credit-collections-and-operations-departments">Data Owner: Sales &amp; Marketing, Credit &amp; Collections and Operations departments</h3>
+<p>As the parties that face and collect data from customers, merchants or third-party data providers, these departments are automatically the data owners, and it is their responsibility as the first line of defence to establish data quality.</p>
+<p>Guided by the DMO rules, SOPs and policies and supported by technology systems and tools, these departments should be responsible for accurate data input. Their responsibilities also extend to the following:</p>
+<ol type="1">
+<li><u>Implement data quality rules</u></li>
+</ol>
+<p>Data owners should implement the data quality rules collectively as defined by the DMO and data consumers. They should also put checks and alerts in place, monitoring beyond the coverage defined by the DMO threshold. When cooperating with third party data providers, for instance, in the case of aggregating external fraud reports from card acquirers, data quality standards should be aligned and formalized into Service Level Agreements, with help from the Legal team.</p>
+<p>It is also the responsibility of Data Owners to provide feedback when data quality rules specified by the DMO are unreasonable or improvable.</p>
+<ol start="2" type="1">
+<li><u>Data quality controls, evaluation, and remediation</u></li>
+</ol>
+<p>Under the DMO guidelines, it is the data owners’ responsibility to evaluate the quality of CDEs, implement controls and receive alerts should the quality measurements fall below the threshold. They should also remediate data quality issues as they are discovered, either manually or through the use of tools and automation.</p>
+<ol start="3" type="1">
+<li><u>Documentation and golden sources</u></li>
+</ol>
+<p>Data owners should contribute to business data documentations to ensure downstream users understand and utilize the data correctly. Only when CDEs have been quality-checked, documented, and governed, should data owners then consolidate them into a single source of truth.</p>
+<p>However, this approach may vary depending on specific use cases. For instance, in the case of the Risk and Fraud functions inside the Credit and Collections department, their golden source of customer’s credit-scores and assessments from risk models can be self-owned to tailor to their own requirements.</p>
+<p>In contrast, data like customers’ personal information, which is collectively required by other departments for different application purposes, should be consolidated into a central golden source to prevent duplication of efforts, and ensure consistency. The departments can then align standards and requirements, and individual roles and responsibilities in terms of data governance.</p>
+</section>
+<section id="data-consumer-sales-marketing-credit-collections-and-operations-departments" class="level3">
+<h3 class="anchored" data-anchor-id="data-consumer-sales-marketing-credit-collections-and-operations-departments">Data Consumer: Sales &amp; Marketing, Credit &amp; Collections and Operations departments</h3>
+<p>As data consumers, these departments are responsible for analytics, reports and all data innovation previously mentioned. In short, they turn data into business decisions and profits for the organization. It is therefore their responsibility to analyse the actual business needs, and decide what data is required, what it should look like, and what qualifies as good quality data.</p>
+<p>Additionally, they are to ensure correct calculations for metrics and define what constitutes as ideal performance for analytical models. They should also be responsible for the maintenance of data dictionaries and business glossaries to document any data logic or definitions associated with the analysis conducted. UATs and data profiling should also be conducted at their end to ensure that the data results behave as expected.</p>
+</section>
+<section id="legal-compliance-and-internal-audit" class="level3">
+<h3 class="anchored" data-anchor-id="legal-compliance-and-internal-audit">Legal, Compliance and Internal Audit</h3>
+<p>As the third line of defence, it is the responsibility of Internal Audit to oversight all processes and evaluate their effectiveness. The Legal and compliance department should also be responsible for the Service Level Agreements (data quality standards embedded) when third-party data providers are involved, and to make sure that the data quality satisfies regulatory requirements.</p>
+<p>In the case of hyper-personalization and other similar initiatives where customer data, such as Personally Identifiable Information is used for data wrapping purposes, it is also the Legal team’s job to design and create consent forms and ensure that these are subsequently signed by customers.</p>
+</section>
+<section id="finance" class="level3">
+<h3 class="anchored" data-anchor-id="finance">Finance</h3>
+<p>The Finance department should ensure that all operational costs for data quality guardiancy are within budget and evaluate the financial values and costs in bringing in new data management or data quality tools, to support the decision-making of the Senior Management.</p>
+</section>
+</section>
+<section id="external-stakeholders" class="level2">
+<h2 class="anchored" data-anchor-id="external-stakeholders">4.2 External Stakeholders</h2>
+<ul>
+<li><p><strong>Third-party data providers</strong>: To provide reports with data quality as agreed in SLA.</p></li>
+<li><p><strong>Independent auditor</strong>: To make sure the data quality in the third parties are acceptable.</p></li>
+<li><p><strong>Regulatory bodies</strong>: To make policies (BCBS 239) and provide guidance for data quality and governance within organizations.</p></li>
+</ul>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>5. Conclusion</h1>
+<p>This report has highlighted the importance of good quality data as a key enabler for digitization and innovation initiatives in the credit card industry. Through the application of data analytics, machine learning, and artificial intelligence, card issuers can enhance credit scoring models, improve fraud detection, and offer more personalized customer experiences. Effective data utilization can potentially result in improved revenue, cost reduction, and enhanced social capital, empowering card issuers with a more sustainable business model.</p>
+<p>The success of these initiatives is however dependant on a collaborative effort across the organization. The Data Management Office ensure that data policies and frameworks are in place. Departments such as Sales, Marketing, and Operations turn data into actionable insights that enable strategic decisions. In tandem, the Technology division supports these efforts with strong technology infrastructure, while Legal, Compliance, and Internal Audit provide the necessary oversight for compliance to policies, frameworks, and regulations. Working together, this integrated network enables the successful implementation of Innovation initiatives which then results in sustainable growth and competitiveness.</p>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<p>Adams, R. (2022, September 9). Credit card profitability. <a href="https://www.federalreserve.gov/econres/notes/feds-notes/credit-card-profitability-20220909.html" class="uri">https://www.federalreserve.gov/econres/notes/feds-notes/credit-card-profitability-20220909.html</a></p>
+<p>Cherif, A., Badhib, A., Ammar, H., Alshehri, S., Kalkatawi, M., &amp; Imine, A. (2023). Credit card fraud detection in the era of disruptive technologies: A systematic review. Journal of King Saud University - Computer and Information Sciences, 35(1), 145-174. <a href="https://doi.org/10.1016/j.jksuci.2022.11.008" class="uri">https://doi.org/10.1016/j.jksuci.2022.11.008</a></p>
+<p>European Union Agency for Fundamental Rights. (2022, December 8). Bias in algorithms - Artificial intelligence and discrimination. <a href="https://fra.europa.eu/en/publication/2022/bias-algorithms-artificial-intelligence-and-discrimination" class="uri">https://fra.europa.eu/en/publication/2022/bias-algorithms-artificial-intelligence-and-discrimination</a></p>
+<p>Mauliddiah, N., &amp; Suharjito. (2023). Implementation Graph Database Framework for Credit Card Fraud Detection. Procedia Computer Science, 227, 326-335. <a href="https://doi.org/10.1016/j.procs.2023.10.531" class="uri">https://doi.org/10.1016/j.procs.2023.10.531</a></p>
+<p>Robertson, D. (2023, January 5). Card industry’s fraud-fighting efforts pay off: Nilson Report. Payments Dive. <a href="https://www.paymentsdive.com/news/card-industry-fraud-fighting-efforts-pay-off-nilson-report-credit-debit/639675/" class="uri">https://www.paymentsdive.com/news/card-industry-fraud-fighting-efforts-pay-off-nilson-report-credit-debit/639675/</a></p>
+<p>Thennakoon, A., Bhagyani, C., Premadasa, S., Mihiranga, S., &amp; Kuruwitaarachchi, N. (2019). Real-time credit card fraud detection using machine learning. In 2019 9th International Conference on Cloud Computing, Data Science &amp; Engineering (Confluence) (pp.&nbsp;1-6). IEEE.</p>
+<p>Enterprise, H. P. (2020, November 18). Real time credit card fraud detection with Apache spark and event streaming. HPE Developer Portal. <a href="https://developer.hpe.com/blog/real-time-credit-card-fraud-detection-with-apache-spark-and-event-stream/" class="uri">https://developer.hpe.com/blog/real-time-credit-card-fraud-detection-with-apache-spark-and-event-stream/</a></p>
+<p>KPMG Economic Research Institute (2020, March), Data Science to Transform Business Operations, ISSUE MONITOR vol.121</p>
+<p>Woori financial institute (2022, April), Global banks’ hyper-personalized banking practices and implications, Digital Insight</p>
+<p>Korea Data Agency (2022, October), Utilizing Big Data in the Financial Industry, DATA INDUSTRY WHITE PAPER 2023</p>
+<p>WorldBank (2019), Credit Scoring Approaches Guidelines, The World Bank Group, available at: <a href="https://thedocs.worldbank.org/en/doc/935891585869698451-0130022020/original/CREDITSCORINGAPPROACHESGUIDELINESFINALWEB.pdf" class="uri">https://thedocs.worldbank.org/en/doc/935891585869698451-0130022020/original/CREDITSCORINGAPPROACHESGUIDELINESFINALWEB.pdf</a></p>
+<p>Mashanovich, N (2023), Credit Scoring: Prepare Your Data Right (Part 3), DataDrivenInvestor <a href="https://medium.com/@mashanovich/credit-risk-modeling-handbook-data-preparation-and-exploratory-data-analysis-part-3-2d8ed3f99096">https://medium.com/@mashanovich/credit-risk-modeling-handbook-data-preparation-and-exploratory-data-analysis-part-3-2d8ed3f99096</a></p>
+<p>Gambacorta L. (2019), BIS Working Papers <a href="https://www.bis.org/publ/work834.pdf" class="uri">https://www.bis.org/publ/work834.pdf</a></p>
+<p>Poghosyan, S. (2023), Understanding Machine Learning Credit Scores: A Data Science and AI Approach, Plat AI <a href="https://plat.ai/blog/credit-scoring-using-machine-learning/" class="uri">https://plat.ai/blog/credit-scoring-using-machine-learning/</a></p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

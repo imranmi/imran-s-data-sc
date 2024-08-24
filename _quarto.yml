@@ -76,10 +76,12 @@ website:
             href: Article-ex/Article-Ex8/Article_Ex8.html
           - text: Assignment 9 - Quantum Computing - Mean-Variance Portfolio Optimization    
             href: Article-ex/Article-Ex9/Article_Ex9.html
-          - text: Project - Quantum Computing - Portfolio Optimisation using Hybrid Algorithm    
+          - text: Project 1 - Quantum Computing - Portfolio Optimisation using Hybrid Algorithm    
             href: Article-ex/Article-Ex10/Article_Ex10.html
-          - text: Project - Integrated IOT Data for Sustainability Use case    
-            href: Article-ex/Article-Ex11/Article_Ex11.html  
+          - text: Project 2 - Integrated IOT Data for Sustainability Use case    
+            href: Article-ex/Article-Ex11/Article_Ex11.html
+          - text: Project 3 - Data Quality as the Key enabler of Innovation and Digitisation    
+            href: Article-ex/Article-Ex12/Article_Ex12.html   
 format:
   html:
     theme: 
