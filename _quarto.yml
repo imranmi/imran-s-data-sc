@@ -72,8 +72,10 @@ website:
             href: Article-ex/Article-Ex6/Article_Ex6.html
           - text: Assignment 7 - Design considerations when deploying a CBDC project  
             href: Article-ex/Article-Ex7/Article_Ex7.html
-          - text: Assignment 8   
-            href: Article-ex/Article-Ex8/Article_Ex8.html  
+          - text: Assignment 8 - Consortium blockchain to track and trace assets for finance lease  
+            href: Article-ex/Article-Ex8/Article_Ex8.html
+          - text: Assignment 9 - Quantum Computing - Mean-Variance Portfolio Optimization    
+            href: Article-ex/Article-Ex9/Article_Ex9.html  
 format:
   html:
     theme: 
