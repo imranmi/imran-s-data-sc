@@ -77,7 +77,9 @@ website:
           - text: Assignment 9 - Quantum Computing - Mean-Variance Portfolio Optimization    
             href: Article-ex/Article-Ex9/Article_Ex9.html
           - text: Project - Quantum Computing - Portfolio Optimisation using Hybrid Algorithm    
-            href: Article-ex/Article-Ex10/Article_Ex10.html  
+            href: Article-ex/Article-Ex10/Article_Ex10.html
+          - text: Project - Integrated IOT Data for Sustainability Use case    
+            href: Article-ex/Article-Ex11/Article_Ex11.html  
 format:
   html:
     theme: 

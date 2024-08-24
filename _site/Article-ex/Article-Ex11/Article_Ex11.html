@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Imran Ibrahim, Huson Low, Lim Jia Jia, Kanyapak Buathang, Kiora, S Buvana">
+<meta name="dcterms.date" content="2024-08-24">
+
+<title>Imran’s Postgrad repo - Integrated IOT Data for Sustainability Use case</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Imran’s Postgrad repo</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-exercises-in-r" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Exercises in R</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises-in-r">    
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex1/R_Ex1.html">
+ <span class="dropdown-text">R Exercise 1 - Analysing PISA’s education survey data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex2/R_Ex2.html">
+ <span class="dropdown-text">R Exercise 2 - 5 Exploratory Data Analyses on Pisa Data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex3/R_Ex3.html">
+ <span class="dropdown-text">R Exercise 3 - DataVis Makeover of another student’s work</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex4/R_Ex4.html">
+ <span class="dropdown-text">R Exercise 4 - Be Weatherwise or Otherwise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex5/R_Ex5.html">
+ <span class="dropdown-text">R Exercise 5 - Visual Analytics exercise on Armed conflicts - Initial Draft</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex6/R_Ex6.html">
+ <span class="dropdown-text">R Exercise 6 - Geospatial Analysis1 - Local Measures of Spatial Autocorrelation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex7/R_Ex7.html">
+ <span class="dropdown-text">R Exercise 7 - Geospatial Analysis2 - Emerging Hot Spot Analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex8/R_Ex8.html">
+ <span class="dropdown-text">R Exercise 8 - Geospatial Analysis3 - Spatially Constrained Clustering-ClustGeo method</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex9/R_Ex9.html">
+ <span class="dropdown-text">Group Project Poster - Decoding Chaos - Analysing Armed conflicts in Myammar</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-exercises-in-python" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Exercises in Python</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises-in-python">    
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex1/Python_Ex1.html">
+ <span class="dropdown-text">Python Exercise 1 - Automate the design of a 3-stocks portfolio for a given target return</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex2/Python_Ex2.html">
+ <span class="dropdown-text">Python Exercise 2 - Designing a 3-stock portfolio for a robo-advisor</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex3/Python_Ex3.html">
+ <span class="dropdown-text">Python Exercise 3 - Project - Predicting Stock Prices through Time series Analysis</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-sas-viya-exercises" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">SAS Viya Exercises</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-sas-viya-exercises">    
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex1/Write_Ex1.html">
+ <span class="dropdown-text">Assignment 1 - Show me the numbers</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex2/Write_Ex2.html">
+ <span class="dropdown-text">Assignment 2 - Be Customer wise or otherwise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex3/Write_Ex3.html">
+ <span class="dropdown-text">Project - Loan Default prediction</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex4/Write_Ex4.html">
+ <span class="dropdown-text">Project Poster - Loan Default prediction</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-written-assignments-(fintech" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Written Assignments (Fintech)</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-written-assignments-(fintech">    
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex1/Article_Ex1.html">
+ <span class="dropdown-text">Assignment 1 - Factors that contributed to the rise of Fintech companies</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex2/Article_Ex2.html">
+ <span class="dropdown-text">Assignment 2 - Banks have changed the way they deploy technology</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex3/Article_Ex3.html">
+ <span class="dropdown-text">Assignment 3 - Assess and discuss how the role of financial regulators has evolved</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex4/Article_Ex4.html">
+ <span class="dropdown-text">Assignment 4 - Key characteristics that create or inject value for a non-fungible token</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex5/Article_Ex5.html">
+ <span class="dropdown-text">Assignment 5 - Bitcoin - Examining a Layer 1 &amp; 2 solution and adoption for a payment use case</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex6/Article_Ex6.html">
+ <span class="dropdown-text">Assignment 6 - Decentralised Finance - Examine the working principles and Appraise the future of DEFI</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex7/Article_Ex7.html">
+ <span class="dropdown-text">Assignment 7 - Design considerations when deploying a CBDC project</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex8/Article_Ex8.html">
+ <span class="dropdown-text">Assignment 8 - Consortium blockchain to track and trace assets for finance lease</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex9/Article_Ex9.html">
+ <span class="dropdown-text">Assignment 9 - Quantum Computing - Mean-Variance Portfolio Optimization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex10/Article_Ex10.html">
+ <span class="dropdown-text">Project - Quantum Computing - Portfolio Optimisation using Hybrid Algorithm</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex11/Article_Ex11.html">
+ <span class="dropdown-text">Project - Integrated IOT Data for Sustainability Use case</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools tools-wide">
+    <a href="../../about.html" title="About Imran" class="quarto-navigation-tool px-1" aria-label="About Imran"><i class="bi bi-house-heart"></i></a>
+    <a href="https://github.com/imranmi/imran-s-data-sc" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/imran-ibrahim-116a236b" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#problem-statement" id="toc-problem-statement" class="nav-link active" data-scroll-target="#problem-statement">1. Problem Statement</a></li>
+  <li><a href="#current-system" id="toc-current-system" class="nav-link" data-scroll-target="#current-system">2. Current System</a>
+  <ul class="collapse">
+  <li><a href="#banks-and-sustainability-tracking" id="toc-banks-and-sustainability-tracking" class="nav-link" data-scroll-target="#banks-and-sustainability-tracking">2.1 Banks and Sustainability Tracking</a></li>
+  <li><a href="#payment-service-providers-and-sustainability-tracking" id="toc-payment-service-providers-and-sustainability-tracking" class="nav-link" data-scroll-target="#payment-service-providers-and-sustainability-tracking">2.2 Payment Service Providers and Sustainability Tracking</a></li>
+  <li><a href="#startups-and-sustainability-tracking" id="toc-startups-and-sustainability-tracking" class="nav-link" data-scroll-target="#startups-and-sustainability-tracking">2.3 Startups and Sustainability Tracking</a></li>
+  <li><a href="#identified-market-gaps" id="toc-identified-market-gaps" class="nav-link" data-scroll-target="#identified-market-gaps">2.4 Identified Market Gaps</a></li>
+  </ul></li>
+  <li><a href="#proposed-solution" id="toc-proposed-solution" class="nav-link" data-scroll-target="#proposed-solution">3. Proposed Solution</a>
+  <ul class="collapse">
+  <li><a href="#broad-description" id="toc-broad-description" class="nav-link" data-scroll-target="#broad-description">3.1 Broad Description</a></li>
+  <li><a href="#core-features" id="toc-core-features" class="nav-link" data-scroll-target="#core-features">3.2 Core Features</a></li>
+  </ul></li>
+  <li><a href="#technologies" id="toc-technologies" class="nav-link" data-scroll-target="#technologies">4. Technologies</a>
+  <ul class="collapse">
+  <li><a href="#iot-integration-and-financial-data-synthesis" id="toc-iot-integration-and-financial-data-synthesis" class="nav-link" data-scroll-target="#iot-integration-and-financial-data-synthesis">4.1 IoT Integration and Financial Data Synthesis</a>
+  <ul class="collapse">
+  <li><a href="#integration-process" id="toc-integration-process" class="nav-link" data-scroll-target="#integration-process">Integration Process</a></li>
+  </ul></li>
+  <li><a href="#ai-driven-finance-and-secure-transaction-ecosystem" id="toc-ai-driven-finance-and-secure-transaction-ecosystem" class="nav-link" data-scroll-target="#ai-driven-finance-and-secure-transaction-ecosystem">4.2 AI-driven Finance and Secure Transaction Ecosystem</a></li>
+  <li><a href="#api--powered-sustainability-insights" id="toc-api--powered-sustainability-insights" class="nav-link" data-scroll-target="#api--powered-sustainability-insights">4.3 API- powered Sustainability Insights</a></li>
+  <li><a href="#tokenization-and-digitizing-credentials" id="toc-tokenization-and-digitizing-credentials" class="nav-link" data-scroll-target="#tokenization-and-digitizing-credentials">4.4 Tokenization and Digitizing Credentials</a></li>
+  </ul></li>
+  <li><a href="#risk-security-features" id="toc-risk-security-features" class="nav-link" data-scroll-target="#risk-security-features">5. Risk / Security Features</a></li>
+  <li><a href="#solution-stakeholders" id="toc-solution-stakeholders" class="nav-link" data-scroll-target="#solution-stakeholders">6. Solution Stakeholders</a>
+  <ul class="collapse">
+  <li><a href="#eco-link-iot-payment-integrator-and-eco-reward-platform" id="toc-eco-link-iot-payment-integrator-and-eco-reward-platform" class="nav-link" data-scroll-target="#eco-link-iot-payment-integrator-and-eco-reward-platform">6.1 Eco-Link (IoT Payment Integrator and Eco-Reward Platform)</a></li>
+  <li><a href="#rewards-partners" id="toc-rewards-partners" class="nav-link" data-scroll-target="#rewards-partners">6.2 Rewards Partners</a></li>
+  <li><a href="#regulators" id="toc-regulators" class="nav-link" data-scroll-target="#regulators">6.3 Regulators</a></li>
+  </ul></li>
+  <li><a href="#solution-resources" id="toc-solution-resources" class="nav-link" data-scroll-target="#solution-resources">7. Solution Resources</a></li>
+  <li><a href="#solution-steps" id="toc-solution-steps" class="nav-link" data-scroll-target="#solution-steps">8. Solution Steps</a></li>
+  <li><a href="#solution-benefits" id="toc-solution-benefits" class="nav-link" data-scroll-target="#solution-benefits">9. Solution Benefits</a>
+  <ul class="collapse">
+  <li><a href="#imrans-journey-with-eco-link" id="toc-imrans-journey-with-eco-link" class="nav-link" data-scroll-target="#imrans-journey-with-eco-link">9.1 Imran’s Journey with Eco-Link</a></li>
+  <li><a href="#financial-institutions-and-service-providers-retail-partners" id="toc-financial-institutions-and-service-providers-retail-partners" class="nav-link" data-scroll-target="#financial-institutions-and-service-providers-retail-partners">9.2 Financial Institutions and Service Providers / Retail Partners</a></li>
+  </ul></li>
+  <li><a href="#future-outlook" id="toc-future-outlook" class="nav-link" data-scroll-target="#future-outlook">10. Future Outlook</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Integrated IOT Data for Sustainability Use case</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Imran Ibrahim, Huson Low, Lim Jia Jia, Kanyapak Buathang, Kiora, S Buvana </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 24, 2024</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">August 24, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="problem-statement" class="level1">
+<h1>1. Problem Statement</h1>
+<p>Consumers are surrounded by Internet of Things (IoT) devices that constantly collect and generate valuable data. According to Statista, there were approximately 15.4 billion connected devices worldwide, a figure that is expected to reach 29 billion by 2030. Yet, the financial services sector hasn’t fully capitalized on this wealth of information.</p>
+<p>At the same time, the demand for sustainable choices is on the rise. Specifically, in Singapore, a study by Accenture found that 75% of consumers want to behave more sustainably but lack the avenues and options to do so (WWF-Singapore and Accenture, 2021). They are eager to understand how their everyday actions and purchasing actions could impact and align with Singapore’s national sustainability ambitions. A UOB study further validates this trend. The study revealed that 88% of survey respondents believe that banks and financial institutions should offer more sustainable investing solutions while 91% of the respondents would like to be rewarded for supporting eco-friendly and sustainable businesses. These studies show the high demand for insights into the environmental consequences of financial actions and rewards for sustainable behaviours.</p>
+<p>Moreover, the adoption of digital financial applications is growing rapidly in Singapore. A report indicated that the usage of digital payments in Singapore is forecasted to continuously grow from 2018 to 2027, highlighting the rising reliance on such digital financial instruments (Statista , 2023). Together with the user count, the transaction value of digital payments in Singapore is expected to increase, signalling the notion of deeper integration of digital payment means in everyday transactions.</p>
+<p>Despite these trends, financial platforms have yet to fully integrate IoT data across a range of IoT eco-systems to sense-make and deliver more holistic insights. This oversight not only hampers the delivery of optimal financial decisions and user experience but also overlooks an opportunity to incentivize sustainable behaviours that have the potential to help corporations and nations meet their sustainability goals at a macro level. The prevailing gap between the IoT ecosystem and financial platforms requires customers to navigate multiple separate platforms, each independent to their own IoT ecosystems.</p>
+<p>In an age where many of us juggle a mix of smart gadgets and financial apps, it is challenging to see the bigger picture. How does our latest online purchase affect the environment? Or which financial choices can make a green impact? As we are left connecting the dots, financial institutions are overlooking a golden chance. By bridging these gaps, they could not only empower users towards sustainable choices but also unveil revenue generating avenues by catering to this rising wave of eco-aware consumers.</p>
+</section>
+<section id="current-system" class="level1">
+<h1>2. Current System</h1>
+<p>To understand the problem better, existing services provided by Banks, Payment Service Providers and Startups which are related to sustainability tracking are shown in Figure 1 below. The following section details how these groups are contributing to the realm of sustainable finance.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1249355740.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 1: Examples of Current service providers in sustainability tracking</figcaption>
+</figure>
+</div>
+<section id="banks-and-sustainability-tracking" class="level2">
+<h2 class="anchored" data-anchor-id="banks-and-sustainability-tracking">2.1 Banks and Sustainability Tracking</h2>
+<p>Banks and financial institutions are offering their customers insights on their carbon impact, by classifying their payment transactions and calculating an equivalent carbon footprint measure. For example, the Live Better initiative was launched by DBS in 2021 as part of its digital sustainability initiative.</p>
+<p>Within the Live Better application, the Track Better carbon calculator (Fig 2) classifies customer debit and credit card transactions into five main categories namely, food, travel, transport, shopping and energy and utilities.&nbsp; Carbon footprint measures are then calculated by multiplying the dollar value of transactions with an internally developed Economic Emissions Factor (EF) to derive an estimated carbon footprint measure (Fig 3) (DBS, 2023).</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3544893273.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 2: Track Better carbon calculator (DBS, 2023)</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-953678612.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 3: Track Better’s Carbon Footprint formula</figcaption>
+</figure>
+</div>
+<p>Besides Track Better, other applications like Invest Better, Offset Better and Give Better enable DBS’s customers to invest in ESG linked funds, offset their carbon footprints against carbon credits/projects and donate funds to charities and social enterprises.</p>
+</section>
+<section id="payment-service-providers-and-sustainability-tracking" class="level2">
+<h2 class="anchored" data-anchor-id="payment-service-providers-and-sustainability-tracking">2.2 Payment Service Providers and Sustainability Tracking</h2>
+<p>Visa launched Eco Benefits in 2021, enabling Visa issuing institutions to offer sustainability-focused services to their debit and credit card customers. These services include a carbon footprint calculator, carbon offsets, personalized education and donations to charities and social enterprises (Fig 4). Similarly, payment transactions are classified into groups and multiplied with an ‘Emissions Factor’ to derive an estimated carbon footprint measure (Visa, 2021).</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3006452846.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 4: New Services enabled through Visa Eco benefits (NoCash, 2021)</figcaption>
+</figure>
+</div>
+</section>
+<section id="startups-and-sustainability-tracking" class="level2">
+<h2 class="anchored" data-anchor-id="startups-and-sustainability-tracking">2.3 Startups and Sustainability Tracking</h2>
+<p>Established in 2019, Startups like “The Capture Club” specialize in offering sustainability solutions by tracking carbon footprints based on users’ transport and food consumption choices. Beyond these core functionalities, the application also educates users about their carbon footprints and suggests green projects to neutralize their environmental impact (Capture, 2023). However, user feedback has been varied. While many appreciate its educational content and offsetting options, concerns have been raised about the application’s accuracy and its tendency towards broad classifications. Additionally, a notable limitation is the inability for users to integrate data directly from their IoT devices and record daily expenses, which would otherwise enhance the accuracy of their carbon footprint tracking.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2288358639.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 5: Capture Club’s Carbon Footprint &amp; Co2 Tracker application (Capture, 2023)</figcaption>
+</figure>
+</div>
+</section>
+<section id="identified-market-gaps" class="level2">
+<h2 class="anchored" data-anchor-id="identified-market-gaps">2.4 Identified Market Gaps</h2>
+<p>According to a consumer sustainability survey by DBS in 2021, 73% of Singaporeans expressed their readiness to adopt a green lifestyle in a fuss-free and intuitive manner, but many have yet to discover the right channels to do so. Furthermore, few were taking meaningful actions to live sustainably as they did not have an easy and effective way to track their carbon footprint across diverse platforms.&nbsp; Although current financial platforms and sustainability initiatives have made commendable strides in providing consumers with insights into their environmental footprint, several gaps remain:</p>
+<p><u>Siloed and Fragmented Ecosystems</u>: Current platforms, primarily rely on their proprietary data streams, focusing mainly on transactions made using their cards. This siloed approach misses out on a broader spectrum of financial activities, rendering a limited and sometimes skewed representation of a user’s carbon footprint. For example, the transactions made by direct bank transfers, mobile wallets, and cash, remain uncaptured, leading to incomplete insights into users’ behaviours and subsequently affecting the user experience due to these unaccounted financial activities.</p>
+<p><u>Absence of Real-time Data Integration</u>: Current platforms lack integration with IoT devices, missing out on the potential to gather real-time data on various activities which could have environmental implications. Consider vehicles fitted with smart sensors. Retrofitting such devices not only provides immediate feedback on driving efficiency but can also influence fuel consumption, and subsequently, carbon emissions. Integrating such data streams across a <strong>unified platform</strong> can allow for more timely and actionable feedback for users. By receiving real-time emission data from daily activities such as driving, users can make spontaneous decisions to reduce their carbon footprint while at the same time receive financial insights on potential fuel savings based on credit card financial records (E.g., Fuel expenditure at Shell integrated with onboard Car data on fuel uptake).</p>
+<p><u>Incentives for Genuine Carbon Reduction</u>: The current system offers consumers a way to balance out their emissions through carbon offsets. However, this approach may inadvertently promote a superficial approach to sustainability. By allowing individuals to “neutralize” specific activities, these platforms might overshadow the broader picture of our environmental impact. Instead, clear <strong>data-driven incentives</strong> should be offered to encourage consumers to proactively reduce their actual carbon footprint, rather than simply compensating for it. True environmental responsibility extends beyond offsets and seeks a deeper change in consumption habits.</p>
+<p><u>Behavioural Insights</u>: The existing financial system enables consumers to track their purchasing patterns but <strong>lacks fidelity in tracking behavioural patterns</strong>. Focusing on just payment transactions can lead to overlooking the broader behavioural patterns of consumers. For instance, even if a user spends money on sustainable products, their overall lifestyle might still be environmentally taxing. This could involve scenarios such as consuming organic coffee but regularly using single-use plastics, or buying eco-friendly clothes but wasting water, which are contradictions that the current systems might not capture comprehensively.</p>
+</section>
+</section>
+<section id="proposed-solution" class="level1">
+<h1>3. Proposed Solution</h1>
+<section id="broad-description" class="level2">
+<h2 class="anchored" data-anchor-id="broad-description">3.1 Broad Description</h2>
+<p>The team proposes to launch an <strong>integrated IoT Financial and Sustainability platform</strong> named “Eco-Link”. “Eco-Link” will leverage the mobile phone as an IoT payment device, and seamlessly connect across a range of IoT eco-systems and financial service providers (see Fig 6 below). Consequently, this enables “Eco-Link” to provide <strong>real-time insights</strong> into users’ financial choices, recommend sustainability measures, and enable automated payment functionalities. Looking ahead, “Eco-Link” can expand its partnerships and look towards <strong>integrating</strong> data across an increasing range of IoT devices, including mobile phones, smart cars, and smart home systems and become a holistic tool for consumers to make eco-conscious financial decisions. “Eco-Link” aligns this data with the user’s payment information across different financial entities and gives a <strong>real-time analysis</strong> of the environmental consequences arising from the user’s financial decisions and consumption patterns.</p>
+</section>
+<section id="core-features" class="level2">
+<h2 class="anchored" data-anchor-id="core-features">3.2 Core Features</h2>
+<p>The subsequent section outlines the primary features of Eco-Link.</p>
+<p><u>Unified Financial Integration Platform:</u> A defining core feature of Eco-Link is its state-of-the-art Unified Financial Integration Platform capabilities. Recognizing the fragmentation and inconsistencies that users often face while navigating different banking apps and payment service providers, Eco-Link leads the way with a transformative solution. Eco-Link seamlessly aggregates and consolidates all financial data, providing users with an unobstructed, comprehensive view of their entire financial landscape. Whether connecting bank accounts, credit cards, insurance, or other financial services, users are offered a holistic snapshot of their financial health, spending behaviours, and transactional histories. This integration is thoughtfully designed, making financial management more streamlined, intuitive, and efficient than ever before.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3008958890.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 6: Conceptual representation of Eco-Link created with the assistance of DALL.E 2</figcaption>
+</figure>
+</div>
+<p><u>‘Eco Rewards’ for Platform Users</u>: Setting Eco-Link apart from traditional financial platforms is its ‘Eco Rewards’ system. As more users transact and engage with their finances, they are incentivized to make environmentally conscious choices. Whether it’s opting for an eco-friendly vendor, investing in green financial portfolios, or transitioning to paperless bank interactions, each sustainable action accumulates rewards for the consumer. These ‘Eco Rewards’ are not merely points or incentives but represent tangible acknowledgment of the user’s commitment to a greener, more sustainable future. This innovative approach ensures that users are consistently encouraged to embed sustainability into their daily financial decisions, making eco-friendliness a rewarding experience in itself. Figure 7 below presents the app view of how the reward points can be tabulated.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2916696185.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 7: Conceptual representation of Eco-Link App</figcaption>
+</figure>
+</div>
+<p><u>Integrated Sustainability Insights and IoT Integration</u>: Several promising startups have ventured into measuring users’ carbon footprints, yet many of these approaches are rather manual, limiting their full potential. Eco-Link revolutionizes this approach by integrating both IoT devices and financial platforms to offer a more automated, real-time assessment of one’s sustainable actions. At its core, Eco-Link’s platform not only computes a user’s carbon footprint using their payment and collected IoT data. Eco-Link goes a step further to provide dynamic, actionable recommendations based on these insights, empowering users to enhance their sustainability scores and seamlessly transition to an eco-friendlier lifestyle. Additionally, the platform’s advanced IoT Data Visualization capabilities offer users access to live feeds and historical trends from both their payment transactions and connected IoT devices.</p>
+<p><u>Advanced AI-driven Recommendations (Future Enhancement):</u> Building upon our existing foundation, we envision a next-generation feature for Eco-Link that delves deeper by offering personalized AI-driven insights. By further integrating with emerging IoT ecosystems and harnessing an ever-expanding pool of user data, our future AI algorithms aim to provide even more nuanced and context-aware recommendations tailored to each user’s evolving circumstances and preferences. This enhanced feature, currently in our development roadmap, will not only focus on guiding users towards pro eco-choices like energy-efficient appliances or sustainable transportation but will also be able to anticipate future trends, ensuring that Eco-Link users are always at the forefront of both financial prudence and environmental sustainability.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1031125848.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 8: Conceptual representation of AI-driven recommendations with the assistance of DALL.E 2</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="technologies" class="level1">
+<h1>4. Technologies</h1>
+<p>In this section, we will elaborate on four technologies which serve as enablers for Eco-Link.</p>
+<section id="iot-integration-and-financial-data-synthesis" class="level2">
+<h2 class="anchored" data-anchor-id="iot-integration-and-financial-data-synthesis">4.1 IoT Integration and Financial Data Synthesis</h2>
+<p>In today’s connected environment, consumers interact with numerous IoT devices that produce a vast amount of data. Much of this data remains untapped within the financial services sector. With the help of IoT Connectivity Platforms such as AWS IoT Core, we will be able to connect IoT data with financial platforms (Hasan, 2022)</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1395989373.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 9: AWS IoT Framework</figcaption>
+</figure>
+</div>
+<p>Figure 9 above represents an AWS-based architecture that showcases how IoT connectivity platforms, can integrate IoT data seamlessly with financial platforms.</p>
+<section id="integration-process" class="level3">
+<h3 class="anchored" data-anchor-id="integration-process">Integration Process</h3>
+<p><strong>1. IoT Device Connection:</strong></p>
+<p>At the heart of this system lies the AWS IoT Core, which establishes a secure connection between various IoT devices and the cloud. Imagine a spectrum of financial devices, ranging from point-of-sale terminals, ATMs, to even personal wearable tech, requiring real time transmission of financial data . AWS IoT Core makes this interconnectivity possible.</p>
+<p><strong>2. Data Processing and Storage:</strong></p>
+<p>Once data from these devices reaches the cloud, serverless compute service <strong>AWS Lambda</strong> can be used to process this information instantly. Every time a user makes a transaction, Lambda can trigger financial analytics or store transactional data.</p>
+<p><strong>Amazon DynamoDB</strong> serves as the database for storing transactional data, user profiles, and other essential financial datasets. <strong>DynamoDB</strong> offers quick and reliable data retrieval, ensuring that financial platforms have immediate access to required information.</p>
+<p><strong>3. Analytics and Insights:</strong></p>
+<p>After processing, the raw IoT data needs to be transformed into meaningful insights. <strong>AWS IoT Analytics</strong> filters, transforms, and enriches IoT data before storing it, making it ready for analytics and machine learning.</p>
+<p><strong>Amazon QuickSight</strong> integrates with the processed data to offer visualization tools. Financial analysts can use it to observe market trends, customer spending patterns, and other valuable insights, all derived from the incoming IoT data.</p>
+<p><strong>4. Security:</strong></p>
+<p>Security is paramount, particularly in the handling of financial data. <strong>AWS IoT Device Defender</strong> monitors and audits IoT configurations to ensure best practices are followed. Simultaneously, <strong>Amazon Cognito</strong> manages user authentication, ensuring that only authorized personnel have access to the financial platforms.</p>
+<p><strong>5. Data Delivery and User Experience:</strong></p>
+<p><strong>Amazon SNS</strong> (Simple Notification Service) can be incorporated to provide real-time alerts. For financial platforms, this could mean instant notifications about market changes, transaction confirmations, or trigger of potential fraud warnings.</p>
+<p>Financial platforms often need APIs for third-party integrations. <strong>Amazon API Gateway</strong> creates, publishes, and secures these APIs, allowing mobile banking apps or trading platforms to securely access the data they need.</p>
+<p>Lastly, <strong>AWS Amplify</strong>, combined with <strong>Amazon S3</strong> and <strong>CloudFront</strong>, ensures that web applications related to financial platforms are delivered with low latency, guaranteeing a smooth user experience. Additionally, tools like Tableau and SAS Viya can help process this data, providing valuable insights for decision-making (Tableau, 2023). To store this data securely, solutions like AWS S3, Google Cloud Storage, and databases like PostgreSQL and InfluxDB are used.</p>
+<p>Through these technology enablers behind IoT devices, we can improve user experience and pave the way for new applications, such as IoT payments. The combination of these technologies ensures that consumers have easy access to financial decisions and sustainability insights (Cointelegraph, 2021).</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2531140443.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 10: An overview of the workings of an IOT system (Cointelegraph, 2021)</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="ai-driven-finance-and-secure-transaction-ecosystem" class="level2">
+<h2 class="anchored" data-anchor-id="ai-driven-finance-and-secure-transaction-ecosystem">4.2 AI-driven Finance and Secure Transaction Ecosystem</h2>
+<p>Today’s consumers use smart devices for a multitude of tasks, and financial decisions are no exception. Given this, there is a clear need for precise AI-driven recommendations to assist in financial planning and actions. By utilizing frameworks like TensorFlow, PyTorch, and scikit-learn, we aim to create a straightforward system that offers users actionable financial insights based on their behaviours and preferences (Software, 2023).</p>
+<p>This AI-centric approach to finance is supported by the trust and security offered by blockchain technology. Platforms like Ethereum and Binance Smart Chain provide a secure backdrop for transactions. To streamline these transactions, Eco-Link is integrated with popular payment gateways like Stripe, PayPal, and IoT-specific payment systems from Mastercard and Visa. Enhancing this security are protective measures from solutions like Norton IoT Security and TrendMicro.</p>
+<p>Below outlines the integration of the IoT payment process:</p>
+<p><strong>1. Registration &amp; Association:</strong> First, users must register their IoT device on the platform. This connects the device to a specific service provider’s contract, a step that might require setting up specific APIs or other protocols.</p>
+<p><strong>2. Real-time Data Transmission:</strong> As the IoT device functions, it sends real-time data to the platform. This helps determine if the conditions of any contract are met.</p>
+<p><strong>3. Validation &amp; Checking:</strong> The platform checks this data against the contract terms to see if conditions have been fulfilled.</p>
+<p><strong>4. Payment Initiation:</strong> If the data matches contract terms, the platform triggers the payment process, collaborating with the user’s bank or financial institution.</p>
+<p><strong>5. Service Provider Notification:</strong> After the payment starts, the platform notifies the service provider with details of the transaction.</p>
+<p><strong>6. Service Delivery or Continuation</strong>: Depending on the notification, the service provider then delivers the service or product or continues a subscription.</p>
+<p>Now consider a scenario where an IoT-equipped car monitors its fuel levels and consumption rates. When the fuel reaches a critically low level, or if the AI identifies an upcoming long journey based on the user’s calendar or habitual routes, it uses data from Google Maps to inform the user of the nearest petrol kiosk. Upon arrival at the station, the vehicle communicates with the pump, and after refuelling, a payment is automatically initiated. The platform’s AI, understanding the driver’s typical routes and consumption patterns, ensures that the driver is always aware of nearby fuelling options, optimizing both convenience and fuel efficiency.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2901707847.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 11: Process flow for an autonomous IoT triggered payment (Melki, 2023)</figcaption>
+</figure>
+</div>
+</section>
+<section id="api--powered-sustainability-insights" class="level2">
+<h2 class="anchored" data-anchor-id="api--powered-sustainability-insights">4.3 API- powered Sustainability Insights</h2>
+<p>With the integration of API-powered sustainability insights, the dream of making Eco-Link a reality comes one step closer.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1959540343.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 12: Climatiq application architecture (Wenzel, 2023)</figcaption>
+</figure>
+</div>
+<p>Figure 12 above showcases a holistic infrastructure of Climatiq, demonstrating an integration of several components. This interplay of technologies underscores the potential for comprehensive data gathering, analysis, and insight generation. As illustrated, Climatiq seamlessly interacts with third-party systems, including ERP and data warehouses. This allows for the automated gathering of vast data necessary for accurate carbon emissions calculations, making it apt for Eco-Link to obtain holistic insights.</p>
+<p>Central to Climatiq’s model is its REST API, which facilitates smooth communication between different components (Climatiq, 2023). The REST API could empower Eco-Link by allowing different eco-conscious modules or services to interact efficiently, sharing data and insights in real-time. To establish trust and security, Climatiq employs auth0 for user and admin authentication. A secure login mechanism not only ensures data integrity but also instills confidence in users. By adopting a similar authentication approach, Eco-Link can ensure its user data remains uncompromised.</p>
+<p>By using Vercel and NEXT.Js, Climatiq maintains visually appealing front-end and robust functionalities.&nbsp; For Eco-Link, this means users can have interactive dashboards, real-time configurations, and insights presented in an easily digestible manner, fostering informed eco-decisions. Finally, to facilitate real-time estimations and analytics, Fastly’s Compute@Edge offers caching and real-time estimations, which, when combined with fauna’s Geo Distributed DB Cluster, ensures data is retrieved from the nearest available source. This minimizes latency, provides faster response times, and, importantly, reduces emissions from distant server retrievals. Such capabilities would be invaluable to Eco-Link, allowing it to provide users with instantaneous insights and recommendations based on real-time data.</p>
+</section>
+<section id="tokenization-and-digitizing-credentials" class="level2">
+<h2 class="anchored" data-anchor-id="tokenization-and-digitizing-credentials">4.4 Tokenization and Digitizing Credentials</h2>
+<p>Payment networks such as Visa and Mastercard play a pivotal role in advancing IoT payments. They have been instrumental in building the framework to promote token availability and interoperability across IoT devices. This involves developing and maintaining the necessary technology for IoT commerce, especially in tokenization and digitizing credentials (Visa, 2023).</p>
+<p>These networks also offer scalable frameworks for issuers and IoT device manufacturers, with initiatives like Visa’s Visa Token Service(VTS). They collaborate with a variety of stakeholders, from car manufacturers to wearables brands, extending the payment value chain.</p>
+<p>The below diagram illustrates Visa’s token provisioning and activation occurs. This is a One-Time action per payment credential.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2139999320.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 13: Token provisioning and activation process (Visa, 2017)</figcaption>
+</figure>
+</div>
+<p>The token provisioning and activation process, as depicted in the diagram (Figure 13), is an integral part of Visa’s approach to fortifying IoT payments. This procedure starts when a cardholder loads their Visa account details onto a connected device. Once loaded, the device sends a request to provision the account to a token requestor, acting as an intermediary (Eco-Link). The token requestor, in turn, fetches the necessary credentials from the Visa Token Service. Crucially, instead of transmitting the actual Payment Account Number (PAN), the system replaces it with a digital token—a surrogate value. This ensures the actual payment details remain shielded.</p>
+<p>The Visa Risk Manager evaluates the provisioning request, making decisions based on established approval rules set by the Visa account issuer. Once the token is greenlit, it is then provisioned to the device and activated for payments. The strength of this system lies in its ability to protect sensitive payment information. Even if there’s an unauthorized breach, the exposed token is rendered valueless to cybercriminals, as it does not carry the actual card details.</p>
+<p>In essence, Visa’s tokenization system is a multi-step, highly secure approach that leverages advanced technology to ensure both convenience and safety in the expanding realm of IoT payments.</p>
+</section>
+</section>
+<section id="risk-security-features" class="level1">
+<h1>5. Risk / Security Features</h1>
+<p>As financial systems link up with IoT devices, the expanded network of interconnected systems becomes a potential target for cyber threats (Mastercard, 2021). These are the primary security issues associated with this integration:</p>
+<p><strong>1. Device Security Limitations:</strong></p>
+<p>IoT devices, due to their limited processing capacity and memory, face challenges in adopting advanced security measures. Battery-operated devices pose added challenges, especially when it comes to remote security updates, given the necessity to conserve energy.</p>
+<p><strong>2. Data Privacy and Potential Breaches:</strong></p>
+<p>IoT devices&nbsp; generate substantial personal data making them attractive to cyber attackers. The inherent vulnerabilities of these devices further increase the risk of data compromise.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2920263489.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 14: Potential IoT Vulnerabilities (Lumenci, 2022)</figcaption>
+</figure>
+</div>
+<p><strong>3. Vulnerability to DDoS Attacks:</strong></p>
+<p>Several IoT devices lack sufficient protection against Distributed Denial of Service attacks. Pre-set factory settings amplify the risk of unauthorized remote access. Additionally, the low user interaction with IoT devices can lead to under-detection of such breaches.</p>
+<p>Given the above challenges, the following security considerations become essential for IoT payments:</p>
+<p>· <strong>Authenticated Payments:</strong></p>
+<p>Many IoT applications are designed for payments to occur autonomously, without human intervention. Such operations underscore the importance of robust authentication mechanisms. When a car autonomously pays for parking or a refrigerator procures groceries, the underlying technology should ensure the transactions are authentic and authorized.</p>
+<p>· <strong>Identifying Devices in Transactions:</strong></p>
+<p>Payments involve not just the transfer between accounts but also between entities, with one party often being an IoT device. This necessitates a system where devices maintain distinct and verifiable identities to secure the data they transfer.</p>
+<p>· <strong>Managing Payment Discrepancies:</strong></p>
+<p>In instances of transactional errors or disputes, it is vital to determine liability. Strong device authentication combined with user authorization measures are key in ensuring the legitimacy and accountability of transactions.</p>
+</section>
+<section id="solution-stakeholders" class="level1">
+<h1>6. Solution Stakeholders</h1>
+<p>We have categorised solution stakeholders into three categories: IoT Payment Integrators, Rewards Partners, and Regulators.</p>
+<section id="eco-link-iot-payment-integrator-and-eco-reward-platform" class="level2">
+<h2 class="anchored" data-anchor-id="eco-link-iot-payment-integrator-and-eco-reward-platform">6.1 Eco-Link (IoT Payment Integrator and Eco-Reward Platform)</h2>
+<p>To contextualise, Eco-Link serves as the central hub, seamlessly integrating payments through IoT devices while promoting and rewarding sustainable behaviours. As the backbone, it collaborates with various stakeholders to provide a comprehensive, eco-conscious payment experience. For Eco-Link to be successful, it would also have to work with other IoT payment integrators such as Mastercard and Visa, which play an important role in facilitating seamless transactions over the Eco-Link platform. At the same time, IoT device manufacturers which produce items such as smart phones, watches, cars, smart home gadgets etc, will also play an important role in making their eco-systems ‘connectable’.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2169809955.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 15: Conceptual representation of Merchant Rewards using DALL.E 2</figcaption>
+</figure>
+</div>
+</section>
+<section id="rewards-partners" class="level2">
+<h2 class="anchored" data-anchor-id="rewards-partners">6.2 Rewards Partners</h2>
+<p>These partners motivate customers towards sustainable behaviours through financial incentives on the Eco-Link platform.</p>
+<p><u>Merchants</u>: Collaborating with Eco-Link, businesses offer rewards or discounts to users paying via the platform. For example, a salad shop might provide a discount to Eco-Link users, as salads typically have a smaller carbon footprint than meat-based meals.</p>
+<p><u>Banks</u>: Responding to demands from both shareholders and customers for clear sustainability goals, banks enable account integration with Eco-Link and introduce innovative financial products tied to sustainability. Banks might provide special saving accounts with added benefits for eco-conscious users. Furthermore, banks might use Eco-Link to share insights or educational content on green investments.</p>
+<p><u>Credit Card Companies</u>: Recognizing the growing consumer awareness of sustainability, these companies can offer green credit cards that reward sustainable purchases (DBS, 2021). It is important to note that while Visa &amp; Mastercard provide technical solutions, such as carbon footprint calculators, the actual rewards are decided and disbursed by the issuing banks themselves.</p>
+<p><u>Other Financial Service Providers</u>: Insurance companies, for example, can adjust premium rates based on factors like eco-friendly driving habits (melita.io, 2023). Meanwhile, investment firms might highlight green portfolios, letting users invest in an environmentally friendly future.</p>
+</section>
+<section id="regulators" class="level2">
+<h2 class="anchored" data-anchor-id="regulators">6.3 Regulators</h2>
+<p>This group ensures the ethical and legal operations of the Eco-Link platform.</p>
+<p><u>Financial Regulatory Authorities</u>: Regulators ensure Eco-Link aligns with financial regulations, bolstering the platform’s credibility.</p>
+<p><u>Data Protection and Privacy Commissions</u>: These bodies manage and advise on user data usage and protection, setting standards for data storage and protection to ensure Eco-Link maintains high user data confidentiality and integrity.</p>
+<p><u>Environmental and Sustainability Boards</u>: These entities verify Eco-Link’s eco-friendly commitments. They also present feedback, guidance, and validation for the platform’s sustainability initiatives. An example partner could be National Environment Agency (NEA), which plays a pivotal role in ensuring a clean and sustainable environment for Singapore (NEA, 2022).</p>
+</section>
+</section>
+<section id="solution-resources" class="level1">
+<h1>7. Solution Resources</h1>
+<p>Solution resources for each technological component will be explained in the following sections.</p>
+<p><u><strong>IoT Integration and Financial Data Synthesis</strong></u></p>
+<p>We would require a team of specialized IoT engineers adept at handling platforms like AWS IoT Core, Google Cloud IoT, and Microsoft Azure IoT Hub. This is to ensure scalability and accommodate a growing number of devices without compromising on performance and maintaining strong security measures. Alongside, data scientists and database administrators are crucial to harness, analyse, and securely store the vast data streams generated. They will transform raw data into useful insights. These insights can lead to the development of new features which would enhance user experience. Expertise in cloud storage solutions and financial data analytics tools would also be paramount to ensure the efficient synthesis of collected data.</p>
+<p><u><strong>AI-driven Financial Advisory and Secure Transaction Ecosystem</strong></u></p>
+<p>A team of AI and machine learning specialists would be at the heart of development, bringing proficiency in platforms like TensorFlow, PyTorch, and scikit-learn. This ensures that the advice is not derived from historical data but also anticipates future financial trends. It would give users a proactive approach to their finances. Blockchain developers familiar with Ethereum and Binance Smart Chain would be essential for crafting a secure transaction environment (Reddy, Hamshika, Aishwarya, &amp; Ashritha, 2022). Moreover, cybersecurity experts, well-versed in tools like Norton IoT Security and TrendMicro, would ensure the robustness and security of our entire ecosystem.</p>
+<p><u><strong>API-Powered Sustainability Insights</strong></u></p>
+<p>Partnering with the RESTful API platform by Climatiq for greenhouse gas emissions estimations requires a strategic approach to resource allocation. At the forefront, there is a need for API integration specialists and backend developers to facilitate seamless interfacing and manage POST requests. With the platform handling sensitive data, including bank statements and payment terminals, data security experts are essential for safeguarding interactions and system integrity. Database managers will handle the platform’s extensive emissions database, ensuring smooth data operations. UI/UX designers and frontend developers will translate CO2 insights into user-friendly interfaces. Additionally, leveraging the integrated MCC (Merchant Category Code) mapping demands experts in transaction categorization for precise carbon estimations. Finally, data scientists and analysts will be instrumental in converting raw data into actionable insights, supported by infrastructure specialists overseeing the platform’s scalable architecture.</p>
+</section>
+<section id="solution-steps" class="level1">
+<h1>8. Solution Steps</h1>
+<p><strong>Step 1. &nbsp;Needs Assessment and Prototype Development:</strong></p>
+<p>Begin by comprehensively understanding user preferences, pain points, and challenges. Leveraging this foundational knowledge, design a preliminary, testable version of Eco-Link, ensuring the prototype embodies the primary vision and essential functionalities.</p>
+<p><strong>Step 2. Stakeholder Engagement and Partnerships:</strong></p>
+<p><u>Financial Collaborations</u>. Engage directly with financial institutions, credit card companies, and insurance providers. Negotiate beneficial agreements that synchronize user rewards with their financial and sustainability objectives.</p>
+<p><u>Road Shows for Larger Stakeholders</u>. Organize strategic roadshows targeting major corporations and government entities. Present Eco-Link’s capabilities, emphasizing its potential to aid them in achieving their ambitious sustainability targets. By marketing the platform’s dual advantage of financial integration and sustainability metrics, appeal to their larger environmental goals and responsibilities.</p>
+<p><strong>Step 3. Regulatory Compliance and Technology Development:</strong></p>
+<p>Prioritize strict compliance with data privacy regulations and the benchmarks set by the financial industry. In parallel, bolster the platform’s defences with state-of-the-art security measures. Develop the technological foundation of Eco-Link, focusing on a robust web and mobile platform infrastructure. This should include seamless data integration and an intuitive user interface. Elevate user engagement with straightforward navigation and innovative data visualization tools.</p>
+<p><strong>Step 4. Pilot Phase and Feedback Integration:</strong> Introduce Eco-Link to a handpicked audience for preliminary testing. Use the feedback from this phase to make iterative enhancements, ensuring that the platform continually aligns with user experience demands and sustainability goals.</p>
+<p><strong>Step 5. Full Launch and Continuous Updates:</strong> With the platform refined based on real-world insights, proceed to a wider launch of Eco-Link. Beyond the launch, commit to dynamic updates and innovations, aligning with ever-evolving technological advancements, shifting sustainability landscapes, and invaluable user feedback.</p>
+</section>
+<section id="solution-benefits" class="level1">
+<h1>9. Solution Benefits</h1>
+<p>Eco-Link offers multifaceted advantages that cater to a broad spectrum of stakeholders. Let’s follow Imran’s journey to understand the tangible benefits experienced by end users, financial institutions, and service providers.</p>
+<section id="imrans-journey-with-eco-link" class="level2">
+<h2 class="anchored" data-anchor-id="imrans-journey-with-eco-link">9.1 Imran’s Journey with Eco-Link</h2>
+<p>Imran, a tech-savvy 29-year-old, relies heavily on digital solutions for his daily needs, especially financial transactions. As a car owner, he is also conscious about reducing his environmental impact. Here is how Imran’s journey unfolds with Eco-Link:</p>
+<p><strong>Onboarding and Daily Usage:</strong></p>
+<p>· Discovering Eco-Link’s promise of rewarding sustainable behaviour, Imran sets up his profile, linking his bank accounts, credit cards, and integrates his smart car system for NFC payments (Visa, 2023).</p>
+<p>· He adopts the Eco-Link mobile wallet, making it his primary payment mode for daily transactions.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3883708410.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 16: Conceptual representation of Imran’s Experience with Eco-Link by DALL.E 2</figcaption>
+</figure>
+</div>
+<p><strong>Value Proposition:</strong></p>
+<ul>
+<li><p>Imran’s Eco-Link dashboard showcases his transaction history and car usage. He can track his sustainability score – he is happy to note that opting for a salad instead of beef increased his points.</p></li>
+<li><p>The platform calculates his carbon footprint, derived from all his energy bills, fuel consumption, and other purchases on a real time basis.</p></li>
+<li><p>Imran is rewarded with cashback for sustainable purchases and even receives AI-driven suggestions to further eco-friendly choices and save money.</p></li>
+</ul>
+<p><strong>End Users:</strong></p>
+<p>For end users like Imran, Eco-Link is not just a payment platform; it serves as a comprehensive eco-conscious lifestyle guide. Users gain real-time insights into their micro-transactions, allowing transparency in consumption patterns and carbon footprints. The platform aggregates all financial transactions, reducing the need to juggle multiple apps. The built-in carbon footprint tracker, coupled with rewards for eco-friendly purchases, motivates users towards an environmentally responsible lifestyle. Moreover, AI-driven insights based on past data nudge users towards lower emission choices, ensuring a holistic and rewarding experience.</p>
+</section>
+<section id="financial-institutions-and-service-providers-retail-partners" class="level2">
+<h2 class="anchored" data-anchor-id="financial-institutions-and-service-providers-retail-partners">9.2 Financial Institutions and Service Providers / Retail Partners</h2>
+<p><strong>Financial Institutions:</strong></p>
+<p>For financial institutions, Eco-Link provides access to a growing segment of eco-conscious consumers. By integrating their data, they not only endorse a green initiative but also strengthen customer relationships. This association promotes their image as an environmentally responsible entity and expands their consumer base seeking sustainable expense management.</p>
+<p><strong>Service Providers / Retail Partners:</strong></p>
+<p>Retailers partnering with Eco-Link can spotlight their eco-friendly products, leveraging the platform to drive demand. They can also dispense rewards and discounts to eco-conscious consumers, amplifying their sustainability initiatives. This partnership enhances their customer base and boosts their green branding efforts.</p>
+<p>In essence, Eco-Link’s ecosystem weaves a win-win situation for all stakeholders, driving both environmental consciousness and economic growth.</p>
+</section>
+</section>
+<section id="future-outlook" class="level1">
+<h1>10. Future Outlook</h1>
+<p>Global trends emphasize eco-conscious living, ensuring that an integrated solution like Eco-Link will garner immense popularity. With that, Eco-Link presents limitless future possibilities and there are various ways to expand on this solution. These are some of the possible areas that our solution, Eco-Link can pivot to enhance the user experiences and eventually meet the ever-increasing payment needs of the consumers.</p>
+<p><u>Enrichment of User Experience</u></p>
+<p>The platform can scale up to include more enriching content to serve our customers. Analytical insights can be applied to the users’ data to present tailored blogs and tutorials. For example, if Eco-Link picks up on user’s constant payments to ride hailing services, the platform can bring up articles and blogs related to carbon emission from private transportation and other environmental implications which can then urge and remind users to take up a more eco-conscious commute. In addition, the platform can push out facts and posts on the environmental initiatives happening in Singapore. Users are then well-informed deepening their intents for sustainable finance.</p>
+<p><u>Peer to Peer Interactive Elements</u></p>
+<p>Eco-Link can be gamified by tabulating the energy scores and presenting them in a publicly visible score dashboard. This Peer-to-Peer feature can allow the platform users to share their sustainability scores to the rest of the application users promoting the ongoing environmental efforts and healthy competition amidst the users. The top performers could be incentivised further to continue with their sustainable payment efforts.</p>
+<p><u>Integration of other IoT Devices</u></p>
+<p>In the long run, partnerships with other IoT providers can be forged. Through this, consumers can elect to connect their IoT devices to our platform and utilize the platform to make payments and track their finances sustainably (PYMNTS, 2022).</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2985443481.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 17: Conceptual representation of integrating multiple IoT Ecosystems by DALL.E 2</figcaption>
+</figure>
+</div>
+<p>Eco-Link could maintain an open API to share data across other IoT ecosystems such as Google Home or Amazon Alexa. By integrating these devices, users can get notifications on the energy consumption within their homes, and we could even provide more services such as recurring payment plans. For instance, if a person links their smart home devices to Eco-Link’s system, they can track their energy consumption together with their other finances and associated energy consumptions. This way they can get a fuller picture of their energy trends and along the pipeline, payment arrangements can be made via Eco-Link. Users can use the Eco-Link’s digital wallet to trigger monthly payments to utility companies for their household energy consumption. Eco-Link could expand by forming these future partnerships with other IoT vendors (e.g.&nbsp;smart appliances/ gadgets) which is a win-win situation for both consumers and partners. Eco-Link can serve as the intermediary between these two groups where vendors can promote their services (e.g.&nbsp;easy statement retrievals, auto payments through Eco-Link). Meanwhile, users can continue to track their finance and their carbon emissions sustainably for the various services used by them.</p>
+<p><strong>As such, Eco-Link can become an indispensable tool in modern, sustainable living.</strong></p>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<p>Capture. (1 November, 2023). <em>The Capture App</em>. Retrieved from Capture: https://www.thecapture.club/</p>
+<p>Climatiq. (1 November, 2023). <em>Build carbon intelligence into your software</em>. Retrieved from Climatiq: https://www.climatiq.io/</p>
+<p>Climatiq. (1 November, 2023). <em>Calculate Carbon Emissions for Payments and Transactions</em>. Retrieved from Climatiq: https://www.climatiq.io/payments-transactions-carbon-emissions</p>
+<p>Cointelegraph. (29 December, 2021). <em>Introducing the Trivergence: Transformation driven by blockchain, AI and the IoT</em>. Retrieved from Magazine by Cointelegraph: https://cointelegraph.com/magazine/introducing-trivergence-transformation-blockchain-ai-iot/</p>
+<p>DBS. (15 April, 2021). <em>DBS intensified green push with nation’s first eco-friendly card</em>. Retrieved from DBS: https://www.dbs.com/newsroom/DBS_intensifies_green_push_with_nations_first_eco_friendly_card</p>
+<p>DBS. (1 November, 2023). <em>DBS LiveBetter - Just one tap to take sustainable actions to track, offset, give and invest in a greener future</em>. Retrieved from DBS: https://www.dbs.com.sg/personal/livebetter</p>
+<p>Hasan, M. (16 February, 2022). <em>The IoT cloud: Microsoft Azure vs.&nbsp;AWS vs.&nbsp;Google Cloud</em>. Retrieved from IOT Analytics: https://iot-analytics.com/iot-cloud/</p>
+<p>Lumenci. (20 March, 2022). <em>Smart Payments: The Future of Transaction</em>. Retrieved from Lumenci: https://www.lumenci.com/post/smart-payments</p>
+<p>Mastercard. (2021). <em>How IoT will Shape the Future of Payments.</em> Japan: Mastercard.</p>
+<p>melita.io. (8 May, 2023). <em>IoT Technology Leads to Lower Car Insurance Premiums and Safer Roads</em>. Retrieved from IoT For All: https://www.iotforall.com/iot-technology-leads-to-lower-car-insurance-premiums-and-safer-roads</p>
+<p>Melki, A. (19 July, 2023). <em>Autonomous Payments in Action: How IoT Payments Are Revolutionizing the Way We Transact</em>. Retrieved from Medium: https://medium.com/@alimelki/autonomous-payments-in-action-how-iot-payments-are-revolutionizing-the-way-we-transact-9630c099b80d</p>
+<p>NEA. (2022). <em>Sustainable and Resource Efficient Singapore</em>. Retrieved from National Environment Agency: https://www.nea.gov.sg/integrated-sustainability-report-2021-2022/review-of-fy2021/ensuring-a-clean-and-sustainable-environment-for-singapore/sustainable-and-resource-efficient-singapore</p>
+<p>NoCash. (10 November, 2021). <em>Visa announces the “Visa Eco Benefits”</em>. Retrieved from NoCash: https://nocash.ro/visa-announces-the-visa-eco-benefits/</p>
+<p>PYMNTS. (30 August, 2022). <em>Carbon Trackers, the Next Big Thing in European Banking Apps</em>. Retrieved from PYMNTS: https://www.pymnts.com/news/digital-banking/2022/carbon-trackers-the-next-big-thing-in-european-banking-apps/</p>
+<p>Reddy, S., Hamshika, S., Aishwarya, S., &amp; Ashritha, V. (2022). Block Chain for Financial Application using IOT. <em>Turkish Journal of Computer and Mathematics Education</em>, 844 - 853.</p>
+<p>Software. (1 November, 2023). <em>Machine Learning (ML) for IoT</em>. Retrieved from Software: https://www.softwareag.com/en_corporate/resources/iot/article/machine-learning.html</p>
+<p>Statista . (9 August, 2023). <em>Number of users of digital payments in Singapore from 2018 to 2027, by segment</em>. Retrieved from Statista: https://www.statista.com/forecasts/1304594/digital-payment-users-by-segment-singapore</p>
+<p>Tableau. (1 November, 2023). <em>MoneySQ makes timely and effective decisions in fast-paced FinTech industry</em>. Retrieved from Tableau: https://www.tableau.com/solutions/customer/moneysq-makes-timely-and-effective-decisions-in-fast-paced-fintech-industry</p>
+<p>Visa. (February, 2017). <em>Visa and IBM: Changing the World of Payments by Turning Things into Potential Points of Sale</em>. Retrieved from Visa Developer Center: https://community.developer.visa.com/t5/Blogs/Visa-and-IBM-Changing-the-World-of-Payments-by-Turning-Things/ba-p/6076</p>
+<p>Visa. (9 November, 2021). <em>Visa Announces the “Visa Eco Benefits” Sustainability Bundle to Empower Issuers to Meet Climate- Conscious Consumer Demand</em>. Retrieved from Visa: https://www.visa.co.uk/about-visa/newsroom/press-releases.3142789.html</p>
+<p>Visa. (1 November, 2023). <em>Leading the token transformation</em>. Retrieved from Visa: https://usa.visa.com/partner-with-us/payment-technology/visa-tokenization.html</p>
+<p>Visa. (1 November, 2023). <em>Secure Payments in the Connected Car</em>. Retrieved from Visa: https://usa.visa.com/visa-everywhere/innovation/connected-commerce/connected-car.html</p>
+<p>Wenzel, W. (15 May, 2023). <em>Achieving low latencies and low emissions at the edge for Climatiq’s carbon calculation API</em>. Retrieved from Fauna: https://fauna.com/blog/low-latencies-and-emissions-at-the-edge-for-climatiqs-carbon-calculation-api</p>
+<p>WWF-Singapore and Accenture. (2021). <em>Sustainability in Singapore - Consumer and business Opportunities.</em> Retrieved from https://wwfasia.awsassets.panda.org/downloads/sustainability_in_singapore_wwf_accenture.pdf</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
