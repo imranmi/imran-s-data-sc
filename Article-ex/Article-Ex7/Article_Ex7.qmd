@@ -1,0 +1,165 @@
+---
+title: "Design considerations when deploying a CBDC project"
+author: "Imran Ibrahim"
+date: August 24, 2024
+date-modified: "last-modified"
+toc: true
+execute: 
+  eval: true
+  echo: true
+  freeze: true
+  warning: false
+  message: false
+---
+
+# Assignment Topic
+
+According to the Bank of International Settlement (BIS), a central bank digital currency (CBDC) could be used by individuals or businesses to pay each other or it could be used by financial institutions to settle trades in financial markets. The former being termed as “retail CBDC” while the latter is a “wholesale CBDC”. In a 2021 BIS survey of central banks, 86% are actively researching the potential for CBDCs, 60% were experimenting with CBDC technology, and 14% were deploying pilot projects.
+
+### Part 1
+
+Evaluate if CBDC should be operating on top of a blockchain/distributed ledger technology. Use examples to back your claims.
+
+### Part 2
+
+Assess the importance/unimportance of other blockchain design considerations (e.g., privacy protection, transaction finality, transaction fees, and other considerations) when deploying a CBDC project.
+
+## Part 1 - Evaluate if CBDC should be operating on top of a Blockchain/DLT
+
+Central banks have had different views on the merits of using DLT for CBDCs. For example, The Bahamas and the Eastern Caribbean Central Bank (ECCB) have piloted DLT-based systems, citing the security of DLT as important for their requirements.
+
+The PBOC, has used DLT during pilots and assessed that its capacity to process falls short of its requirements, expressing concerns about the ability of DLT to manage high volume transaction days.
+
+The PBOC has instead committed to a hybrid architecture where DLT is deployed in limited areas where it has advantages over other technologies. Different technologies form part of its “Long Term Evolution System” and are integrated into the e-CNY stack centred around a centralized ledger and database.
+
+## Case for not using DLTs
+
+Blockchain transactions can be expensive in terms of transaction costs and can be slow owing to the considerable number of broadcasts and confirmations required.
+
+Although a public and distributed ledger has the advantage of making transactions more transparent and thus prevent or minimize double spending and counterfeiting; it also restricts its use as a means for everyday payments due to its limits in transaction throughput and lack of scalability.
+
+Scalability problems and slow confirmation times can limit its use for daily payments and transactions. For example, when we pay for goods and services, we should have to wait for them to be confirmed and validated on a blockchain.
+
+Being decentralized and distributed, a DLT based CBDC system would need to consider the potential size and extent of its network. This will include deciding how many participating nodes are required, their locations, and their levels of inter-connectivity. Ownership rights and responsibilities of participating nodes also need to be clearly defined.
+
+### Governance     
+
+Using blockchain/DLT technology would mean operating in a permissioned environment. This would require a well-defined governance policy actively managed by the central bank. Boundaries may be less clear as the number of participating nodes and validators increase. Governance models will need to ensure that security frameworks sufficiently define clear roles and responsibilities across all participating nodes.
+
+Governance is also critical during system updates where updates and other system upgrades need to be quickly applied over the network. Participating nodes would need to be monitored for adherence to IT security policies and requirements.
+
+### Private Keys
+
+Private and public keys may be used for signing and verifying transactions. This could pose a problem in scenarios where users are more familiar with password-enabled security. If the Central Bank allow users to maintain their own keys, or use third-party key custodians, then these key custodians will also need to be audited and verified that they have implement the security controls applicable to other network participants. Enabling the use of private keys for general public use will also introduce new risks like phishing and fraud.
+
+### External Oracles
+
+CBDCs with smart contracts may introduce dependencies on external third-party oracles, which function as sources of data to enable the automatic execution of the smart contract codes. As oracle services originate from outside the DLT system, existing security frameworks may not automatically extend to these oracles sources.
+
+Attacks on external oracles can potentially affect smart contracts where malicious actors exploit vulnerabilities in the code to drain funds or to manipulate the functionality of the CBDC.
+
+### Consensus Protocols
+
+Blockchain protocols use consensus mechanisms to confirm and validate transactions. However, Consensus protocols could be prone to attacks, creating opportunities for double-spending, and invalidated or forged transaction histories.
+
+A central bank would need to consider which consensus mechanism would work best for their requirements. To preventing collusion, Incentives may need to be instituted to ensure that validators act in the greater interest of the system.
+
+Central banks may also need to anticipate quantum threats and incorporate quantum-resistant protocols to prevent attacks on the consensus protocol.
+
+## Case for using DLTs
+
+### Programmable Money
+
+Blockchain and smart contracts can unlock the potential for smart, programmable money.
+
+MAS, through project Orchid intends to trial the use of retail CBDCs for government initiatives like government vouchers, commercial vouchers, government pay-outs and subsidies.
+
+A programmable retail CBDC, using well-designed smart contracts, could facilitate a more efficient disbursement of targeted fiscal support (e.g., welfare vouchers) and support new business and operating models. This can enable government agencies to have greater flexibility in defining conditions for how the funds could be used, supporting a more targeted delivery of financial assistance.
+
+For example, to ensure that citizens are spending their digital funds according to intended fiscal objectives, spending conditions could be programmed in the Smart contracts (Project Orchid, n.d.).
+
+These conditions could include:
+
+-   Disbursing different amounts of subsidies or vouchers based on household income or housing type
+
+-   Allow the spending of funds only at specific merchant categories (e.g. supermarkets or neighbourhood shops)
+
+-   Conditions for spend (e.g minimum amount and expiry dates)
+
+### Making Cross-Border payments more efficient
+
+Cross-border funds transfers can be costly and time-consuming.
+
+Domestic banks rely on correspondent banks to manage cross- border transactions. However, different payment message standards and systems can pose challenges. Cross-border payments require the use of multiple un-linked systems across different countries that are not necessarily synchronized, creating the possibility that one action may succeed and another fail.
+
+The MAS and the Bank of Canada (BOC) embarked on the Jasper-Ubin Project in 2016, to trial an atomic transaction for a Canadian Dollar (CAD) - Singapore Dollar (SGD) payment across two DLT platforms based on Hash Time Locked Contracts (HTLC) which used smart contracts to synchronize transactions. The 2 central banks successfully demonstrated a cross-border, cross-currency, cross platform atomic transaction without the need for a third party that is trusted by both jurisdictions. (Central Banks of Canada and Singapore Conduct Successful Experiment for Cross-border Payments Using Distributed Ledger Technology, n.d.)
+
+### Improving inefficient infrastructure
+
+The National Bank of Cambodia, through project ‘Bakong’ is one of the first central banks to use blockchain technology in its national payments systems. Project ‘Bakong’ was conceived to promote financial inclusion and greater banking system efficiency.
+
+Cambodia’s population generally use physical cash and mobile phone-based payment systems to transfer funds between each other and businesses. There are multiple payments systems, causing difficulties in transferring money to those who use different mobile money applications. (Central Banks and Distributed Ledger Technology: How Are Central Banks Exploring Blockchain Today?, 2019)
+
+The blockchain-based payment system, accessible via local commercial banks, is designed to operate with both private mobile payment applications and commercial bank accounts, facilitating retail payments between citizens and businesses and in the process encourage citizens to open bank accounts, enabling them to be included in the financial system.
+
+In Cambodia’s case, there was a lack of an efficient payments and settlements infrastructure and by implementing blockchain for their payments system, they were able to improve their existing infrastructure.
+
+### Conclusion
+
+**In conclusion**, individual central banks have yet to conclude on whether deploying blockchain/DLT can help them achieve their goals when deploying a CBDC. Where existing technologies are already in place with little to no frictions or few inefficiencies, it has made more sense to continue using existing capabilities instead of re-inventing the wheel. At the opposite end, for countries with existing inefficient infrastructure see DLT/blockchain as an upgrade to existing systems, enabling them to reach the same levels of efficiency as other developed countries and helping them achieve long-standing objectives of having an efficient payments system, payments and improving financial inclusion
+
+It is more than likely that central banks will continue to integrate DLT into their existing infrastructure to solve or achieve specific purposes unique to their own needs. To this point, I believe that blockchain/DLT should be used in CBDC projects; however, the extent of use would depend on what each central bank really intends to achieve with their digital currency.
+
+## Part 2 - Assess the importance/unimportance of other blockchain design considerations when deploying a CBDC project
+
+Below are some important design considerations that are important when deploying a CBDC project.
+
+### Scalability
+
+The transfer of funds or payments from sender to receiver should be completed real time. The blockchain technology supporting CBDC payments should also be able to handle high volumes of transactions with the large number of users expected. The network should be able to support a high number of transactions per second to ensure settlement finality, allowing transactions between parties to be concluded quickly to serve as a valid alternative to physical cash or electronic bank transfer payments. Blockchains currently may not be able to handle such a high volume of transactions due to existing limitations in block size, transaction format and consensus protocol. A layer 2 state channel solution could be implemented to remove small value transactions or micropayments off chain to reduce the transactional load on the main chain. This can enable more transactions to be included in each block thereby increasing the number of overall transactions that can be processed.
+
+### Interoperability
+
+Interoperability can enable multiple CBDC systems interact and exchange data with each other across borders. This ensures that CBDC systems can make payments to each other without any frictions and can enhance the efficiency of cross-border payments which is currently costly and time consuming; having too many intermediaries with different proprietary systems
+
+The CBDC system will need to be able to interoperable with existing private sector digital payment systems maintained by local commercial banks or other payment companies. This ensures that the CBDC can be used as part of a larger set of financial tools to send and receive funds to anyone in that country. For example, one should not need to have prior accounts with Bank A or Fintech company B before being able to send funds to someone with accounts with those entities. This ensures that a CBDC can be adopted by a larger audience to be used for daily transactions.
+
+If each commercial bank or payments fintech run its own proprietary networks, users may need to onboard different systems to complete a transaction. The CBDC technology used will need to be to be interoperable across different platforms, wallets, and payment systems.
+
+### Anonymity and Privacy
+
+Having full anonymity through the use of physical cash or cryptocurrencies may not be
+necessarily feasible for CBDCs which are managed by central banks that do not
+wish to encourage potential exploitation of their digital currencies for illicit
+purposes. Nonetheless, full disclosures of identities may also not propagate
+financial inclusion where identification can be difficult or costly to obtain.
+This is especially true in rural or disadvantage areas where identification can
+be difficult to obtain. As a trade-off, central banks can implement different tiers
+of wallets with different limits, where wallets with lower limits can
+incorporate greater anonymity and privacy. From a consumer perspective, value
+transfers could be entirely anonymous, and only require additional information as
+the transaction value increases.
+
+### Secure and Resilient
+
+The CBDC system should be secure from cyber-attacks and attempts to change the records of transactions. Blockchain, with its cryptographic proofs and immutable nature can reduce the risk of forgery and counterfeiting. With a decentralised network of validators and nodes, blockchain technology prevents centralized points of failure, theft and manipulation of transaction data, ensuring uninterrupted availability round the clock.
+
+### Smart Contracts
+
+The use of smart contracts can greatly enhance the functionality of CBDCs for government initiatives like government vouchers, commercial vouchers, government pay-outs and subsidies as trialled by MAS, for project Orchid (Project Orchid, n.d.). However, the introduction of Smart contracts for CBDCs can also introduce a new set of vulnerabilities for users, with erroneous codes, software bugs, centralized oracles and vulnerabilities in on-ramp and off-ramp bridges.
+
+Smart contracts, which contain self-executing code might be targeted by malicious actors who seek to exploit vulnerabilities to drain funds or to manipulate the balances. Ultimately it depends on what the individual central bank envisions its CBDC to be in future. Careful examination and audit of smart contracts is crucial before the deployment of any additional functionalities.
+
+## References
+
+Behind the Scenes of Central Bank Digital Currency: Emerging Trends, Insights, and Policy Lessons. (2022, February 7). IMF. <https://www.imf.org/en/Publications/fintech-notes/Issues/2022/02/07/Behind-the-Scenes-of-Central-Bank-Digital-Currency-512174>
+
+Auer, R. (2020, March 1). The technology of retail central bank digital currency. <https://www.bis.org/publ/qtrpdf/r_qt2003j.htm>
+
+Hansen, T. (2022, March 2). Security Considerations for a Central Bank Digital Currency. <https://www.federalreserve.gov/econres/notes/feds-notes/security-considerations-for-a-central-bank-digital-currency-20220203.html>
+
+Project Orchid. (n.d.). <https://www.mas.gov.sg/schemes-and-initiatives/project-orchid>
+
+Central Banks of Canada and Singapore conduct successful experiment for cross-border payments using Distributed Ledger Technology. (n.d.). <https://www.mas.gov.sg/news/media-releases/2019/central-banks-of-canada-and-singapore-conduct-successful-experiment-for-cross-border-payments>
+
+Central Banks and Distributed Ledger Technology: How are Central Banks Exploring Blockchain Today? (2019, April). <https://www.weforum.org/whitepapers/central-banks-and-distributed-ledger-technology-how-are-central-banks-exploring-blockchain-today/>
