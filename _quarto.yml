@@ -75,7 +75,9 @@ website:
           - text: Assignment 8 - Consortium blockchain to track and trace assets for finance lease  
             href: Article-ex/Article-Ex8/Article_Ex8.html
           - text: Assignment 9 - Quantum Computing - Mean-Variance Portfolio Optimization    
-            href: Article-ex/Article-Ex9/Article_Ex9.html  
+            href: Article-ex/Article-Ex9/Article_Ex9.html
+          - text: Project - Quantum Computing - Portfolio Optimisation using Hybrid Algorithm    
+            href: Article-ex/Article-Ex10/Article_Ex10.html  
 format:
   html:
     theme: 

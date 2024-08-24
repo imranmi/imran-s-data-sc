@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Imran Ibrahim, Lim Chong Siong, Huson Low, Foo T’suen Wei">
+<meta name="dcterms.date" content="2024-08-24">
+
+<title>Imran’s Postgrad repo - Project - Quantum Computing - Portfolio Optimisation using Hybrid Algorithm</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Imran’s Postgrad repo</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-exercises-in-r" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Exercises in R</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises-in-r">    
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex1/R_Ex1.html">
+ <span class="dropdown-text">R Exercise 1 - Analysing PISA’s education survey data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex2/R_Ex2.html">
+ <span class="dropdown-text">R Exercise 2 - 5 Exploratory Data Analyses on Pisa Data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex3/R_Ex3.html">
+ <span class="dropdown-text">R Exercise 3 - DataVis Makeover of another student’s work</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex4/R_Ex4.html">
+ <span class="dropdown-text">R Exercise 4 - Be Weatherwise or Otherwise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex5/R_Ex5.html">
+ <span class="dropdown-text">R Exercise 5 - Visual Analytics exercise on Armed conflicts - Initial Draft</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex6/R_Ex6.html">
+ <span class="dropdown-text">R Exercise 6 - Geospatial Analysis1 - Local Measures of Spatial Autocorrelation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex7/R_Ex7.html">
+ <span class="dropdown-text">R Exercise 7 - Geospatial Analysis2 - Emerging Hot Spot Analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex8/R_Ex8.html">
+ <span class="dropdown-text">R Exercise 8 - Geospatial Analysis3 - Spatially Constrained Clustering-ClustGeo method</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex9/R_Ex9.html">
+ <span class="dropdown-text">Group Project Poster - Decoding Chaos - Analysing Armed conflicts in Myammar</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-exercises-in-python" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Exercises in Python</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises-in-python">    
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex1/Python_Ex1.html">
+ <span class="dropdown-text">Python Exercise 1 - Automate the design of a 3-stocks portfolio for a given target return</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex2/Python_Ex2.html">
+ <span class="dropdown-text">Python Exercise 2 - Designing a 3-stock portfolio for a robo-advisor</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex3/Python_Ex3.html">
+ <span class="dropdown-text">Python Exercise 3 - Project - Predicting Stock Prices through Time series Analysis</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-sas-viya-exercises" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">SAS Viya Exercises</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-sas-viya-exercises">    
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex1/Write_Ex1.html">
+ <span class="dropdown-text">Assignment 1 - Show me the numbers</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex2/Write_Ex2.html">
+ <span class="dropdown-text">Assignment 2 - Be Customer wise or otherwise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex3/Write_Ex3.html">
+ <span class="dropdown-text">Project - Loan Default prediction</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex4/Write_Ex4.html">
+ <span class="dropdown-text">Project Poster - Loan Default prediction</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-written-assignments-(fintech" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Written Assignments (Fintech)</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-written-assignments-(fintech">    
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex1/Article_Ex1.html">
+ <span class="dropdown-text">Assignment 1 - Factors that contributed to the rise of Fintech companies</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex2/Article_Ex2.html">
+ <span class="dropdown-text">Assignment 2 - Banks have changed the way they deploy technology</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex3/Article_Ex3.html">
+ <span class="dropdown-text">Assignment 3 - Assess and discuss how the role of financial regulators has evolved</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex4/Article_Ex4.html">
+ <span class="dropdown-text">Assignment 4 - Key characteristics that create or inject value for a non-fungible token</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex5/Article_Ex5.html">
+ <span class="dropdown-text">Assignment 5 - Bitcoin - Examining a Layer 1 &amp; 2 solution and adoption for a payment use case</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex6/Article_Ex6.html">
+ <span class="dropdown-text">Assignment 6 - Decentralised Finance - Examine the working principles and Appraise the future of DEFI</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex7/Article_Ex7.html">
+ <span class="dropdown-text">Assignment 7 - Design considerations when deploying a CBDC project</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex8/Article_Ex8.html">
+ <span class="dropdown-text">Assignment 8 - Consortium blockchain to track and trace assets for finance lease</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex9/Article_Ex9.html">
+ <span class="dropdown-text">Assignment 9 - Quantum Computing - Mean-Variance Portfolio Optimization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex10/Article_Ex10.html">
+ <span class="dropdown-text">Project - Quantum Computing - Portfolio Optimisation using Hybrid Algorithm</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools tools-wide">
+    <a href="../../about.html" title="About Imran" class="quarto-navigation-tool px-1" aria-label="About Imran"><i class="bi bi-house-heart"></i></a>
+    <a href="https://github.com/imranmi/imran-s-data-sc" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/imran-ibrahim-116a236b" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#technical-solution-overview" id="toc-technical-solution-overview" class="nav-link active" data-scroll-target="#technical-solution-overview">1. Technical Solution Overview</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">1.1 Introduction</a></li>
+  <li><a href="#problem-statement" id="toc-problem-statement" class="nav-link" data-scroll-target="#problem-statement">1.2 Problem Statement</a></li>
+  <li><a href="#broad-technical-solution" id="toc-broad-technical-solution" class="nav-link" data-scroll-target="#broad-technical-solution">1.3 Broad Technical Solution</a></li>
+  </ul></li>
+  <li><a href="#quantum-algorithms-in-detail" id="toc-quantum-algorithms-in-detail" class="nav-link" data-scroll-target="#quantum-algorithms-in-detail">2. Quantum Algorithms in Detail</a>
+  <ul class="collapse">
+  <li><a href="#quadratic-unconstrained-binary-optimization-qubo" id="toc-quadratic-unconstrained-binary-optimization-qubo" class="nav-link" data-scroll-target="#quadratic-unconstrained-binary-optimization-qubo">2.1 Quadratic Unconstrained Binary Optimization (QUBO)</a></li>
+  <li><a href="#variational-quantum-eigensolver-vqe" id="toc-variational-quantum-eigensolver-vqe" class="nav-link" data-scroll-target="#variational-quantum-eigensolver-vqe">2.2 Variational Quantum Eigensolver (VQE)</a></li>
+  <li><a href="#quantum-approximate-optimization-algorithm-qaoa" id="toc-quantum-approximate-optimization-algorithm-qaoa" class="nav-link" data-scroll-target="#quantum-approximate-optimization-algorithm-qaoa">2.3 Quantum Approximate Optimization Algorithm (QAOA)</a></li>
+  <li><a href="#optimizer-with-highest-optimal-value" id="toc-optimizer-with-highest-optimal-value" class="nav-link" data-scroll-target="#optimizer-with-highest-optimal-value">2.4 Optimizer with Highest Optimal Value</a></li>
+  </ul></li>
+  <li><a href="#classical-algorithm-in-detail" id="toc-classical-algorithm-in-detail" class="nav-link" data-scroll-target="#classical-algorithm-in-detail">3. Classical Algorithm in Detail</a>
+  <ul class="collapse">
+  <li><a href="#classical-portfolio-allocation-following-quantum-stock-selection" id="toc-classical-portfolio-allocation-following-quantum-stock-selection" class="nav-link" data-scroll-target="#classical-portfolio-allocation-following-quantum-stock-selection">3.1 Classical Portfolio Allocation following Quantum Stock selection</a></li>
+  </ul></li>
+  <li><a href="#quantum-advantages" id="toc-quantum-advantages" class="nav-link" data-scroll-target="#quantum-advantages">4. Quantum Advantages</a></li>
+  <li><a href="#commercial-cost-and-benefits" id="toc-commercial-cost-and-benefits" class="nav-link" data-scroll-target="#commercial-cost-and-benefits">5. Commercial Cost and Benefits</a>
+  <ul class="collapse">
+  <li><a href="#ibmq" id="toc-ibmq" class="nav-link" data-scroll-target="#ibmq">5.1 IBMQ</a></li>
+  <li><a href="#aws-amazon-braket" id="toc-aws-amazon-braket" class="nav-link" data-scroll-target="#aws-amazon-braket">5.2 AWS (Amazon Braket)</a></li>
+  <li><a href="#azure-azure-quantum---quantum-service-microsoft-azure" id="toc-azure-azure-quantum---quantum-service-microsoft-azure" class="nav-link" data-scroll-target="#azure-azure-quantum---quantum-service-microsoft-azure">5.3 Azure (Azure Quantum - Quantum Service | Microsoft Azure)</a></li>
+  <li><a href="#comparison-to-expected-business-gains" id="toc-comparison-to-expected-business-gains" class="nav-link" data-scroll-target="#comparison-to-expected-business-gains">5.4 Comparison to Expected Business Gains</a></li>
+  </ul></li>
+  <li><a href="#risk-and-challenges" id="toc-risk-and-challenges" class="nav-link" data-scroll-target="#risk-and-challenges">6. Risk and Challenges</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">7. Conclusion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">8. References</a></li>
+  <li><a href="#appendix-1" id="toc-appendix-1" class="nav-link" data-scroll-target="#appendix-1">9. Appendix 1</a></li>
+  <li><a href="#appendix-2" id="toc-appendix-2" class="nav-link" data-scroll-target="#appendix-2">10. Appendix 2</a>
+  <ul class="collapse">
+  <li><a href="#classiq-code" id="toc-classiq-code" class="nav-link" data-scroll-target="#classiq-code">Classiq code</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Project - Quantum Computing - Portfolio Optimisation using Hybrid Algorithm</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Imran Ibrahim, Lim Chong Siong, Huson Low, Foo T’suen Wei </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 24, 2024</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">August 24, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="technical-solution-overview" class="level1">
+<h1>1. Technical Solution Overview</h1>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">1.1 Introduction</h2>
+<p>This report presents a business case for portfolio optimisation by integrating quantum computing algorithms, specifically Variational Quantum Eigensolver (VQE) and Quantum Approximate Optimization Algorithm (QAOA) into the stock selection process, while continuing to use classical computing for portfolio allocation. By leveraging the unique computational capabilities of Quantum computing, Financial Institutions can potentially improve their investment strategies and mitigate risks using this hybrid portfolio optimisation approach.</p>
+</section>
+<section id="problem-statement" class="level2">
+<h2 class="anchored" data-anchor-id="problem-statement">1.2 Problem Statement</h2>
+<p>In wealth management at banks, relationship managers provide advice to their customers based on a ‘house’ view crafted internally by their respective Investment strategy teams. This is akin to a black box where house views are formulated through a combination of financial modelling, time-series forecasting, fundamental &amp; technical analysis, and human judgement. This black box approach also implies that there is a lack of transparency on the basis and success rates of these strategies; from a customer’s perspective, it would seem like they are fed with the same advice templates year-on-year. This rigid one-size fits all approach limits the banks’ ability to provide science-based advice to their high-net-worth customers who may want professional advice based on their own selection of stocks.</p>
+<p>Yet, traditional approaches to optimise stock selection and portfolio allocations rely on classical computer methods that may not fully capture the potential insights available through emerging technologies. By incorporating quantum computing algorithms into stock selection, there is much potential to analyse complex patterns and relationships within large datasets, leading to more accurate and effective stock selection.</p>
+</section>
+<section id="broad-technical-solution" class="level2">
+<h2 class="anchored" data-anchor-id="broad-technical-solution">1.3 Broad Technical Solution</h2>
+<p>Hybrid Portfolio Optimisation Approach. Selecting stocks for an optimal portfolio is a complex task that involves navigating a vast number of potential choices to identify suitable securities that can offer the maximum return for a given level of risk, or conversely, minimize the risk for a given level of returns. Given the combinatorial nature of the problem, where the number of potential portfolio configurations grows exponentially with the number of assets, classical computational methods may falter, especially when handling larger portfolios. Quantum computing therefore offers an appealing solution, to potentially speed up the stock selection process and improve the accuracy of solutions. By exploiting the proven classical computation approach, we recommend a hybrid approach of quantum computation algorithms to perform effective stock selection and classical computation algorithms to perform portfolio allocation via a hybrid portfolio optimisation approach. See <strong>Figure 1</strong> for the workflow.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2209687003.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 1. Hybrid Portfolio Optimisation Workflow</figcaption>
+</figure>
+</div>
+<p><u><strong>Quantum Computing for Stock Selection</strong></u>. Quantum algorithms, such as VQE and QAOA, offer computational advantages for stock selection. By employing these algorithms, organizations can leverage their capacity to identify hidden correlations which may be challenging using traditional methods alone. By leveraging a quantum approach towards stock selection, financial institutions could achieve a competitive advantage by being able to uncover valuable insights and improve decision-making in the stock selection process.</p>
+<p><u><strong>Classical Computing for Portfolio Allocation</strong></u>. While quantum computing shows much promise for stock selection, it is also important to recognise its limitations (e.g.&nbsp;scalability, noise). Therefore, our team proposes to use proven classical computing methods for the portfolio allocation stage through Monte Carlo simulations, which guarantees practicality, stability, and reliable optimization in the portfolio allocation process.</p>
+</section>
+</section>
+<section id="quantum-algorithms-in-detail" class="level1">
+<h1>2. Quantum Algorithms in Detail</h1>
+<p>The quantum algorithm is designed to choose 10 random stocks from the S&amp;P500 index. A risk factor of 10 is chosen to generate the expected returns and covariance matrix based on 1 year of historical stock data. The randomly selected stocks will be converted to a Quadratic Unconstrained Binary Optimization (QUBO) formulation that will generate a binary equation that will be solved by three optimisers; (1) classical eigensolver, (2) Variational Quantum Eigensolver (VQE), and (3) Quantum Approximate Optimization Algorithm (QAOA).</p>
+<p><img src="images/clipboard-4096317878.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-124955315.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 2. Covariance Matrix of the Random Selected Stocks, and Output of Classical Eigensolver</figcaption>
+</figure>
+</div>
+<section id="quadratic-unconstrained-binary-optimization-qubo" class="level2">
+<h2 class="anchored" data-anchor-id="quadratic-unconstrained-binary-optimization-qubo">2.1 Quadratic Unconstrained Binary Optimization (QUBO)</h2>
+<p>The stock selection problem needs to be translated into a form suitable for quantum algorithms. This involves converting the problem into a Quadratic Unconstrained Binary Optimization (QUBO) formulation. A QUBO problem aims to minimize or maximize an objective function comprising binary variables.</p>
+<p>It can be expressed as:&nbsp;</p>
+<p>f(x) = ∑i,j Qij xi xj + ∑i hi xi</p>
+<p>where:</p>
+<p>• xi and xj are binary variables that can take on the values 0 or 1</p>
+<p>• Qij is a coefficient that represents the strength of the interaction between variables i and j</p>
+<p>• hi is a coefficient that represents the strength of a bias term for variable i.</p>
+<p>The goal of solving a QUBO problem is to find the binary values of x that can minimize or maximize the objective function f(x). In the context of stock selection, each binary variable xi can represent whether a particular stock is included in the portfolio, and the coefficients in the objective function can reflect various factors such as expected returns and risks associated with the stocks.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2787630637.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 3. QUBO Objective Function (Portfolio Optimization — Qiskit Finance 0.3.4 Documentation, n.d.)</figcaption>
+</figure>
+</div>
+<p>For the purposes of this project, the above QUBO format is used for our initial Stock Selection process. We will assume that the full budget B will be spent, and we will map the equality constraint (1<sup>T</sup>x = B) to a penalty term which will then be scaled by a parameter and subtracted from the objective function. This function can then be mapped to a Hamiltonian function whose minimum energy ground state corresponds to the optimal solution. Next, we employ quantum algorithms like QAOA and VQE to derive our optimal set of stocks to select and include for our portfolio.</p>
+</section>
+<section id="variational-quantum-eigensolver-vqe" class="level2">
+<h2 class="anchored" data-anchor-id="variational-quantum-eigensolver-vqe">2.2 Variational Quantum Eigensolver (VQE)</h2>
+<p>VQE is designed to find the minimum eigenvalue of a Hamiltonian, representing the ground state energy of a quantum system. In the context of stock selection, this ground state can be associated with the optimal set of stocks.</p>
+<p>The VQE begins with an ansatz, a specific guess for the quantum state, typically near to the ground state of the system. This state is prepared on a quantum computer and the corresponding energy (the expectation value of the Hamiltonian) is measured.</p>
+<p>The measured energy value is then returned to a classical computer, which hosts an optimization algorithm. This classical optimizer fine-tunes the parameters within the quantum circuit to lower the energy, working under the principle that the ground state of a system is its minimum energy state. This process iterates until the optimizer can no longer find lower energy values and therefore settles to the optimal solution.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1390241396.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 4. Sample of the VQE output</figcaption>
+</figure>
+</div>
+</section>
+<section id="quantum-approximate-optimization-algorithm-qaoa" class="level2">
+<h2 class="anchored" data-anchor-id="quantum-approximate-optimization-algorithm-qaoa">2.3 Quantum Approximate Optimization Algorithm (QAOA)</h2>
+<p>QAOA is designed to find near-optimal solutions to combinatorial optimization problems. The algorithm employs a two-step procedure that involves a unitary transformation dependent on a cost Hamiltonian (HC) and a mixer Hamiltonian (HB), denoted as U(HC,γ) and U(HB,β) respectively. QAOA starts by encoding the combinatorial problem into a cost function that is then mapped onto a cost Hamiltonian, HC. This Hamiltonian is a quantum operator representing the energy landscape of the problem. Alongside the cost Hamiltonian, a mixer Hamiltonian, HB, is defined to drive transitions between different states in the problem’s solution space.</p>
+<p>The algorithm starts with an initial state, which is a uniform superposition of all possible solutions. It then alternates between applying the cost and mixer unitary operators, U(HC,γ) and U(HB,β), a predetermined number of times (p). The effect of these operations is two-fold: the cost Hamiltonian operator increases the probability of measuring good solutions, while the mixer Hamiltonian ensures a comprehensive exploration of the solution space.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2375010079.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 5. Sample of the QAOA output</figcaption>
+</figure>
+</div>
+<p>Like VQE, QAOA also leverages the strengths of both quantum and classical computers, using the former for maintaining a superposition of potential solutions and the latter for guiding the search for high-quality solutions.</p>
+</section>
+<section id="optimizer-with-highest-optimal-value" class="level2">
+<h2 class="anchored" data-anchor-id="optimizer-with-highest-optimal-value">2.4 Optimizer with Highest Optimal Value</h2>
+<p>The quantum code is also designed to select the optimiser algorithm with the highest value, and the corresponding stocks that would be selected to be acquired. Figure 6 shows that for our first simulation, the Variational Eigensolver (VQE) algorithm generated the highest value with the following stocks (IDXX, HAS, WM, EXC, and PGR) to be acquired. These stocks will then be transferred to the classical algorithm for subsequent processing.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-514309923.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 6. Optimiser Algorithm with highest Optimal value</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="classical-algorithm-in-detail" class="level1">
+<h1>3. Classical Algorithm in Detail</h1>
+<p><u><strong>Maximum Sharpe Ratio Portfolio Optimisation</strong></u>. We can now take the output (specific selection of stocks based on a portfolio) and insert into a classical algorithm to achieve an optimal allocation of funds using maximum Sharpe Ratio approach. For this report, the following stocks will be used as an example: IDXX, HAS, WM, EXC, and PGR.</p>
+<section id="classical-portfolio-allocation-following-quantum-stock-selection" class="level2">
+<h2 class="anchored" data-anchor-id="classical-portfolio-allocation-following-quantum-stock-selection">3.1 Classical Portfolio Allocation following Quantum Stock selection</h2>
+<p><u><strong>Preparing Financial Data</strong></u>. Through Yahoo Finance, the historical adjusted closing prices for each selected stock are extracted for a specified date range with up to 5 years. Daily returns of each stock prices are then computed through the <strong>pct_change()</strong> function. By leveraging historical stock prices, investors can gain insights into the performance and volatility of individual stocks and use this information to make informed portfolio allocation decisions.</p>
+<p><u><strong>Uniform Distribution Approach</strong></u>. To determine the optimal weight for each stock, random weights from a uniform distribution were used, and then normalized by dividing them by their sum to obtain a percentage of the entire holdings. Random generated weights from a uniform distribution, meaning evenly distributed between 0 and 1, are used to a wide range of potential weight combinations and to consequently derive a diverse set of portfolios. The impact of these portfolios will then be evaluated through back testing. While random numbers generated from other distributions, such as the exponential or log-normal distributions, could be used, uniform distribution is commonly used in such portfolio optimization studies such as Markowitz, 1952 and Asadujjaman, 2018.</p>
+<p><u><strong>Portfolio Performance Metrics</strong></u><strong>.</strong> Several metricsare used to evaluate the risk-return characteristics of investment portfolios and assess the performance of the portfolio.&nbsp; First, the expected portfolio return (<strong>rp</strong>) is obtained by multiplying the average daily returns of the stocks by the number of trading days in a year (252 days) and taking the dot product with the weights to account for the compounding effect of daily returns over a year. Second, the portfolio variance (<strong>port_var</strong>) is computed to determine the volatility of the portfolio’s returns with consideration of the individual stock variances and covariance between different stocks within the portfolio. This parameter is considered as a key input to the portfolio optimisation problem (Markowitz, 1952). This value is calculated by multiplying (1) weights of the covariance matrix (<strong>cov</strong>) of the stock returns, and (2) 252 which is the total number of trading days within a year. Lastly, the Sharpe ratio (<strong>sharpe</strong>) is computed as a measure of risk-adjusted return in portfolio analysis; this allows an evaluation of the excess return earned by a portfolio relative to the risk taken. A higher Sharpe ratio indicates a better risk-adjusted performance which implies a higher return relative to the volatility of the portfolio (i.e.&nbsp;the best returns based on the risk taken). The Sharpe ratio is computed by subtracting the risk-free rate (<strong>rf</strong>) from the portfolio return and dividing it by the standard deviation of excess returns. Sharpe ratios for more volatile portfolios or portfolios with other differences in return statistical properties (e.g., certain mutual funds, hedge funds etc.) may be more difficult to estimate accurately than more stable portfolios such as ETFs (Christie, 2005). The risk-free rate (<strong>rf</strong>) represents the returns that an investor can expect from an investment with zero risk. A 2% risk-free rate is used in our analysis and is often derived from the yield of government bonds or other low-risk financial instruments. The average 10-year US treasury bond is between 1% and 3% (U.S. Department of the Treasury, 2022). Performance metrics provides insights into the use and interpretation of these metrics for assessing portfolio performance. While this approach provides certain levels of assurance of the portfolio returns, other researcher such as Anderson et al., 2009 would argue for a better approach using uncertainty-return trade-off approach instead of the current and traditional risk-return trade-off approach for a better assessment. Nonetheless, a generic and common approach was used to assess the performance of various portfolios.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-71561603.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 7. Matrix Covariance</figcaption>
+</figure>
+</div>
+<p><u><strong>Monte Carlo Simulation</strong></u><strong>.</strong> With the understanding of generating one portfolio, Monte Carlo simulation is used to determine the expected value from the average of a large sample size. As the number of samples increases, the average of the sample values will converge to the expected result. In our case, 10,000 random portfolios are generated, which takes less than 1min to execute. We can then identify the most optimal risk-free portfolio with the highest Sharpe ratio, and the associated weightage for each stock.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3115508718.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 8. Performance Metrics of First Five Portfolios.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-75069830.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 9. Maximum Sharpe Ratio value and the corresponding Weightage.</figcaption>
+</figure>
+</div>
+<p><u><strong>Analysis of Portfolio Optimisation Algorithm</strong></u><strong>.</strong> To evaluate the performance of the generated portfolio, an initial investment of $100,000 was used in three portfolios: (1) portfolio with the highest Sharpe Ratio, (2) equal weighted portfolio (i.e.&nbsp;20% weighs for each of the 5 stocks), and (3) S&amp;P500 index as a benchmark. For the first run, we can see that the recommended portfolio generates the highest returns of 27.52% compared to the other two which has about less than 8% returns. Based on 10 runs of the same portfolio, we can see that the optimised portfolio has more than 23% average returns over two years, or more than 16.5% annual returns compared to the other two portfolios.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-318693510.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 10. Comparison of Portfolio Returns.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1881315035.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 11. Comparison of Returns of the Same Portfolio over 10 Runs.</figcaption>
+</figure>
+</div>
+<p><u><strong>Further Analysis</strong></u>A total of 30 simulations of random samples (different stocks each) was performed to determine the average annual returns of the three different portfolios. More than 90% of simulations selected VQE as the optimal quantum algorithm. The highest average annual returns were 7.86% from the optimised portfolio, followed by 0.8% from the equal weighted portfolio, and 0.64% from the S&amp;P500 Index portfolio. This can conclude that VQE is the most optimal optimiser and that the use of the Maximum-Sharpe Ratio method for portfolio optimisation can potentially generate an expected 7.86% annual returns. See <strong>Figure 6</strong> below, and appendix for detailed results.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3995750994.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 12. 30 Simulations of Random Samples.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="quantum-advantages" class="level1">
+<h1>4. Quantum Advantages</h1>
+<p>Quantum computing offers several advantages that can be harnessed in stock portfolio optimisation. In our proposed solution, by integrating quantum computing algorithms such as VQE and QAOA, we can potentially provide superior results in the stock selection process compared to conventional methods.</p>
+<p><u><strong>Ability to Solve Complex Problems</strong></u>: Quantum computers can solve complex problems that are computationally intensive for classical computers. Quantum algorithms can help navigate the complexities of the stock selection process, which involves assessing and comparing a vast array of potential choices,&nbsp; exploring a large solution space more efficiently.</p>
+<p><u><strong>Multidimensional Data</strong></u>. Quantum computing is capable of handling multidimensional data more efficiently. In the case of stock selection, we deal with a multitude of variables for each stock, including historical price data, growth rates, market sentiment, and economic factors. Quantum computing can manage these complex, multidimensional datasets effectively, offering a more holistic approach to stock selection.</p>
+<p><u><strong>Improved Computational Efficiency</strong></u>. Quantum computers can potentially offer exponential speed-up for optimization problems. Algorithms like VQE and QAOA can process large amounts of information and run complex calculations more efficiently than classical algorithms. This potentially leads to improved accuracy in stock selection and faster decision-making, providing a competitive edge for financial institutions.</p>
+<p><u><strong>Hybrid Quantum-Classical Approach</strong></u>. Leveraging a hybrid quantum-classical computing approach allows us to take advantage of the best of both worlds. Quantum computing can be used for probabilistic tasks such as stock selection, while classical computing can be used for deterministic tasks that it excels in, like portfolio allocation. This hybrid approach is flexible and adaptable, offering potential improvements in both accuracy and efficiency.</p>
+<p>A distinctive advantage of quantum computing is its potential to automate and enhance decision-making in the stock selection process, potentially reducing human error and bias. Unlike traditional Monte Carlo simulations, which require a predetermined set of stocks to be pre-selected – a process that can be influenced by human bias – quantum algorithms can objectively assess a broad array of stocks and output decisions on whether to include them in the portfolio or not. This automation can lead to a more thorough and unbiased selection of potential investment opportunities.</p>
+</section>
+<section id="commercial-cost-and-benefits" class="level1">
+<h1>5. Commercial Cost and Benefits</h1>
+<p>We can analyse the potential cost for a bank to provide quantum services by focusing on the offerings provided by IBMQ, AWS (Amazon Braket), and Azure (Azure Quantum - Quantum Service | Microsoft Azure). The estimated costs are based on the assumption that the bank conducts <strong>10,000 quantum transactions</strong> each month, with an average computing time of <strong>5 minutes</strong>. Additionally, a comparison is made between the potential costs and the expected business gains. It should be noted that the following analysis assumes certain usage patterns and pricing structures, which may vary over time.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3241271367.png" class="img-fluid figure-img"></p>
+<figcaption>Table 1. Projected Monthly Cost for various Quantum Computing Platforms.</figcaption>
+</figure>
+</div>
+<section id="ibmq" class="level2">
+<h2 class="anchored" data-anchor-id="ibmq">5.1 IBMQ</h2>
+<p>IBM offers both free access to basic machines and a paid partnership option for larger machines. However, as the average computing time takes five minutes per transaction, it is likely that the bank would require access to more advanced machines. Referring to Table 1 above, for 27 qubit systems, the cost is USD $1.60 per second. Therefore, the cost of providing the service is estimated at <strong>USD$4,800,000</strong> per month.</p>
+</section>
+<section id="aws-amazon-braket" class="level2">
+<h2 class="anchored" data-anchor-id="aws-amazon-braket">5.2 AWS (Amazon Braket)</h2>
+<p>AWS pricing for quantum services can be complex, combining a “per task” price and a “per shot” price for multiple providers. Assuming the bank uses 8,000 shots for each transaction, the cost can vary depending on the specific quantum processing unit (QPU) used. Based on the provided information, the cost ranges from at least USD $2.80 to a maximum of USD $240.3 per transaction. The values in Table 1 assume an average cost of $121.05 for 8000 shots which equates to a total monthly cost of <strong>USD$1,210,500</strong>.</p>
+</section>
+<section id="azure-azure-quantum---quantum-service-microsoft-azure" class="level2">
+<h2 class="anchored" data-anchor-id="azure-azure-quantum---quantum-service-microsoft-azure">5.3 Azure (Azure Quantum - Quantum Service | Microsoft Azure)</h2>
+<p>Azure Quantum offers a flexible pricing model, ranging from as low as USD $0.02 per 10 milliseconds increment of job time to more substantial costs exceeding USD $125,000 per month. Assuming the bank’s average computing time of 5 minutes per transaction, the projected monthly cost is <strong>USD $600,000</strong>.</p>
+</section>
+<section id="comparison-to-expected-business-gains" class="level2">
+<h2 class="anchored" data-anchor-id="comparison-to-expected-business-gains">5.4 Comparison to Expected Business Gains</h2>
+<p>The implementation of a quantum computing service can result in substantial business gains for the bank, considering the significant revenue generated by its wealthy clients, which exceeds SGD200 million per month (see Table 2 above). For example, in 2022, DBS attributed SGD 1.3 billion of its income from wealth management fees alone (DBS Full-year Net Profit Rises 20% to Record SGD 8.19 Billion, n.d.). Despite the costs associated with quantum computing services, the average cost of implementation remains relatively low in comparison to the revenue brought in by the bank’s clients. By harnessing the power of quantum computing, the bank can leverage advanced computational capabilities to optimize investment strategies, conduct risk analysis, and execute algorithmic trading strategies with unparalleled speed and precision. The resulting improvements in decision-making processes and investment outcomes can enhance customer satisfaction and drive further growth.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1604873515.png" class="img-fluid figure-img"></p>
+<figcaption>Table 2. Extract from DBS Annual Report 2022</figcaption>
+</figure>
+</div>
+<p>Quantum computing is recognisably accepted &nbsp;as the next quantum leap (<em>no pun intended</em>) in the finance industry with high potential to unlock ~USD1B for each finance institution (FI) through better corporate risk management, improved client satisfaction, operational excellence, and sustainability (Bobier et al., 2021). Hence, many FIs are investing into quantum technology firms and/or developing their own quantum computing capabilities in various areas such as lending and trading. With the top two global stock exchange operators (NYSE and NASDAQ in U.S.) having an estimated value of USD43T market capitalisation as of 2023 (Statista, 2023), many corporations (especially investment banks such as JPMorgan, Goldman Sachs) and retail investors are looking for various ‘sure-win’ quantitative trading methods.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3798823744.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 13. Expected Use Cases and Revenue Potential of Quantum Computing in Financial Services (Yndurain et al., 2023).</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="risk-and-challenges" class="level1">
+<h1>6. Risk and Challenges</h1>
+<p>Despite the compelling case for quantum computing’s potential in portfolio optimization, we must also consider the following business and technical challenges:</p>
+<p><u><strong>Technology Maturity</strong></u>. Currently, large-scale, fault-tolerant quantum computers are still under development. Given quantum technology is in its early stages, both the hardware and the algorithms are undergoing constant refinement and evolution. This immaturity could pose a risk to the viability of integrating quantum computing in our operations.</p>
+<p><u><strong>Quantum Error Correction</strong></u>. Quantum information is error-prone, due to both environmental noise and the inherently unstable nature of quantum states. To ensure reliable quantum computations, robust error correction algorithms would be essential.</p>
+<p><u><strong>Cost</strong></u>. Building, maintaining, and operating quantum computing infrastructure can be prohibitively expensive. This is exacerbated by the requirement for quantum computers to operate within clean environment such as extremely low temperatures, and low magnetic and noise interferences. While Quantum Computing as a Service (QCaaS) offerings, such as those from IBM and Classique, promises to lower these barriers, dependencies on external vendors could lead to vulnerabilities in terms of pricing fluctuations, service availability, and data sovereignty.</p>
+<p><u><strong>Interoperability</strong></u>. Quantum computing solutions may face difficulties in integrating with existing financial systems and processes. This could necessitate substantial development and testing, and potential compatibility issues.</p>
+</section>
+<section id="conclusion" class="level1">
+<h1>7. Conclusion</h1>
+<p>In conclusion, the integration of quantum computing algorithms, specifically VQE and QAOA, onto stock selection process while using classical computing for portfolio allocation offers significant potential for improving investment strategies and mitigating risks. By leveraging quantum computational advantages, organizations can analyze complex patterns and relationships within large datasets, leading to more accurate and effective stock selection. Quantum algorithms such as VQE and QAOA provide unique capabilities for solving combinatorial optimization problems and handling multidimensional data, making them well-suited for stock selection. Additionally, the hybrid quantum-classical approach maximises strength of both quantum and classical computing strengths, improving efficiency and accuracy.</p>
+<p>Quantum computing offers scalability and the potential for automation, paving the way for enhanced decision-making in the ever-evolving landscape of stock portfolio optimization. The use of the classical portfolio optimisation offers a variety of proven, simple, and easy-to-understand approaches that make its appealing to financial institutions and regulators. In other words, other than exploiting the benefits of both quantum and classical computation, the key advantage of <strong>explainability</strong> can be achieved to operationalise this hybrid portfolio optimisation approach easily into the finance industry. As quantum technology continues to advance, it holds great promise for revolutionizing the financial industry and empowering organizations to achieve competitive advantages in the realm of investment strategies.</p>
+</section>
+<section id="references" class="level1">
+<h1>8. References</h1>
+<p>Anderson, E. W., Ghysels, E., &amp; Juergens, J. L. (2009, July 21).&nbsp;The impact of risk and uncertainty on expected returns. Journal of Financial Economics. https://www.sciencedirect.com/science/article/abs/pii/S0304405X09001275&nbsp;</p>
+<p>Asadujjaman, Md., &amp; Zaman, K. (2018, October 11).&nbsp;Robustness-based portfolio optimization under epistemic uncertainty - journal of industrial engineering international. SpringerLink. https://link.springer.com/article/10.1007/s40092-018-0292-4&nbsp;</p>
+<p>Bobier, J.-F., Binefa, J.-M., Langione, M., &amp; Kumar, A. (2021, July 1).&nbsp;<em>It’s time for financial institutions to place their quantum bets</em>. BCG Global. Retrieved May 1, 2023, from https://www.bcg.com/publications/2020/how-financial-institutions-can-utilize-quantum-computing&nbsp;</p>
+<p>Bova, F. (2021, July 23). <em>Quantum Computing Is Coming. What Can It Do?</em> Harvard Business Review. <a href="https://hbr.org/2021/07/quantum-computing-is-coming-what-can-it-do" class="uri">https://hbr.org/2021/07/quantum-computing-is-coming-what-can-it-do</a></p>
+<p>Christie, S. (2005, May 9).&nbsp;Is the Sharpe ratio useful in asset allocation?. SSRN. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=720801&nbsp;</p>
+<p>Classiq Technologies. (n.d.).&nbsp;<em>Portfolio optimization</em>. Classiq. https://docs.classiq.io/latest/user-guide/built-in-algorithms/combinatorial-optimization/problem-library/portfolio/&nbsp;</p>
+<p>DBS full-year net profit rises 20% to record SGD 8.19 billion. (n.d.). <a href="https://www.dbs.com/newsroom/DBS_full_year_net_profit_rises_20pct_to_record_SGD_8_19_billion#:~:text=Full%2Dyear%20Consumer%20Banking%20%2F%20Wealth,lower%20wealth%20management%20product%20sales" class="uri">https://www.dbs.com/newsroom/DBS_full_year_net_profit_rises_20pct_to_record_SGD_8_19_billion#:~:text=Full%2Dyear%20Consumer%20Banking%20%2F%20Wealth,lower%20wealth%20management%20product%20sales</a>.</p>
+<p>DBS, OCBC &amp; UOB Average 18% Wealth Management Income Growth - Singapore Exchange (SGX). (n.d.). <a href="https://www.sgx.com/research-education/market-updates/20200303-dbs-ocbc-uob-average-18-wealth-management-income-growth" class="uri">https://www.sgx.com/research-education/market-updates/20200303-dbs-ocbc-uob-average-18-wealth-management-income-growth</a></p>
+<p>Duan, Y.C. (2007). A Multi-Objective Approach to Portfolio Optimization. <em>Rose-Hulman Undergraduate Mathematics Journal: Vol. 8 :</em> Issue. 1 , Article 12.</p>
+<p>Egger, D. J., Gambella, C., Marecek, J., McFaddin, S., Mevissen, M., Raymond, R., Simonetto, A., Woerner, S., &amp; Yndurain, E. (2020). Quantum Computing for Finance: State-of-the-Art and Future Prospects. <em>IEEE Transactions on Quantum Engineering</em>, <em>1</em>, 1–24. <a href="https://doi.org/10.1109/tqe.2020.3030314" class="uri">https://doi.org/10.1109/tqe.2020.3030314</a></p>
+<p>Hsu, J. C. (2005, January 11).&nbsp;<em>Cap-weighted portfolios are sub-optimal portfolios</em>. SSRN. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=647001&nbsp;</p>
+<p>Leymann, F., &amp; Barzen, J. (2020). The bitter truth about gate-based quantum algorithms in the NISQ era. <em>Quantum Science and Technology</em>, <em>5</em>(4), 044007. <a href="https://doi.org/10.1088/2058-9565/abae7d" class="uri">https://doi.org/10.1088/2058-9565/abae7d</a></p>
+<p>Leymann, F., &amp; Barzen, J. (2020). The bitter truth about gate-based quantum algorithms in the NISQ era. Quantum Science and Technology, 5(4), 044007. <a href="https://doi.org/10.1088/2058-9565/abae7d" class="uri">https://doi.org/10.1088/2058-9565/abae7d</a></p>
+<p>Markowitz, H. (1952). Portfolio selection.&nbsp;The Journal of Finance,&nbsp;7(1), 77. https://doi.org/10.2307/2975974&nbsp;</p>
+<p>Mugel, S., Kuchkovsky, C., Sanchez, E., Fernández-Lorenzo, S., Luis-Hita, J., Lizaso, E., &amp; Orus, R. (2022). Dynamic portfolio optimization with real datasets using quantum processors and quantum-inspired tensor networks. <em>Physical Review Research</em>, <em>4</em>(1). <a href="https://doi.org/10.1103/physrevresearch.4.013006" class="uri">https://doi.org/10.1103/physrevresearch.4.013006</a></p>
+<p>Orus, R., Mugel, S., &amp; Lizaso, E. (2018). Quantum computing for finance: Overview and prospects. <em>Reviews in Physics</em>, <em>4</em>, 100028. <a href="https://doi.org/10.1016/j.revip.2019.100028" class="uri">https://doi.org/10.1016/j.revip.2019.100028</a></p>
+<p>Owhadi-Kareshk, M. (2021, December 16). <em>Portfolio Optimization on Classical and Quantum Computers Using PortFawn</em>. arXiv.org. <a href="https://arxiv.org/abs/2112.08998" class="uri">https://arxiv.org/abs/2112.08998</a></p>
+<p>Portfolio Optimization — Qiskit Finance 0.3.4 documentation. (n.d.). <a href="https://qiskit.org/ecosystem/finance/tutorials/01_portfolio_optimization.html" class="uri">https://qiskit.org/ecosystem/finance/tutorials/01_portfolio_optimization.html</a></p>
+<p>Rhum, R. (2023, May 3).&nbsp;<em>Rethink your volatility toolkit- quality and minimum volatility</em>. BlackRock. https://www.blackrock.com/us/financial-professionals/insights/volatility-toolkit-qual-minimum-volatility&nbsp;</p>
+<p>Statista Research Department, (2023, April 24).&nbsp;<em>Largest stock exchange operators by market Cap 2023</em>. Statista. Retrieved May 1, 2023, from https://www.statista.com/statistics/270126/largest-stock-exchange-operators-by-market-capitalization-of-listed-companies/&nbsp;</p>
+<p>U.S. Department of the Treasury. (2022, October 11).&nbsp;Daily Treasury Real Long-Term Rate Averages. Interest Rate Statistics. https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/textview.aspx?data=yield&nbsp;</p>
+</section>
+<section id="appendix-1" class="level1">
+<h1>9. Appendix 1</h1>
+<p><u><strong>Detailed Analysis</strong></u>. A simulation of 30 were performed with each simulation generating a portfolio consisting of different stock. Based on the findings below, the optimised portfolio generated an average returns of 15.72% over 2 years or 7.86% annually, while the equal weighted portfolio generated 1.6% or 0.8% average returns per annum. In addition, the number of equal weighted portfolio is double of the optimised portfolio with 10 negative returns (~34% of the 30 samples). S&amp;P500 portfolio has a stable average returns of 1.27% over two years or 0.67% per annum.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1613074800.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 14. Comparison of Returns of the 30 different Portfolios.</figcaption>
+</figure>
+</div>
+<p><u><strong>Alternative Approaches for Portfolio Optimisation</strong></u>.Maximum Sharpe ratio portfolio optimisation is one of the approach in determining the portfolio optimisation. It focuses on maximizing the risk-adjusted returns by using a portfolio with the highest possible Sharpe ratio. There are also various approaches for portfolio optimisation such as mean-variance portfolio developed by Markowitz, 1952 where optimized weights for each asset in the target portfolio are generated based on the expected returns and risks (volatility), and also equal weighted portfolio that were used to compare against the maximum Sharpe ratio portfolio as highlighted earlier in this report. The other four known optimisation approach is briefly discussed below.</p>
+<p><u><strong>Maximum Return portfolio</strong></u><strong>.</strong> For investors who prioritise maximum returns without any regard of the associated risk, maximum return portfolio approach is best suited. We can see in Figure 15 that while the maximum return portfolio does not generate the highest Sharpe ratio, it provides the highest expected returns of about 23.4%. While the returns over 2 years was impressive at 36.47%, the associated risk are high, and may higher probability of generating negative returns compared to portfolios with risk factors considered.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3528728684.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 15. Maximum Return Portfolio.</figcaption>
+</figure>
+</div>
+<p><u><strong>Minimum Volatility Portfolio</strong></u>. This optimization method is suitable for investors who are looking to maintain a diverse portfolio while reducing risk to the lowest possible. While the expected return is a secondary consideration, however this value should be respectable (i.e.&nbsp;positive returns) (Rhum, 2023).</p>
+<p><u><strong>Market Capitalization-Weighted Portfolio</strong></u>: Portfolio in this approach is created by the weight of each asset proportional to its market capitalization. However, this approach is deemed to be sub-optimal as overweight stocks tends to have high stock prices relative to their fundamentals while underweight stocks have low stock prices relative to their fundamentals. This could lead to concentration of stocks (Hsu, 2005), which may present a higher risk.</p>
+<p><u><strong>Multi-Objective Portfolio Optimization</strong></u>: This approach considers multiple objectives, such as maximizing returns, minimizing risk, and achieving other portfolio characteristics to develop the portfolio, and is also known as multiple objectives approach. In contract, the Mean Variance optimisation approach is known as a single objective approach. Interestingly, studies have shown that the optimal solution generated between this approach and the mean variance optimisation approach is similar, and that investors should choose portfolio based on the expected risk and return in any approaches (Duan, 2007).</p>
+<p>Thus, after discussing the various portfolio optimisation methods, <strong><em>Max Sharpe Ratio approach remains to be the most balanced with key considerations on expected returns and associated risk factors.</em></strong></p>
+</section>
+<section id="appendix-2" class="level1">
+<h1>10. Appendix 2</h1>
+<p><u><strong>Quantum Circuit Model</strong></u>. Classiq platform provides quick access to variety of sample programmes to enable users to understand the performance of the quantum circuit and algorithm (Classiq Technologies, (n.d.)). In this case of portfolio optimisation, the objective of the available model was identify the best portfolio with the lowest difference between risk and profit. It has been adjusted find the best portfolio with the maximum Sharpe Ratio. Similar to our hybrid portfolio optimisation approach, the model consists of binary variable declaration for each asset (model.x) to indicate the chosen stock for the portfolio as well as the constraint on the specific number of assets within the portfolio. We have added formulas to find the maximum sharpe ratio with reference to the proven classical algorithm formula used in this report. A total of 140 gates consisting of 72 U-gates and 68 CX gates were used in this algorithm, and has a depth of 102 and width of 8.</p>
+<p><img src="images/clipboard-4116625157.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2147609328.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 16. Portfolio Optimisation Code for Maximum Sharpe Ratio, Quantum Circuit, and Circuit information.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2721632963.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 17. Detailed Quantum Circuit</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3177859820.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 18. Results from 1000 shots</figcaption>
+</figure>
+</div>
+<section id="classiq-code" class="level2">
+<h2 class="anchored" data-anchor-id="classiq-code">Classiq code</h2>
+<p><img src="images/clipboard-2818208297.png" class="img-fluid"></p>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
