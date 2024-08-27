@@ -32,7 +32,7 @@ While the payments sector has been a dominant Fintech sector globally and domest
 
 ## 2.2 Fintech Lending in Indonesia
 
-### Rapid Growth of Fintech Lending in 2023 
+### Rapid Growth of Fintech Lending in 2023
 
 The Fintech lending industry in Indonesia has expanded exponentially from 2019 to 2022. In 2022, it was estimated that the Fintech loan disbursement was 250 Trillion Rupiah, a 58% growth from 2021 (Otoritas Jasa Keuangan, 2023). However, it was also observed that the Fintech lending business has showed signs of saturation starting from early 2023 (see **Figure 1** **and 2**) (Otoritas Jasa Keuangan, 2023). That said, the growth of the Fintech lending will continue, albeit at a slower rate before it reaches saturation point. We assessed that this saturation could be due to (1) the increase in Non-Performing Loans (NPL), making Fintech lending a less attractive business than expected; and (2) Increased competition from both registered and non-registered lending platforms.
 
@@ -68,7 +68,7 @@ The surge in internet and mobile penetration in Indonesia in the past few years,
 
 Indonesians have a financial literacy of 38% which means that about 140 million Indonesians do not understand financial concepts such as loans where they are unable to manage their funds and loans (Otoritas Jasa Keuangan, 2020). With easy access to the banking services, Indonesians with low financial literacy may have limited understanding on the technicalities and impact of the financial products such as loan. The increase in default rate could lead to downstream socio-economic problems that the government actively seeks to manage.
 
-### Low Financial Inclusion in Indonesia 
+### Low Financial Inclusion in Indonesia
 
 About 76% of Indonesians has access to legitimate financial services, likely due to the high mobile penetration rate stated earlier (Otoritas Jasa Keuangan, 2020). Specific to loans, 71% of the low-to-medium income earners in Indonesia do not have access to credit services and have higher propensity to turn to unlicensed money lenders (PwC, 2019, p. 11). This is more pertinent for those in remote areas, and gig workers such as Gojek and Grab workers who do not have regular income streams. This trend is also fueled by the fact that banks are not interested in servicing low-income workers who are seeking small loans due to the low profit margin.
 
@@ -130,8 +130,7 @@ This would enable both fintech companies and regulators to understand the impact
 
 ### Build Strategic Partnerships and Monetise Data
 
-New entrants could merge, acquire, and/or form partnership with existing fintech players, traditional banks, and conglomerates. Collaborations can result in shared resources, including data, technology, and distribution channels, all of which could lead to a potential increase in consumer reach and better risk management. Partnerships can also bridge the talent gap in emerging areas like A.I. and data analytics, enhancing the capability of new entrants to innovate, compete
-and become profitable. The use of these emerging technologies enables Fintech companies to create highly personalised product offerings and services. Additionally, customer risk profiling and fraud detection could be further enhanced by integrating diverse data sources from multiple channels and customers’ touchpoints. This not only improves the operational efficiency of lending platforms but also enables a better Customer Relationship Management and lower default rates.
+New entrants could merge, acquire, and/or form partnership with existing fintech players, traditional banks, and conglomerates. Collaborations can result in shared resources, including data, technology, and distribution channels, all of which could lead to a potential increase in consumer reach and better risk management. Partnerships can also bridge the talent gap in emerging areas like A.I. and data analytics, enhancing the capability of new entrants to innovate, compete and become profitable. The use of these emerging technologies enables Fintech companies to create highly personalised product offerings and services. Additionally, customer risk profiling and fraud detection could be further enhanced by integrating diverse data sources from multiple channels and customers’ touchpoints. This not only improves the operational efficiency of lending platforms but also enables a better Customer Relationship Management and lower default rates.
 
 ### Invest in Customer Education and Responsible Lending
 

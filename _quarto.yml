@@ -28,23 +28,23 @@ website:
             href: R-ex/R-Ex3/R_Ex3.html
           - text: R Exercise 4 - Be Weatherwise or Otherwise
             href: R-ex/R-Ex4/R_Ex4.html
-          - text: R Exercise 5 - Visual Analytics exercise on Armed conflicts - Initial Draft
+          - text: R Exercise 5 - Visual Analytics exercise on Armed conflicts 
             href: R-ex/R-Ex5/R_Ex5.html
-          - text: R Exercise 6 - Geospatial Analysis1 - Local Measures of Spatial Autocorrelation
+          - text: R Exercise 6 - Geospatial 1- Local Measures of Spatial Autocorrelation
             href: R-ex/R-Ex6/R_Ex6.html
-          - text: R Exercise 7 - Geospatial Analysis2 - Emerging Hot Spot Analysis
+          - text: R Exercise 7 - Geospatial 2 - Emerging Hot Spot Analysis
             href: R-ex/R-Ex7/R_Ex7.html
-          - text: R Exercise 8 - Geospatial Analysis3 - Spatially Constrained Clustering-ClustGeo method
+          - text: R Exercise 8 - Geospatial 3 - Spatially Constrained Clustering
             href: R-ex/R-Ex8/R_Ex8.html
-          - text: Group Project Poster - Decoding Chaos - Analysing Armed conflicts in Myammar
+          - text: Group Project Poster - Analysing Armed conflicts in Myammar
             href: R-ex/R-Ex9/R_Ex9.html  
       - text: Exercises in Python
         menu: 
-          - text: Python Exercise 1 - Automate the design of a 3-stocks portfolio for a given target return 
+          - text: Python Exercise 1 - Automating a 3-stocks portfolio 
             href: Python-ex/Python-Ex1/Python_Ex1.html
           - text: Python Exercise 2 - Designing a 3-stock portfolio for a robo-advisor 
             href: Python-ex/Python-Ex2/Python_Ex2.html
-          - text: Python Exercise 3 - Project - Predicting Stock Prices through Time series Analysis 
+          - text: Python Project - Predicting Stock Prices with Time series Analysis 
             href: Python-ex/Python-Ex3/Python_Ex3.html
       - text: SAS Viya Exercises
         menu: 
@@ -56,34 +56,36 @@ website:
             href: Write-ex/Write-Ex3/Write_Ex3.html
           - text: Project Poster - Loan Default prediction    
             href: Write-ex/Write-Ex4/Write_Ex4.html
-      - text: Written Assignments (Fintech) 
+      - text: Fintech Assignments 
         menu: 
-          - text: Assignment 1 - Factors that contributed to the rise of Fintech companies 
+          - text: Assignment 1 - Factors contributing to the rise of Fintech companies 
             href: Article-ex/Article-Ex1/Article_Ex1.html
-          - text: Assignment 2 - Banks have changed the way they deploy technology
+          - text: Assignment 2 - How Banks have changed the way they deploy technology
             href: Article-ex/Article-Ex2/Article_Ex2.html
-          - text: Assignment 3 - Assess and discuss how the role of financial regulators has evolved  
+          - text: Assignment 3 - How the role of financial regulators has evolved  
             href: Article-ex/Article-Ex3/Article_Ex3.html
-          - text: Assignment 4 - Key characteristics that create or inject value for a non-fungible token   
+          - text: Assignment 4 - Key characteristics that create or inject value for a NFT   
             href: Article-ex/Article-Ex4/Article_Ex4.html        
-          - text: Assignment 5 - Bitcoin - Examining a Layer 1 & 2 solution and adoption for a payment use case 
+          - text: Assignment 5 - Bitcoin - Examining a Layer 1 & 2 solution 
             href: Article-ex/Article-Ex5/Article_Ex5.html
-          - text: Assignment 6 - Decentralised Finance - Examine the working principles and Appraise the future of DEFI 
+          - text: Assignment 6 - Examining the working principles and the future of DeFi 
             href: Article-ex/Article-Ex6/Article_Ex6.html
-          - text: Assignment 7 - Design considerations when deploying a CBDC project  
+          - text: Assignment 7 - Design considerations for a CBDC project  
             href: Article-ex/Article-Ex7/Article_Ex7.html
-          - text: Assignment 8 - Consortium blockchain to track and trace assets for finance lease  
+          - text: Assignment 8 - Consortium blockchain for Finance lease use case  
             href: Article-ex/Article-Ex8/Article_Ex8.html
           - text: Assignment 9 - Quantum Computing - Mean-Variance Portfolio Optimization    
             href: Article-ex/Article-Ex9/Article_Ex9.html
+      - text: Fintech Projects 
+        menu:
           - text: Project 1 - Quantum Computing - Portfolio Optimisation using Hybrid Algorithm    
             href: Article-ex/Article-Ex10/Article_Ex10.html
-          - text: Project 2 - Integrated IOT Data for Sustainability Use case    
+          - text: Project 2 - Integrated IOT Data for Sustainability Use Case    
             href: Article-ex/Article-Ex11/Article_Ex11.html
-          - text: Project 3 - Data Quality as the Key enabler of Innovation and Digitisation    
+          - text: Project 3 - Data Quality as Key enablers of Innovation and Digitisation    
             href: Article-ex/Article-Ex12/Article_Ex12.html
           - text: Project 4 - Emerging Fintech Trends in Indonesia    
-            href: Article-ex/Article-Ex13/Article_Ex13.html  
+            href: Article-ex/Article-Ex13/Article_Ex13.html
 format:
   html:
     theme: 
