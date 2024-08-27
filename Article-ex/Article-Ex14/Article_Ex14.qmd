@@ -1,0 +1,81 @@
+---
+title: "Can ChatGPT or chatbots replace Search Engines?"
+author: "Imran Ibrahim"
+date: August 27, 2024
+date-modified: "last-modified"
+toc: true
+execute: 
+  eval: true
+  echo: true
+  freeze: true
+  warning: false
+  message: false
+---
+
+# Assignment Topic
+
+Learn about ChatGPT and appraise if it is a search engine. In your own words explain how ChatGPT works. Assess if ChatGPT or chatbots can replace search engines. Try raising the above question to ChatGPT and provide snapshot of the response.
+
+## Introduction
+
+ChatGPT is an advanced AI language model developed by OpenAI, designed specifically for conversational language and capable of generating responses in a way that mimics human conversation.
+
+However, it is not a search engine and is primarily designed to function as a chatbot, engaging in conversations with users and providing contextually relevant information. On the other hand, search engines are designed to provide users with a list of links and resources related to their search queries, helping users navigate vast amounts of information efficiently.
+
+ChatGPT is built on large-scale language models that uses neural networks to process sequential data. It focuses on predicting the next word in a sequence based on previous words, generating coherent and contextually correct responses. In contrast, search engines use algorithms like web crawlers, indexers, and ranking systems, to organize and deliver relevant search results to users.
+
+ChatGPT is trained on large datasets of text from the internet and learns from patterns and relationships between words and phrases. In contrast, search engines, rely on algorithms like PageRank that consider factors such as the quality and quantity of backlinks to a webpage, content relevance, and user feedback to rank and display search results.
+
+## Use Cases
+
+Chatbots like ChatGPT are best suited for applications where human-like interaction is required, for example customer support or virtual assistants. Users can ask questions, request for information, or provide prompts to obtain the information they require. In contrast, search engines, serve as a user interface to the internet, where users input their search queries, and retrieve a list of websites, articles, images, and other content relevant to their requirements.
+
+## How ChatGPT works
+
+ChatGPT uses deep learning techniques to generate human-like text. It is based on large-scale language models and incorporates some techniques from Instruct GPT, which had introduced  strategies for integrating human feedback into the training process, aligning model outputs with human expectations. It is trained on large data sets of text from the internet and learns from the patterns and relationships between words and phrases. When responding to prompts, it predicts and determines the next word based on the context, repeating this process until a stop condition is met. As a result, it is able to produce coherent, logical, and ‘complete’ responses to user queries and prompts. The core components of ChatGpt are the Transformer model and Language models.
+
+The Transformer model is a neural network architecture designed to process sequential data, consisting of multiple layers of self-attention and a feed forward network. After processing an input, a decoder generates an output using the context provided by the encoder to generate a response. The model is first trained using unsupervised learning and then fine-tuned on specific tasks by using supervised learning. For successful completion of tasks, pre-trained data is required. The model first encodes the input text and then converts it to a numerical representation which is then processed by the model’s neural network. This encoding is performed using embedding layers that maps words to their corresponding numerical representations.
+
+ChatGpt is trained as a language model to predict the next word in a sequence of given previous words. This model is intended to produce rational, consistent, and meaningful output. Pre-trained ChatGPT can be tuned for a specific task and passes a fine-tuning test by answering questions generating text summaries or text in response to queries.
+
+## Can ChatGPT or chatbots replace Search Engines?
+
+Both chatbots and search engines serve distinct purposes. However, their respective strengths and weaknesses could complement each other when used together.
+
+### Efficiency and Scope of Search
+
+Search engines provide users with a list of multiple websites, articles, research papers, news, images, and other content relevant to their queries. Users can choose the most relevant source of information they require. In contrast, chatbots, may not be able to provide a comprehensive list of information and would only provide a more conversational response, which is insufficient considering the breadth of information available.
+
+However, the breath of information provided by search engines may be overwhelming for a normal user who would need to comb each information source in order to obtain the relevant information he/she requires. In this instance, chatbots can help to narrow the scope of the search, recommending specific key words, helping the user refine his search better. When used in combination, both tools can function as a search engine optimization tool which helps users communicate their ideas and intent better in order to enhance the quality of search results, he/she gets.
+
+For example, in the screenshot below, Microsoft has introduced OpenAI’s chat AI to the new Bing interface. Not only does Bing analyse user queries and outputs a conversational dialogue, but it also combines search to list relevant websites and links and prompts the user to further expand or refine his search queries through text prompts in order to continue the conversation.
+
+![Screenshot: Microsoft's new Bing interface](images/clipboard-3767940.png){fig-align="left"}
+
+### Accuracy and Up-to-date information
+
+Search engines are designed to provide up-to-date and accurate information by constantly crawling and indexing the web. On the other hand, Chatbots are limited by their training data and may produce incorrect or outdated information.
+
+For example, ChatGPT’s training data is only up to September 2021 (as per screenshot below) and is therefore not able to provide accurate and up to date responses to queries. In contrast, search engines, are better equipped to provide up-to-date and accurate information as they are not limited to outdated training data sets.
+
+![Screenshot: ChatGPT's training data is limited to September 2021](images/clipboard-1385842835.png){fig-align="left"}
+
+### Query Complexity and Ambiguity
+
+Chatbots can struggle with complex or ambiguous queries. Search engines may still return a set of results, albeit irrelevant results; that can at least help the user refine or rethink their search approaches.
+
+For example, if a user searches for “Mars” without specifying whether they are looking for information on the planet or the Chocolate bar, a search engine would return both type of results. In contrast, a chatbot, may need further clarification before providing a relevant response.
+
+According to OpenAI, ChatGPT can also sometimes return incorrect answers that could sound convincing. This is due to its limitations during the Reinforced Learning stage where there was no source of truth referenced. Similarly, ChatGPT is also sensitive to changes in the text inputs from users, claiming to not know some answers, but answering them correctly once users change their inputs or asks their questions in a different way.
+
+**In conclusion**, although chatbots like ChatGPT have made significant progress, they are unlikely to replace search engines due to their design, use cases, and limitations. Instead, chatbots and search engines can complement each other, offering users a more comprehensive and interactive experience just like the new Bing search engine from Microsoft.
+
+![Screenshot: Raising the above question to ChatGPT](images/clipboard-3474510505.png){fig-align="left"}
+
+## References
+
+*Introducing ChatGPT*. (n.d.). <https://openai.com/blog/chatgpt>
+
+Ortiz, S. (2023, March 23). *What is ChatGPT and why does it matter? Here’s what you need to know*. ZDNET. <https://www.zdnet.com/article/what-is-chatgpt-and-why-does-it-matter-heres-everything-you-need-to-know/>
+
+Ruby, M. (2023, March 4). *How ChatGPT Works: The Model Behind The Bot - Towards Data Science*. Medium. <https://towardsdatascience.com/how-chatgpt-works-the-models-behind-the-bot-1ce5fca96286>

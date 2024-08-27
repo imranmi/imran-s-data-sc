@@ -184,10 +184,7 @@ For these IoT devices, the Elliptic Curve Cryptography (ECC) scheme called ECDSA
 
 Similarly, standard hash functions used in blockchain like KECCAK-256 or SHA-256 may not be appropriate for use by IoT devices due to its heavy computational load and power requirements. Instead, lighter hash algorithms like AES-hash could be used by IoT devices due to its lower power requirements.
 
-In a Blockchain system, anonymity is implied but not assured. Devices and participants in the network can be identified by their public key or their hash. This is particularly concerning for IoT devices as these devices store and transmit sensitive pertaining to the asset and asset owners/users. A consortium blockchain with only invited participants would address these concerns with a central authority limiting participation to only authorized participants. However, there could also be instances where an attacker could disguise itself as the central authority. This problem
-could be addressed by requiring the central authority to execute a smart
-contract to add any new node. This can be followed by a consensus requirement
-by all nodes for all any changes to be effective.
+In a Blockchain system, anonymity is implied but not assured. Devices and participants in the network can be identified by their public key or their hash. This is particularly concerning for IoT devices as these devices store and transmit sensitive pertaining to the asset and asset owners/users. A consortium blockchain with only invited participants would address these concerns with a central authority limiting participation to only authorized participants. However, there could also be instances where an attacker could disguise itself as the central authority. This problem could be addressed by requiring the central authority to execute a smart contract to add any new node. This can be followed by a consensus requirement by all nodes for all any changes to be effective.
 
 ## Consensus Mechanism
 
@@ -219,10 +216,7 @@ The use of ring signatures allows participants to hide in a crowd by masking the
 
 ### Zero Knowledge Proofs in verification process
 
-Zero Knowledge proofs (ZKPs) offer participants anonymity for their
-identities and transactions. This is because ZKPs do not require the actual
-sharing of the transaction or identity data when verifying transactions. Participants
-can post proofs that confirm the validity of their identity and transactions through a means of challenge and proof function. Here, participants provide proof on the authenticity of their credentials and transactions without divulging additional information about themselves and their activities.
+Zero Knowledge proofs (ZKPs) offer participants anonymity for their identities and transactions. This is because ZKPs do not require the actual sharing of the transaction or identity data when verifying transactions. Participants can post proofs that confirm the validity of their identity and transactions through a means of challenge and proof function. Here, participants provide proof on the authenticity of their credentials and transactions without divulging additional information about themselves and their activities.
 
 Rather than interactive ZKPs which comprises of repetitive witness, challenge and response interactions between provers and verifiers, in a consortium blockchain with pre-approved participants, a one-time Non-Interactive Zero Knowledge proof (NIZKP) process can be implemented to satisfy validators within one exchange.
 

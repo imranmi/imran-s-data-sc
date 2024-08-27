@@ -76,6 +76,8 @@ website:
             href: Article-ex/Article-Ex8/Article_Ex8.html
           - text: Assignment 9 - Quantum Computing - Mean-Variance Portfolio Optimization    
             href: Article-ex/Article-Ex9/Article_Ex9.html
+          - text: Assignment 10 - Can ChatGPT or chatbots replace Search Engines?    
+            href: Article-ex/Article-Ex14/Article_Ex14.html  
       - text: Fintech Projects 
         menu:
           - text: Project 1 - Quantum Computing - Portfolio Optimisation using Hybrid Algorithm    
