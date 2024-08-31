@@ -16,10 +16,22 @@ execute:
 
 ![](images/ISSS608_AY2023-24-G1-Group05-PosterDraft-300324-1138PM.jpg)
 
-# Website
+# Project Website
 
 <https://decoding-chaos.netlify.app/>
 
-# Shiny app user guide
+# Shiny Application Story board
+
+<https://decoding-chaos.netlify.app/prototype/storyboard/storyboard>
+
+# Shiny Application user guide
 
 <https://decoding-chaos.netlify.app/RShiny/UserGuide.pdf>
+
+# Shiny Application links - Individual modules
+
+1.  Aspatial Analysis by Teo Suan Earn: <https://imran-mi.shinyapps.io/Group5VAA-Decoding-Chaos-Aspatial/>
+
+2.  Geospatial Analysis by Imran Ibrahim: <https://imran-mi.shinyapps.io/Group5VAA-Decoding-Chaos-Geospatial/>
+
+3.  Confirmatory Analysis by Zachary Wong: <https://imran-mi.shinyapps.io/Group5VAA-Decoding-Chaos-Confirmatory/>
