@@ -30,7 +30,7 @@ execute:
 
 # Shiny Application links - Individual modules
 
-1.  Aspatial Analysis by Teo Suan Earn: <https://imran-mi.shinyapps.io/Group5VAA-Decoding-Chaos-Aspatial/>
+1.  Aspatial Analysis by Teo Suan Ern: <https://imran-mi.shinyapps.io/Group5VAA-Decoding-Chaos-Aspatial/>
 
 2.  Geospatial Analysis by Imran Ibrahim: <https://imran-mi.shinyapps.io/Group5VAA-Decoding-Chaos-Geospatial/>
 
