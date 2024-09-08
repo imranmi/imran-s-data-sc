@@ -241,37 +241,37 @@ The Ubin V Payment Network is the fifth and most recent phase of Project Ubin, a
 
 ## 6.4 Phase 5 commercial use cases 
 
-### Case Study 1
+### Case Study 1 - Private securities exchange
 
-![Case Study 1](images/clipboard-3213318520.png){fig-align="left"}
+![](images/clipboard-3213318520.png){fig-align="left"}
 
 Case study 1 showcases how a private securities exchange can use the functionality offered by the Ubin payments network to enable the atomic DvP of private securities and corresponding payments between buyers and sellers. 1exchange, which was granted its Recognised Market Operator licence by MAS in December 2018, is the country’s first regulated stock exchange for the trading of Singaporean private companies’ securities. Investors who trade in private securities listed on the platform will have digital representations of their shareholdings created and registered via smart contracts on a public blockchain network.
 
-### Case Study 2
+### Case Study 2 - Tokenised bonds and payments
 
-![Case Study 2](images/clipboard-3268936393.png){fig-align="left"}
+![](images/clipboard-3268936393.png){fig-align="left"}
 
 Case Study 2 demonstrates how the functionality offered by the Ubin payments network could be used to enable the atomic DvP of tokenised bonds and payments. STACS has developed a securities trading asset clearing and settlement platform based on blockchain technology, which financial institutions can use for the issuance and lifecycle management of digital securities. Specifically, this case study models the origination of a bond on the platform, whereby an investment bank can issue bonds on behalf of a company on the platform and can accept payment of funds from the Ubin payments network. Investors would refer to other banks looking to purchase bonds on behalf of their clients, using funds in the Ubin payments network.
 
-### Case Study 3
+### Case Study 3 - Cross border settlement of digital securities and dividends
 
-![Case Study 3](images/clipboard-2890731440.png){fig-align="left"}
+![](images/clipboard-2890731440.png){fig-align="left"}
 
 Sygnum Bank AG (Sygnum) has provided two case studies that could be involved in the Ubin payments network. These are cross-border settlement of a digital security transaction in the primary market, and cross-border dividend payment using digital currencies. Integrating with the Ubin payments network will bring quicker settlement of digital securities, as clearing is conducted real-time on-chain.
 
 Moreover, the conditional payment functionality on the Ubin payments network will allow dividend payments to be released based on certain conditions such as time or percentage of shareholding, thereby reducing manual processes while increasing the speed of payment.
 
-### Case Study 4
+### Case Study 4 - Trade document exchange and payments processing
 
-![Case Study 4](images/clipboard-2736075388.png){fig-align="left"}
+![](images/clipboard-2736075388.png){fig-align="left"}
 
-Digital Ventures, a subsidiary of Siam Commercial Bank, has developed a platform called Blockchain for Procure-to-Pay (B2P) to enable trade document exchanges with automated document verification and payment processing. This platform9 improves process efficiency and delivers cost savings to buyers; it also provides sellers with easier and faster access to supply chain financing.
+Digital Ventures, a subsidiary of Siam Commercial Bank, has developed a platform called Blockchain for Procure-to-Pay (B2P) to enable trade document exchanges with automated document verification and payment processing. This platform improves process efficiency and delivers cost savings to buyers; it also provides sellers with easier and faster access to supply chain financing.
 
 The B2P platform was integrated with the Ubin payments network to facilitate supply chain trading and financing. Buyers, sellers and banks exchange trade documents over the platform, with payments settled through the Ubin payments network. This integration shows the potential for achieving more efficient means of cross border, single-currency settlement.
 
-### Case Study 5
+### Case Study 5 - Supply Chain finance
 
-![Case Study 5](images/clipboard-1533475599.png){fig-align="left"}
+![](images/clipboard-1533475599.png){fig-align="left"}
 
 Case study 5 explores how the Ubin conditional payment functionality may be used by Crediti, a Singapore-headquartered blockchain-enabled trade credit and supply chain financing platform that engages non-bank institutional capital as an alternative source of funding to SMEs seeking finance.
 
@@ -279,25 +279,25 @@ Every exposure is tokenised and recorded in an immutable registry, which prevent
 
 In this case study, it is assumed that a seller requests financing on the platform by transferring the bill of lading, which serves as a document of title to a commoditised product, to the lender.
 
-### Case Study 6
+### Case Study 6 - Healthcare claims
 
-![Case Study 6](images/clipboard-3558509744.png){fig-align="left"}
+![](images/clipboard-3558509744.png){fig-align="left"}
 
 Digital Asset helps enterprises design, create, and run the next generation of distributed ledger applications using Digital Asset Modelling Language (DAML), an intuitive, open-source, smart contract programming language. The firm has developed a prototype for a proposed healthcare claims application, which is modelled on the lifecycle of a hospitalisation claim in Singapore involving a patient, a hospital, a private insurer and a national health insurer.
 
 The interactions between the parties are tracked as ledger events and governed by DAML smart contracts. The application integrates with the Ubin payments network for balance enquiries and the transfer of payments.
 
-### Case Study 7
+### Case Study 7 - Payments for programmatic Advertising
 
-![Case Study 7](images/clipboard-2313275786.png){fig-align="left"}
+![](images/clipboard-2313275786.png){fig-align="left"}
 
 Aqilliz has developed a product, Proton, which leverages on the Zilliqa platform to streamline the digital supply chain of programmatic advertising by connecting multiple parties on a single platform. This network could be integrated with the Ubin payments network to better facilitate the payment process.
 
 The current model looks at the net settlement via the Ubin payments network. However, if the Ubin payments network supports cheap and fast micropayments, the amount payable may be automatically calculated and payment be made directly via the Ubin payments network.
 
-### Case Study 8
+### Case Study 8 - Salary payments
 
-![Case Study 8](images/clipboard-1185795566.png){fig-align="left"}
+![](images/clipboard-1185795566.png){fig-align="left"}
 
 Octomate provides a blockchain-based HR payments solution that allows real-time, accurate salary payments for gig workers and organisations upon work completion. In Adecco’s case, workers and companies can view and track work done on a front-end application. Once the gig workers complete their assignments, the payments are released automatically. To ensure completeness in the process, these platforms can be integrated with bank payment platforms to allow for seamless transactions and the release of payments.
 
@@ -307,9 +307,9 @@ These pre-defined agreements are recorded on Octomate’s platform, with smart c
 
 ## 6.5 Key Insights
 
-The success of Phase 5 highlighted the potential for blockchain technology to revolutionize cross-border payments and settlements. The prototype demonstrated that blockchain can enable faster, cheaper, and more secure transactions, with the ability to transact in multiple currencies. Additionally, the collaboration between MAS and financial institutions showed that the development of blockchain solutions requires a collaborative approach. The partnership between the public and private sectors was crucial to the success of the project.
+The success of Phase 5 highlighted the potential for blockchain technology to revolutionize domestic and cross-border payments and settlements. The prototype demonstrated that blockchain can enable faster, cheaper, and more secure transactions, with the ability to transact in multiple currencies. Additionally, the collaboration between MAS and financial institutions showed that the development of blockchain solutions requires a collaborative approach. The partnership between the public and private sectors was crucial to the success of the project.
 
-## 6.6 Lessons Learnt
+### Lessons Learnt
 
 The development of Phase 5: Ubin V Payment Network has provided several important lessons for the financial industry and for the development of blockchain-based solutions in general. Some of the key lessons learned from the Ubin V Payment Network include:
 
