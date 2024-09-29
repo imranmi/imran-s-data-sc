@@ -18,7 +18,7 @@ Project Ubin was a multi-year collaborative project conducted by the Monetary Au
 
 Announced in Nov 2016, the project aims to help MAS and the industry better understand the technology and its potential benefits through practical experimentation. This report aims to provide a summary of the 5 phases of Project Ubin and shed light on the insights gained and lessons learnt in each phase and overall.
 
-# 2. Phase 1 - Exploring the potential of Blockchain 
+# 2. Phase 1 - Exploring the potential of Blockchain
 
 Project Ubin was conceived as an opportunity for Singapore to take a leading role in the research on DLT and Central Bank Digital Currencies (CBDCs). In Phase 1, the project assessed the technical feasibility of using a tokenised form of the Singapore Dollar (SGD) issued by the central bank for inter-bank payments and settlement on a distributed ledger.
 
@@ -70,7 +70,7 @@ The prototypes were developed to address 6 key criteria: Decentralised processin
 
 Phase 2 revolves around the optimized netting of payments while preserving transactional privacy. Current Real-Time Gross Settlement (RTGS) systems operate on centralized infrastructure which risk being a single point of failure. It was hoped that DLT could be used as a means to remedy this situation and enable a payments system robust enough to process large volumes of transactions seamlessly while also being able to reduce liquidity gridlocks. The capability to resolve gridlocks is termed as Liquidity Saving Mechanism (LSM). The prospect of a distributed platform also opens doors for a “24/7 Singapore”, which can be beneficial for continuous trade with the global economy.
 
-## 3.2 Key Findings for Phase 2 
+## 3.2 Key Findings for Phase 2
 
 Phase 2 was announced as a success when all three prototypes proved to be capable of gridlock resolution. Corda developed a new cycle-based algorithm called “Cycle-solver”, where netting cycles are identified and optimized. On the other hand, both Hyperledger and Quorum used the EAF2 algorithm to detect and identify gridlock resolutions.
 
@@ -128,8 +128,7 @@ On the other hand, DLT systems could bring about significant efficiencies in tra
 
 Phase 4 takes Project Ubin beyond Singapore shores and saw a cross-jurisdictional collaboration between the Bank of Canada (BoC), the Bank of England (BoE), and MAS to focus on enhancing cross-border payments and settlements by exploring alternative models for processing cross-border transactions.
 
-This phase was also supported by financial institutions like HSBC, Overseas-Chinese Banking Corporation (OCBC), the Toronto-Dominion Bank (TD), United Overseas Bank (UOB) and Payments Canada. This project was built on top
-of previous projects such as Project Jasper by the BoC and Project Ubin’s earlier phases.
+This phase was also supported by financial institutions like HSBC, Overseas-Chinese Banking Corporation (OCBC), the Toronto-Dominion Bank (TD), United Overseas Bank (UOB) and Payments Canada. This project was built on top of previous projects such as Project Jasper by the BoC and Project Ubin’s earlier phases.
 
 ## 5.1 Phase 4 Objectives
 
@@ -175,7 +174,7 @@ The following are some of the learnings with regards to each model’s benefits 
 
 ![Model 3c: Universal W-CBDC Backed by A Basket of Currencies and Accepted By All Participating Jurisdictions](images/clipboard-3135392951.png){fig-align="left"}
 
-## 5.3 Beyond Lessons -  Proof of Concept
+## 5.3 Beyond Lessons - Proof of Concept
 
 Riding on the learnings from Project Jasper and Project Ubin, the Bank of Canada (BoC) and Monetary Authority of Singapore (MAS) collaborated to test the hypothesis that DLT could enable greater efficiencies and reduce risks in cross-border payments and settlements. They explored the architecture that supported Models 3a, 3b and 3c, to uncover the technical challenges while implementing these models.
 
@@ -239,7 +238,7 @@ The Ubin V Payment Network is the fifth and most recent phase of Project Ubin, a
 
 ![Fig 5.2: Technical Architecture Diagram (Monetary Authority of Singapore, 2021).](images/clipboard-3733300207.png){fig-align="left"}
 
-## 6.4 Phase 5 commercial use cases 
+## 6.4 Phase 5 commercial use cases
 
 ### Case Study 1 - Private securities exchange
 
