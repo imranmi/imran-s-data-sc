@@ -89,7 +89,9 @@ website:
           - text: Project 4 - Emerging Fintech Trends in Indonesia    
             href: Article-ex/Article-Ex13/Article_Ex13.html
           - text: Project 5 - Project Ubin - An analysis of Phases 1-5    
-            href: Article-ex/Article-Ex15/Article_Ex15.html  
+            href: Article-ex/Article-Ex15/Article_Ex15.html
+          - text: Project 6 - Smart Contracts Security    
+            href: Article-ex/Article-Ex16/Article_Ex16.html
 format:
   html:
     theme: 
