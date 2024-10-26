@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Imran Ibrahim, Kanyapak Buathang, Lim Jia Jia, Steven Liman, Kiora">
+<meta name="dcterms.date" content="2024-10-26">
+
+<title>Smart Contracts and their Security: Insights and Lessons – Imran’s Postgrad repo</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Imran’s Postgrad repo</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-exercises-in-r" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Exercises in R</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises-in-r">    
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex1/R_Ex1.html">
+ <span class="dropdown-text">R Exercise 1 - Analysing PISA’s education survey data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex2/R_Ex2.html">
+ <span class="dropdown-text">R Exercise 2 - 5 Exploratory Data Analyses on Pisa Data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex3/R_Ex3.html">
+ <span class="dropdown-text">R Exercise 3 - DataVis Makeover of another student’s work</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex4/R_Ex4.html">
+ <span class="dropdown-text">R Exercise 4 - Be Weatherwise or Otherwise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex5/R_Ex5.html">
+ <span class="dropdown-text">R Exercise 5 - Visual Analytics exercise on Armed conflicts</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex6/R_Ex6.html">
+ <span class="dropdown-text">R Exercise 6 - Geospatial 1- Local Measures of Spatial Autocorrelation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex7/R_Ex7.html">
+ <span class="dropdown-text">R Exercise 7 - Geospatial 2 - Emerging Hot Spot Analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex8/R_Ex8.html">
+ <span class="dropdown-text">R Exercise 8 - Geospatial 3 - Spatially Constrained Clustering</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex9/R_Ex9.html">
+ <span class="dropdown-text">Group Project Poster - Analysing Armed conflicts in Myammar</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-exercises-in-python" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Exercises in Python</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises-in-python">    
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex1/Python_Ex1.html">
+ <span class="dropdown-text">Python Exercise 1 - Automating a 3-stocks portfolio</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex2/Python_Ex2.html">
+ <span class="dropdown-text">Python Exercise 2 - Designing a 3-stock portfolio for a robo-advisor</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex3/Python_Ex3.html">
+ <span class="dropdown-text">Python Project - Predicting Stock Prices with Time series Analysis</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-sas-viya-exercises" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">SAS Viya Exercises</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-sas-viya-exercises">    
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex1/Write_Ex1.html">
+ <span class="dropdown-text">Assignment 1 - Show me the numbers</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex2/Write_Ex2.html">
+ <span class="dropdown-text">Assignment 2 - Be Customer wise or otherwise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex3/Write_Ex3.html">
+ <span class="dropdown-text">Project - Loan Default prediction</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex4/Write_Ex4.html">
+ <span class="dropdown-text">Project Poster - Loan Default prediction</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fintech-assignments" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Fintech Assignments</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-fintech-assignments">    
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex1/Article_Ex1.html">
+ <span class="dropdown-text">Assignment 1 - Factors contributing to the rise of Fintech companies</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex2/Article_Ex2.html">
+ <span class="dropdown-text">Assignment 2 - How Banks have changed the way they deploy technology</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex3/Article_Ex3.html">
+ <span class="dropdown-text">Assignment 3 - How the role of financial regulators has evolved</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex4/Article_Ex4.html">
+ <span class="dropdown-text">Assignment 4 - Key characteristics that create or inject value for a NFT</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex5/Article_Ex5.html">
+ <span class="dropdown-text">Assignment 5 - Bitcoin - Examining a Layer 1 &amp; 2 solution</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex6/Article_Ex6.html">
+ <span class="dropdown-text">Assignment 6 - Examining the working principles and the future of DeFi</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex7/Article_Ex7.html">
+ <span class="dropdown-text">Assignment 7 - Design considerations for a CBDC project</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex8/Article_Ex8.html">
+ <span class="dropdown-text">Assignment 8 - Consortium blockchain for Finance lease use case</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex9/Article_Ex9.html">
+ <span class="dropdown-text">Assignment 9 - Quantum Computing - Mean-Variance Portfolio Optimization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex14/Article_Ex14.html">
+ <span class="dropdown-text">Assignment 10 - Can ChatGPT or chatbots replace Search Engines?</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fintech-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Fintech Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-fintech-projects">    
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex10/Article_Ex10.html">
+ <span class="dropdown-text">Project 1 - Quantum Computing - Portfolio Optimisation using Hybrid Algorithm</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex11/Article_Ex11.html">
+ <span class="dropdown-text">Project 2 - Integrated IOT Data for Sustainability Use Case</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex12/Article_Ex12.html">
+ <span class="dropdown-text">Project 3 - Data Quality as the Key enabler of Innovation and Digitisation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex13/Article_Ex13.html">
+ <span class="dropdown-text">Project 4 - Emerging Fintech Trends in Indonesia</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex15/Article_Ex15.html">
+ <span class="dropdown-text">Project 5 - Project Ubin - An analysis of Phases 1-5</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex16/Article_Ex16.html">
+ <span class="dropdown-text">Project 6 - Smart Contracts Security</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="../../about.html" title="About Imran" class="quarto-navigation-tool px-1" aria-label="About Imran"><i class="bi bi-house-heart"></i></a>
+    <a href="https://github.com/imranmi/imran-s-data-sc" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/imran-ibrahim-116a236b" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a></li>
+  <li><a href="#background-of-smart-contracts" id="toc-background-of-smart-contracts" class="nav-link" data-scroll-target="#background-of-smart-contracts">2. Background of Smart Contracts</a>
+  <ul class="collapse">
+  <li><a href="#what-are-smart-contracts" id="toc-what-are-smart-contracts" class="nav-link" data-scroll-target="#what-are-smart-contracts">2.1 What are Smart Contracts?</a></li>
+  <li><a href="#how-does-it-work" id="toc-how-does-it-work" class="nav-link" data-scroll-target="#how-does-it-work">2.2 How does it work?</a></li>
+  <li><a href="#key-features-of-smart-contracts" id="toc-key-features-of-smart-contracts" class="nav-link" data-scroll-target="#key-features-of-smart-contracts">2.3 Key Features of Smart Contracts:</a></li>
+  <li><a href="#evolution-of-smart-contracts" id="toc-evolution-of-smart-contracts" class="nav-link" data-scroll-target="#evolution-of-smart-contracts">2.4 Evolution of Smart contracts</a></li>
+  <li><a href="#ethereums-architecture-high-level" id="toc-ethereums-architecture-high-level" class="nav-link" data-scroll-target="#ethereums-architecture-high-level">2.5 Ethereum’s Architecture (High-Level)</a></li>
+  </ul></li>
+  <li><a href="#benefits-and-challenges" id="toc-benefits-and-challenges" class="nav-link" data-scroll-target="#benefits-and-challenges">3. Benefits and Challenges</a>
+  <ul class="collapse">
+  <li><a href="#top-10-smart-contract-vulnerabilities" id="toc-top-10-smart-contract-vulnerabilities" class="nav-link" data-scroll-target="#top-10-smart-contract-vulnerabilities">3.1 Top 10 Smart Contract Vulnerabilities</a></li>
+  <li><a href="#how-many-vulnerable-contracts-remain" id="toc-how-many-vulnerable-contracts-remain" class="nav-link" data-scroll-target="#how-many-vulnerable-contracts-remain">​3.2 How many vulnerable contracts remain?</a></li>
+  </ul></li>
+  <li><a href="#internal-vulnerabilities-of-smart-contracts" id="toc-internal-vulnerabilities-of-smart-contracts" class="nav-link" data-scroll-target="#internal-vulnerabilities-of-smart-contracts">4. Internal Vulnerabilities of Smart contracts</a></li>
+  <li><a href="#lessons-from-major-smart-contract-hacks" id="toc-lessons-from-major-smart-contract-hacks" class="nav-link" data-scroll-target="#lessons-from-major-smart-contract-hacks">5. Lessons from major Smart Contract hacks</a>
+  <ul class="collapse">
+  <li><a href="#dao-hack-2016" id="toc-dao-hack-2016" class="nav-link" data-scroll-target="#dao-hack-2016">5.1 DAO Hack (2016)</a></li>
+  <li><a href="#parity-multi-sig-wallet-hack-2017" id="toc-parity-multi-sig-wallet-hack-2017" class="nav-link" data-scroll-target="#parity-multi-sig-wallet-hack-2017">5.2 Parity Multi-Sig Wallet Hack (2017)</a></li>
+  </ul></li>
+  <li><a href="#external-vulnerabilities-oracles-and-data-dependencies" id="toc-external-vulnerabilities-oracles-and-data-dependencies" class="nav-link" data-scroll-target="#external-vulnerabilities-oracles-and-data-dependencies">6. External Vulnerabilities: Oracles and Data Dependencies</a>
+  <ul class="collapse">
+  <li><a href="#oracles---security-measures" id="toc-oracles---security-measures" class="nav-link" data-scroll-target="#oracles---security-measures">6.1 Oracles - Security Measures</a></li>
+  </ul></li>
+  <li><a href="#smart-contract-privacy-issues" id="toc-smart-contract-privacy-issues" class="nav-link" data-scroll-target="#smart-contract-privacy-issues">7. Smart Contract Privacy issues</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">8. Conclusion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">9. References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Smart Contracts and their Security: Insights and Lessons</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Imran Ibrahim, Kanyapak Buathang, Lim Jia Jia, Steven Liman, Kiora </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 26, 2024</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">October 27, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1">
+<h1>1. Introduction</h1>
+<p>In recent years, blockchain technology has garnered significant attention for its potential to revolutionize various industries, and at the core of this revolution lies smart contracts. These self-executing contracts offer numerous advantages, such as efficiency and automation, while reducing the need for intermediaries.</p>
+<p>However, as with any technology, smart contracts come with their own set of security challenges that must be addressed to ensure their safe and reliable use. This report delves into the technical workings of smart contracts, their vulnerabilities, and the lessons learned from significant security breaches in the decentralized finance (DeFi) space.</p>
+</section>
+<section id="background-of-smart-contracts" class="level1">
+<h1>2. Background of Smart Contracts</h1>
+<section id="what-are-smart-contracts" class="level3">
+<h3 class="anchored" data-anchor-id="what-are-smart-contracts">2.1 What are Smart Contracts?</h3>
+<p>Smart contracts are digital agreements that are written in code and automatically executed when predefined conditions are met. They operate on blockchain platforms, with Ethereum being one of the most prominent.</p>
+<p>Unlike traditional contracts, smart contracts eliminate the need for intermediaries such as banks or lawyers, offering a self-governing mechanism that executes and enforces the agreement between parties.</p>
+<p>The decentralized nature of blockchain ensures that smart contracts are tamper-resistant, with their execution and verification distributed across numerous nodes. This increases trust in the system, as no single entity can alter the contract’s terms once deployed.</p>
+</section>
+<section id="how-does-it-work" class="level3">
+<h3 class="anchored" data-anchor-id="how-does-it-work">2.2 How does it work?</h3>
+<p><img src="images/clipboard-3134190363.png" class="img-fluid"></p>
+</section>
+<section id="key-features-of-smart-contracts" class="level3">
+<h3 class="anchored" data-anchor-id="key-features-of-smart-contracts">2.3 Key Features of Smart Contracts:</h3>
+<ul>
+<li><p><strong>Self-execution</strong>: Terms are executed when the conditions coded into the contract are met.</p></li>
+<li><p><strong>Irreversibility</strong>: Once a contract is deployed on the blockchain, it cannot be modified.</p></li>
+<li><p><strong>Transparency</strong>: All parties can see the contract and its execution, which is public in nature.</p></li>
+</ul>
+<p>Despite these advantages, the immutability and transparency of smart contracts introduce security concerns, especially when bugs or malicious exploits are discovered.</p>
+</section>
+<section id="evolution-of-smart-contracts" class="level3">
+<h3 class="anchored" data-anchor-id="evolution-of-smart-contracts">2.4 Evolution of Smart contracts</h3>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3218363499.png" class="img-fluid figure-img"></p>
+<figcaption>Timeline of Smart Contracts - from conception to adoption</figcaption>
+</figure>
+</div>
+<p>Smart contracts gained widespread attention with the launch of Ethereum in 2015, which provided a flexible and programmable platform for developers. Unlike Bitcoin’s limited scripting language, Ethereum allowed developers to write Turing-complete programs, enabling the creation of decentralized applications (dApps).</p>
+</section>
+<section id="ethereums-architecture-high-level" class="level3">
+<h3 class="anchored" data-anchor-id="ethereums-architecture-high-level">2.5 Ethereum’s Architecture (High-Level)</h3>
+<p>Ethereum’s architecture is pivotal for smart contract functionality. It consists of:</p>
+<ol type="1">
+<li><p><strong>Blocks</strong>: Store transaction records and smart contracts.</p></li>
+<li><p><strong>Consensus Layer</strong>: Ensures that contract outcomes are consistent and validated across the network.</p></li>
+<li><p><strong>Smart Contracts</strong>: Self-executing contracts with the agreement terms directly written into code.</p></li>
+<li><p><strong>Miners</strong>: Validate and incorporate smart contract transactions to the blockchain.</p></li>
+<li><p><strong>Transaction Pool</strong>: A queue where unprocessed transactions are waiting to be validated.</p></li>
+<li><p><strong>Node</strong>: Each node can execute smart contracts and verify outcomes independently.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2575731030.png" class="img-fluid figure-img"></p>
+<figcaption>Ethereum’s Architecture. Source: Mastering Ethereum (Andreas Antonopolous, Gavin Wood, 2018)​</figcaption>
+</figure>
+</div>
+<p>The decentralized execution and trustless environment of smart contracts are one of Ethereum’s unique selling points, but the complexity of the system has also exposed numerous vulnerabilities.</p>
+</section>
+</section>
+<section id="benefits-and-challenges" class="level1">
+<h1>3. Benefits and Challenges</h1>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3708370054.png" class="img-fluid figure-img"></p>
+<figcaption>Purported benefits of Smart Contracts</figcaption>
+</figure>
+</div>
+<p>Smart contracts offer several advantages, including:</p>
+<ul>
+<li><p><strong>Automation</strong>: Once deployed, smart contracts automatically execute based on the logic embedded within them.</p></li>
+<li><p><strong>Cost Efficiency</strong>: By eliminating intermediaries, smart contracts reduce transaction costs.</p></li>
+<li><p><strong>Trustless Agreements</strong>: Parties do not need to trust each other, as the blockchain enforces the contract.</p></li>
+</ul>
+<p><u><strong>However</strong></u>, smart contracts can also pose significant security challenges. These include coding errors, external dependencies (e.g., oracles for off-chain data), and a lack of privacy in public blockchains. The inability to modify or update smart contracts once deployed can also lead to catastrophic failures if bugs or security holes are found.</p>
+<section id="top-10-smart-contract-vulnerabilities" class="level3">
+<h3 class="anchored" data-anchor-id="top-10-smart-contract-vulnerabilities">3.1 Top 10 Smart Contract Vulnerabilities</h3>
+<p>According to the Open Worldwide Application Security Project (OWASP), an organization dedicated to software security, the top 10 smart contract vulnerabilities are:​</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3327926118.png" class="img-fluid figure-img"></p>
+<figcaption>The Top 10 Smart Contract Vulnerabilities. Source: OWASP</figcaption>
+</figure>
+</div>
+</section>
+<section id="how-many-vulnerable-contracts-remain" class="level3">
+<h3 class="anchored" data-anchor-id="how-many-vulnerable-contracts-remain">​3.2 How many vulnerable contracts remain?</h3>
+<p>As mentioned previously, smart contracts are irreversible and cannot be rectified unilaterally upon deployment. Hence we have also examined research that sought to assess how many vulnerable contracts have been deployed and continue to remain in the various blockchains.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3639623171.png" class="img-fluid figure-img"></p>
+<figcaption>3 seperate studies have identified vulnerable contracts using smart contract audit tools like Oyente, Maian and Zeus.​</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="internal-vulnerabilities-of-smart-contracts" class="level1">
+<h1>4. Internal Vulnerabilities of Smart contracts</h1>
+<p>One of the biggest challenges facing smart contracts is their inherent coding vulnerabilities. These arise from human error, lack of awareness about blockchain mechanisms, or oversights in logic.</p>
+<p>Below are some key internal vulnerabilities:</p>
+<ul>
+<li><p><strong>Reentrancy Attacks</strong>: Reentrancy is one of the most notorious vulnerabilities, as demonstrated in the 2016 DAO hack, where attackers exploited the recursive nature of Ethereum smart contracts. By repeatedly calling a function before the balance was updated, they were able to drain funds, leading to a loss of over $150 million in Ether.</p>
+<p><strong>Solution</strong>: One way to mitigate this is through the introduction of the <code>REVERT</code> opcode in Ethereum, which halts contract execution if errors occur, along with gas refund mechanisms.</p></li>
+<li><p><strong>Arithmetic Overflows</strong>: The PoWH Coin Ponzi scheme suffered from an overflow bug, allowing an attacker to exploit fixed-size data types. The vulnerability stemmed from the limitation that integers can only store a certain range of values, and exceeding this range results in erroneous behavior.</p>
+<p><strong>Solution</strong>: Developers now use libraries like SafeMath, which ensure arithmetic operations do not overflow. However, these libraries must be implemented with caution.</p></li>
+<li><p><strong>Public Visibility</strong>: Publicly visible code and data are often exploited by attackers, as demonstrated in several high-profile hacks. Attackers can exploit publicly accessible functions or variables that are not adequately secured.</p>
+<p><strong>Solution</strong>: Better design practices and understanding the visibility of variables and functions in Solidity (the primary language for Ethereum smart contracts) can mitigate these risks.</p></li>
+</ul>
+</section>
+<section id="lessons-from-major-smart-contract-hacks" class="level1">
+<h1>5. Lessons from major Smart Contract hacks</h1>
+<p>Several smart contract vulnerabilities have been exploited in the past, resulting in large-scale financial losses. Some of the most significant lessons come from real-world case studies:</p>
+<section id="dao-hack-2016" class="level3">
+<h3 class="anchored" data-anchor-id="dao-hack-2016">5.1 DAO Hack (2016)</h3>
+<p>One of the most infamous events in blockchain history, this attack highlighted the importance of addressing reentrancy in smart contract code. It led to the introduction of Ethereum Improvement Proposals (EIPs) that revamped security protocols, such as the <code>REVERT</code> opcode for error handling and better gas calculation mechanisms.</p>
+<p><img src="images/clipboard-4201030708.png" class="img-fluid"></p>
+</section>
+<section id="parity-multi-sig-wallet-hack-2017" class="level3">
+<h3 class="anchored" data-anchor-id="parity-multi-sig-wallet-hack-2017">5.2 Parity Multi-Sig Wallet Hack (2017)</h3>
+<p>This attack exploited a coding flaw related to integer overflow, resulting in millions of dollars worth of Ether being stolen from multi-signature wallets. It underscored the need for more rigorous security audits and formal verification tools to ensure that contracts behave as expected in all execution scenarios.</p>
+<p><img src="images/clipboard-1880961375.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="external-vulnerabilities-oracles-and-data-dependencies" class="level1">
+<h1>6. External Vulnerabilities: Oracles and Data Dependencies</h1>
+<p>Smart contracts are often reliant on external data sources, called <strong>oracles</strong>, which provide off-chain data to the blockchain. This reliance introduces vulnerabilities because oracles can be manipulated or compromised, leading to incorrect data being fed into the contract. For example:</p>
+<ul>
+<li><p><strong>Synthetix Oracle Failure (2019)</strong>: In this case, a DeFi protocol experienced an oracle malfunction that provided an inflated exchange rate for the South Korean won (KRW), resulting in a potential $1 billion loss due to incorrect trades executed by bots.</p></li>
+<li><p><strong>bZx Protocol Attack (2020)</strong>: A flash loan attack leveraged a manipulated oracle to inflate asset prices and exploit the system, leading to significant profits for the attacker.</p></li>
+</ul>
+<p><img src="images/clipboard-2906158110.png" class="img-fluid"></p>
+<section id="oracles---security-measures" class="level3">
+<h3 class="anchored" data-anchor-id="oracles---security-measures">6.1 Oracles - Security Measures</h3>
+<p><u>Decentralized Oracles:</u></p>
+<p>Using multiple oracles can reduce the risk of manipulation, distributing trust across several data providers and make it harder for attackers to manipulate the oracle/s.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-609127181.png" class="img-fluid figure-img"></p>
+<figcaption>Instead of using one Oracle, a network of decentralised Oracles can improve security and prevent manipulation. Source: Chainlink.com</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-1521413844.png" class="img-fluid figure-img"></p>
+<figcaption>How a network of Oracles can be intergrated and the information flow that enable Smart contracts to retrieve the necessary data to function correctly.</figcaption>
+</figure>
+</div>
+<p><u>Time-lock Mechanisms:</u></p>
+<p>Introducing a delay between oracle data retrieval and contract execution can allow for verification and mitigate real-time manipulation.</p>
+<p><u>Economic Incentives and Penalties:</u></p>
+<ul>
+<li><p>Reward oracles for providing accurate and timely data.</p></li>
+<li><p>Penalize oracles that provide incorrect data, making malicious behavior costly.</p></li>
+</ul>
+<p><u>Verifying Data Sources:</u></p>
+<ul>
+<li><p>Authenticity proofs – use 3rd party to notarise</p></li>
+<li><p>Trusted Execution Environment (TEE) – use trusted hardware</p></li>
+</ul>
+<p><u>Regular Audits:</u></p>
+<p>Periodically audit oracle systems and their data sources for vulnerabilities.</p>
+<p><u>Fallback Mechanisms:</u></p>
+<p>Backup data sources or alternative oracles in case of primary oracle failure or compromise.</p>
+</section>
+</section>
+<section id="smart-contract-privacy-issues" class="level1">
+<h1>7. Smart Contract Privacy issues</h1>
+<p>Smart contracts operating on public blockchains are inherently transparent, meaning that anyone can view the contract’s code, transaction history, and balances. While this transparency is beneficial for auditing and trust, it creates privacy concerns, especially for enterprise use cases where confidentiality is essential.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3698966231.png" class="img-fluid figure-img"></p>
+<figcaption>Smart Contract source codes are made public. Source: EtherScan</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3578749702.png" class="img-fluid figure-img"></p>
+<figcaption>Wallet addresses and holdings are public information. Source: EtherScan</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2428184984.png" class="img-fluid figure-img"></p>
+<figcaption>Transactions made on the blockchain can be tracked and traced. Source: EtherScan</figcaption>
+</figure>
+</div>
+<p>Some emerging solutions for privacy in smart contracts include:</p>
+<ol type="1">
+<li><strong>Secure Multi-Party Computation (SMPC)</strong>: This cryptographic technique allows multiple parties to compute a function on their inputs without revealing the actual data. It ensures that only the final result is shared, preserving the confidentiality of the original data.</li>
+</ol>
+<p><img src="images/clipboard-979765062.png" class="img-fluid"></p>
+<ol start="2" type="1">
+<li><strong>Trusted Execution Environments (TEEs)</strong>: These secure hardware enclaves, like Intel’s SGX, provide a private computing environment for executing smart contracts. Data processed within the TEE is protected from external tampering or observation.</li>
+</ol>
+<p><img src="images/clipboard-2958570910.png" class="img-fluid"></p>
+</section>
+<section id="conclusion" class="level1">
+<h1>8. Conclusion</h1>
+<p>Smart contracts have undoubtedly changed the landscape of decentralized finance and applications. However, their potential is limited by security vulnerabilities, both internal (coding issues) and external (oracle manipulation). While the industry is making strides with better security tools, formal verification, and audit frameworks, there is still much work to be done.</p>
+<p>Moving forward, key areas of focus should include:</p>
+<ul>
+<li><p><strong>Scalability without compromising security</strong>: As smart contracts grow in complexity, developers must balance performance with security.</p></li>
+<li><p><strong>Interoperability</strong>: Smart contracts need to be able to function across different blockchains seamlessly.</p></li>
+<li><p><strong>Regulatory Frameworks</strong>: The legal status of smart contracts remains uncertain, and clearer regulations will be necessary as they are adopted in traditional financial systems.</p></li>
+</ul>
+<p>Ultimately, the security of smart contracts will be an ongoing challenge as new vulnerabilities are discovered, making it imperative for developers and organizations to stay informed and implement best practices.</p>
+</section>
+<section id="references" class="level1">
+<h1>9. References</h1>
+<p>Blockchains. (2023, May 5). What Is A Smart Contract? A Complete Guide. 101 Blockchains. <a href="https://101blockchains.com/what-is-a-smart-contract/" class="uri">https://101blockchains.com/what-is-a-smart-contract/</a></p>
+<p>Frankenfield, J. (2023, May 31). What are smart contracts on the blockchain and how they work. Investopedia. <a href="https://www.investopedia.com/terms/s/smart-contracts.asp" class="uri">https://www.investopedia.com/terms/s/smart-contracts.asp</a></p>
+<p>Ethereumbook. (n.d.). GitHub - ethereumbook/ethereumbook: Mastering Ethereum, by Andreas M. Antonopoulos, Gavin Wood. GitHub. <a href="https://github.com/ethereumbook/ethereumbook" class="uri">https://github.com/ethereumbook/ethereumbook</a></p>
+<p>IBM Supply Chain Intelligence Suite - Food Trust. (n.d.). <a href="https://www.ibm.com/products/supply-chain-intelligence-suite/food-trust" class="uri">https://www.ibm.com/products/supply-chain-intelligence-suite/food-trust</a></p>
+<p>Trade Finance with Digital Blockchain | HSBC Malaysia. (n.d.). <a href="https://www.business.hsbc.com.my/en-gb/campaigns/reshaping-trade-finance-with-blockchain" class="uri">https://www.business.hsbc.com.my/en-gb/campaigns/reshaping-trade-finance-with-blockchain</a></p>
+<p>OWASP Smart Contract Top 10 | OWASP Foundation. (n.d.). <a href="https://owasp.org/www-project-smart-contract-top-10/" class="uri">https://owasp.org/www-project-smart-contract-top-10/</a></p>
+<p>Howell, J. (2023b, October 26). Top 10 DEFI Hacks You should know. 101 Blockchains. <a href="https://101blockchains.com/top-defi-hacks/" class="uri">https://101blockchains.com/top-defi-hacks/</a></p>
+<p>Graham, A. (2023, May 16). Largest DEFI Hacks (Top 10). <a href="https://www.buybitcoinbank.com/cryptocurrency/largest-defi-hacks" class="uri">https://www.buybitcoinbank.com/cryptocurrency/largest-defi-hacks</a></p>
+<p>Lewandowska, P. (2023, June 27). Smart contract attacks: the most memorable blockchain hacks of all time. Nextrope. <a href="https://nextrope.com/smart-contract-attacks-the-most-memorable-blockchain-hacks-of-all-time/" class="uri">https://nextrope.com/smart-contract-attacks-the-most-memorable-blockchain-hacks-of-all-time/</a></p>
+<p>Malynovskyi, V., &amp; Malynovskyi, V. (2023, May 25). Top 17 smart contract hacks in 2021-2022 found by 4IRE. 4ire. <a href="https://4irelabs.com/articles/top-17-smart-contract-hacks/" class="uri">https://4irelabs.com/articles/top-17-smart-contract-hacks/</a></p>
+<p>Loi Luu, Duc-Hiep Chu, Hrishi Olickel, Prateek Saxena, and Aquinas Hobor. 2016. Making Smart Contracts Smarter. In Proceedings of the 2016 ACM SIGSAC Conference on Computer and Communications Security (CCS ’16). Association for Computing Machinery, New York, NY, USA, 254–269. <a href="https://doi.org/10.1145/2976749.2978309" class="uri">https://doi.org/10.1145/2976749.2978309</a></p>
+<p>Nikolic, I. (2018, February 16). Finding The Greedy, Prodigal, and Suicidal Contracts at Scale. arXiv.org. <a href="https://arxiv.org/abs/1802.06038" class="uri">https://arxiv.org/abs/1802.06038</a></p>
+<p>Kalra, S. (2018, February 18). ZEUS: Analyzing Safety of smart Contracts. IBM Research Publications. <a href="https://research.ibm.com/publications/zeus-analyzing-safety-of-smart-contracts" class="uri">https://research.ibm.com/publications/zeus-analyzing-safety-of-smart-contracts</a></p>
+<p>Analysis of the DAO exploit. (2016, June 18). Hacking Distributed. <a href="https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/" class="uri">https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/</a></p>
+<p>Banisadr, E. (2019, November 27). How $800k Evaporated from the PoWH Coin Ponzi Scheme Overnight. Medium. <a href="https://medium.com/@ebanisadr/how-800k-evaporated-from-the-powh-coin-ponzi-scheme-overnight-1b025c33b530">https://medium.com/@ebanisadr/how-800k-evaporated-from-the-powh-coin-ponzi-scheme-overnight-1b025c33b530</a></p>
+<p>DASP - TOP 10. (n.d.). <a href="https://dasp.co/">https://dasp.co/#item-10</a></p>
+<p>Ethereum. (n.d.). Smart contract security | ethereum.org. ethereum.org. <a href="https://ethereum.org/en/developers/docs/smart-contracts/security/" class="uri">https://ethereum.org/en/developers/docs/smart-contracts/security/</a></p>
+<p>Team, C. (2023, August 29). Oracle Manipulation Attacks are Rising, Creating a Unique Concern for DeFi. Chainalysis. <a href="https://www.chainalysis.com/blog/oracle-manipulation-attacks-rising/" class="uri">https://www.chainalysis.com/blog/oracle-manipulation-attacks-rising/</a></p>
+<p>Ethereum. (n.d.-a). Oracles | Ethereum.org. ethereum.org. <a href="https://ethereum.org/en/developers/docs/oracles/" class="uri">https://ethereum.org/en/developers/docs/oracles/</a></p>
+<p>Muhs, D. (n.d.). Oracle Manipulation - Smart Contract Security Field Guide. <a href="https://scsfg.io/hackers/oracle-manipulation/" class="uri">https://scsfg.io/hackers/oracle-manipulation/</a></p>
+<p>What is an oracle in blockchain? » explained | Chainlink. (n.d.). <a href="https://chain.link/education/blockchain-oracles" class="uri">https://chain.link/education/blockchain-oracles</a></p>
+<p>HAWK: The blockchain model of Cryptography and Privacy-Preserving smart Contracts. (2016, May 1). IEEE Conference Publication | IEEE Xplore. <a href="https://ieeexplore.ieee.org/document/7546538" class="uri">https://ieeexplore.ieee.org/document/7546538</a></p>
+<p>EKIden: a platform for Confidentiality-Preserving, trustworthy, and performant smart contracts. (2019b, June 1). IEEE Conference Publication | IEEE Xplore. <a href="https://ieeexplore.ieee.org/document/8806762" class="uri">https://ieeexplore.ieee.org/document/8806762</a></p>
+<p>Paradigm. (2019, May 22). Enigma— decentralized privacy layer: full review - Paradigm - Medium. Medium. <a href="https://medium.com/paradigm-research/enigma-detailed-review-on-the-project-dc713a17f5d2" class="uri">https://medium.com/paradigm-research/enigma-detailed-review-on-the-project-dc713a17f5d2</a></p>
+<p>Smart Contract Based Multi-Party Computation with Privacy Preserving and Settlement Addressed. (2018, October 1). IEEE Conference Publication | IEEE Xplore. <a href="https://ieeexplore.ieee.org/document/8611588" class="uri">https://ieeexplore.ieee.org/document/8611588</a></p>
+<p>Integritee Network. (2023, October 5). TEE 101: How Intel SGX works and why we use it at Integritee. Medium. <a href="https://medium.com/integritee/tee-101-how-intel-sgx-works-and-why-we-use-it-at-integritee-5cb2957c050f" class="uri">https://medium.com/integritee/tee-101-how-intel-sgx-works-and-why-we-use-it-at-integritee-5cb2957c050f</a></p>
+<p>Project, G. (2018, November 20). Graphene-ng demo + DEVCON4 TEEs/SGX actions recap - The Golem Project - Medium. Medium. <a href="https://medium.com/golem-project/graphene-ng-demo-devcon4-tees-sgx-actions-recap-a2f84704ad01" class="uri">https://medium.com/golem-project/graphene-ng-demo-devcon4-tees-sgx-actions-recap-a2f84704ad01</a></p>
+<p>Intel® Software Guard Extensions (Intel® SGX). (n.d.). Intel. <a href="https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html" class="uri">https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html</a></p>
+<p>Enhancing FinTech Security with Secure Multi-Party Computation Technology : NEC Technical Journal | NEC. (n.d.). NEC. <a href="https://www.nec.com/en/global/techrep/journal/g16/n02/160211.html" class="uri">https://www.nec.com/en/global/techrep/journal/g16/n02/160211.html</a></p>
+<p>J. Scholz (2023). EIP-150 and the 63/64 Rule for Gas. <a href="https://www.techtarget.com/searchsecurity/tip/Smart-contract-benefits-and-best-practices-for-security" class="uri">https://www.techtarget.com/searchsecurity/tip/Smart-contract-benefits-and-best-practices-for-security</a></p>
+<p>A. Irei. Smart contract benefits and best practices for security. <a href="https://www.techtarget.com/searchsecurity/tip/Smart-contract-benefits-and-best-practices-for-security" class="uri">https://www.techtarget.com/searchsecurity/tip/Smart-contract-benefits-and-best-practices-for-security</a></p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
