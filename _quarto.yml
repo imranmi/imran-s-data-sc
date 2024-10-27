@@ -92,6 +92,8 @@ website:
             href: Article-ex/Article-Ex15/Article_Ex15.html
           - text: Project 6 - Smart Contracts Security    
             href: Article-ex/Article-Ex16/Article_Ex16.html
+          - text: Project 7 - Central Bank Digital Currencies - Potential Benefits, Risks & Challenges    
+            href: Article-ex/Article-Ex17/Article_Ex17.html  
 format:
   html:
     theme: 
