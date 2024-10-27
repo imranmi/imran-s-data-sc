@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Imran Ibrahim, Benjamin Lim, Dorothy Goh, Tan Siang Meng, Liu Xiaolong">
+<meta name="dcterms.date" content="2024-10-27">
+
+<title>Central Bank Digital Currencies - Potential Benefits, Risks &amp; Challenges – Imran’s Postgrad repo</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Imran’s Postgrad repo</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-exercises-in-r" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Exercises in R</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises-in-r">    
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex1/R_Ex1.html">
+ <span class="dropdown-text">R Exercise 1 - Analysing PISA’s education survey data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex2/R_Ex2.html">
+ <span class="dropdown-text">R Exercise 2 - 5 Exploratory Data Analyses on Pisa Data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex3/R_Ex3.html">
+ <span class="dropdown-text">R Exercise 3 - DataVis Makeover of another student’s work</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex4/R_Ex4.html">
+ <span class="dropdown-text">R Exercise 4 - Be Weatherwise or Otherwise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex5/R_Ex5.html">
+ <span class="dropdown-text">R Exercise 5 - Visual Analytics exercise on Armed conflicts</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex6/R_Ex6.html">
+ <span class="dropdown-text">R Exercise 6 - Geospatial 1- Local Measures of Spatial Autocorrelation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex7/R_Ex7.html">
+ <span class="dropdown-text">R Exercise 7 - Geospatial 2 - Emerging Hot Spot Analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex8/R_Ex8.html">
+ <span class="dropdown-text">R Exercise 8 - Geospatial 3 - Spatially Constrained Clustering</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R-ex/R-Ex9/R_Ex9.html">
+ <span class="dropdown-text">Group Project Poster - Analysing Armed conflicts in Myammar</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-exercises-in-python" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Exercises in Python</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-exercises-in-python">    
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex1/Python_Ex1.html">
+ <span class="dropdown-text">Python Exercise 1 - Automating a 3-stocks portfolio</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex2/Python_Ex2.html">
+ <span class="dropdown-text">Python Exercise 2 - Designing a 3-stock portfolio for a robo-advisor</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Python-ex/Python-Ex3/Python_Ex3.html">
+ <span class="dropdown-text">Python Project - Predicting Stock Prices with Time series Analysis</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-sas-viya-exercises" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">SAS Viya Exercises</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-sas-viya-exercises">    
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex1/Write_Ex1.html">
+ <span class="dropdown-text">Assignment 1 - Show me the numbers</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex2/Write_Ex2.html">
+ <span class="dropdown-text">Assignment 2 - Be Customer wise or otherwise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex3/Write_Ex3.html">
+ <span class="dropdown-text">Project - Loan Default prediction</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Write-ex/Write-Ex4/Write_Ex4.html">
+ <span class="dropdown-text">Project Poster - Loan Default prediction</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fintech-assignments" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Fintech Assignments</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-fintech-assignments">    
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex1/Article_Ex1.html">
+ <span class="dropdown-text">Assignment 1 - Factors contributing to the rise of Fintech companies</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex2/Article_Ex2.html">
+ <span class="dropdown-text">Assignment 2 - How Banks have changed the way they deploy technology</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex3/Article_Ex3.html">
+ <span class="dropdown-text">Assignment 3 - How the role of financial regulators has evolved</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex4/Article_Ex4.html">
+ <span class="dropdown-text">Assignment 4 - Key characteristics that create or inject value for a NFT</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex5/Article_Ex5.html">
+ <span class="dropdown-text">Assignment 5 - Bitcoin - Examining a Layer 1 &amp; 2 solution</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex6/Article_Ex6.html">
+ <span class="dropdown-text">Assignment 6 - Examining the working principles and the future of DeFi</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex7/Article_Ex7.html">
+ <span class="dropdown-text">Assignment 7 - Design considerations for a CBDC project</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex8/Article_Ex8.html">
+ <span class="dropdown-text">Assignment 8 - Consortium blockchain for Finance lease use case</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex9/Article_Ex9.html">
+ <span class="dropdown-text">Assignment 9 - Quantum Computing - Mean-Variance Portfolio Optimization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex14/Article_Ex14.html">
+ <span class="dropdown-text">Assignment 10 - Can ChatGPT or chatbots replace Search Engines?</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fintech-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Fintech Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-fintech-projects">    
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex10/Article_Ex10.html">
+ <span class="dropdown-text">Project 1 - Quantum Computing - Portfolio Optimisation using Hybrid Algorithm</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex11/Article_Ex11.html">
+ <span class="dropdown-text">Project 2 - Integrated IOT Data for Sustainability Use Case</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex12/Article_Ex12.html">
+ <span class="dropdown-text">Project 3 - Data Quality as the Key enabler of Innovation and Digitisation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex13/Article_Ex13.html">
+ <span class="dropdown-text">Project 4 - Emerging Fintech Trends in Indonesia</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex15/Article_Ex15.html">
+ <span class="dropdown-text">Project 5 - Project Ubin - An analysis of Phases 1-5</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex16/Article_Ex16.html">
+ <span class="dropdown-text">Project 6 - Smart Contracts Security</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../Article-ex/Article-Ex17/Article_Ex17.html">
+ <span class="dropdown-text">Project 7 - Central Bank Digital Currencies - Potential Benefits, Risks &amp; Challenges</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="../../about.html" title="About Imran" class="quarto-navigation-tool px-1" aria-label="About Imran"><i class="bi bi-house-heart"></i></a>
+    <a href="https://github.com/imranmi/imran-s-data-sc" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+    <a href="https://www.linkedin.com/in/imran-ibrahim-116a236b" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#topic" id="toc-topic" class="nav-link active" data-scroll-target="#topic">1. Topic</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">2. Introduction</a></li>
+  <li><a href="#cbdc-developments-and-benefits" id="toc-cbdc-developments-and-benefits" class="nav-link" data-scroll-target="#cbdc-developments-and-benefits">3. CBDC developments and benefits</a>
+  <ul class="collapse">
+  <li><a href="#potential-benefits-of-cbdcs" id="toc-potential-benefits-of-cbdcs" class="nav-link" data-scroll-target="#potential-benefits-of-cbdcs">3.1 Potential Benefits of CBDCs</a></li>
+  </ul></li>
+  <li><a href="#risks-and-mitigants" id="toc-risks-and-mitigants" class="nav-link" data-scroll-target="#risks-and-mitigants">4. Risks and mitigants</a>
+  <ul class="collapse">
+  <li><a href="#dampen-credit-creation-and-raising-credit-costs" id="toc-dampen-credit-creation-and-raising-credit-costs" class="nav-link" data-scroll-target="#dampen-credit-creation-and-raising-credit-costs">4.1 Dampen Credit creation and raising credit costs</a></li>
+  <li><a href="#heighten-financial-stability-risks" id="toc-heighten-financial-stability-risks" class="nav-link" data-scroll-target="#heighten-financial-stability-risks">4.2 Heighten financial stability risks</a>
+  <ul class="collapse">
+  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions"><u>4.2.1 Solution(s)</u></a></li>
+  </ul></li>
+  <li><a href="#adverse-impact-on-monetary-policy-instrument" id="toc-adverse-impact-on-monetary-policy-instrument" class="nav-link" data-scroll-target="#adverse-impact-on-monetary-policy-instrument">4.3 Adverse impact on monetary policy instrument</a>
+  <ul class="collapse">
+  <li><a href="#solutions-1" id="toc-solutions-1" class="nav-link" data-scroll-target="#solutions-1"><u>4.3.1 Solution(s)</u></a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#challenges-and-workarounds" id="toc-challenges-and-workarounds" class="nav-link" data-scroll-target="#challenges-and-workarounds">5. Challenges and workarounds</a>
+  <ul class="collapse">
+  <li><a href="#legal-framework" id="toc-legal-framework" class="nav-link" data-scroll-target="#legal-framework">5.1 Legal Framework</a>
+  <ul class="collapse">
+  <li><a href="#relevance-of-central-bank-law" id="toc-relevance-of-central-bank-law" class="nav-link" data-scroll-target="#relevance-of-central-bank-law">5.1.1 Relevance of Central Bank Law</a></li>
+  <li><a href="#relevance-of-monetary-law" id="toc-relevance-of-monetary-law" class="nav-link" data-scroll-target="#relevance-of-monetary-law">5.1.2 Relevance of Monetary Law</a></li>
+  <li><a href="#solutions-2" id="toc-solutions-2" class="nav-link" data-scroll-target="#solutions-2"><u>5.1.3 Solution(s)</u></a></li>
+  </ul></li>
+  <li><a href="#mass-adoption" id="toc-mass-adoption" class="nav-link" data-scroll-target="#mass-adoption">5.2 Mass adoption</a>
+  <ul class="collapse">
+  <li><a href="#solutions-3" id="toc-solutions-3" class="nav-link" data-scroll-target="#solutions-3"><u>5.2.1 Solution(s)</u></a></li>
+  </ul></li>
+  <li><a href="#interoperability" id="toc-interoperability" class="nav-link" data-scroll-target="#interoperability">5.3 Interoperability</a>
+  <ul class="collapse">
+  <li><a href="#solutions-4" id="toc-solutions-4" class="nav-link" data-scroll-target="#solutions-4"><u>5.3.1 Solution(s)</u></a></li>
+  </ul></li>
+  <li><a href="#privacy-data-security-and-cybersecurity-challenges" id="toc-privacy-data-security-and-cybersecurity-challenges" class="nav-link" data-scroll-target="#privacy-data-security-and-cybersecurity-challenges">5.4 Privacy, Data Security and Cybersecurity Challenges</a>
+  <ul class="collapse">
+  <li><a href="#solutions-5" id="toc-solutions-5" class="nav-link" data-scroll-target="#solutions-5"><u>5.4.1 Solution(s)</u></a></li>
+  </ul></li>
+  <li><a href="#implementation-challenge-operating-cbdcs-on-top-of-dlt-to-reap-benefits-brings-forth-key-risks-including-settlement-risks" id="toc-implementation-challenge-operating-cbdcs-on-top-of-dlt-to-reap-benefits-brings-forth-key-risks-including-settlement-risks" class="nav-link" data-scroll-target="#implementation-challenge-operating-cbdcs-on-top-of-dlt-to-reap-benefits-brings-forth-key-risks-including-settlement-risks">5.5 Implementation challenge – operating CBDCs on top of DLT to reap benefits brings forth key risks including settlement risks</a>
+  <ul class="collapse">
+  <li><a href="#benefits" id="toc-benefits" class="nav-link" data-scroll-target="#benefits">5.5.1 Benefits</a></li>
+  <li><a href="#challenges" id="toc-challenges" class="nav-link" data-scroll-target="#challenges">5.5.2 Challenges</a></li>
+  <li><a href="#solutions-6" id="toc-solutions-6" class="nav-link" data-scroll-target="#solutions-6"><u>5.5.3 Solution(s)</u></a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">6. Conclusion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">7. References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Central Bank Digital Currencies - Potential Benefits, Risks &amp; Challenges</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Imran Ibrahim, Benjamin Lim, Dorothy Goh, Tan Siang Meng, Liu Xiaolong </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 27, 2024</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">October 27, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="topic" class="level1">
+<h1>1. Topic</h1>
+<p>According to a research paper issued by The Bank for International Settlement in January 2020, 80% of the world’s central banks had already started to conceptualise and research the potential for CBDCs.</p>
+<ol type="1">
+<li><p>Please provide an account on the current development of CBDCs globally.</p></li>
+<li><p>Please explore and assess the potential benefits, risks and challenges for CBDCs and provide suggestions to overcome such risks and challenges.</p></li>
+</ol>
+</section>
+<section id="introduction" class="level1">
+<h1>2. Introduction</h1>
+<p>This paper reviews the benefits, risks and challenges associated with central bank digital currencies (“CBDCs”).</p>
+<p>First, we will explore developments in this space and the benefits of issuing CBDCs. Next, we will elaborate on the risks and challenges of CBDCs respectively, and the mitigating measures. Lastly, we will conclude with our views on the likely path forward for CBDCs.</p>
+</section>
+<section id="cbdc-developments-and-benefits" class="level1">
+<h1>3. CBDC developments and benefits</h1>
+<p>CBDCs are fiat currencies issued in a digital format by a central bank, and typically deployed on distributed ledgers that record the ownership and transfer of the currency via cryptography. Retail CBDCs are meant for use by the general public, just like notes and coins today. Wholesale CBDCs are solely for use by financial institutions to settle large-value transactions amongst themselves and the central bank, akin to present-day reserves.</p>
+<p>CBDC developments are tracked and updated through an interactive platform created by the Atlantic Council, an American think-tank. Figure 1 shows that as of Dec 2022, 11 countries have successfully launched a CBDC, while another 89 countries are in research, development or pilot phase.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-270975088.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 1: Status of CBDC issuance across the world. Source: The Atlantic Council</figcaption>
+</figure>
+</div>
+<p>Before examining the reasons for growing interest in CBDCs, a re-cap of the technological features of digital assets would help to motivate the subsequent discussion:</p>
+<ol type="1">
+<li><p><strong>Programmability</strong>: Embedding the automated behaviour of digital money through a computer program. This allows for the creation of smart contracts capable of self-executing pre-determined steps (e.g., transfers) once encoded pre-defined conditions are met (e.g., upon the receipt of an asset).</p></li>
+<li><p><strong>Composability</strong>: The ability to stack smart contracts on each other, or more commonly known as Lego money, which enables the combination of functions across a transaction’s value chain. This could also reduce or eliminate the need for intermediaries.</p></li>
+<li><p><strong>Atomicity</strong>: This describes a scenario involving two assets where the transfer of one asset depends on the transfer of the other – such that both transfers happen or neither happens; ensuring certainty.</p></li>
+</ol>
+<section id="potential-benefits-of-cbdcs" class="level2">
+<h2 class="anchored" data-anchor-id="potential-benefits-of-cbdcs">3.1 Potential Benefits of CBDCs</h2>
+<p>Issuing CBDCs that incorporate the foregoing technological features would engender at least four potential benefits:</p>
+<ol type="1">
+<li><strong>First</strong>, increased efficiency in cross-border and domestic exchange, trading and transfer of financial assets (including currencies) and the associated payment and settlement of these transactions.</li>
+</ol>
+<p>To be sure, features similar to those described previously (Programmability, Composability and Atomcity) already exist today.</p>
+<p>Take the example of an interbank financial transaction:-</p>
+<ul>
+<li><p>The reserve held by banks can be “programmed” to exchange information with other platforms via API so that a bank can timely access information on its balances. Instructions for payment, transfer and settlement are also conveyed through SWIFT messages.</p></li>
+<li><p>Credit risks from settlement failure can be minimised through the simultaneous receipt of the payment and assets by each counterparty. Such “atomicity” is known as PvP (for currencies) and DvP (payment of currency for assets) in wholesale payment systems operated by central banks (e.g., MAS MEPS+) and regulated central counterparties such as CLS.</p></li>
+<li><p>Smart contracts’ functionalities can already be found in margin requirements where parties are alerted to make margin top-ups to proceed with their transaction.</p></li>
+</ul>
+<p>The equivalence of those features for retail transactions are:-</p>
+<ul>
+<li><p>SGFINDEX, which collates account information with different banks onto one platform in Singapore;</p></li>
+<li><p>FAST, which allows for instant payment and receipt of funds with finality; and</p></li>
+<li><p>GIRO, which provides instruction for recurring payments.</p></li>
+</ul>
+<p>In a cross-border setting, correspondent banks in the respective jurisdictions would facilitate the transactions.</p>
+<p>That said, the novelty lies in the potential for the seamless integration of these features across asset classes (with asset tokenisation) and the various parts of the transactions. This reduces the need for multiple intermediaries, and hence, delays and costs. The initial results are promising. Ongoing experiments have shown CBDCs can achieve lower cost, faster settlement and increased operational transparency (e.g., wholesale CBDCs: Projects Jura, Dunbar, Mbridge; wholesale and retail CBDCs: Project Icebreaker).</p>
+<ol start="2" type="1">
+<li><strong>Second</strong>, prevent “cryptoisation” and protect national security of a payment system for cross-border payments against financial sanctions.</li>
+</ol>
+<p>The potential efficiency gains as set out above are also applicable to stablecoins and cryptocurrenices, which could supplant fiat currencies, aptly characterised as “cryptoisation”. Notably, the introduction of Libra, a global stablecoin, by Facebook was a wake-up call for the community of central banks. Notwithstanding the assurances provided by the Libra Foundation, the prospect of a private entity supplanting the fiat currencies issued by central banks heightened concerns about the loss of monetary sovereignty and efficacy of monetary policy as well as money laundering (ML) and terrorism financing (TF). Growing interest in the use of cryptocurrencies as a form of money, serving as a medium of exchange, a store of value and an unit of account, compounded the risk of “cryptoisation”. Central banks, BIS and IMF have accordingly stepped up their efforts to ensure that fiat currencies and the associated payment systems and infrastructure remain competitive, as seen by the work done on CBDCs.</p>
+<p>More recently, the levy of financial sanctions against Russia for its war in Ukraine, which include the removal of Russia’s entities in the use of USD cross-border payment systems, has heightened concerns about the ability of a country to conduct cross-border financial transactions. Some countries have accordingly sought to develop alternative payment networks. As noted by the Atlantic Council, there are now 9 cross-border wholesale CBDC tests and 7 cross-border retail projects, nearly double the number from 2021.&nbsp;&nbsp;</p>
+<ol start="3" type="1">
+<li><strong>Third,</strong> the need to support financial inclusion, leveraging on the advancement in payment technology. This also offers the potential for “leap-frogging”, as there is less of a need to ensure interoperability across legacy systems and platforms.</li>
+</ol>
+<p>Such considerations are pertinent in emerging markets and developing economies (“EMDEs”) (Boar and Wehrli, 2021). An example is Bahamas. Given its sprawling archipelago of around 700 islands and pockets of sparse population, banks had found it costly to serve the populace. In addition, banks also had to adhere to onerous strict regulations relating to money laundering and terrorist financing (“ML/TF”) risks, which further increased the cost of financial services. In response, the Central Bank of the Bahamas launched the Sand Dollar, a retail CBDC, to support financial inclusion in October 2020 (Central Bank of The Bahamas, 2019).&nbsp;</p>
+<p>In more advanced economies, the issuance of CBDC could also promote competition and innovation in payments markets by setting a common payment rail for payment service providers. This will guard against the formation of “walled gardens”, where payment operators engage in monopolistic behaviour to maximise network externalities at the cost of loss in interoperability and consumer choice.&nbsp;</p>
+<ol start="4" type="1">
+<li><strong>Fourth</strong>, the political need to ensure that central bank-issued fiat currency remains available as a service to the residents, especially in countries with a dwindling use of cash.</li>
+</ol>
+<p>Over-reliance on the private sector for the issuance of money and the associated infrastructure could also reduce the resilience of a jurisdiction’s payment system should there be no contingency backups during a crisis. An example is the falling cash usage in Sweden, which has prompted the Riksbank to be technically prepared for the issuance of CBDCs if the need arises. As shown in Figure 2 from the 2021 IMF Article IV Consultation, Sweden’s cash usage has dropped more than halved over the past decade, falling from about 3% in 2010 to 1.3% in 2019. Relative to the other countries’ cash usage, Sweden is also the lowest.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-932405565.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 2: Cash Usage. Source: IMF</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="risks-and-mitigants" class="level1">
+<h1>4. Risks and mitigants</h1>
+<p>With more central banks around the world seeing a growing interest in and need for the development of CBDCs, there is a corresponding growth in the body of research into the potential risks and associated challenges in the implementation of CBDCs. These are discussed in turn, below.</p>
+<section id="dampen-credit-creation-and-raising-credit-costs" class="level2">
+<h2 class="anchored" data-anchor-id="dampen-credit-creation-and-raising-credit-costs">4.1 Dampen Credit creation and raising credit costs</h2>
+<p>Retail CBDCs are a close substitute for bank deposits as a medium of exchange (payment) for goods and services. The extent of substitution would depend on CBDCs’ utility which, in turn, hinge on factors including transaction costs of using CBDCs for payment, perception of security and privacy of CBDC transactions.</p>
+<p>Sizable outflows of retail deposits to CBDCs will adversely impact banks’ funding positions and Net Stable Funding Ratio (minimally 100% under Basel III rules). As depositors switch out of bank deposits into CBDCs, banks will first utilise their reserves held with the central bank to purchase central bank-issued CBDCs for sale to depositors in exchange for their bank deposits. On depletion of reserves, banks may fund CBDC purchases by borrowing from the central bank against eligible collateral. Corollary of this, (i) on the asset side of banks’ balance sheets, banks are left with a more illiquid portfolio as they exhaust their reserves and encumber their liquid securities, while (ii) on the liabilities side of their balance sheet, retail deposits (a source of stable funding) dip and borrowings from the central bank rise. Figure 3 illustrates this</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3672556990.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 3: How outflows of retail deposits to CBDCs affect banks balance sheets (figures in bil)</figcaption>
+</figure>
+</div>
+<p>Banks’ responses to a smaller funding base may have negative externalities. Banks could reduce the amount of lending to the economy, weakening credit creation. Otherwise, banks could pay a higher interest rate on retail deposits or turn to more costly wholesale funding. (MAS notes that wholesale funding of longer maturity that are at least as stable as retail deposits are typically more expensive). Contemporaneously, they may raise lending rates to preserve profitability. This results in higher credit costs for bank borrowers.</p>
+<p>Lending rates aside, credit costs for businesses and governments may also rise should interest-bearing retail CBDCs compete with investible assets (such as commercial paper or Treasury bills) as a store of value. The magnitude of shift to retail CBDCs will largely depend on assets’ relative yields.</p>
+<p>In turn, escalating credit costs could depress loan quantum taken out for consumption and investments, weighing on the overall growth of the economy.</p>
+</section>
+<section id="heighten-financial-stability-risks" class="level2">
+<h2 class="anchored" data-anchor-id="heighten-financial-stability-risks">4.2 Heighten financial stability risks</h2>
+<p>The introduction of CBDCs increases banks’ vulnerability to shocks as:</p>
+<ol type="1">
+<li><p>facing deposits flight, banks turn to more costly wholesale deposits or wholesale debt (collectively, “wholesale funding”), which are prone to runs. Crucially, the behaviour of wholesale fund providers versus retail depositors differs starkly. The ‘stickiness’ of retail deposits is well-established, and withdrawals are largely prompted by individual depositor’s liquidity needs. A 2010 study by the European Central Bank found that the availability of noisy and costless public signals on bank quality (such as credit ratings for mortgage-backed securities or peer bank metrics) dis-incentivises wholesale fund provider from engaging in costly self-directed monitoring of the bank and increases their tendency to withdraw funds based on negative public signals, particularly if they are senior claimants to the liquidated assets. A joint paper by NYU, Princeton University and the US Federal Reserve noted that at the onset of the Global Financial Crisis, retail markets remained relatively stable while wholesale funding markets experienced dry-ups and runs. The spectre of wholesale funding run was also poignantly illustrated by the recent fallout of Silicon Valley Bank.</p></li>
+<li><p>banks engage in risky activities to preserve net interest margin (“NIM”).To meet market expectations on profitability, banks may engage in higher yielding but risker activities to offset increased funding costs.</p></li>
+<li><p>banks that are unable to pass on rising funding costs in the form of higher lending rates to borrowers face a thinning capital stack, which reduces their resilience to shocks. This is because retained earnings (including profits) form part of a bank’s CET1 capital stock available for loss absorption.</p></li>
+</ol>
+<p>CBDCs also increase the likelihood of bank runs. In stress periods involving concerns about bank solvency, the run from bank deposits are expected to amplify, aided by the ease of convertibility to CBDCs. This will subject banks to liquidity strains that could overwhelm present regulatory safeguards (e.g., Liquidity Coverage Ratio).</p>
+<p>Should a liquidity crisis come to pass, the central bank’s role as the lender of last resort (“LOLR”) to backstop the banking sector will be limited by two key constraints, as historical events have spotlighted:</p>
+<ol type="1">
+<li><p>Lend with sufficient collateral: In the case of Lehman Brothers, former Chairman Bernanke testified that the Federal Reserve’s sole available tool was to provide short term liquidity against adequate collateral, and (Lehman’s) available collateral fell well short of the amount needed to secure a Federal Reserve loan of sufficient size to meet its funding needs. As the Federal Reserve cannot make an unsecured loan… the firm’s failure was, unfortunately, unavoidable.”</p></li>
+<li><p>Full recourse to the borrower: During the 2008 run on money market funds (“MMFs”), MMFs were averse to borrowing from a proposed lending facility by the US Federal Reserve due to the “full recourse” clause. Remaining shareholders were likely to accelerate their exit on concerns that their claims would be subordinated to the Federal Reserve.</p></li>
+</ol>
+<p>En masse substitution of bank deposits for CBDCs in an extreme stress scenario may force central banks to seek ways to return funds to the economy. Doing so by way of unsecured lending to banks (without receiving eligible collateral) will significantly increase central banks’ exposure to credit and liquidity risks. There are also moral hazard risks to central banks being the final arbiter disbursing funds.</p>
+<section id="solutions" class="level3">
+<h3 class="anchored" data-anchor-id="solutions"><u>4.2.1 Solution(s)</u></h3>
+<p>The common thread of the foregoing risks of dampened credit creation, rising credit costs and heightened financial stability risks is the sizable and abrupt displacement of bank deposits with CBDCs, and relatedly, the potential for bank disintermediation.</p>
+<p>These risks may be mitigated in three ways:-</p>
+<ol type="1">
+<li><p>First, central banks could design CBDCs to bear zero interest, pari passu with cash which pays a nominal interest rate of zero. This also ensures that interest-bearing bank deposits and investible assets are more compelling as a store of value. In a negative interest rate environment, central banks could program into CBDCs a surcharge for holding CBDC balances.</p></li>
+<li><p>Second, central banks could cap the amount of CBDCs that an end user can hold, at a point in time. This limits the maximum potential aggregate outflow of deposits, stabilises banks’ deposit base and mitigates steepening credit costs that would disincentivise the pursuing of productive economic activities.</p></li>
+<li><p>Third, central banks could constrain the amount of CBDCs that an end user can accumulate, over a period. This measure would slow down the velocity of bank outflows to CBDCs and the speed of bank runs.</p></li>
+</ol>
+<p>In the first two measures above, end users can be tracked from unique identifiers such as social security number. However, imposing quantitative caps, could curtail the use of CBDCs as an efficient means of payment for domestic and cross-border transactions. In advanced economies where cheap and fast payments are already widely available domestically, we expect quantitative caps to be confined to retail, and not wholesale, CBDCs.</p>
+</section>
+</section>
+<section id="adverse-impact-on-monetary-policy-instrument" class="level2">
+<h2 class="anchored" data-anchor-id="adverse-impact-on-monetary-policy-instrument">4.3 Adverse impact on monetary policy instrument</h2>
+<p>Issuance of CBDCs may reduce the robustness of a central bank’s monetary policy instrument. We illustrate the foregoing in the context of Singapore. A Singapore dollar CBDC that is universally accessible and elastically supplied (that is, available on demand in unlimited amounts) may draw non-residents, raising their holdings of Singapore dollar substantially in the process. A surge in the level and volatility of capital flows may cause the S$NEER to more frequently depart from a level consistent with domestic price stability, leading to an uptick in instances where MAS has to intervene in the foreign exchange market. FX intervention operation would also lead to the accumulation or drawdown of Singapore’s Official Foreign Reserves.</p>
+<section id="solutions-1" class="level3">
+<h3 class="anchored" data-anchor-id="solutions-1"><u>4.3.1 Solution(s)</u></h3>
+<p>Central banks operating exchange-rate centred frameworks could consider restricting retail CBDC access to domestic residents, or introduce time-bound access CBDCs for tourists or short-term visitors. Implementation wise, these central banks could for instance program CBDCs for use within certain geolocation co-ordinates.</p>
+</section>
+</section>
+</section>
+<section id="challenges-and-workarounds" class="level1">
+<h1>5. Challenges and workarounds</h1>
+<p>The risks highlighted above are predicated on sizeable use of CBDCs post-implementation.</p>
+<p>However, there remains some key challenges for CBDCs that would need to be addressed before CBDCs would be viable for use.</p>
+<section id="legal-framework" class="level2">
+<h2 class="anchored" data-anchor-id="legal-framework">5.1 Legal Framework</h2>
+<p>Central bank law and monetary law are two critical public law aspects of CBDCs.</p>
+<section id="relevance-of-central-bank-law" class="level3">
+<h3 class="anchored" data-anchor-id="relevance-of-central-bank-law">5.1.1 Relevance of Central Bank Law</h3>
+<p>Central bank law establishes central bank bodies and prescribe their mandate. The equivalence in Singapore’s context is the Monetary Authority of Singapore Act 1970, which establishes MAS as a body corporate under s3 and lists MAS’ principal objects and functions under s4 thereto.</p>
+<p>Central banks must have the mandate to issue CBDCs which are ultimately a liability on their books, and the issuance of unauthorised CBDCs will bring forth legal, financial and reputational risks for central banks.</p>
+<p>Whether central banks possess such mandate to issue CBDCs rests on (i) their prescribed functions and (ii) their powers to carry out those functions. Crucially, the issuance of CBDCs must be within the scope of central banks’ statutory functions and central banks must be legally empowered to issue CBDCs. The design features of CBDC could impinge on the interpretation of the existing legislation, such that amendments to the relevant laws may be required for the issuance of CBDC.</p>
+<p>For instance, CBDCs can be account-based or token-based. Account-based CBDCs are balances in cash current accounts in a central bank’s books. Token-based CBDCs are digital tokens and do not involve an account-type relationship between the central bank and CBDC token holder.</p>
+<p>The issuance of token-based CBDCs may be construed as falling outside of central banks’ statutory functions to issue “banknotes and coins”. Relatedly, central banks may only be empowered to issue “banknotes and coins”, and any action to issue token-based CBDCs are ultra-vires of powers conferred upon them. IMF, in a 2020 publication, noted that current central bank laws for 61% out of 171 IMF-member central banks limit their currency issuance function to “banknotes and coins”, 23% explicitly permit the issuance of currency in a digital format, and the remaining 16% central bank laws are unclear.</p>
+<p>In the same publication, IMF also highlighted that debate persists over whether central banks are legally authorised to grant the general public access to its payment systems in order to hold account-based retail CBDCs, as part of central banks’ statutory functions to operate and oversee payment systems. IMF noted that 85% of central bank laws today permit central banks to open accounts for institutions only and not for the public.</p>
+</section>
+<section id="relevance-of-monetary-law" class="level3">
+<h3 class="anchored" data-anchor-id="relevance-of-monetary-law">5.1.2 Relevance of Monetary Law</h3>
+<p>Monetary law refers to the legislative and regulatory framework for use of monetary value to be legally valid for the purpose of extinguishing debt or other monetary obligations. The equivalence in Singapore’s context is the Currency Act 1967, which prescribes in s13(1) that currency notes and coins issued by MAS are legal tender in Singapore. Legal tender status obliges creditors to accept the currency for payment.</p>
+<p>Legal tender status is a matter of designation via legislation, by central banks. Importantly, not all means of payment (for instance, commercial bank balances) have legal tender status which explains why businesses have the option to only accept cash for payment.</p>
+<p>The pertinent question here is whether CBDCs should be accorded legal tender status. It is unclear if not doing so would reduce the adoption rate of CBDCs, as deposit money do not have legal tender status but yet are widely used as a reliable means of payment. That said, there may be a case to do so to strike an equivalence with notes and notes issued by a central bank.</p>
+</section>
+<section id="solutions-2" class="level3">
+<h3 class="anchored" data-anchor-id="solutions-2"><u>5.1.3 Solution(s)</u></h3>
+<p>Although legislative amendments would easily fix the issues above (e.g., paragraph 35 explains that legal tender status is a matter of legal designation), the first-order question is whether there is a compelling case for amending current central bank law and monetary law, and the implications of any amendments on other legislations, including contract laws.</p>
+</section>
+</section>
+<section id="mass-adoption" class="level2">
+<h2 class="anchored" data-anchor-id="mass-adoption">5.2 Mass adoption</h2>
+<p>There is considerable uncertainty over the adoption rate of CBDCs. Two years post debut, Bahamas’ Sand Dollar has seen only modest take-up. The Central Bank of Bahamas publicly attributed low CBDC penetration to the presence of alternative payment means available such as e-money and credit/debit cards and COVID-19 which stymied education outreach efforts. IMF, in a Spring 2021 report, noted only $130,000 worth of sand dollars was in circulation compared with $500-mil Bahamian dollars. As of end 2021, this increased to $800,000 according to the 2021 annual report of The Central Bank of the Bahamas.</p>
+<p>Figure 4 enumerates findings from selected central banks (based on their end-user consultations) on retail CBDC features that end-users consider important. In summary, they pertain to (i) safety of funds, (ii) usage costs such as transaction costs, (ii) ease of use, (iv) security of transactions (including end-user liability and whether the intermediaries in a CBDC transaction are regulated), (v) privacy, and (v) accessibility.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2382145011.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 4: BIS’s end-user consultation and research summary</figcaption>
+</figure>
+</div>
+<p>Merchants’ acceptance would rise if CBDCs could either widen their customer base or lower their existing costs of transactions.</p>
+<section id="solutions-3" class="level3">
+<h3 class="anchored" data-anchor-id="solutions-3"><u>5.2.1 Solution(s)</u></h3>
+<p>To encourage end-users’ adoption, CBDCs should be designed with reference to the features in Figure 4. For instance, CBDCs could enhance its accessibility by incorporating voice or assistive touch commands for users who are visually and/or physically impaired. Next, user experience (ease of use and convenience) could influence the public’s reception to using CBDCs. Linking end-user’ identities to their existing mobile phone numbers to streamline password proliferation or authenticating users through facial recognition, could also enhance a user’s CBDC journey. Central banks may benefit from collaborations with commercial banks and private payment service providers on design matters.</p>
+<p>As mentioned, merchants would be concerned about costs of accepting and / or making CBDC payments, which include costs to install and maintaining bespoke hardware. These costs should be competitive when compared to costs of using existing payment facilities and payment services offered by third-party payment rails, such as payment card companies.</p>
+<p>The implementation of CBDCs and its ecosystem should be done in a manner and form that is familiar and compatible with existing tools, technology, and conditions. This may require:</p>
+<ol type="1">
+<li><p>Integrating CBDC payments into existing Point-of-Sales infrastructure or applications</p></li>
+<li><p>Partnerships with private sectors, e.g., telco providers. to provide affordable payment services to users</p></li>
+<li><p>Subsidies to lower merchant’s implementation costs</p></li>
+<li><p>Ensuring compatibility with existing devices, e.g., smart phones, wearables, stored-Value cards, and</p></li>
+<li><p>Availability in offline or low-connectivity environments.</p></li>
+</ol>
+<p>As an example of the above, the People’s Bank of China (“PBOC”) teamed up with WeChat (China’s social media platform giant) to add e-CNY (China’s CBDC) to WeChat’s payment services.</p>
+<p>CoinTelegraph reported, in a 2023 publication, that end-users must authorise the e-CNY wallet operator to sync their WeChat mobile phone number, for activation of WeChat’s payment wallet fast payment function. Thereafter, payments to digital yuan-supporting merchants, such as McDonalds, can be made using the WeChat app.</p>
+</section>
+</section>
+<section id="interoperability" class="level2">
+<h2 class="anchored" data-anchor-id="interoperability">5.3 Interoperability</h2>
+<p>Interoperability is vital to payment systems, enabling them to seamlessly exchange information and facilitate transactions. This in turn would boost CBDC adoption rates.</p>
+<p>One significant barrier to interoperability is technical incongruities such as difference in message formats, data elements, operating systems, security protocols, scalability, or throughput capacity. These incompatibilities can hinder seamless interaction between existing payment systems and CBDC systems. On their part, existing payment system participants may be reluctant to make large investments to adapt technical specifications in legacy infrastructure to CBDC systems.</p>
+<p>Legal and regulatory barriers can also inhibit interoperability between existing payment systems and CBDC systems. These challenges can stem from different supervisory regimes, compliance requirements, and consumer protection rules. For instance, the transfer of CBDCs from one country to another entails compliance with both countries’ legal requirements (e.g., over ML/TF or data protection) which may not yet be harmonised.</p>
+<section id="solutions-4" class="level3">
+<h3 class="anchored" data-anchor-id="solutions-4"><u>5.3.1 Solution(s)</u></h3>
+<p>To address frictions from interoperability, the following approaches could be considered:</p>
+<ol type="1">
+<li><p><strong>Adopt common technical standards and APIs</strong>: Utilizing common technical standards and APIs could enhance compatibility between present-day payment systems and CBDC systems, reduce technical barriers to interoperability and facilitate seamless CBDC transactions between systems.</p></li>
+<li><p><strong>Incentivise participation</strong>: Central banks could encourage participation in the CBDC ecosystem by offering benefits such as lower transaction costs, enhanced security, or streamlined processes. CNBC in 2021 reported on PBOC’s novel approach of parcelling out RMB 40-mil of e-CNY in a lottery. Up to 200,000 red packets containing RMB 200 dollars each could be won by Beijing residents.</p></li>
+<li><p><strong>Establish rules for CBDC payments during closing hours</strong>: Central banks must establish rules to handle CBDC payments initiated during the closing hours of non-CBDC payment systems with a view to improving the availability of CBDCs and enhancing integration into existing payment systems.</p></li>
+<li><p><strong>Consider sharing infrastructure:</strong> Central banks could review the feasibility of building a common platform that embeds the sharing of functions, such as using the same authorization and clearing providers or digital identity schemes.</p></li>
+</ol>
+</section>
+</section>
+<section id="privacy-data-security-and-cybersecurity-challenges" class="level2">
+<h2 class="anchored" data-anchor-id="privacy-data-security-and-cybersecurity-challenges">5.4 Privacy, Data Security and Cybersecurity Challenges</h2>
+<p>All digital transactions, including CBDC transactions, would leave a digital trail including personal data that is in turn, susceptible to leakage and exploitation by malicious actors. Addressing privacy risks and cybersecurity concerns in the use of CBDCs is therefore not a matter of ensuring anonymity as physical cash would be able to, but rather a matter of maintaining two key principles of:</p>
+<ul>
+<li><p><strong>Authentication and Authorization</strong> where only the CBDC’s legitimate owner should be able access and spend CBDC.</p></li>
+<li><p><strong>Privacy and Confidentiality</strong> where private information about the CBDC transaction and parties involved should not be visible to unauthorized persons.</p></li>
+</ul>
+<p>Notably, a major concern arising from a Central Bank administered digital currency is State surveillance. The access to personal data may potentially pave the way for the state to adopt Big Brother-esque surveillance of all actions and transactions performed by individuals or corporates and to take punitive action. The Financial Times, in 2021, reported that the PBOC can, “track large-value transactions at the individual level in real time [and] Beijing aims to use this feature to combat money laundering, corruption and the financing of ‘terrorism’ at home”.</p>
+<p>Issuance of CBDCs may also entail “centralized collection of transaction data, posing major security risks” (Fanti et al, 2022 Sep). Even if the state does not attempt to conduct surveillance, a centralized repository of data would represent high value targets for malicious actors. Reliance on third party tech providers (see Figure 5) to maintain the centralized database may also introduce vulnerabilities especially if said third parties are not subject to stringent regulatory frameworks governing operational and cyber resilience.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-358071203.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 5: Typical parties to a payment transaction</figcaption>
+</figure>
+</div>
+<section id="solutions-5" class="level3">
+<h3 class="anchored" data-anchor-id="solutions-5"><u>5.4.1 Solution(s)</u></h3>
+<p>Privacy, data security and cybersecurity concerns associated with CBDCs are not new or unique. Nor are they insurmountable given the plethora of safe and secured services offered by the prevailing digital wallets and private payments service providers.</p>
+<p>The rapid adoption of digital wallets signals that users are willing to cede some of their privacy rights in exchange for value-added services. Correspondingly, a strong use case for CBDCs with sufficient security measures would be able to attract user adoption while tempering privacy concerns. The Asian Banker estimates that based on current growth rates, mobile wallets will reach 2.6 billion users by 2025. Typically, the success of these private wallets lies in their ability to become “embedded in [their users’s] daily lives when [the wallets] are part of ecosystems […] extending into e-commerce, ride hailing, food delivery, messaging, travel, [etc.]” (Chaudhuri et al, 2022). See Figure 6.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3380483550.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 6: Mobile wallet user growth in ASEAN</figcaption>
+</figure>
+</div>
+<p>CBDCs’ build should replicate minimally “the same level of privacy as a bank account” (Bank of England, 2023). A possible compromise between true anonymity in cash transactions and a Central Bank administered CBDC would be to adopt an ‘intermediated account-based CBDC model’, as suggested in BOE’s digital pound consultation paper. See Figure 7.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3628078976.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 7: BOE’s privacy objectives for the Digital Pound</figcaption>
+</figure>
+</div>
+<p>Notably, maintaining CBDC accounts with an intermediary such as a bank or payment service provider would remove the Central Bank as a direct administrator of personal data generated while providing a familiar means to fulfil the two key principles outlined in paragraph 49 above. That is, the intermediary would serve as an administrator to identify users for authentication and authorization, and likewise protect data privacy and confidentiality in compliance with data protection laws and regulations. Specifically, such a two-tier arrangement would address concerns about the State intruding on personal privacy and confidentiality apart from the necessary provisions to obtain information to deter and detect financial crimes. For example, s47(1) of the Banking Act 1970 in Singapore restrict disclosure by banks of customer information “except as expressly provided in (this) Act”, where the exceptions relate to the need to fight financial crimes.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-838101432.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 8: Intermediated account-based CBDC model</figcaption>
+</figure>
+</div>
+<p>Further technical features, notably Privacy Enhancing Technologies, can also be applied to anonymise data transmitted or shared by intermediaries with the Central Bank. There are several techniques that may work concurrently (BOE, 2023) :</p>
+<ol type="1">
+<li><p><strong>Data Minimisation techniques</strong> which aims to hide personal information that may be tied to the CBDC transaction behind ciphers or pseudonyms, based on operator-defined thresholds. Specifically, the CBDC operator “could permit only certain types of transaction to be executed without registering the identity of payer and payee” (ECB, 2020), and collect more identification and personal data only if transactions cross a pre-defined threshold value.</p></li>
+<li><p><strong>Aggregate Data Analysis</strong> which functions on the use of Differential Privacy (on the latter, “an algorithm is said to be differentially private if by looking at the output, one cannot tell whether any individual’s data was included in the original dataset or not” (Harvard University n.d.)), and it is achieved by introducing statistical noise that adjusts the output variance when the input changes (Devaux, 2022). Adopting Aggregate Data Analysis would mean that any data that is shared with authorized parties would involve aggregated formats where individual CBDC users cannot be identified.</p></li>
+<li><p><strong>Blind proofs or Zero-knowledge (range) proofs</strong>, “where one party can prove to another party that a given statement is true without revealing any additional data apart from the fact that the statement is indeed true.” (BOE, 2023) This would minimize the need to transmit and share personal information in order to confirm CBDC transactions.</p></li>
+</ol>
+</section>
+</section>
+<section id="implementation-challenge-operating-cbdcs-on-top-of-dlt-to-reap-benefits-brings-forth-key-risks-including-settlement-risks" class="level2">
+<h2 class="anchored" data-anchor-id="implementation-challenge-operating-cbdcs-on-top-of-dlt-to-reap-benefits-brings-forth-key-risks-including-settlement-risks">5.5 Implementation challenge – operating CBDCs on top of DLT to reap benefits brings forth key risks including settlement risks</h2>
+<p>CBDCs may either operate using (i) Distributed Ledger Technology (“DLT”) or (ii) the traditional core ledger system with supporting infrastructure and rules.</p>
+<p>Adopting DLT for CBDC systems could present both benefits and challenges.</p>
+<section id="benefits" class="level3">
+<h3 class="anchored" data-anchor-id="benefits">5.5.1 Benefits</h3>
+<p>DLT ensures the consistency and integrity of data records by being maintained by multiple nodes, avoiding the single-point-of-failure and risks associated with centralized solutions. DLT also provides better scalability by increasing dedicated computing nodes.</p>
+</section>
+<section id="challenges" class="level3">
+<h3 class="anchored" data-anchor-id="challenges">5.5.2 Challenges</h3>
+<ol type="1">
+<li><p><strong>Reduced privacy and confidentiality</strong>: DLT have less privacy and confidentiality. E.g., public blockchains like Bitcoin and Ethereum offer complete transaction (but not identity of users) transparency This concern is reduced, but not fully abated, even in a permissioned environment.,</p></li>
+<li><p><strong>Uncertainty over settlement finality</strong>: Settlement finality refers to the point in time where one party is deemed to have discharged his obligation or transferred his asset in satisfaction of his obligation, and such discharge or transfer is irrevocable even if his counterparty becomes insolvent or bankrupt.</p></li>
+</ol>
+<p>Principle 8 to BIS’ Principles for Financial Market Infrastructures (“FMIs”) calls for FMIs to provide “clear and certain final settlement”, minimally by end of the value date. In DLT arrangements, the point where settlement finality is reached may not be clear or well-defined, particularly in distributed networks that rely on a consensus process (such as Proof-of-Work) for inclusion of a transaction to the ledger. In such distributed networks, transaction confirmations are not immediate, and the potential for forks or chain reorganizations can cast doubt on the irreversibility of transactions.</p>
+<ol start="3" type="1">
+<li><p><strong>Increased network governance difficulties:</strong> DLT’s huge amounts of distributed computing nodes pose network governance challenges.</p></li>
+<li><p><strong>Need for technical talent:</strong> DLT needs broader support and more technical talent since it is built on a more complex infrastructure.</p></li>
+</ol>
+</section>
+<section id="solutions-6" class="level3">
+<h3 class="anchored" data-anchor-id="solutions-6"><u>5.5.3 Solution(s)</u></h3>
+<p>Alternative consensus mechanisms, such as Proof of Stake or federated Byzantine agreement systems, could offer greater certainty concerning transaction finality, thus minimizing the likelihood of forks or chain reorganizations.</p>
+</section>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>6. Conclusion</h1>
+<p>Starting from first principles, CBDCs are no different from the reserves and cash issued by a central bank to operationalise the concept of money as a medium of exchange, a unit of account and a store of value. That said, as this paper has highlighted, the novel technological features undergirding CBDCs present the potential for the record, payment, transfer and settlement of money to be made more efficient and more robust with a reduced need for intermediaries.</p>
+<p>The same features also bring along new challenges and risks. These include privacy issues, cybersecurity considerations, disintermediation of banks and financial stability implications. Conceptually, some of the challenges and risks could be addressed by the appropriate calibration of the design parameters, such as having a cap on retail CBDC holdings and paying zero interest to prevent bank disintermediation.</p>
+<p>More work would need to be done to better understand the full extent of benefits as well as challenges and risks even notwithstanding numerous central bank experiments thus far. Specifically, the litmus test of CBDCs to function as money will be its ability to scale securely and cost-effectively while maintaining the same benefits seen at the proof-of-concept stage.</p>
+</section>
+<section id="references" class="level1">
+<h1>7. References</h1>
+<p>Atlanticcouncil.org. (2022). Central Bank Digital Currency Tracker. Retrieved March 18, 2023, from <a href="https://www.atlanticcouncil.org/cbdctracker" class="uri">https://www.atlanticcouncil.org/cbdctracker</a></p>
+<p>Ball, L. (2016, August 24). The Fed and Lehman Brothers: A new narrative. Retrieved March 18, 2023, <a href="https://cepr.org/voxeu/columns/fed-and-lehman-brothers-new-narrative" class="uri">https://cepr.org/voxeu/columns/fed-and-lehman-brothers-new-narrative</a></p>
+<p>Banescu, S., Borodach, B., &amp; Lannquist, A. (2021, November 20). 4 key cyber security threats to the new Central Bank Digital Currencies. World Economic Forum. Retrieved March 17, 2023 from <a href="https://www.weforum.org/agenda/2021/11/4-key-threats-central-bank-digital-currencies/" class="uri">https://www.weforum.org/agenda/2021/11/4-key-threats-central-bank-digital-currencies/</a></p>
+<p>Bank of England. (2023, February 7). The digital pound: Technology working paper. Bank of England. Retrieved March 17, 2023 from <a href="https://www.bankofengland.co.uk/paper/2023/the-digital-pound-technology-working-paper" class="uri">https://www.bankofengland.co.uk/paper/2023/the-digital-pound-technology-working-paper</a></p>
+<p>Bank of England. (2023, March 10). The digital pound: A new form of money for households and businesses? Bank of England. Retrieved March 15, 2023, from <a href="https://www.bankofengland.co.uk/paper/2023/the-digital-pound-consultation-paper" class="uri">https://www.bankofengland.co.uk/paper/2023/the-digital-pound-consultation-paper</a></p>
+<p>Bis.org. (2021). Central bank digital currencies: user needs and adoption. Retrieved March 18, 2023, from <a href="https://www.bis.org/publ/othp42_user_needs.pdf" class="uri">https://www.bis.org/publ/othp42_user_needs.pdf</a></p>
+<p>Bis.org. (2022, April). Central bank digital currencies: a new tool in the financial inclusion toolkit? Retrieved March 18, 2023, from <a href="https://www.bis.org/fsi/publ/insights41.pdf" class="uri">https://www.bis.org/fsi/publ/insights41.pdf</a></p>
+<p>Bis.org. (2021, September). Central bank digital currencies: system design and interoperability. Retrieved March 18, 2023, from <a href="https://www.bis.org/publ/othp42_system_design.pdf" class="uri">https://www.bis.org/publ/othp42_system_design.pdf</a></p>
+<p>Central Bank Bahamas. (n.d.a) 2021 annual report. Retrieved March 18, 2023, from <a href="https://www.centralbankbahamas.com/viewPDF/documents/2022-05-05-11-51-31-CBOB-2021-Annual-Report-and-Financial-Statements.pdf" class="uri">https://www.centralbankbahamas.com/viewPDF/documents/2022-05-05-11-51-31-CBOB-2021-Annual-Report-and-Financial-Statements.pdf</a></p>
+<p>Carlson, M., Duygan-Bump, B., Nelson, W.R. (2015, February). BIS Working Papers No 493. Why do we need both liquidity regulations and a lender of last resort? A perspective from Federal Reserve lending during the 2007–09 US financial crisis. Retrieved March 18, 2023, from <a href="https://www.bis.org/publ/work493.pdf" class="uri">https://www.bis.org/publ/work493.pdf</a></p>
+<p>Chaudhuri, R., Gathinji, C., Tayar, G., &amp; Williams, E. (2022, October 13). Sustaining Digital Payments Growth: Winning models in emerging markets. McKinsey &amp; Company. Retrieved March 15, 2023, from <a href="https://www.mckinsey.com/industries/financial-services/our-insights/sustaining-digital-payments-growth-winning-models-in-emerging-markets" class="uri">https://www.mckinsey.com/industries/financial-services/our-insights/sustaining-digital-payments-growth-winning-models-in-emerging-markets</a></p>
+<p>Devaux, E. (2022, December 21). What is differential privacy: Definition, mechanisms, and examples. Statice. Retrieved March 17, 2023, from <a href="https://www.statice.ai/post/what-is-differential-privacy-definition-mechanisms-examples" class="uri">https://www.statice.ai/post/what-is-differential-privacy-definition-mechanisms-examples</a></p>
+<p>Dorst, S. (Spring 2021). Digital dollars for online tea. Retrieved March 18, 2023, from <a href="https://www.imf.org/external/pubs/ft/fandd/2021/03/fighting-pandemic-disruption-with-innovation-dorst.htm" class="uri">https://www.imf.org/external/pubs/ft/fandd/2021/03/fighting-pandemic-disruption-with-innovation-dorst.htm</a></p>
+<p>European Central Bank. (2010, July). Working Paper Series No 1223 - The dark side of bank wholesale funding. Retrieved March 18, 2023, from <a href="https://www.ecb.europa.eu/pub/pdf/scpwps/ecbwp1223.pdf" class="uri">https://www.ecb.europa.eu/pub/pdf/scpwps/ecbwp1223.pdf</a></p>
+<p>European Central Bank. (2020, October). Report on a Digital Euro - European Central Bank. European Central Bank. Retrieved March 17, 2023, from <a href="https://www.ecb.europa.eu/pub/pdf/other/Report_on_a_digital_euro~4d7268b458.en.pdf" class="uri">https://www.ecb.europa.eu/pub/pdf/other/Report_on_a_digital_euro~4d7268b458.en.pdf</a></p>
+<p>Fanti, G., Lipsky, J., &amp; Moehr, O. (2022, September). Central Bankers’ new cybersecurity challenge. International Monetary Fund. Retrieved March 15, 2023, from <a href="https://www.imf.org/en/Publications/fandd/issues/2022/09/Central-bankers-new-cybersecurity-challenge-Fanti-Lipsky-Moehr" class="uri">https://www.imf.org/en/Publications/fandd/issues/2022/09/Central-bankers-new-cybersecurity-challenge-Fanti-Lipsky-Moehr</a></p>
+<p>Fanti, G., Kostiainen, K., Howlett, W., Lipsky, J., Moehr, O., Schnapper-Casteras, J. P., &amp; Wolff, J. (2022, June 5). Missing key: The challenge of cybersecurity and Central Bank Digital Currency. Atlantic Council. Retrieved March 17, 2023, from <a href="https://www.atlanticcouncil.org/in-depth-research-reports/report/missing-key/#chapter1" class="uri">https://www.atlanticcouncil.org/in-depth-research-reports/report/missing-key/#chapter1</a></p>
+<p>Federalreserve.gov. (2021, Jun 23). Fed Notes – What is programmable money? Retrieved March 18, 2023, from <a href="https://www.federalreserve.gov/econres/notes/feds-notes/what-is-programmable-money-20210623.html" class="uri">https://www.federalreserve.gov/econres/notes/feds-notes/what-is-programmable-money-20210623.html</a></p>
+<p>Gertler. M., Kiyotaki. N., Prestipino, A. (2015, November). Wholesale Banking and Bank Runs in Macroeconomic Modelling of Financial Crises. Retrieved March 18, 2023, from <a href="https://www.princeton.edu/~kiyotaki/papers/GKP11092015_.pdf" class="uri">https://www.princeton.edu/~kiyotaki/papers/GKP11092015_.pdf</a></p>
+<p>Hansen, T., &amp; Delak, K. (2022, March 2). Security considerations for a central bank digital currency. The Fed - Security Considerations for a Central Bank Digital Currency. Retrieved March 17, 2023, from <a href="https://www.federalreserve.gov/econres/notes/feds-notes/security-considerations-for-a-central-bank-digital-currency-20220203.html" class="uri">https://www.federalreserve.gov/econres/notes/feds-notes/security-considerations-for-a-central-bank-digital-currency-20220203.html</a></p>
+<p>Harvard University. (n.d.). Differential Privacy. Harvard University Privacy Tools Project. Retrieved March 17, 2023, from <a href="https://privacytools.seas.harvard.edu/differential-privacy" class="uri">https://privacytools.seas.harvard.edu/differential-privacy</a></p>
+<p>Kaissi, N. (2021, October 28). Mobile wallets will reach 2.6 billion users in Asia Pacific by 2025. The Asian Banker. Retrieved March 17, 2023, from <a href="https://www.theasianbanker.com/updates-and-articles/mobile-wallet-will-reach-2.6-billion-users-in-asia-pacific-by-2025" class="uri">https://www.theasianbanker.com/updates-and-articles/mobile-wallet-will-reach-2.6-billion-users-in-asia-pacific-by-2025</a></p>
+<p>Kharpal, A. (2021, June 2). China to hand out $6.2 million in digital currency to Beijing residents as part of trial. Retrieved March 18, 2023, from <a href="https://www.cnbc.com/2021/06/02/china-digital-currency-beijing-to-hand-out-6point2-million-in-trial.html" class="uri">https://www.cnbc.com/2021/06/02/china-digital-currency-beijing-to-hand-out-6point2-million-in-trial.html</a></p>
+<p>Kynge, J., &amp; Yu, S. (2021, February 17). Virtual control: The agenda behind China’s new digital currency. Financial Times. Retrieved March 15, 2023, from <a href="https://www.ft.com/content/7511809e-827e-4526-81ad-ae83f405f623" class="uri">https://www.ft.com/content/7511809e-827e-4526-81ad-ae83f405f623</a></p>
+<p>Mas.gov.sg. (2021, Nov 9). A Retail Central Bank Digital Currency (CBDC): Economic Considerations in the Singapore Context. Retrieved March 18, 2023, from <a href="https://www.mas.gov.sg/publications/monographs-or-information-paper/2021/retail-cbdc-paper" class="uri">https://www.mas.gov.sg/publications/monographs-or-information-paper/2021/retail-cbdc-paper</a></p>
+<p>Nwaokocha, A. (2023, March 7). WeChat integrates digital yuan into its payment platform Retrieved March 18, 2023, from <a href="https://cointelegraph.com/news/wechat-integrates-digital-yuan-into-its-payment-platform" class="uri">https://cointelegraph.com/news/wechat-integrates-digital-yuan-into-its-payment-platform</a></p>
+<p>R3.com. (2020, April). Central Bank Digital Currency: an innovation in payments. Retrieved March 18, 2023, from <a href="https://www.r3.com/wp-content/uploads/2020/04/r3_CBDC_report.pdf" class="uri">https://www.r3.com/wp-content/uploads/2020/04/r3_CBDC_report.pdf</a> &gt;</p>
+<p>World Bank Group. (2022, June 28). Covid-19 drives global surge in use of digital payments. World Bank. Retrieved March 15, 2023, from <a href="https://www.worldbank.org/en/news/press-release/2022/06/29/covid-19-drives-global-surge-in-use-of-digital-payments" class="uri">https://www.worldbank.org/en/news/press-release/2022/06/29/covid-19-drives-global-surge-in-use-of-digital-payments</a></p>
+<p>Yoshinaga, A., et al.&nbsp;(2020, November 20). Legal Aspects of Central Bank Digital Currency: Central Bank and Monetary Law Considerations. Retrieved March 18, 2023, from <a href="https://www.imf.org/en/Publications/WP/Issues/2020/11/20/Legal-Aspects-of-Central-Bank-Digital-Currency-Central-Bank-and-Monetary-Law-Considerations-49827" class="uri">https://www.imf.org/en/Publications/WP/Issues/2020/11/20/Legal-Aspects-of-Central-Bank-Digital-Currency-Central-Bank-and-Monetary-Law-Considerations-49827</a></p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
